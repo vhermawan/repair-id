@@ -1,0 +1,9 @@
+<template>
+  <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" :class="class">
+    <path d="M5.25 2.625L9.625 7L5.25 11.375" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</template>
+
+<script setup lang="ts">
+defineProps<{ class?: string }>()
+</script>
