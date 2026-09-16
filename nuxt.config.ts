@@ -1,7 +1,12 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
+  app: {
+    head: {
+      title: 'Repair Material Studio',
+    },
+  },
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxt/icon'],
   googleFonts: {
     families: {
       'Archivo': { wght: '100..900' },

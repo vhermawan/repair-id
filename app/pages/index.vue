@@ -1,68 +1,66 @@
 <template>
   <div>
     <!-- Hero -->
-    <section class="w-full h-[780px] flex flex-col justify-between p-9 px-12 overflow-hidden relative">
-      <!-- Hero Scrim -->
-      <div class="absolute inset-0 z-[1]">
-        <div class="absolute inset-0 bg-[#005FE7C7] mix-blend-multiply" />
-        <div class="absolute inset-0 [background-image:linear-gradient(95.456deg,_#062A5CE6_2.755%,_#0044A87A_50%,_#005FE71F_97.245%)]" />
-      </div>
-
+    <section class="w-full min-h-[600px] lg:h-[780px] flex flex-col gap-0 p-[24px_20px] lg:p-[36px_48px] justify-between items-start overflow-hidden relative">
       <!-- Hero BG -->
       <img src="/images/hero-bg.jpg" alt="Repair workshop" class="absolute inset-0 w-full h-full object-cover z-0" />
 
-      <!-- Nav -->
-      <TheNavbar light class="relative z-10" />
+      <!-- Hero Scrim -->
+      <div class="absolute inset-0 bg-[#005FE7C7] mix-blend-multiply z-[1]" />
+      <div class="absolute inset-0 [background-image:linear-gradient(95.456deg,_#062A5CE6_2.755%,_#0044A87A_50%,_#005FE71F_97.245%)] z-[2]" />
+
+      <!-- Nav spacer (navbar is now fixed) -->
+      <div class="h-0 relative z-[3]" />
 
       <!-- Hero Content -->
-      <div class="w-full flex flex-row gap-16 pt-7 items-center relative z-[2]">
+      <div class="w-full flex flex-col lg:flex-row gap-8 lg:gap-[64px] pt-7 lg:items-center relative z-[3]">
         <!-- Hero Copy -->
-        <div class="flex-1 flex flex-col gap-[26px]">
+        <div class="flex-1 flex flex-col gap-5 lg:gap-[26px]">
           <!-- Headline -->
-          <div class="flex flex-col gap-[10px]">
+          <div class="flex flex-col gap-[8px] lg:gap-[10px]">
             <!-- Eyebrow -->
-            <div class="flex items-center gap-[10px] pb-[14px]">
-              <span class="w-[7px] h-[7px] rounded-full bg-cream shrink-0" />
-              <span class="font-mono text-[10px] tracking-[1.4px] text-[#D8E5FF] whitespace-nowrap">
+            <div class="flex items-center gap-[8px] lg:gap-[10px] pb-[10px] lg:pb-[14px]">
+              <span class="w-[6px] h-[6px] lg:w-[7px] lg:h-[7px] rounded-full bg-cream shrink-0" />
+              <span class="font-mono text-[8px] lg:text-[10px] tracking-[1.2px] lg:tracking-[1.4px] text-[#D8E5FF]">
                 SACHET &amp; KANTONG PLASTIK — DIOLAH, BUKAN DIBUANG
               </span>
             </div>
             <!-- Line 1 -->
-            <h1 class="font-archivo font-bold text-[76px] leading-[74px] tracking-[-3.2px] text-cream whitespace-nowrap">
+            <h1 class="font-archivo font-bold text-[36px] leading-[38px] lg:text-[76px] lg:leading-[74px] tracking-[-1.5px] lg:tracking-[-3.2px] text-cream">
               Material permukaan
             </h1>
             <!-- Line 2 -->
-            <div class="flex items-end gap-[14px]">
-              <span class="font-serif italic text-[76px] leading-[74px] tracking-[-1.5px] text-[#BFD8FF] whitespace-nowrap">
+            <div class="flex flex-wrap items-end gap-[6px] lg:gap-[14px]">
+              <span class="font-serif italic text-[36px] leading-[38px] lg:text-[76px] lg:leading-[74px] tracking-[-0.8px] lg:tracking-[-1.5px] text-[#BFD8FF]">
                 dari sampah
               </span>
-              <span class="font-archivo font-bold text-[76px] leading-[74px] tracking-[-3.2px] text-cream whitespace-nowrap">
+              <span class="font-archivo font-bold text-[36px] leading-[38px] lg:text-[76px] lg:leading-[74px] tracking-[-1.5px] lg:tracking-[-3.2px] text-cream">
                 yang ditolak.
               </span>
             </div>
           </div>
 
           <!-- Sub -->
-          <p class="w-full font-inter text-base leading-[26px] text-[#E6EEFF]">
+          <p class="w-full font-inter text-[13px] leading-[21px] lg:text-base lg:leading-[26px] text-[#E6EEFF]">
             Repair mengubah sachet dan kantong plastik yang ditolak daur ulang menjadi RR Board —
             lembaran material permukaan untuk bangunan dan produk jadi.
           </p>
 
           <!-- CTA -->
-          <div class="flex items-center gap-3 pt-2">
-            <NuxtLink to="#rr-board" class="flex items-center gap-2.5 px-6 py-[15px] bg-cream">
-              <span class="font-inter text-sm font-semibold text-navy whitespace-nowrap">Lihat RR Board</span>
-              <IconArrowRight class="w-4 h-4 text-navy" />
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1 lg:pt-2">
+            <NuxtLink to="#rr-board" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] bg-cream">
+              <span class="font-inter text-[13px] lg:text-sm font-semibold text-navy whitespace-nowrap">Lihat RR Board</span>
+              <Icon name="lucide:arrow-right" class="w-4 h-4 text-navy" />
             </NuxtLink>
-            <a href="#" class="flex items-center gap-2.5 px-6 py-[15px] [outline:1px_solid_#F4F1E980] [outline-offset:-0.5px]">
-              <IconMessageCircle class="w-4 h-4 text-cream" />
-              <span class="font-inter text-sm font-semibold text-cream whitespace-nowrap">Diskusi kebutuhan Anda</span>
+            <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] [outline:1px_solid_#F4F1E980] [outline-offset:-0.5px]">
+              <Icon name="lucide:message-circle" class="w-4 h-4 text-cream" />
+              <span class="font-inter text-[13px] lg:text-sm font-semibold text-cream whitespace-nowrap">Diskusi kebutuhan Anda</span>
             </a>
           </div>
         </div>
 
-        <!-- Hero Spec Card -->
-        <div class="w-[400px] shrink-0 backdrop-blur-[12px] flex flex-col bg-[#0614283D] [outline:1px_solid_#F4F1E94D] [outline-offset:-0.5px] rounded-lg overflow-hidden">
+        <!-- Hero Spec Card (desktop only) -->
+        <div class="hidden lg:flex w-[400px] shrink-0 [backdrop-filter:blur(12px)] flex-col bg-[#0614283D] [outline:1px_solid_#F4F1E94D] [outline-offset:-0.5px] rounded-lg overflow-hidden">
           <div class="p-[24px_24px_18px_24px] flex flex-col gap-1.5">
             <span class="font-mono text-[10px] tracking-[1.2px] text-[#A9C9FF]">[ SPESIFIKASI PANEL ]</span>
             <span class="font-archivo font-bold text-[32px] tracking-[-1.2px] text-cream">RR Board&trade;</span>
@@ -74,56 +72,56 @@
           </div>
           <div class="flex justify-between items-center px-6 py-4 bg-[#F4F1E914] border-t border-[#F4F1E926]">
             <span class="font-inter text-[13px] font-semibold text-cream">Unduh technical datasheet</span>
-            <IconDownload class="w-[15px] h-[15px] text-cream" />
+            <Icon name="lucide:download" class="w-[15px] h-[15px] text-cream" />
           </div>
         </div>
       </div>
 
       <!-- Hero Bottom -->
-      <div class="w-full flex justify-between items-center pt-[26px] border-t border-[#F4F1E933] relative z-[3]">
-        <span class="font-mono text-[10px] tracking-[1.2px] text-[#A9C9FF]">
+      <div class="w-full flex flex-col gap-3 lg:flex-row lg:justify-between lg:items-center pt-5 lg:pt-[26px] border-t border-[#F4F1E933] relative z-[3]" style="gap: 80px">
+        <span class="font-mono text-[8px] lg:text-[10px] tracking-[1.2px] text-[#A9C9FF] hidden lg:block">
           [ SEJAK 2019 &middot; JAKARTA, INDONESIA ]
         </span>
-        <div class="flex items-center gap-[44px]">
-          <div v-for="metric in heroMetrics" :key="metric.label" class="flex items-end gap-2">
-            <span class="font-archivo font-bold text-[18px] tracking-[-0.5px] text-cream whitespace-nowrap">{{ metric.value }}</span>
-            <span class="font-inter text-[12px] text-[#BFD8FF] whitespace-nowrap">{{ metric.label }}</span>
+        <div class="flex items-end gap-4 lg:gap-[44px]">
+          <div v-for="metric in heroMetrics" :key="metric.label" class="flex flex-col items-start lg:flex-row lg:items-end gap-0.5 lg:gap-2">
+            <span class="font-archivo font-bold text-[12px] lg:text-[18px] tracking-[-0.3px] lg:tracking-[-0.5px] text-cream whitespace-nowrap">{{ metric.value }}</span>
+            <span class="font-inter text-[8px] lg:text-[12px] text-[#BFD8FF] whitespace-nowrap">{{ metric.label }}</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- S0b — Proses Produksi -->
-    <section class="w-full flex flex-col gap-7 p-[64px_48px_72px_48px] bg-cream">
+    <section class="w-full flex flex-col gap-5 lg:gap-7 p-[40px_20px] lg:p-[64px_48px_72px_48px] bg-cream">
       <!-- Header -->
-      <div class="w-full flex justify-between items-end gap-[60px]">
+      <div class="w-full flex flex-col gap-2 lg:flex-row lg:justify-between lg:items-end lg:gap-[60px]">
         <span class="font-mono text-[11px] tracking-[1.2px] text-[#005FE7] whitespace-nowrap">[ PROSES ]</span>
-        <span class="font-inter text-sm text-[#061428A6] whitespace-nowrap">
+        <span class="font-inter text-[13px] lg:text-sm text-[#061428A6]">
           Dari sampah sachet sampai panel siap pasang — semua di satu workshop.
         </span>
       </div>
 
       <!-- Process Strip -->
-      <div class="w-full flex gap-4">
-        <div v-for="step in processSteps" :key="step.index" class="flex-1 flex flex-col gap-[14px]">
-          <div class="w-full h-[230px] bg-cover bg-center rounded overflow-hidden"
+      <div class="w-full grid grid-cols-2 lg:flex gap-3 lg:gap-4">
+        <div v-for="step in processSteps" :key="step.index" class="flex-1 flex flex-col gap-3 lg:gap-[14px]">
+          <div class="w-full h-[140px] lg:h-[230px] bg-cover bg-center rounded overflow-hidden"
             :style="{ backgroundImage: `url(${step.image})` }" />
-          <div class="flex flex-col gap-[5px]">
-            <div class="flex items-center gap-[10px]">
-              <span class="font-mono text-[11px] tracking-[1px] text-[#005FE7]">{{ step.index }}</span>
-              <span class="font-archivo font-bold text-[18px] tracking-[-0.5px] text-navy">{{ step.title }}</span>
+          <div class="flex flex-col gap-[4px] lg:gap-[5px]">
+            <div class="flex items-center gap-2 lg:gap-[10px]">
+              <span class="font-mono text-[10px] lg:text-[11px] tracking-[1px] text-[#005FE7]">{{ step.index }}</span>
+              <span class="font-archivo font-bold text-[14px] lg:text-[18px] tracking-[-0.5px] text-navy">{{ step.title }}</span>
             </div>
-            <p class="font-inter text-[13px] leading-[20px] text-[#06142899]">{{ step.desc }}</p>
+            <p class="font-inter text-[11px] lg:text-[13px] leading-[17px] lg:leading-[20px] text-[#06142899]">{{ step.desc }}</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- S1 — What is Repair -->
-    <section id="about" class="w-full flex flex-col gap-14 p-[80px_48px_64px_48px] bg-[#005FE7]">
-      <div class="w-full flex gap-20">
+    <section id="about" class="w-full flex flex-col gap-8 lg:gap-14 p-[48px_20px] lg:p-[80px_48px_64px_48px] bg-[#005FE7]">
+      <div class="w-full flex flex-col gap-6 lg:flex-row lg:gap-20">
         <!-- Left label -->
-        <div class="w-[300px] shrink-0 flex flex-col gap-[14px]">
+        <div class="lg:w-[300px] shrink-0 flex flex-col gap-2 lg:gap-[14px]">
           <span class="font-mono text-[11px] tracking-[1.2px] text-[#CFE0FF]">[ TENTANG REPAIR ]</span>
           <span class="font-inter text-[13px] leading-[20px] text-[#F3EFE4B3]">
             Sejak 2019, mengolah sampah plastik bernilai rendah menjadi material bernilai guna.
@@ -131,19 +129,19 @@
         </div>
 
         <!-- Right copy -->
-        <div class="flex-1 flex flex-col gap-7">
-          <p class="w-full font-archivo font-medium text-[30px] leading-[41px] tracking-[-0.6px] text-cream">
+        <div class="flex-1 flex flex-col gap-6 lg:gap-7">
+          <p class="w-full font-archivo font-medium text-[22px] leading-[30px] lg:text-[30px] lg:leading-[41px] tracking-[-0.6px] text-cream">
             Repair mengumpulkan sachet dan kantong plastik yang ditolak daur ulang, lalu
             menekannya menjadi RR Board: lembaran material permukaan alternatif pengganti kayu
             olahan dan panel sintetis.
           </p>
 
           <!-- Stats -->
-          <div class="flex gap-12">
+          <div class="flex flex-col gap-4 lg:flex-row lg:gap-12">
             <div v-for="stat in aboutStats" :key="stat.label"
-              class="flex-1 flex flex-col gap-1.5">
-              <span class="font-archivo font-semibold text-[38px] tracking-[-1.2px] text-cream whitespace-nowrap">{{ stat.value }}</span>
-              <span class="font-inter text-[13px] leading-[18px] text-[#F3EFE4CC]">{{ stat.label }}</span>
+              class="flex-1 flex flex-row lg:flex-col items-baseline lg:items-start gap-2 lg:gap-1.5">
+              <span class="font-archivo font-semibold text-[28px] lg:text-[38px] tracking-[-1.2px] text-cream whitespace-nowrap">{{ stat.value }}</span>
+              <span class="font-inter text-[12px] lg:text-[13px] leading-[18px] text-[#F3EFE4CC]">{{ stat.label }}</span>
             </div>
           </div>
         </div>
@@ -151,31 +149,34 @@
     </section>
 
     <!-- S1b — What is RR Board -->
-    <section id="rr-board" class="w-full flex gap-16 p-[88px_48px] bg-[#EDF3FE]">
+    <section id="rr-board" class="w-full flex flex-col lg:flex-row gap-8 lg:gap-16 p-[48px_20px] lg:p-[88px_48px] bg-[#EDF3FE]">
       <!-- Left copy -->
-      <div class="flex-1 flex flex-col gap-6">
+      <div class="flex-1 flex flex-col gap-5 lg:gap-6">
         <span class="font-mono text-[11px] tracking-[1.2px] text-[#005FE7]">[ APA ITU RR BOARD ]</span>
-        <h2 class="w-full font-archivo font-bold text-[52px] leading-[56px] tracking-[-2px] text-[#062A5C]">
+        <h2 class="w-full font-archivo font-bold text-[32px] leading-[36px] lg:text-[52px] lg:leading-[56px] tracking-[-1.5px] lg:tracking-[-2px] text-[#062A5C]">
           Papan permukaan dari sachet dan kantong plastik.
         </h2>
-        <p class="w-full font-inter text-base leading-[26px] text-[#062A5CCC]">
-          RR Board dibuat tanpa resin tambahan — plastik dilebur dan ditekan menjadi lembaran
-          padat. Permukaannya bermotif terazo plastik, setiap panel unik, dan bisa dipotong,
-          dibor, serta dirakit seperti panel kayu.
+        <p class="w-full font-inter text-[14px] leading-[22px] lg:text-base lg:leading-[26px] text-[#062A5CCC]">
+          Tanpa resin tambahan. Permukaan bermotif terazo
+          plastik, tiap panel unik, bisa dipotong dan dibor
+          seperti panel kayu.
         </p>
+
+        <!-- Single image on mobile -->
+        <img src="/images/rr-board-terrazzo-blue.jpg" alt="RR Board terrazzo surface" class="lg:hidden w-full h-[240px] object-cover" />
 
         <!-- Specs -->
         <div class="flex flex-col gap-0">
           <div v-for="spec in rrBoardSpecs" :key="spec.key"
-            class="flex justify-between items-center py-[14px] border-t border-[#D6E4FD]">
-            <span class="font-mono text-[11px] tracking-[0.6px] text-[#0044A8]">{{ spec.key }}</span>
-            <span class="font-inter text-sm font-medium text-[#062A5C]">{{ spec.value }}</span>
+            class="flex justify-between items-center py-3 lg:py-[14px] border-t border-[#D6E4FD]">
+            <span class="font-mono text-[10px] lg:text-[11px] tracking-[0.6px] text-[#0044A8]">{{ spec.key }}</span>
+            <span class="font-inter text-[13px] lg:text-sm font-medium text-[#062A5C]">{{ spec.value }}</span>
           </div>
         </div>
       </div>
 
-      <!-- Right media -->
-      <div class="w-[55%] shrink-0 flex flex-col gap-2">
+      <!-- Right media (desktop only) -->
+      <div class="hidden lg:flex w-full lg:w-[55%] shrink-0 flex-col gap-2">
         <img src="/images/rr-board-stack.jpg" alt="RR Board stacked panels" class="w-full h-[320px] object-cover rounded" />
         <div class="flex gap-2">
           <img src="/images/rr-board-terrazzo-colorful.jpg" alt="Terrazzo colorful" class="flex-1 h-[200px] object-cover rounded" />
@@ -185,108 +186,108 @@
     </section>
 
     <!-- S2 — Building Application -->
-    <section id="application" class="w-full flex flex-col gap-12 p-[96px_48px] bg-[#062A5C]">
+    <section id="application" class="w-full flex flex-col gap-8 lg:gap-12 p-[48px_20px] lg:p-[96px_48px] bg-[#062A5C]">
       <!-- Header -->
-      <div class="w-full flex gap-20 items-end">
-        <div class="flex-1 flex flex-col gap-[14px]">
+      <div class="w-full flex flex-col gap-4 lg:flex-row lg:gap-20 lg:items-end">
+        <div class="flex-1 flex flex-col gap-[10px] lg:gap-[14px]">
           <span class="font-mono text-[11px] tracking-[1.2px] text-[#A9C9FF]">[ RR BOARD DALAM BANGUNAN ]</span>
-          <h2 class="w-full font-archivo font-bold text-[46px] leading-[51px] tracking-[-1.8px] text-cream">
+          <h2 class="w-full font-archivo font-bold text-[28px] leading-[32px] lg:text-[46px] lg:leading-[51px] tracking-[-1.2px] lg:tracking-[-1.8px] text-cream">
             RR Board sebagai material bangunan.
           </h2>
         </div>
-        <p class="w-[420px] shrink-0 font-inter text-[15px] leading-6 text-[#F3EFE4A6]">
+        <p class="lg:w-[420px] shrink-0 font-inter text-[13px] leading-[20px] lg:text-[15px] lg:leading-6 text-[#F3EFE4A6]">
           Panel siap pakai untuk kebutuhan arsitektural: kuat, tahan lembap, dan tidak memerlukan finishing tambahan.
         </p>
       </div>
 
       <!-- Application Grid -->
-      <div class="w-full flex gap-6">
+      <div class="w-full flex flex-col lg:flex-row gap-4 lg:gap-6">
         <div v-for="app in buildingApps" :key="app.title" class="flex-1 flex flex-col bg-[#0B3269] overflow-hidden">
-          <img :src="app.image" :alt="app.title" class="w-full h-[340px] object-cover" />
-          <div class="flex flex-col gap-3 p-7">
-            <span class="font-mono text-[11px] tracking-[1px] text-[#A9C9FF]">{{ app.index }}</span>
-            <h3 class="w-full font-archivo font-semibold text-[28px] leading-[32px] tracking-[-0.8px] text-cream">{{ app.title }}</h3>
-            <p class="w-full font-inter text-sm leading-[22px] text-[#F3EFE4A6]">{{ app.desc }}</p>
-            <NuxtLink :to="app.link" class="flex items-center gap-2 pt-2.5">
+          <img :src="app.image" :alt="app.title" class="w-full h-[200px] lg:h-[340px] object-cover" />
+          <div class="flex flex-col gap-2 lg:gap-3 p-5 lg:p-7">
+            <span class="font-mono text-[10px] lg:text-[11px] tracking-[1px] text-[#A9C9FF]">{{ app.index }}</span>
+            <h3 class="w-full font-archivo font-semibold text-[20px] leading-[24px] lg:text-[28px] lg:leading-[32px] tracking-[-0.5px] lg:tracking-[-0.8px] text-cream">{{ app.title }}</h3>
+            <p class="w-full font-inter text-[13px] leading-[20px] lg:text-sm lg:leading-[22px] text-[#F3EFE4A6]">{{ app.desc }}</p>
+            <NuxtLink :to="app.link" class="flex items-center gap-2 pt-1.5 lg:pt-2.5">
               <span class="font-inter text-[13px] font-semibold text-[#A9C9FF]">Lihat aplikasi</span>
-              <IconArrowRight class="w-[15px] h-[15px] text-[#A9C9FF]" />
+              <Icon name="lucide:arrow-right" class="w-[15px] h-[15px] text-[#A9C9FF]" />
             </NuxtLink>
           </div>
         </div>
       </div>
 
       <!-- CTA Row -->
-      <div class="flex items-center gap-3.5">
-        <a href="#" class="flex items-center gap-2.5 px-6 py-[15px] bg-cream">
-          <span class="font-inter text-sm font-semibold text-navy whitespace-nowrap">Go to RR Board page</span>
-          <IconArrowRight class="w-4 h-4 text-navy" />
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 lg:gap-3.5">
+        <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] bg-cream">
+          <span class="font-inter text-[13px] lg:text-sm font-semibold text-navy whitespace-nowrap">Go to RR Board page</span>
+          <Icon name="lucide:arrow-right" class="w-4 h-4 text-navy" />
         </a>
-        <a href="#" class="flex items-center gap-2.5 px-6 py-[15px] [outline:1px_solid_#F3EFE44D] [outline-offset:-0.5px]">
-          <IconMessageCircle class="w-4 h-4 text-cream" />
-          <span class="font-inter text-sm font-semibold text-cream whitespace-nowrap">Diskusikan kebutuhan Anda</span>
+        <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] [outline:1px_solid_#F3EFE44D] [outline-offset:-0.5px]">
+          <Icon name="lucide:message-circle" class="w-4 h-4 text-cream" />
+          <span class="font-inter text-[13px] lg:text-sm font-semibold text-cream whitespace-nowrap">Diskusikan kebutuhan Anda</span>
         </a>
       </div>
     </section>
 
     <!-- S3 — End Product -->
-    <section id="projects" class="w-full flex flex-col gap-12 p-[96px_48px] bg-cream">
+    <section id="projects" class="w-full flex flex-col gap-8 lg:gap-12 p-[48px_20px] lg:p-[96px_48px] bg-cream">
       <!-- Header -->
-      <div class="w-full flex gap-20 items-end">
-        <div class="flex-1 flex flex-col gap-[14px]">
+      <div class="w-full flex flex-col gap-4 lg:flex-row lg:gap-20 lg:items-end">
+        <div class="flex-1 flex flex-col gap-[10px] lg:gap-[14px]">
           <span class="font-mono text-[11px] tracking-[1.2px] text-[#005FE7]">[ RR BOARD SEBAGAI PRODUK ]</span>
-          <h2 class="w-full font-archivo font-bold text-[46px] leading-[51px] tracking-[-1.8px] text-navy">
+          <h2 class="w-full font-archivo font-bold text-[28px] leading-[32px] lg:text-[46px] lg:leading-[51px] tracking-[-1.2px] lg:tracking-[-1.8px] text-navy">
             Bukan hanya lembaran — juga produk jadi.
           </h2>
         </div>
-        <p class="w-[420px] shrink-0 font-inter text-[15px] leading-6 text-[#061428CC]">
+        <p class="lg:w-[420px] shrink-0 font-inter text-[13px] leading-[20px] lg:text-[15px] lg:leading-6 text-[#061428CC]">
           Kami merakit RR Board menjadi furnitur dan perabot siap pakai untuk sekolah, kantor, dan ruang publik.
         </p>
       </div>
 
       <!-- Product Grid -->
-      <div class="w-full flex gap-6">
+      <div class="w-full flex flex-col lg:flex-row gap-4 lg:gap-6">
         <div v-for="product in products" :key="product.title" class="flex-1 flex flex-col bg-white overflow-hidden">
-          <img :src="product.image" :alt="product.title" class="w-full h-[340px] object-cover" />
-          <div class="flex flex-col gap-3 p-7">
-            <span class="font-mono text-[11px] tracking-[1px] text-[#005FE7]">{{ product.index }}</span>
-            <h3 class="w-full font-archivo font-semibold text-[28px] leading-[32px] tracking-[-0.8px] text-navy">{{ product.title }}</h3>
-            <p class="w-full font-inter text-sm leading-[22px] text-[#10201A99]">{{ product.desc }}</p>
-            <NuxtLink :to="product.link" class="flex items-center gap-2 pt-2.5">
+          <img :src="product.image" :alt="product.title" class="w-full h-[200px] lg:h-[340px] object-cover" />
+          <div class="flex flex-col gap-2 lg:gap-3 p-5 lg:p-7">
+            <span class="font-mono text-[10px] lg:text-[11px] tracking-[1px] text-[#005FE7]">{{ product.index }}</span>
+            <h3 class="w-full font-archivo font-semibold text-[20px] leading-[24px] lg:text-[28px] lg:leading-[32px] tracking-[-0.5px] lg:tracking-[-0.8px] text-navy">{{ product.title }}</h3>
+            <p class="w-full font-inter text-[13px] leading-[20px] lg:text-sm lg:leading-[22px] text-[#10201A99]">{{ product.desc }}</p>
+            <NuxtLink :to="product.link" class="flex items-center gap-2 pt-1.5 lg:pt-2.5">
               <span class="font-inter text-[13px] font-semibold text-[#005FE7]">Lihat produk</span>
-              <IconArrowRight class="w-[15px] h-[15px] text-[#005FE7]" />
+              <Icon name="lucide:arrow-right" class="w-[15px] h-[15px] text-[#005FE7]" />
             </NuxtLink>
           </div>
         </div>
       </div>
 
       <!-- CTA Row -->
-      <div class="flex items-center gap-3.5">
-        <NuxtLink to="#projects" class="flex items-center gap-2.5 px-6 py-[15px] bg-[#005FE7]">
-          <span class="font-inter text-sm font-semibold text-cream whitespace-nowrap">Go to Customer Project</span>
-          <IconArrowRight class="w-4 h-4 text-cream" />
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 lg:gap-3.5">
+        <NuxtLink to="#projects" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] bg-[#005FE7]">
+          <span class="font-inter text-[13px] lg:text-sm font-semibold text-cream whitespace-nowrap">Go to Customer Project</span>
+          <Icon name="lucide:arrow-right" class="w-4 h-4 text-cream" />
         </NuxtLink>
-        <a href="#" class="flex items-center gap-2.5 px-6 py-[15px] [outline:1px_solid_#06142833] [outline-offset:-0.5px]">
-          <IconMessageCircle class="w-4 h-4 text-navy" />
-          <span class="font-inter text-sm font-semibold text-navy whitespace-nowrap">Diskusikan kebutuhan Anda</span>
+        <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] [outline:1px_solid_#06142833] [outline-offset:-0.5px]">
+          <Icon name="lucide:message-circle" class="w-4 h-4 text-navy" />
+          <span class="font-inter text-[13px] lg:text-sm font-semibold text-navy whitespace-nowrap">Diskusikan kebutuhan Anda</span>
         </a>
       </div>
     </section>
 
     <!-- S4 — Our Clients -->
-    <section class="w-full flex flex-col gap-10 p-[72px_48px] bg-[#E3DFD3]">
+    <section class="w-full flex flex-col gap-6 lg:gap-10 p-[48px_20px] lg:p-[72px_48px] bg-[#E3DFD3]">
       <!-- Header -->
-      <div class="w-full flex justify-between items-end">
+      <div class="w-full flex flex-col gap-2 lg:flex-row lg:justify-between lg:items-end">
         <span class="font-mono text-[11px] tracking-[1.2px] text-[#06142899] whitespace-nowrap">[ OUR CLIENTS ]</span>
-        <span class="font-inter text-sm text-[#061428CC] whitespace-nowrap">
+        <span class="font-inter text-[12px] lg:text-sm text-[#061428CC]">
           Dipercaya arsitek, kontraktor, dan brand yang serius soal material.
         </span>
       </div>
 
       <!-- Logo Rows -->
-      <div v-for="(row, i) in clientRows" :key="i" class="w-full flex">
+      <div v-for="(row, i) in clientRows" :key="i" class="w-full grid grid-cols-2 lg:flex">
         <div v-for="client in row" :key="client"
-          class="flex-1 h-[87px] flex items-center justify-center border-y border-[#0614281F]">
-          <span class="font-archivo font-bold text-[22px] tracking-[-0.5px] text-[#06142880] whitespace-nowrap">{{ client }}</span>
+          class="flex-1 h-[60px] lg:h-[87px] flex items-center justify-center border-y border-[#0614281F]">
+          <span class="font-archivo font-bold text-[16px] lg:text-[22px] tracking-[-0.5px] text-[#06142880] whitespace-nowrap">{{ client }}</span>
         </div>
       </div>
     </section>
