@@ -2,7 +2,7 @@
   <!-- Fixed wrapper -->
   <nav
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
-    :class="scrolled && !menuOpen
+    :class="solid && !menuOpen
       ? 'bg-white/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.08)]'
       : menuOpen
         ? 'bg-[#005FE7]'
@@ -15,7 +15,7 @@
           src="/logo.png"
           alt="Repair Material Studio"
           class="h-[28px] lg:h-[36px] w-auto"
-          :class="scrolled && !menuOpen ? 'invert' : ''"
+          :class="solid && !menuOpen ? 'invert' : ''"
         />
       </NuxtLink>
 
@@ -24,7 +24,7 @@
         <NuxtLink
           v-for="link in links" :key="link.label" :to="link.to"
           class="font-inter text-[13px] whitespace-nowrap"
-          :class="scrolled ? 'text-navy' : 'text-cream'"
+          :class="solid ? 'text-navy' : 'text-cream'"
         >
           {{ link.label }}
         </NuxtLink>
@@ -35,19 +35,19 @@
         <!-- Lang Switch -->
         <div
           class="flex items-center gap-[2px] p-[3px] rounded-full"
-          :class="scrolled && !menuOpen
+          :class="solid && !menuOpen
             ? '[outline:1px_solid_#06142833] [outline-offset:-0.5px]'
             : '[outline:1px_solid_#F4F1E966] [outline-offset:-0.5px]'"
         >
           <button
             class="font-mono text-[11px] font-semibold tracking-[0.5px] px-2.5 lg:px-3 py-1 lg:py-1.5 rounded-full whitespace-nowrap"
-            :class="scrolled && !menuOpen ? 'bg-navy text-cream' : 'bg-cream text-navy'"
+            :class="solid && !menuOpen ? 'bg-navy text-cream' : 'bg-cream text-navy'"
           >
             ID
           </button>
           <button
             class="font-mono text-[11px] font-semibold tracking-[0.5px] px-2.5 lg:px-3 py-1 lg:py-1.5 whitespace-nowrap bg-transparent"
-            :class="scrolled && !menuOpen ? 'text-navy/40' : 'text-[#D8E5FF]'"
+            :class="solid && !menuOpen ? 'text-navy/40' : 'text-[#D8E5FF]'"
           >
             EN
           </button>
@@ -57,7 +57,7 @@
         <NuxtLink
           to="#contact"
           class="hidden lg:flex items-center gap-2 px-[18px] py-[11px]"
-          :class="scrolled ? '[outline:1px_solid_#06142833] [outline-offset:-0.5px]' : 'bg-cream'"
+          :class="solid ? '[outline:1px_solid_#06142833] [outline-offset:-0.5px]' : 'bg-cream'"
         >
           <span class="font-inter text-[13px] font-semibold text-navy whitespace-nowrap">
             Hubungi Kami
@@ -68,7 +68,7 @@
         <!-- Mobile menu button -->
         <button
           class="lg:hidden flex items-center justify-center w-10 h-10 rounded-full"
-          :class="scrolled && !menuOpen ? 'bg-[#005FE7]' : menuOpen ? 'bg-navy' : 'bg-[#005FE7]'"
+          :class="solid && !menuOpen ? 'bg-[#005FE7]' : menuOpen ? 'bg-navy' : 'bg-[#005FE7]'"
           @click="menuOpen = !menuOpen"
         >
           <Icon v-if="menuOpen" name="lucide:x" class="w-4 h-4 text-cream" />
@@ -121,14 +121,17 @@
 </template>
 
 <script setup lang="ts">
+const route = useRoute()
+const isHome = computed(() => route.path === '/')
 const scrolled = ref(false)
 const menuOpen = ref(false)
+const solid = computed(() => !isHome.value || scrolled.value)
 
 const links = [
-  { label: 'RR Board', to: '#rr-board' },
-  { label: 'Application', to: '#application' },
-  { label: 'Projects', to: '#projects' },
-  { label: 'About', to: '#about' },
+  { label: 'RR Board', to: '/rr-board' },
+  { label: 'Application', to: '/application' },
+  { label: 'Projects', to: '/projects' },
+  { label: 'About', to: '/about' },
 ]
 
 onMounted(() => {
