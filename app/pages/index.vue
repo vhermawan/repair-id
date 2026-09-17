@@ -6,8 +6,8 @@
       <img src="/images/hero-bg.webp" alt="Repair workshop" class="absolute inset-0 w-full h-full object-cover z-0" />
 
       <!-- Hero Scrim -->
-      <div class="absolute inset-0 bg-[#005FE7C7] mix-blend-multiply z-[1]" />
-      <div class="absolute inset-0 [background-image:linear-gradient(95.456deg,_#062A5CE6_2.755%,_#0044A87A_50%,_#005FE71F_97.245%)] z-[2]" />
+      <div class="absolute inset-0 bg-[#00000050] mix-blend-multiply z-[1]" />
+      <div class="absolute inset-0 [background-image:linear-gradient(95.456deg,_#00000070_2.755%,_#00000035_50%,_#00000010_97.245%)] z-[2]" />
 
       <!-- Nav spacer (navbar is now fixed) -->
       <div class="h-0 relative z-[3]" />
