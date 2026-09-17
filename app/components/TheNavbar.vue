@@ -23,7 +23,7 @@
       <div class="hidden lg:flex items-center gap-[34px]">
         <NuxtLink
           v-for="link in links" :key="link.label" :to="link.to"
-          class="font-inter text-[13px] whitespace-nowrap"
+          class="font-dm-sans text-[13px] whitespace-nowrap"
           :class="solid ? 'text-navy' : 'text-cream'"
         >
           {{ link.label }}
@@ -59,7 +59,7 @@
           class="hidden lg:flex items-center gap-2 px-[18px] py-[11px]"
           :class="solid ? '[outline:1px_solid_#06142833] [outline-offset:-0.5px]' : 'bg-cream'"
         >
-          <span class="font-inter text-[13px] font-semibold text-navy whitespace-nowrap">
+          <span class="font-dm-sans text-[13px] font-semibold text-navy whitespace-nowrap">
             Hubungi Kami
           </span>
           <Icon name="lucide:arrow-up-right" class="w-[15px] h-[15px] text-navy" />
@@ -99,7 +99,7 @@
           >
             <div class="flex items-center gap-3">
               <span class="font-mono text-[11px] tracking-[0.5px] text-[#A9C9FF]">{{ String(i + 1).padStart(2, '0') }}</span>
-              <span class="font-archivo font-bold text-[28px] tracking-[-0.8px] text-cream">{{ link.label }}</span>
+              <span class="font-dm-sans font-bold text-[28px] tracking-[-0.8px] text-cream">{{ link.label }}</span>
             </div>
             <Icon name="lucide:arrow-up-right" class="w-5 h-5 text-cream" />
           </NuxtLink>
@@ -109,7 +109,7 @@
         <div class="flex flex-col gap-4">
           <a href="#" class="flex items-center justify-center gap-2.5 px-5 py-[15px] bg-cream rounded-sm">
             <Icon name="lucide:message-circle" class="w-4 h-4 text-navy" />
-            <span class="font-inter text-[13px] font-semibold text-navy whitespace-nowrap">Chat via WhatsApp</span>
+            <span class="font-dm-sans text-[13px] font-semibold text-navy whitespace-nowrap">Chat via WhatsApp</span>
           </a>
           <span class="font-mono text-[11px] tracking-[0.5px] text-[#A9C9FF] text-center">
             halo@repair.id · +62 812 0000 0000

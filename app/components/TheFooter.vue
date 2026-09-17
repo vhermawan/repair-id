@@ -4,16 +4,16 @@
     <div class="w-full flex flex-col gap-8 lg:flex-row lg:gap-20">
       <!-- Copy -->
       <div class="flex-1 flex flex-col gap-5 lg:gap-6">
-        <h2 class="w-full text-cream font-archivo font-bold text-[28px] leading-[32px] lg:text-[54px] lg:leading-[57px] tracking-[-1.2px] lg:tracking-[-2.2px]">
+        <h2 class="w-full text-cream font-dm-sans font-bold text-[28px] leading-[32px] lg:text-[54px] lg:leading-[57px] tracking-[-1.2px] lg:tracking-[-2.2px]">
           Punya proyek? Kirim kebutuhan Anda, kami hitung bersama.
         </h2>
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 lg:gap-3.5">
           <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] bg-cream">
-            <span class="font-inter text-[13px] lg:text-sm font-semibold text-navy whitespace-nowrap">Chat via WhatsApp</span>
+            <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-navy whitespace-nowrap">Chat via WhatsApp</span>
             <Icon name="lucide:message-circle" class="w-4 h-4 text-navy" />
           </a>
           <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] [outline:1px_solid_#F3EFE44D] [outline-offset:-0.5px]">
-            <span class="font-inter text-[13px] lg:text-sm font-semibold text-cream whitespace-nowrap">Unduh katalog RR Board</span>
+            <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-cream whitespace-nowrap">Unduh katalog RR Board</span>
           </a>
         </div>
       </div>
@@ -22,7 +22,7 @@
       <div class="lg:w-80 shrink-0 flex flex-col gap-4 lg:gap-[18px]">
         <div v-for="item in contacts" :key="item.key" class="w-full flex flex-col gap-[4px] lg:gap-[5px]">
           <span class="font-mono text-[10px] tracking-[1.2px] text-[#A9C9FF] whitespace-nowrap">{{ item.key }}</span>
-          <span class="w-full font-inter text-[13px] lg:text-sm leading-[21px] text-cream">{{ item.value }}</span>
+          <span class="w-full font-dm-sans text-[13px] lg:text-sm leading-[21px] text-cream">{{ item.value }}</span>
         </div>
       </div>
     </div>

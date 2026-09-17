@@ -15,8 +15,7 @@ export default {
         },
       },
       fontFamily: {
-        archivo: ['Archivo', 'system-ui', 'sans-serif'],
-        inter: ['Inter', 'system-ui', 'sans-serif'],
+        'dm-sans': ['DM Sans', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'system-ui', 'sans-serif'],
         serif: ['Instrument Serif', 'serif'],
       },

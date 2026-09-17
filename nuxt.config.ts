@@ -9,8 +9,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxt/icon'],
   googleFonts: {
     families: {
-      'Archivo': { wght: '100..900' },
-      'Inter': { wght: '100..900' },
+      'DM Sans': { wght: '100..1000' },
       'JetBrains Mono': { wght: '100..800' },
       'Instrument Serif': { ital: [400] },
     },
