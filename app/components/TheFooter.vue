@@ -5,15 +5,15 @@
       <!-- Copy -->
       <div class="flex-1 flex flex-col gap-5 lg:gap-6">
         <h2 class="w-full text-cream font-dm-sans font-bold text-[28px] leading-[32px] lg:text-[54px] lg:leading-[57px] tracking-[-1.2px] lg:tracking-[-2.2px]">
-          Punya proyek? Kirim kebutuhan Anda, kami hitung bersama.
+          {{ t('footer.heading') }}
         </h2>
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 lg:gap-3.5">
           <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] bg-cream">
-            <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-navy whitespace-nowrap">Chat via WhatsApp</span>
+            <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-navy whitespace-nowrap">{{ t('footer.ctaWhatsapp') }}</span>
             <Icon name="lucide:message-circle" class="w-4 h-4 text-navy" />
           </a>
           <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] [outline:1px_solid_#F3EFE44D] [outline-offset:-0.5px]">
-            <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-cream whitespace-nowrap">Unduh katalog RR Board</span>
+            <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-cream whitespace-nowrap">{{ t('footer.ctaCatalog') }}</span>
           </a>
         </div>
       </div>
@@ -35,13 +35,15 @@
         class="h-[48px] lg:h-[96px] w-auto opacity-10"
       />
       <span class="font-mono text-[9px] lg:text-[10px] tracking-[0.8px] text-[#F3EFE480] whitespace-nowrap">
-        &copy; 2026 Repair Material Studio
+        {{ t('footer.copyright') }}
       </span>
     </div>
   </footer>
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 const contacts = [
   { key: 'WORKSHOP', value: 'Jl. Raya Bogor KM 27, Jakarta Timur' },
   { key: 'EMAIL', value: 'halo@repair.id' },

@@ -22,11 +22,11 @@
       <!-- Desktop Nav Links -->
       <div class="hidden lg:flex items-center gap-[34px]">
         <NuxtLink
-          v-for="link in links" :key="link.label" :to="link.to"
+          v-for="link in links" :key="link.to" :to="link.to"
           class="font-dm-sans text-[13px] whitespace-nowrap"
           :class="solid ? 'text-navy' : 'text-cream'"
         >
-          {{ link.label }}
+          {{ t(link.labelKey) }}
         </NuxtLink>
       </div>
 
@@ -40,14 +40,20 @@
             : '[outline:1px_solid_#F4F1E966] [outline-offset:-0.5px]'"
         >
           <button
-            class="font-mono text-[11px] font-semibold tracking-[0.5px] px-2.5 lg:px-3 py-1 lg:py-1.5 rounded-full whitespace-nowrap"
-            :class="solid && !menuOpen ? 'bg-navy text-cream' : 'bg-cream text-navy'"
+            class="font-mono text-[11px] font-semibold tracking-[0.5px] px-2.5 lg:px-3 py-1 lg:py-1.5 rounded-full whitespace-nowrap transition-colors"
+            :class="locale === 'id'
+              ? (solid && !menuOpen ? 'bg-navy text-cream' : 'bg-cream text-navy')
+              : (solid && !menuOpen ? 'text-navy/40' : 'text-[#D8E5FF]') + ' bg-transparent'"
+            @click="setLocale('id')"
           >
             ID
           </button>
           <button
-            class="font-mono text-[11px] font-semibold tracking-[0.5px] px-2.5 lg:px-3 py-1 lg:py-1.5 whitespace-nowrap bg-transparent"
-            :class="solid && !menuOpen ? 'text-navy/40' : 'text-[#D8E5FF]'"
+            class="font-mono text-[11px] font-semibold tracking-[0.5px] px-2.5 lg:px-3 py-1 lg:py-1.5 rounded-full whitespace-nowrap transition-colors"
+            :class="locale === 'en'
+              ? (solid && !menuOpen ? 'bg-navy text-cream' : 'bg-cream text-navy')
+              : (solid && !menuOpen ? 'text-navy/40' : 'text-[#D8E5FF]') + ' bg-transparent'"
+            @click="setLocale('en')"
           >
             EN
           </button>
@@ -60,7 +66,7 @@
           :class="solid ? '[outline:1px_solid_#06142833] [outline-offset:-0.5px]' : 'bg-cream'"
         >
           <span class="font-dm-sans text-[13px] font-semibold text-navy whitespace-nowrap">
-            Hubungi Kami
+            {{ t('nav.contact') }}
           </span>
           <Icon name="lucide:arrow-up-right" class="w-[15px] h-[15px] text-navy" />
         </NuxtLink>
@@ -99,7 +105,7 @@
           >
             <div class="flex items-center gap-3">
               <span class="font-mono text-[11px] tracking-[0.5px] text-[#A9C9FF]">{{ String(i + 1).padStart(2, '0') }}</span>
-              <span class="font-dm-sans font-bold text-[28px] tracking-[-0.8px] text-cream">{{ link.label }}</span>
+              <span class="font-dm-sans font-bold text-[28px] tracking-[-0.8px] text-cream">{{ t(link.labelKey) }}</span>
             </div>
             <Icon name="lucide:arrow-up-right" class="w-5 h-5 text-cream" />
           </NuxtLink>
@@ -109,10 +115,10 @@
         <div class="flex flex-col gap-4">
           <a href="#" class="flex items-center justify-center gap-2.5 px-5 py-[15px] bg-cream rounded-sm">
             <Icon name="lucide:message-circle" class="w-4 h-4 text-navy" />
-            <span class="font-dm-sans text-[13px] font-semibold text-navy whitespace-nowrap">Chat via WhatsApp</span>
+            <span class="font-dm-sans text-[13px] font-semibold text-navy whitespace-nowrap">{{ t('nav.whatsapp') }}</span>
           </a>
           <span class="font-mono text-[11px] tracking-[0.5px] text-[#A9C9FF] text-center">
-            halo@repair.id · +62 812 0000 0000
+            {{ t('nav.contactInfo') }}
           </span>
         </div>
       </div>
@@ -121,6 +127,7 @@
 </template>
 
 <script setup lang="ts">
+const { t, locale, setLocale } = useI18n()
 const route = useRoute()
 const isHome = computed(() => route.path === '/')
 const scrolled = ref(false)
@@ -128,10 +135,10 @@ const menuOpen = ref(false)
 const solid = computed(() => !isHome.value || scrolled.value)
 
 const links = [
-  { label: 'RR Board', to: '/rr-board' },
-  { label: 'Application', to: '/application' },
-  { label: 'Projects', to: '/projects' },
-  { label: 'About', to: '/about' },
+  { labelKey: 'nav.rrBoard', to: '/rr-board' },
+  { labelKey: 'nav.application', to: '/application' },
+  { labelKey: 'nav.projects', to: '/projects' },
+  { labelKey: 'nav.about', to: '/about' },
 ]
 
 onMounted(() => {
