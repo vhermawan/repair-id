@@ -1,6 +1,11 @@
 <template>
   <section class="w-full flex flex-col gap-12 lg:gap-[72px] p-[64px_20px] lg:p-[96px_48px] bg-cream">
-    <div class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:items-end">
+    <div
+      v-motion
+      :initial="{ opacity: 0, y: 32 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
+      class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:items-end"
+    >
       <div class="flex-1 flex flex-col gap-3 lg:gap-[14px]">
         <span class="font-mono text-[11px] tracking-[1.3px] text-blue-accent">
           {{ t('rrPage.s1.tag') }}
@@ -15,7 +20,12 @@
     </div>
 
     <div class="w-full flex flex-col lg:flex-row gap-10 lg:gap-[64px]">
-      <div class="w-full lg:w-[640px] shrink-0 flex flex-col gap-7">
+      <div
+        v-motion
+        :initial="{ opacity: 0, x: 40 }"
+        :visible-once="{ opacity: 1, x: 0, transition: { duration: 700, delay: 100 } }"
+        class="w-full lg:w-[640px] shrink-0 flex flex-col gap-7"
+      >
         <p class="font-dm-sans text-[15px] leading-[26px] lg:text-base lg:leading-[27px] text-navy">
           {{ t('rrPage.s1.body1') }}
         </p>
@@ -34,7 +44,12 @@
         </div>
       </div>
 
-      <div class="flex-1 flex flex-col gap-3">
+      <div
+        v-motion
+        :initial="{ opacity: 0, x: -40 }"
+        :visible-once="{ opacity: 1, x: 0, transition: { duration: 700, delay: 200 } }"
+        class="flex-1 flex flex-col gap-3"
+      >
         <div class="w-full h-[280px] lg:h-[420px] bg-navy/10 rounded-sm" />
         <div class="flex gap-3">
           <div class="flex-1 h-[120px] lg:h-[150px] bg-navy/10 rounded-sm" />
@@ -44,7 +59,12 @@
     </div>
 
     <div class="flex flex-col gap-7 pt-14 border-t border-navy/8">
-      <div class="w-full flex flex-col lg:flex-row gap-4 lg:justify-between lg:items-end">
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 32 }"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
+        class="w-full flex flex-col lg:flex-row gap-4 lg:justify-between lg:items-end"
+      >
         <span class="font-mono text-[11px] tracking-[1.3px] text-blue-accent">
           {{ t('rrPage.process.tag') }}
         </span>
@@ -54,7 +74,13 @@
       </div>
 
       <div class="w-full grid grid-cols-2 lg:grid-cols-5 gap-4">
-        <div v-for="step in processSteps" :key="step.index" class="flex flex-col gap-3.5">
+        <div
+          v-for="(step, i) in processSteps" :key="step.index"
+          v-motion
+          :initial="{ opacity: 0, y: 24 }"
+          :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: 100 + i * 100 } }"
+          class="flex flex-col gap-3.5"
+        >
           <div class="w-full h-[160px] lg:h-[200px] bg-navy/10 rounded" />
           <div class="flex flex-col gap-[5px]">
             <div class="flex items-center gap-2.5">

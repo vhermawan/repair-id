@@ -1,6 +1,11 @@
 <template>
   <section id="application" class="w-full flex flex-col gap-8 lg:gap-12 p-[48px_20px] lg:p-[96px_48px] bg-[#062A5C]">
-    <div class="w-full flex flex-col gap-4 lg:flex-row lg:gap-20 lg:items-end">
+    <div
+      v-motion
+      :initial="{ opacity: 0, y: 32 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
+      class="w-full flex flex-col gap-4 lg:flex-row lg:gap-20 lg:items-end"
+    >
       <div class="flex-1 flex flex-col gap-[10px] lg:gap-[14px]">
         <span class="font-mono text-[11px] tracking-[1.2px] text-[#A9C9FF]">{{ t('building.tag') }}</span>
         <h2 class="w-full font-dm-sans font-bold text-[28px] leading-[32px] lg:text-[46px] lg:leading-[51px] tracking-[-1.2px] lg:tracking-[-1.8px] text-cream">
@@ -13,8 +18,16 @@
     </div>
 
     <div class="w-full flex flex-col lg:flex-row gap-4 lg:gap-6">
-      <div v-for="app in buildingApps" :key="app.titleKey" class="flex-1 flex flex-col bg-[#0B3269] overflow-hidden">
-        <img :src="app.image" :alt="t(app.titleKey)" class="w-full h-[200px] lg:h-[340px] object-cover" />
+      <div
+        v-for="(app, i) in buildingApps" :key="app.titleKey"
+        v-motion
+        :initial="{ opacity: 0, y: 24 }"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: 100 + i * 150 } }"
+        class="flex-1 flex flex-col bg-[#0B3269] overflow-hidden"
+      >
+        <div class="h-[200px] lg:h-[340px] overflow-hidden">
+          <img :src="app.image" :alt="t(app.titleKey)" class="parallax-card-img w-full h-full object-cover" />
+        </div>
         <div class="flex flex-col gap-2 lg:gap-3 p-5 lg:p-7">
           <span class="font-mono text-[10px] lg:text-[11px] tracking-[1px] text-[#A9C9FF]">{{ app.index }}</span>
           <h3 class="w-full font-dm-sans font-semibold text-[20px] leading-[24px] lg:text-[28px] lg:leading-[32px] tracking-[-0.5px] lg:tracking-[-0.8px] text-cream">{{ t(app.titleKey) }}</h3>
@@ -27,7 +40,12 @@
       </div>
     </div>
 
-    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 lg:gap-3.5">
+    <div
+      v-motion
+      :initial="{ opacity: 0, y: 24 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: 300 } }"
+      class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 lg:gap-3.5"
+    >
       <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] bg-cream">
         <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-navy whitespace-nowrap">{{ t('building.ctaBoard') }}</span>
         <Icon name="lucide:arrow-right" class="w-4 h-4 text-navy" />

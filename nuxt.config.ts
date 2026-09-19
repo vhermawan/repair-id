@@ -1,12 +1,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  css: ['~/assets/css/animations.css'],
   app: {
     head: {
       title: 'Repair Material Studio',
     },
   },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxt/icon'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', '@nuxt/icon', '@vueuse/motion/nuxt'],
   googleFonts: {
     families: {
       'DM Sans': { wght: '100..1000' },

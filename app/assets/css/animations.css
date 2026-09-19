@@ -1,0 +1,49 @@
+/* ── Hero Entrance (on load, no scroll) ── */
+.hero-entrance {
+  animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.hero-entrance-delay-1 { animation-delay: 0.15s; }
+.hero-entrance-delay-2 { animation-delay: 0.3s; }
+.hero-entrance-delay-3 { animation-delay: 0.5s; }
+.hero-entrance-delay-4 { animation-delay: 0.7s; }
+
+/* ── Parallax ── */
+.parallax-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-img {
+  position: absolute;
+  inset: -20% 0;
+  width: 100%;
+  height: 140%;
+  object-fit: cover;
+  will-change: transform;
+}
+
+.parallax-card-img {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-entrance {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .parallax-img,
+  .parallax-card-img {
+    transform: none !important;
+  }
+}

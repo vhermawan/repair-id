@@ -1,6 +1,11 @@
 <template>
   <section class="w-full flex flex-col gap-10 lg:gap-14 p-[64px_20px] lg:p-[96px_48px] bg-cream">
-    <div class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:items-end">
+    <div
+      v-motion
+      :initial="{ opacity: 0, y: 32 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
+      class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:items-end"
+    >
       <div class="flex-1 flex flex-col gap-3 lg:gap-[14px]">
         <span class="font-mono text-[11px] tracking-[1.3px] text-blue-accent">
           {{ t('rrPage.s4.tag') }}
@@ -16,7 +21,10 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[18px]">
       <div
-        v-for="app in applications" :key="app.index"
+        v-for="(app, i) in applications" :key="app.index"
+        v-motion
+        :initial="{ opacity: 0, y: 24 }"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: i * 120 } }"
         class="flex flex-col bg-white overflow-hidden"
       >
         <div class="w-full h-[200px] lg:h-[300px] bg-navy/10" />
@@ -36,7 +44,12 @@
       </div>
     </div>
 
-    <div class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[60px] lg:justify-between lg:items-end pt-14 border-t border-navy/8">
+    <div
+      v-motion
+      :initial="{ opacity: 0, y: 32 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600, delay: 200 } }"
+      class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[60px] lg:justify-between lg:items-end pt-14 border-t border-navy/8"
+    >
       <div class="flex-1 flex flex-col gap-2.5 max-w-[680px]">
         <h3 class="font-dm-sans font-bold text-[26px] leading-[30px] lg:text-[34px] lg:leading-[39px] tracking-[-1px] lg:tracking-[-1.4px] text-navy">
           {{ t('rrPage.s4.ctaHeading') }}

@@ -1,6 +1,11 @@
 <template>
   <section class="w-full flex flex-col gap-10 lg:gap-14 p-[64px_20px] lg:p-[96px_48px] bg-navy-deep">
-    <div class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:items-end">
+    <div
+      v-motion
+      :initial="{ opacity: 0, y: 32 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
+      class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:items-end"
+    >
       <div class="flex-1 flex flex-col gap-3 lg:gap-[14px]">
         <span class="font-mono text-[11px] tracking-[1.3px] text-[#A9C9FF]">
           {{ t('rrPage.s2.tag') }}
@@ -16,7 +21,10 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
       <div
-        v-for="val in coreValues" :key="val.index"
+        v-for="(val, i) in coreValues" :key="val.index"
+        v-motion
+        :initial="{ opacity: 0, y: 24 }"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: i * 100 } }"
         class="flex flex-col gap-4 pt-6 border-t border-cream/18"
       >
         <span class="font-mono text-[11px] tracking-[1px] text-[#A9C9FF99]">{{ val.index }}</span>

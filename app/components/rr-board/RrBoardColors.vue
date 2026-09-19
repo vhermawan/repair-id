@@ -1,6 +1,11 @@
 <template>
   <section class="w-full flex flex-col gap-10 lg:gap-14 p-[64px_20px] lg:p-[96px_48px] bg-[#EDF3FE]">
-    <div class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:items-end">
+    <div
+      v-motion
+      :initial="{ opacity: 0, y: 32 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
+      class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:items-end"
+    >
       <div class="flex-1 flex flex-col gap-3 lg:gap-[14px]">
         <span class="font-mono text-[11px] tracking-[1.3px] text-blue-accent">
           {{ t('rrPage.s3.tag') }}
@@ -15,7 +20,13 @@
     </div>
 
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
-      <div v-for="swatch in swatches" :key="swatch.code" class="flex flex-col gap-3">
+      <div
+        v-for="(swatch, i) in swatches" :key="swatch.code"
+        v-motion
+        :initial="{ opacity: 0, scale: 0.9 }"
+        :visible-once="{ opacity: 1, scale: 1, transition: { duration: 500, delay: i * 80 } }"
+        class="flex flex-col gap-3"
+      >
         <div class="w-full h-[140px] lg:h-[190px] rounded-sm" :style="{ backgroundColor: swatch.color }" />
         <div class="flex flex-col gap-1">
           <div class="flex justify-between items-center">
@@ -27,7 +38,12 @@
       </div>
     </div>
 
-    <div class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[60px] lg:justify-between lg:items-center p-8 lg:p-10 bg-navy-deep">
+    <div
+      v-motion
+      :initial="{ opacity: 0, scale: 0.95 }"
+      :visible-once="{ opacity: 1, scale: 1, transition: { duration: 600, delay: 200 } }"
+      class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[60px] lg:justify-between lg:items-center p-8 lg:p-10 bg-navy-deep"
+    >
       <div class="flex-1 flex flex-col gap-2.5 max-w-[640px]">
         <h3 class="font-dm-sans font-bold text-[24px] leading-[28px] lg:text-[30px] lg:leading-[35px] tracking-[-1px] lg:tracking-[-1.2px] text-cream">
           {{ t('rrPage.s3.ctaHeading') }}
