@@ -189,6 +189,60 @@ export default {
   'swatch.graphite': 'Matte \u00B7 speckle halus',
   'swatch.midnight': 'Matte \u00B7 speckle halus',
 
+  // Projects page — Hero
+  'projectsPage.heroTag': '[ PROJECTS & SERVICES ]',
+  'projectsPage.heroTitle': 'Dari papan jadi, sampai proyek yang dibangun bareng komunitas.',
+  'projectsPage.heroBody': 'Tiga cara bekerja dengan Repair: beli produk jadi, pesan produk custom, atau jalankan program CSR berbasis material daur ulang.',
+  'projectsPage.heroStat': '[ 3 LAYANAN · 12+ PROYEK TERPASANG ]',
+  'projectsPage.heroScroll': '(scroll down)',
+
+  // Projects page — S1 Services
+  'projectsPage.s1.tag': '[ APA ITU PROJECTS ]',
+  'projectsPage.s1.heading': 'Tiga jalur kerja sama.',
+  'projectsPage.s1.subtitle': 'Semua berangkat dari material yang sama — RR Board. Yang berbeda hanya seberapa jauh kami ikut merancang dan membangun bersama Anda.',
+  'projectsPage.s1.a.title': 'End Product',
+  'projectsPage.s1.a.desc': 'Produk jadi siap kirim — papan, furnitur kecil, dan merchandise. Harga tetap, stok siap, pengiriman lewat marketplace atau order langsung.',
+  'projectsPage.s1.a.meta': 'Stok siap · 1–3 hari kirim',
+  'projectsPage.s1.a.cta1': 'Beli di Shopee',
+  'projectsPage.s1.a.cta2': 'Order via WhatsApp',
+  'projectsPage.s1.b.title': 'Custom Product',
+  'projectsPage.s1.b.desc': 'Ukuran, warna, dan bentuk mengikuti kebutuhan Anda. Kami bantu dari sampel material sampai produksi batch.',
+  'projectsPage.s1.b.meta': 'MOQ fleksibel · 2–4 minggu',
+  'projectsPage.s1.b.cta1': 'Diskusi custom di WhatsApp',
+  'projectsPage.s1.c.title': 'Project CSR Based',
+  'projectsPage.s1.c.desc': 'Program berbasis dampak: pengumpulan sampah plastik mitra Anda diolah jadi produk yang kembali ke komunitas.',
+  'projectsPage.s1.c.meta': 'Skema kolaborasi · per program',
+  'projectsPage.s1.c.cta1': 'Ajukan program CSR',
+
+  // Projects page — S2 Gallery
+  'projectsPage.s2.tag': '[ USE CASE & KLIEN ]',
+  'projectsPage.s2.heading': 'Yang sudah kami kerjakan.',
+  'projectsPage.s2.subtitle': 'Tiga cerita dengan skala dan kebutuhan berbeda — warung, sekolah, dan program hibah.',
+  'projectsPage.s2.card1.title': 'Warung Kang Darka',
+  'projectsPage.s2.card1.loc': 'Bandung · End Product',
+  'projectsPage.s2.card2.title': 'SD Milo Cikal',
+  'projectsPage.s2.card2.loc': 'Jakarta · Custom Product',
+  'projectsPage.s2.card3.title': 'Mess Pekerja RBU',
+  'projectsPage.s2.card3.loc': 'Bekasi · Project CSR',
+  'projectsPage.s2.card4.title': 'Toilet Cubicle Pasar',
+  'projectsPage.s2.card4.loc': 'Depok · Custom Product',
+  'projectsPage.s2.card5.title': 'Booth Bazar Milo',
+  'projectsPage.s2.card5.loc': 'Tangerang · End Product',
+  'projectsPage.s2.filterAll': 'Semua',
+  'projectsPage.s2.filterEnd': 'End Product',
+  'projectsPage.s2.filterCustom': 'Custom',
+  'projectsPage.s2.filterCsr': 'CSR',
+  'projectsPage.s2.hint': '[ GESER UNTUK LIHAT SEMUA ]',
+
+  // Projects page — Clients
+  'projectsPage.clients.tag': '[ DIPERCAYA OLEH ]',
+
+  // Projects page — CTA
+  'projectsPage.cta.heading': 'Konsultasikan kebutuhan Anda, kami hitung harganya.',
+  'projectsPage.cta.body': 'Kirim ukuran, lokasi, dan target waktu — balasan estimasi dalam 1×24 jam kerja.',
+  'projectsPage.cta.whatsapp': 'Tanya harga via WhatsApp',
+  'projectsPage.cta.catalog': 'Lihat katalog produk jadi',
+
   // Stub pages
   'page.about': 'Tentang',
   'page.projects': 'Proyek',

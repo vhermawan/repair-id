@@ -189,6 +189,60 @@ export default {
   'swatch.graphite': 'Matte \u00B7 fine speckle',
   'swatch.midnight': 'Matte \u00B7 fine speckle',
 
+  // Projects page — Hero
+  'projectsPage.heroTag': '[ PROJECTS & SERVICES ]',
+  'projectsPage.heroTitle': 'From ready-made boards to projects built with communities.',
+  'projectsPage.heroBody': 'Three ways to work with Repair: buy finished products, order custom products, or run a CSR program based on recycled materials.',
+  'projectsPage.heroStat': '[ 3 SERVICES · 12+ PROJECTS INSTALLED ]',
+  'projectsPage.heroScroll': '(scroll down)',
+
+  // Projects page — S1 Services
+  'projectsPage.s1.tag': '[ WHAT IS PROJECTS ]',
+  'projectsPage.s1.heading': 'Three ways to collaborate.',
+  'projectsPage.s1.subtitle': 'All start from the same material — RR Board. What differs is how far we help design and build together with you.',
+  'projectsPage.s1.a.title': 'End Product',
+  'projectsPage.s1.a.desc': 'Ready-to-ship finished products — boards, small furniture, and merchandise. Fixed price, stock ready, delivery via marketplace or direct order.',
+  'projectsPage.s1.a.meta': 'In stock · 1–3 days shipping',
+  'projectsPage.s1.a.cta1': 'Buy on Shopee',
+  'projectsPage.s1.a.cta2': 'Order via WhatsApp',
+  'projectsPage.s1.b.title': 'Custom Product',
+  'projectsPage.s1.b.desc': 'Size, colour, and shape follow your needs. We help from material samples to batch production.',
+  'projectsPage.s1.b.meta': 'Flexible MOQ · 2–4 weeks',
+  'projectsPage.s1.b.cta1': 'Discuss custom via WhatsApp',
+  'projectsPage.s1.c.title': 'CSR-Based Project',
+  'projectsPage.s1.c.desc': 'Impact-based program: your partner\'s plastic waste collected and processed into products returned to the community.',
+  'projectsPage.s1.c.meta': 'Collaboration scheme · per program',
+  'projectsPage.s1.c.cta1': 'Submit CSR program',
+
+  // Projects page — S2 Gallery
+  'projectsPage.s2.tag': '[ USE CASES & CLIENTS ]',
+  'projectsPage.s2.heading': 'What we have delivered.',
+  'projectsPage.s2.subtitle': 'Three stories with different scales and needs — food stall, school, and grant program.',
+  'projectsPage.s2.card1.title': 'Warung Kang Darka',
+  'projectsPage.s2.card1.loc': 'Bandung · End Product',
+  'projectsPage.s2.card2.title': 'SD Milo Cikal',
+  'projectsPage.s2.card2.loc': 'Jakarta · Custom Product',
+  'projectsPage.s2.card3.title': 'Mess Pekerja RBU',
+  'projectsPage.s2.card3.loc': 'Bekasi · CSR Project',
+  'projectsPage.s2.card4.title': 'Toilet Cubicle Pasar',
+  'projectsPage.s2.card4.loc': 'Depok · Custom Product',
+  'projectsPage.s2.card5.title': 'Booth Bazar Milo',
+  'projectsPage.s2.card5.loc': 'Tangerang · End Product',
+  'projectsPage.s2.filterAll': 'All',
+  'projectsPage.s2.filterEnd': 'End Product',
+  'projectsPage.s2.filterCustom': 'Custom',
+  'projectsPage.s2.filterCsr': 'CSR',
+  'projectsPage.s2.hint': '[ SWIPE TO SEE ALL ]',
+
+  // Projects page — Clients
+  'projectsPage.clients.tag': '[ TRUSTED BY ]',
+
+  // Projects page — CTA
+  'projectsPage.cta.heading': 'Tell us what you need, we\'ll calculate the price.',
+  'projectsPage.cta.body': 'Send size, location, and timeline — estimate reply within 1×24 business hours.',
+  'projectsPage.cta.whatsapp': 'Ask price via WhatsApp',
+  'projectsPage.cta.catalog': 'Browse finished products',
+
   // Stub pages
   'page.about': 'About',
   'page.projects': 'Projects',

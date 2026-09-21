@@ -38,11 +38,11 @@
     </div>
 
     <!-- Footer Bottom -->
-    <div class="w-full flex flex-col gap-4 lg:flex-row lg:justify-between lg:items-end pt-6 lg:pt-7 border-t border-[#F3EFE42E]">
+    <div class="w-full flex flex-col items-start gap-4 lg:flex-row lg:justify-between lg:items-end pt-6 lg:pt-7 border-t border-[#F3EFE42E]">
       <img
         src="/logo.png"
         alt="Repair Material Studio"
-        class="h-[48px] lg:h-[96px] w-auto opacity-10"
+        class="h-[48px] lg:h-[96px] max-w-full w-auto object-contain opacity-10"
       />
       <span class="font-mono text-[9px] lg:text-[10px] tracking-[0.8px] text-[#F3EFE480] whitespace-nowrap">
         {{ t('footer.copyright') }}
