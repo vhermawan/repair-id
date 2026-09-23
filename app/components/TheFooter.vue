@@ -58,6 +58,6 @@ const { t } = useI18n()
 const contacts = [
   { key: 'PRODUCTION SITE', value: 'Bandung' },
   { key: 'EMAIL', value: 'carissa@repairproject.id', href: 'mailto:carissa@repairproject.id' },
-  { key: 'WHATSAPP', value: '+62 817-6677-848', href: 'https://wa.me/628176677848' },
+  { key: 'WHATSAPP', value: '+62 822-5804-4904', href: 'https://wa.me/6282258044904' },
 ]
 </script>
