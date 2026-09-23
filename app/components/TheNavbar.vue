@@ -60,16 +60,18 @@
         </div>
 
         <!-- Desktop CTA -->
-        <NuxtLink
-          to="#contact"
-          class="hidden lg:flex items-center gap-2 px-[18px] py-[11px]"
+        <a
+          href="https://wa.me/6282258044904"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden lg:flex items-center gap-2 px-[18px] py-[11px] rounded-xl"
           :class="solid ? '[outline:1px_solid_#06142833] [outline-offset:-0.5px]' : 'bg-cream'"
         >
           <span class="font-dm-sans text-[13px] font-semibold text-navy whitespace-nowrap">
             {{ t('nav.contact') }}
           </span>
           <Icon name="lucide:arrow-up-right" class="w-[15px] h-[15px] text-navy" />
-        </NuxtLink>
+        </a>
 
         <!-- Mobile menu button -->
         <button
@@ -99,7 +101,7 @@
         <!-- Menu links -->
         <div class="flex flex-col">
           <NuxtLink
-            v-for="(link, i) in links" :key="link.label" :to="link.to"
+            v-for="(link, i) in links" :key="link.labelKey" :to="link.to"
             class="flex items-center justify-between py-5 border-t border-[#FFFFFF30]"
             @click="menuOpen = false"
           >
