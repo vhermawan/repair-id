@@ -113,7 +113,7 @@
 
         <!-- Bottom CTA -->
         <div class="flex flex-col gap-4">
-          <a href="#" class="flex items-center justify-center gap-2.5 px-5 py-[15px] bg-cream rounded-sm">
+          <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-5 py-[15px] bg-cream rounded-sm">
             <Icon name="lucide:message-circle" class="w-4 h-4 text-navy" />
             <span class="font-dm-sans text-[13px] font-semibold text-navy whitespace-nowrap">{{ t('nav.whatsapp') }}</span>
           </a>

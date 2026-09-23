@@ -256,5 +256,6 @@ export default {
   'page.about': 'Tentang',
   'page.projects': 'Proyek',
   'page.application': 'Aplikasi',
+  'page.rrBoard': 'RR Board',
   'page.comingSoon': 'Segera hadir.',
 } as Record<string, string>

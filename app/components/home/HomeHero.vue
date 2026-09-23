@@ -23,7 +23,7 @@
             <span class="font-dm-sans text-sm font-semibold text-navy whitespace-nowrap">{{ t('hero.ctaBoard') }}</span>
             <Icon name="lucide:arrow-right" class="w-4 h-4 text-navy" />
           </NuxtLink>
-          <a href="#" class="flex items-center gap-[10px] px-6 py-[15px] [outline:1px_solid_#F4F1E980] [outline-offset:-0.5px] rounded-xl">
+          <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center gap-[10px] px-6 py-[15px] [outline:1px_solid_#F4F1E980] [outline-offset:-0.5px] rounded-xl">
             <Icon name="lucide:message-circle" class="w-4 h-4 text-cream" />
             <span class="font-dm-sans text-sm font-semibold text-cream whitespace-nowrap">{{ t('hero.ctaDiscuss') }}</span>
           </a>

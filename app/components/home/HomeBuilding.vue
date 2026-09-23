@@ -51,7 +51,7 @@
         <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-navy whitespace-nowrap">{{ t('building.ctaBoard') }}</span>
         <Icon name="lucide:arrow-right" class="w-4 h-4 text-navy" />
       </a>
-      <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] [outline:1px_solid_#F3EFE459] [outline-offset:-0.5px] rounded-[12px]">
+      <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] [outline:1px_solid_#F3EFE459] [outline-offset:-0.5px] rounded-[12px]">
         <Icon name="lucide:message-circle" class="w-4 h-4 text-cream" />
         <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-cream whitespace-nowrap">{{ t('building.ctaDiscuss') }}</span>
       </a>

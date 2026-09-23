@@ -13,11 +13,11 @@
           {{ t('footer.heading') }}
         </h2>
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 lg:gap-3.5">
-          <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] bg-cream rounded-xl">
+          <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] bg-cream rounded-xl">
             <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-navy whitespace-nowrap">{{ t('footer.ctaWhatsapp') }}</span>
             <Icon name="lucide:message-circle" class="w-4 h-4 text-navy" />
           </a>
-          <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] [outline:1px_solid_#F3EFE44D] [outline-offset:-0.5px] rounded-xl">
+          <a href="https://tr.ee/K4G-EzRrb1" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] [outline:1px_solid_#F3EFE44D] [outline-offset:-0.5px] rounded-xl">
             <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-cream whitespace-nowrap">{{ t('footer.ctaCatalog') }}</span>
           </a>
         </div>
@@ -32,7 +32,8 @@
       >
         <div v-for="item in contacts" :key="item.key" class="w-full flex flex-col gap-[4px] lg:gap-[5px]">
           <span class="font-mono text-[10px] tracking-[1.2px] text-[#A9C9FF] whitespace-nowrap">{{ item.key }}</span>
-          <span class="w-full font-dm-sans text-[13px] lg:text-sm leading-[21px] text-cream">{{ item.value }}</span>
+          <a v-if="item.href" :href="item.href" target="_blank" rel="noopener noreferrer" class="w-full font-dm-sans text-[13px] lg:text-sm leading-[21px] text-cream hover:underline">{{ item.value }}</a>
+          <span v-else class="w-full font-dm-sans text-[13px] lg:text-sm leading-[21px] text-cream">{{ item.value }}</span>
         </div>
       </div>
     </div>
@@ -56,7 +57,7 @@ const { t } = useI18n()
 
 const contacts = [
   { key: 'WORKSHOP', value: 'Jl. Raya Bogor KM 27, Jakarta Timur' },
-  { key: 'EMAIL', value: 'halo@repair.id' },
-  { key: 'WHATSAPP', value: '+62 812 0000 0000' },
+  { key: 'EMAIL', value: 'support@repairproject.id', href: 'mailto:support@repairproject.id' },
+  { key: 'WHATSAPP', value: '+62 822-5804-4904', href: 'https://wa.me/6282258044904' },
 ]
 </script>

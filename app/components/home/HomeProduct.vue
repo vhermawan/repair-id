@@ -21,7 +21,7 @@
           <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-white whitespace-nowrap">{{ t('product.ctaProject') }}</span>
           <Icon name="lucide:arrow-right" class="w-4 h-4 text-white" />
         </NuxtLink>
-        <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] border border-[#0614281F] rounded-xl">
+        <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] border border-[#0614281F] rounded-xl">
           <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-navy whitespace-nowrap">{{ t('product.ctaDiscuss') }}</span>
           <Icon name="lucide:message-circle" class="w-4 h-4 text-navy" />
         </a>

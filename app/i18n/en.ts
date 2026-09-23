@@ -256,5 +256,6 @@ export default {
   'page.about': 'About',
   'page.projects': 'Projects',
   'page.application': 'Application',
+  'page.rrBoard': 'RR Board',
   'page.comingSoon': 'Coming soon.',
 } as Record<string, string>
