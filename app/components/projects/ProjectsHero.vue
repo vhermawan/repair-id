@@ -3,7 +3,7 @@
     ref="heroContainer"
     class="parallax-container w-full min-h-[400px] lg:h-[620px] flex flex-col gap-0 p-[24px_20px_32px] lg:p-[36px_48px_48px] justify-between items-start overflow-hidden relative"
   >
-    <img src="/images/projects-hero.jpg" alt="Projects" class="parallax-img z-0" />
+    <img src="/images/projects-hero.webp" alt="Projects" class="parallax-img z-0" />
     <div class="absolute inset-0 bg-[#005FE7C7] [background-image:linear-gradient(92deg,_#062A5CF2_1%,_#0044A8B3_55%,_#005FE733_99%)] z-[1]" style="mix-blend-mode: multiply" />
 
     <div class="h-0 relative z-[3]" />

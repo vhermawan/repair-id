@@ -104,11 +104,11 @@
 const { t } = useI18n()
 
 const cards = [
-  { number: '01.', titleKey: 'projectsPage.s2.card1.title', locKey: 'projectsPage.s2.card1.loc', desktopWidth: 280, mobileHeight: 260, mobilePt: 40, image: '/images/project-card-01.jpg' },
-  { number: '02.', titleKey: 'projectsPage.s2.card2.title', locKey: 'projectsPage.s2.card2.loc', desktopWidth: 210, mobileHeight: 150, mobilePt: 112, image: '/images/project-card-02.jpg' },
-  { number: '03.', titleKey: 'projectsPage.s2.card3.title', locKey: 'projectsPage.s2.card3.loc', desktopWidth: 280, mobileHeight: 300, mobilePt: 0, image: '/images/project-card-03.jpg' },
-  { number: '04.', titleKey: 'projectsPage.s2.card4.title', locKey: 'projectsPage.s2.card4.loc', desktopWidth: 220, mobileHeight: 160, mobilePt: 120, image: '/images/project-card-04.jpg' },
-  { number: '05.', titleKey: 'projectsPage.s2.card5.title', locKey: 'projectsPage.s2.card5.loc', desktopWidth: 298, mobileHeight: 220, mobilePt: 64, image: '/images/project-card-05.jpg' },
+  { number: '01.', titleKey: 'projectsPage.s2.card1.title', locKey: 'projectsPage.s2.card1.loc', desktopWidth: 280, mobileHeight: 260, mobilePt: 40, image: '/images/project-card-01.webp' },
+  { number: '02.', titleKey: 'projectsPage.s2.card2.title', locKey: 'projectsPage.s2.card2.loc', desktopWidth: 210, mobileHeight: 150, mobilePt: 112, image: '/images/project-card-02.webp' },
+  { number: '03.', titleKey: 'projectsPage.s2.card3.title', locKey: 'projectsPage.s2.card3.loc', desktopWidth: 280, mobileHeight: 300, mobilePt: 0, image: '/images/project-card-03.webp' },
+  { number: '04.', titleKey: 'projectsPage.s2.card4.title', locKey: 'projectsPage.s2.card4.loc', desktopWidth: 220, mobileHeight: 160, mobilePt: 120, image: '/images/project-card-04.webp' },
+  { number: '05.', titleKey: 'projectsPage.s2.card5.title', locKey: 'projectsPage.s2.card5.loc', desktopWidth: 298, mobileHeight: 220, mobilePt: 64, image: '/images/project-card-05.webp' },
 ]
 
 const filters = [

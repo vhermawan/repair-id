@@ -3,7 +3,7 @@
     ref="heroContainer"
     class="parallax-container w-full min-h-[400px] lg:h-[560px] flex flex-col gap-0 p-[24px_20px_32px] lg:p-[36px_48px_48px] justify-between items-start overflow-hidden relative"
   >
-    <img src="/images/rr-board-terrazzo-blue.jpg" alt="RR Board" class="parallax-img z-0" />
+    <img src="/images/rr-board-terrazzo-blue.webp" alt="RR Board" class="parallax-img z-0" />
     <div class="absolute inset-0 bg-[#062A5CD9] [background-image:linear-gradient(93.923deg,_#061428F2_1.813%,_#0044A8A6_98.187%)] z-[1]" />
 
     <div class="h-0 relative z-[3]" />

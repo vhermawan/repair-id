@@ -14,7 +14,13 @@
         {{ t('rrBoardIntro.body') }}
       </p>
 
-      <img src="/images/rr-board-terrazzo-blue.jpg" alt="RR Board terrazzo surface" class="lg:hidden w-full h-[240px] object-cover" />
+      <div class="lg:hidden flex flex-col gap-2">
+        <img src="/images/board-1.webp" alt="RR Board stacked panels" class="w-full h-[200px] object-cover rounded" />
+        <div class="flex gap-2">
+          <img src="/images/board-2.webp" alt="Terrazzo colorful" class="flex-1 min-w-0 h-[140px] object-cover rounded" />
+          <img src="/images/board-3.webp" alt="Terrazzo blue" class="flex-1 min-w-0 h-[140px] object-cover rounded" />
+        </div>
+      </div>
 
       <div class="flex flex-col gap-0">
         <div v-for="spec in rrBoardSpecs" :key="spec.keyKey"
@@ -33,8 +39,8 @@
     >
       <img src="/images/board-1.webp" alt="RR Board stacked panels" class="w-full h-[320px] object-cover rounded" />
       <div class="flex gap-2">
-        <img src="/images/board-2.webp" alt="Terrazzo colorful" class="flex-1 h-[200px] object-cover rounded" />
-        <img src="/images/board-3.webp" alt="Terrazzo blue" class="flex-1 h-[200px] object-cover rounded" />
+        <img src="/images/board-2.webp" alt="Terrazzo colorful" class="flex-1 min-w-0 h-[200px] object-cover rounded" />
+        <img src="/images/board-3.webp" alt="Terrazzo blue" class="flex-1 min-w-0 h-[200px] object-cover rounded" />
       </div>
     </div>
   </section>
