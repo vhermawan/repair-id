@@ -44,10 +44,11 @@
           <span class="font-mono text-[10px] lg:text-[11px] tracking-[1px] text-[#005FE7]">{{ product.index }}</span>
           <h3 class="font-dm-sans font-semibold text-[20px] leading-[24px] lg:text-[28px] lg:leading-[32px] tracking-[-0.5px] lg:tracking-[-0.8px] text-navy">{{ t(product.titleKey) }}</h3>
           <p class="font-dm-sans text-[13px] leading-[20px] lg:text-sm lg:leading-[22px] text-[#10201A99]">{{ t(product.descKey) }}</p>
-          <NuxtLink :to="product.link" class="flex items-center gap-2 pt-1.5 lg:pt-2.5">
+          <div class="pt-1.5 lg:pt-2.5" />
+          <!-- <NuxtLink :to="product.link" class="flex items-center gap-2 pt-1.5 lg:pt-2.5">
             <span class="font-dm-sans text-[13px] font-semibold text-[#005FE7]">{{ t('product.seeProduct') }}</span>
             <Icon name="lucide:arrow-right" class="w-[15px] h-[15px] text-[#005FE7]" />
-          </NuxtLink>
+          </NuxtLink> -->
         </div>
       </div>
     </div>

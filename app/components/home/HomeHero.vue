@@ -31,27 +31,12 @@
       </div>
     </div>
 
-    <div class="hero-entrance hero-entrance-delay-4 w-full flex flex-col gap-3 lg:flex-row lg:justify-between lg:items-center pt-5 lg:pt-[26px] border-t border-[#F4F1E933] relative z-[3]" style="gap: 80px">
-      <span class="font-mono text-[8px] lg:text-[10px] tracking-[1.2px] text-[#A9C9FF] hidden lg:block">
-        {{ t('hero.since') }}
-      </span>
-      <div class="flex items-end gap-4 lg:gap-[44px]">
-        <div v-for="metric in heroMetrics" :key="metric.labelKey" class="flex flex-col items-start lg:flex-row lg:items-end gap-0.5 lg:gap-2">
-          <span class="font-dm-sans font-bold text-[12px] lg:text-[18px] tracking-[-0.3px] lg:tracking-[-0.5px] text-cream whitespace-nowrap">{{ t(metric.valueKey) }}</span>
-          <span class="font-dm-sans text-[8px] lg:text-[12px] text-[#BFD8FF] whitespace-nowrap">{{ t(metric.labelKey) }}</span>
-        </div>
-      </div>
+    <div class="hero-entrance hero-entrance-delay-4 w-full flex flex-col gap-3 lg:flex-row lg:justify-between lg:items-center pt-5 lg:pt-[26px] relative z-[3]" style="gap: 80px">
+     
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 const { t } = useI18n()
-const { target: heroContainer } = useParallax(0.3)
-
-const heroMetrics = [
-  { valueKey: 'hero.metric1.value', labelKey: 'hero.metric1.label' },
-  { valueKey: 'hero.metric2.value', labelKey: 'hero.metric2.label' },
-  { valueKey: 'hero.metric3.value', labelKey: 'hero.metric3.label' },
-]
 </script>

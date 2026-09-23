@@ -32,10 +32,11 @@
           <span class="font-mono text-[10px] lg:text-[11px] tracking-[1px] text-[#A9C9FF]">{{ app.index }}</span>
           <h3 class="w-full font-dm-sans font-semibold text-[20px] leading-[24px] lg:text-[28px] lg:leading-[32px] tracking-[-0.5px] lg:tracking-[-0.8px] text-cream">{{ t(app.titleKey) }}</h3>
           <p class="w-full font-dm-sans text-[13px] leading-[20px] lg:text-sm lg:leading-[22px] text-[#F3EFE4A6]">{{ t(app.descKey) }}</p>
-          <NuxtLink :to="app.link" class="flex items-center gap-2 pt-[10px]">
+          <div class="pt-[10px]" />
+          <!-- <NuxtLink :to="app.link" class="flex items-center gap-2 pt-[10px]">
             <span class="font-dm-sans text-[13px] font-semibold text-[#A9C9FF]">{{ t('building.seeApp') }}</span>
             <Icon name="lucide:arrow-right" class="w-[15px] h-[15px] text-[#A9C9FF]" />
-          </NuxtLink>
+          </NuxtLink> -->
         </div>
       </div>
     </div>
