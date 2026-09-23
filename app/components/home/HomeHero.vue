@@ -19,10 +19,10 @@
         </p>
 
         <div class="hero-entrance hero-entrance-delay-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-[14px]">
-          <NuxtLink to="/rr-board" class="flex items-center gap-[10px] px-6 py-[15px] bg-cream rounded-xl">
+          <a href="#rr-board" @click.prevent="scrollToRrBoard" class="flex items-center gap-[10px] px-6 py-[15px] bg-cream rounded-xl">
             <span class="font-dm-sans text-sm font-semibold text-navy whitespace-nowrap">{{ t('hero.ctaBoard') }}</span>
             <Icon name="lucide:arrow-right" class="w-4 h-4 text-navy" />
-          </NuxtLink>
+          </a>
           <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center gap-[10px] px-6 py-[15px] [outline:1px_solid_#F4F1E980] [outline-offset:-0.5px] rounded-xl">
             <Icon name="lucide:message-circle" class="w-4 h-4 text-cream" />
             <span class="font-dm-sans text-sm font-semibold text-cream whitespace-nowrap">{{ t('hero.ctaDiscuss') }}</span>
@@ -39,4 +39,8 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+
+const scrollToRrBoard = () => {
+  document.getElementById('rr-board')?.scrollIntoView({ behavior: 'smooth' })
+}
 </script>

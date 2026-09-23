@@ -31,10 +31,10 @@
       :visible-once="{ opacity: 1, x: 0, transition: { duration: 700, delay: 200 } }"
       class="hidden lg:flex w-full lg:w-[55%] shrink-0 flex-col gap-2"
     >
-      <img src="/images/rr-board-stack.jpg" alt="RR Board stacked panels" class="w-full h-[320px] object-cover rounded" />
+      <img src="/images/board-1.webp" alt="RR Board stacked panels" class="w-full h-[320px] object-cover rounded" />
       <div class="flex gap-2">
-        <img src="/images/rr-board-terrazzo-colorful.jpg" alt="Terrazzo colorful" class="flex-1 h-[200px] object-cover rounded" />
-        <img src="/images/rr-board-terrazzo-blue.jpg" alt="Terrazzo blue" class="flex-1 h-[200px] object-cover rounded" />
+        <img src="/images/board-2.webp" alt="Terrazzo colorful" class="flex-1 h-[200px] object-cover rounded" />
+        <img src="/images/board-3.webp" alt="Terrazzo blue" class="flex-1 h-[200px] object-cover rounded" />
       </div>
     </div>
   </section>
@@ -48,5 +48,6 @@ const rrBoardSpecs = [
   { keyKey: 'rrBoardIntro.spec2.key', valueKey: 'rrBoardIntro.spec2.value' },
   { keyKey: 'rrBoardIntro.spec3.key', valueKey: 'rrBoardIntro.spec3.value' },
   { keyKey: 'rrBoardIntro.spec4.key', valueKey: 'rrBoardIntro.spec4.value' },
+  { keyKey: 'rrBoardIntro.spec5.key', valueKey: 'rrBoardIntro.spec5.value' },
 ]
 </script>

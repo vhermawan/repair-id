@@ -34,7 +34,7 @@ export default {
   'impact.stat2.desc': 'Functional products created using RR Board.',
   'impact.stat3.value': '1.200',
   'impact.stat3.unit': 'm²',
-  'impact.stat3.desc': 'Estimation of RR Board applied across facades, interiors, furniture, and other applications.',
+  'impact.stat3.desc': 'Estimation of RR Board applied across facades, interiors, furniture, and other.',
 
   // About Repair
   'about.tag': '[ ABOUT REPAIR ]',
@@ -49,16 +49,18 @@ export default {
 
   // RR Board as Building Materials
   'rrBoardIntro.tag': '[ RR BOARD AS BUILDING MATERIALS ]',
-  'rrBoardIntro.heading': 'RR Board as Building Materials',
-  'rrBoardIntro.body': 'RR Board can be fabricated and integrated into different commercial applications, combining practical performance with the distinctive character of recycled plastic.',
+  'rrBoardIntro.heading': 'RR Board',
+  'rrBoardIntro.body': 'RR Board is a circular material that enables architects, designers, and businesses to build with recycled plastics without compromising quality and functionality.',
   'rrBoardIntro.spec1.key': 'Panel size',
-  'rrBoardIntro.spec1.value': '120 × 240 cm',
+  'rrBoardIntro.spec1.value': '1.2 × 2.4 cm',
   'rrBoardIntro.spec2.key': 'Thickness',
-  'rrBoardIntro.spec2.value': '8 / 12 / 18 mm',
-  'rrBoardIntro.spec3.key': 'Properties',
-  'rrBoardIntro.spec3.value': 'Waterproof, termite-proof, rot-proof',
-  'rrBoardIntro.spec4.key': 'End of life',
-  'rrBoardIntro.spec4.value': '100% re-meltable',
+  'rrBoardIntro.spec2.value': '10/ 12 / 16 mm',
+  'rrBoardIntro.spec3.key': 'Weight',
+  'rrBoardIntro.spec3.value': '28 / 32 / 44 kg',
+  'rrBoardIntro.spec4.key': 'Price',
+  'rrBoardIntro.spec4.value': 'Start from Rp 140.000 per m2',
+  'rrBoardIntro.spec5.key': 'Color',
+  'rrBoardIntro.spec5.value': 'Mozaic, Dark, and other color limitedly available',
   'rrBoardIntro.ctaPrimary': 'More about RR Board',
   'rrBoardIntro.ctaSecondary': 'Consult Your Needs',
   'rrBoardIntro.facade.title': 'Facade Application',
@@ -87,7 +89,7 @@ export default {
   'product.item2.title': 'Recycled School Set',
   'product.item2.desc': 'Turning RR Board into functional furniture for learning spaces, designed to bring circular materials into everyday use.',
   'product.seeProduct': 'See product',
-  'product.ctaProject': 'More about Custom Project',
+  'product.ctaProject': 'Download Catalog',
   'product.ctaDiscuss': 'Consult Your Needs',
 
   // Clients
