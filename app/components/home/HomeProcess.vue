@@ -1,33 +1,42 @@
 <template>
-  <section class="w-full flex flex-col gap-5 lg:gap-7 p-[40px_20px] lg:p-[64px_48px_72px_48px] bg-cream">
+  <section class="w-full bg-white flex flex-col lg:flex-row gap-8 lg:gap-[56px] p-[40px_20px_64px] lg:p-[48px_48px_104px_48px]">
+    <!-- Label Column -->
     <div
       v-motion
-      :initial="{ opacity: 0, y: 32 }"
-      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-      class="w-full flex flex-col gap-2 lg:flex-row lg:justify-between lg:items-end lg:gap-[60px]"
+      :initial="{ opacity: 0, y: 24 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
+      class="flex flex-col gap-[10px] lg:w-[280px] shrink-0"
     >
-      <span class="font-mono text-[11px] tracking-[1.2px] text-[#005FE7] whitespace-nowrap">{{ t('process.tag') }}</span>
-      <span class="font-dm-sans text-[13px] lg:text-sm text-[#061428A6]">
-        {{ t('process.subtitle') }}
-      </span>
+      <span class="font-mono text-[11px] leading-[17px] tracking-[1.2px] text-[#005FE7] whitespace-nowrap">{{ t('impact.tag') }}</span>
+      <span class="font-dm-sans text-[16px] leading-[24px] text-[#061428A6] whitespace-nowrap">{{ t('impact.heading') }}</span>
     </div>
 
-    <div class="w-full grid grid-cols-2 lg:flex gap-3 lg:gap-4">
-      <div
-        v-for="(step, i) in processSteps" :key="step.index"
+    <!-- Content Column -->
+    <div class="flex-1 flex flex-col gap-10 lg:gap-[56px]">
+      <!-- Statement -->
+      <p
         v-motion
         :initial="{ opacity: 0, y: 24 }"
-        :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: 100 + i * 100 } }"
-        class="flex-1 flex flex-col gap-3 lg:gap-[14px]"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: 100 } }"
+        class="font-dm-sans text-[22px] leading-[32px] lg:text-[34px] lg:leading-[45px] tracking-[-1px] text-[#061428] w-full"
       >
-        <div class="w-full h-[140px] lg:h-[230px] bg-cover bg-center rounded overflow-hidden"
-          :style="{ backgroundImage: `url(${step.image})` }" />
-        <div class="flex flex-col gap-[4px] lg:gap-[5px]">
-          <div class="flex items-center gap-2 lg:gap-[10px]">
-            <span class="font-mono text-[10px] lg:text-[11px] tracking-[1px] text-[#005FE7]">{{ step.index }}</span>
-            <span class="font-dm-sans font-bold text-[14px] lg:text-[18px] tracking-[-0.5px] text-navy">{{ t(step.titleKey) }}</span>
+        {{ t('impact.body') }}
+      </p>
+
+      <!-- Stats -->
+      <div class="w-full flex flex-col sm:flex-row gap-8 sm:gap-[48px]">
+        <div
+          v-for="(stat, i) in stats" :key="i"
+          v-motion
+          :initial="{ opacity: 0, y: 24 }"
+          :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: 200 + i * 100 } }"
+          class="flex-1 flex flex-col gap-[10px]"
+        >
+          <div class="w-fit flex flex-row gap-[7px] items-end">
+            <span class="font-dm-sans font-bold text-[32px] leading-[36px] lg:text-[38px] lg:leading-[42px] tracking-[-1.5px] text-[#061428] whitespace-nowrap">{{ t(stat.valueKey) }}</span>
+            <span class="font-mono text-[13px] leading-[25px] tracking-[0.5px] text-[#005FE7] whitespace-nowrap">{{ t(stat.unitKey) }}</span>
           </div>
-          <p class="font-dm-sans text-[11px] lg:text-[13px] leading-[17px] lg:leading-[20px] text-[#06142899]">{{ t(step.descKey) }}</p>
+          <p class="font-dm-sans text-[13.5px] leading-[22px] text-[#06142899] w-full">{{ t(stat.descKey) }}</p>
         </div>
       </div>
     </div>
@@ -37,10 +46,9 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-const processSteps = [
-  { index: '01', titleKey: 'process.step1.title', descKey: 'process.step1.desc', image: '/images/process-collect.jpg' },
-  { index: '02', titleKey: 'process.step2.title', descKey: 'process.step2.desc', image: '/images/process-shred.jpg' },
-  { index: '03', titleKey: 'process.step3.title', descKey: 'process.step3.desc', image: '/images/process-press.jpg' },
-  { index: '04', titleKey: 'process.step4.title', descKey: 'process.step4.desc', image: '/images/process-panel.jpg' },
+const stats = [
+  { valueKey: 'impact.stat1.value', unitKey: 'impact.stat1.unit', descKey: 'impact.stat1.desc' },
+  { valueKey: 'impact.stat2.value', unitKey: 'impact.stat2.unit', descKey: 'impact.stat2.desc' },
+  { valueKey: 'impact.stat3.value', unitKey: 'impact.stat3.unit', descKey: 'impact.stat3.desc' },
 ]
 </script>

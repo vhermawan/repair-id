@@ -135,6 +135,7 @@ const menuOpen = ref(false)
 const solid = computed(() => !isHome.value || scrolled.value)
 
 const links = [
+  { labelKey: 'nav.home', to: '/' },
   { labelKey: 'nav.rrBoard', to: '/rr-board' },
   { labelKey: 'nav.application', to: '/application' },
   { labelKey: 'nav.projects', to: '/projects' },

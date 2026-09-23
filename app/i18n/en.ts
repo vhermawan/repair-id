@@ -1,5 +1,6 @@
 export default {
   // Navbar
+  'nav.home': 'Home',
   'nav.rrBoard': 'RR Board',
   'nav.application': 'Application',
   'nav.projects': 'Projects',
@@ -21,17 +22,19 @@ export default {
   'hero.metric3.value': '100%',
   'hero.metric3.label': 're-meltable',
 
-  // Process
-  'process.tag': '[ PROCESS ]',
-  'process.subtitle': 'From sachet waste to ready-to-install panels — all in one workshop.',
-  'process.step1.title': 'Collect',
-  'process.step1.desc': 'Sachets & plastic bags from waste banks',
-  'process.step2.title': 'Shred',
-  'process.step2.desc': 'Plastic shredded into uniform flakes',
-  'process.step3.title': 'Press',
-  'process.step3.desc': 'Melted and pressed without added resin',
-  'process.step4.title': 'Panel ready',
-  'process.step4.desc': 'Cut to 120 × 240 cm size',
+  // Impact
+  'impact.tag': '[ IMPACT ]',
+  'impact.heading': 'Our Impact',
+  'impact.body': 'We give unwanted plastics like sachets and plastic bags a new purpose by transforming them into functional materials for products and the built environment.',
+  'impact.stat1.value': '32.376',
+  'impact.stat1.unit': 'kg',
+  'impact.stat1.desc': 'Low-value plastics transformed into RR Board and put to use.',
+  'impact.stat2.value': '2.500',
+  'impact.stat2.unit': 'pcs',
+  'impact.stat2.desc': 'Functional products created using RR Board.',
+  'impact.stat3.value': '1.200',
+  'impact.stat3.unit': 'm²',
+  'impact.stat3.desc': 'Estimation of RR Board applied across facades, interiors, furniture, and other applications.',
 
   // About Repair
   'about.tag': '[ ABOUT REPAIR ]',
@@ -44,10 +47,10 @@ export default {
   'about.stat3.value': '0',
   'about.stat3.label': 'Production waste discarded',
 
-  // What is RR Board
-  'rrBoardIntro.tag': '[ WHAT IS RR BOARD ]',
-  'rrBoardIntro.heading': 'Surface panel from sachets and plastic bags.',
-  'rrBoardIntro.body': 'No added resin. Plastic terrazzo surface pattern, each panel is unique, can be cut and drilled like wood panels.',
+  // RR Board as Building Materials
+  'rrBoardIntro.tag': '[ RR BOARD AS BUILDING MATERIALS ]',
+  'rrBoardIntro.heading': 'RR Board as Building Materials',
+  'rrBoardIntro.body': 'RR Board can be fabricated and integrated into different commercial applications, combining practical performance with the distinctive character of recycled plastic.',
   'rrBoardIntro.spec1.key': 'Panel size',
   'rrBoardIntro.spec1.value': '120 × 240 cm',
   'rrBoardIntro.spec2.key': 'Thickness',
@@ -56,30 +59,36 @@ export default {
   'rrBoardIntro.spec3.value': 'Waterproof, termite-proof, rot-proof',
   'rrBoardIntro.spec4.key': 'End of life',
   'rrBoardIntro.spec4.value': '100% re-meltable',
+  'rrBoardIntro.ctaPrimary': 'More about RR Board',
+  'rrBoardIntro.ctaSecondary': 'Consult Your Needs',
+  'rrBoardIntro.facade.title': 'Facade Application',
+  'rrBoardIntro.facade.desc': 'A distinctive facade surface made from 100% low-value plastics. RR Board combines unique recycled patterns with water resistance and durability for selected exterior applications.',
+  'rrBoardIntro.toilet.title': 'Toilet Cubicles Application',
+  'rrBoardIntro.toilet.desc': 'Built for humid environments, RR Board offers a water-resistant, durable surface that can be fabricated into functional toilet cubicles.',
 
   // Building Application
   'building.tag': '[ RR BOARD IN BUILDINGS ]',
   'building.heading': 'RR Board as building material.',
   'building.subtitle': 'Ready-to-use panels for architectural needs: strong, moisture-resistant, and requires no additional finishing.',
   'building.app1.title': 'Facade Application',
-  'building.app1.desc': 'Facade panels and secondary skin with plastic terrazzo pattern. Weather-resistant, lightweight, and installed with standard framing.',
+  'building.app1.desc': 'A distinctive facade surface made from 100% low-value plastics. RR Board combines unique recycled patterns with water resistance and durability for selected exterior applications.',
   'building.app2.title': 'Toilet Cubicles Application',
-  'building.app2.desc': 'Waterproof and termite-proof toilet partitions. No swelling like HPL, and easy to clean.',
+  'building.app2.desc': 'Built for humid environments, RR Board offers a water-resistant, durable surface that can be fabricated into functional toilet cubicles.',
   'building.seeApp': 'See application',
   'building.ctaBoard': 'Go to RR Board page',
   'building.ctaDiscuss': 'Discuss your needs',
 
   // End Product
   'product.tag': '[ RR BOARD AS PRODUCT ]',
-  'product.heading': 'Not just sheets — finished products too.',
-  'product.subtitle': 'We assemble RR Board into ready-to-use furniture and fixtures for schools, offices, and public spaces.',
-  'product.item1.title': 'Waste Bin',
-  'product.item1.desc': 'Sorted waste bins made from RR Board panels. Ironic and fitting: a waste bin made from waste itself.',
-  'product.item2.title': 'School Set',
-  'product.item2.desc': 'Durable school desks and chairs, termite-free, and re-meltable when their lifespan ends.',
+  'product.heading': 'RR Board as Product & Project',
+  'product.subtitle': 'Beyond just sheets, RR Board can be transformed into functional products through custom design and manufacturing, from everyday objects to furniture and beyond.',
+  'product.item1.title': 'Recycled Waste Bin',
+  'product.item1.desc': 'A functional waste bin made from RR Board, giving low-value plastics a new purpose in everyday spaces.',
+  'product.item2.title': 'Recycled School Set',
+  'product.item2.desc': 'Turning RR Board into functional furniture for learning spaces, designed to bring circular materials into everyday use.',
   'product.seeProduct': 'See product',
-  'product.ctaProject': 'Go to Customer Project',
-  'product.ctaDiscuss': 'Discuss your needs',
+  'product.ctaProject': 'More about Custom Project',
+  'product.ctaDiscuss': 'Consult Your Needs',
 
   // Clients
   'clients.tag': '[ OUR CLIENTS ]',

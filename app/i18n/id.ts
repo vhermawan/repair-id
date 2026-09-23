@@ -1,5 +1,6 @@
 export default {
   // Navbar
+  'nav.home': 'Beranda',
   'nav.rrBoard': 'RR Board',
   'nav.application': 'Aplikasi',
   'nav.projects': 'Proyek',
@@ -21,17 +22,19 @@ export default {
   'hero.metric3.value': '100%',
   'hero.metric3.label': 'dapat dilebur ulang',
 
-  // Process
-  'process.tag': '[ PROSES ]',
-  'process.subtitle': 'Dari sampah sachet sampai panel siap pasang \u2014 semua di satu workshop.',
-  'process.step1.title': 'Kumpulkan',
-  'process.step1.desc': 'Sachet & kantong plastik dari bank sampah',
-  'process.step2.title': 'Cacah',
-  'process.step2.desc': 'Plastik dicacah jadi serpihan seragam',
-  'process.step3.title': 'Press',
-  'process.step3.desc': 'Dilebur dan ditekan tanpa resin tambahan',
-  'process.step4.title': 'Panel jadi',
-  'process.step4.desc': 'Dipotong ke ukuran 120 \u00D7 240 cm',
+  // Impact
+  'impact.tag': '[ IMPACT ]',
+  'impact.heading': 'Dampak Kami',
+  'impact.body': 'Kami memberi plastik yang tak diinginkan seperti sachet dan kantong plastik tujuan baru dengan mengubahnya menjadi material fungsional untuk produk dan lingkungan binaan.',
+  'impact.stat1.value': '32.376',
+  'impact.stat1.unit': 'kg',
+  'impact.stat1.desc': 'Plastik bernilai rendah diolah menjadi RR Board dan digunakan.',
+  'impact.stat2.value': '2.500',
+  'impact.stat2.unit': 'pcs',
+  'impact.stat2.desc': 'Produk fungsional dibuat menggunakan RR Board.',
+  'impact.stat3.value': '1.200',
+  'impact.stat3.unit': 'm\u00B2',
+  'impact.stat3.desc': 'Estimasi RR Board diaplikasikan di fasad, interior, furnitur, dan aplikasi lainnya.',
 
   // About Repair
   'about.tag': '[ TENTANG REPAIR ]',
@@ -44,10 +47,10 @@ export default {
   'about.stat3.value': '0',
   'about.stat3.label': 'Limbah produksi terbuang',
 
-  // What is RR Board
-  'rrBoardIntro.tag': '[ APA ITU RR BOARD ]',
-  'rrBoardIntro.heading': 'Papan permukaan dari sachet dan kantong plastik.',
-  'rrBoardIntro.body': 'Tanpa resin tambahan. Permukaan bermotif terazo plastik, tiap panel unik, bisa dipotong dan dibor seperti panel kayu.',
+  // RR Board sebagai Material Bangunan
+  'rrBoardIntro.tag': '[ RR BOARD SEBAGAI MATERIAL BANGUNAN ]',
+  'rrBoardIntro.heading': 'RR Board sebagai Material Bangunan',
+  'rrBoardIntro.body': 'RR Board dapat difabrikasi dan diintegrasikan ke berbagai aplikasi komersial, menggabungkan performa praktis dengan karakter khas plastik daur ulang.',
   'rrBoardIntro.spec1.key': 'Ukuran panel',
   'rrBoardIntro.spec1.value': '120 \u00D7 240 cm',
   'rrBoardIntro.spec2.key': 'Ketebalan',
@@ -56,30 +59,36 @@ export default {
   'rrBoardIntro.spec3.value': 'Tahan air, anti rayap, tidak lapuk',
   'rrBoardIntro.spec4.key': 'Akhir hidup',
   'rrBoardIntro.spec4.value': 'Dapat dilebur ulang 100%',
+  'rrBoardIntro.ctaPrimary': 'Selengkapnya tentang RR Board',
+  'rrBoardIntro.ctaSecondary': 'Konsultasikan Kebutuhan Anda',
+  'rrBoardIntro.facade.title': 'Aplikasi Facade',
+  'rrBoardIntro.facade.desc': 'Permukaan facade khas dari 100% plastik bernilai rendah. RR Board menggabungkan pola daur ulang unik dengan ketahanan air dan durabilitas untuk aplikasi eksterior tertentu.',
+  'rrBoardIntro.toilet.title': 'Aplikasi Kubikel Toilet',
+  'rrBoardIntro.toilet.desc': 'Dibangun untuk lingkungan lembap, RR Board menawarkan permukaan tahan air dan tahan lama yang dapat difabrikasi menjadi kubikel toilet fungsional.',
 
   // Building Application
   'building.tag': '[ RR BOARD DALAM BANGUNAN ]',
   'building.heading': 'RR Board sebagai material bangunan.',
   'building.subtitle': 'Panel siap pakai untuk kebutuhan arsitektural: kuat, tahan lembap, dan tidak memerlukan finishing tambahan.',
   'building.app1.title': 'Aplikasi Facade',
-  'building.app1.desc': 'Panel fasad dan secondary skin dengan motif terazo plastik. Tahan cuaca, ringan, dan dipasang dengan rangka standar.',
+  'building.app1.desc': 'Permukaan fasad khas yang terbuat dari 100% plastik bernilai rendah. RR Board memadukan pola daur ulang yang unik dengan ketahanan air dan durabilitas untuk aplikasi eksterior tertentu.',
   'building.app2.title': 'Aplikasi Toilet Cubicles',
-  'building.app2.desc': 'Partisi toilet anti air dan anti rayap. Tidak menggelembung seperti HPL, dan mudah dibersihkan.',
+  'building.app2.desc': 'Dirancang untuk lingkungan lembap, RR Board menawarkan permukaan tahan air dan tahan lama yang dapat difabrikasi menjadi toilet cubicles yang fungsional.',
   'building.seeApp': 'Lihat aplikasi',
   'building.ctaBoard': 'Ke halaman RR Board',
   'building.ctaDiscuss': 'Diskusikan kebutuhan Anda',
 
   // End Product
   'product.tag': '[ RR BOARD SEBAGAI PRODUK ]',
-  'product.heading': 'Bukan hanya lembaran \u2014 juga produk jadi.',
-  'product.subtitle': 'Kami merakit RR Board menjadi furnitur dan perabot siap pakai untuk sekolah, kantor, dan ruang publik.',
-  'product.item1.title': 'Waste Bin',
-  'product.item1.desc': 'Tempat sampah pilah dari panel RR Board. Ironis dan tepat: wadah sampah yang dibuat dari sampah itu sendiri.',
-  'product.item2.title': 'School Set',
-  'product.item2.desc': 'Meja dan kursi sekolah tahan lama, bebas rayap, dan bisa dilebur ulang saat masa pakainya habis.',
+  'product.heading': 'RR Board sebagai Produk & Proyek',
+  'product.subtitle': 'Lebih dari sekadar lembaran, RR Board dapat ditransformasi menjadi produk fungsional melalui desain dan manufaktur kustom, dari benda sehari-hari hingga furnitur dan lainnya.',
+  'product.item1.title': 'Tempat Sampah Daur Ulang',
+  'product.item1.desc': 'Tempat sampah fungsional dari RR Board, memberi tujuan baru bagi plastik bernilai rendah di ruang sehari-hari.',
+  'product.item2.title': 'Set Sekolah Daur Ulang',
+  'product.item2.desc': 'Mengubah RR Board menjadi furnitur fungsional untuk ruang belajar, dirancang untuk membawa material sirkular ke penggunaan sehari-hari.',
   'product.seeProduct': 'Lihat produk',
-  'product.ctaProject': 'Ke halaman Proyek',
-  'product.ctaDiscuss': 'Diskusikan kebutuhan Anda',
+  'product.ctaProject': 'Selengkapnya tentang Proyek Kustom',
+  'product.ctaDiscuss': 'Konsultasikan Kebutuhan Anda',
 
   // Clients
   'clients.tag': '[ KLIEN KAMI ]',

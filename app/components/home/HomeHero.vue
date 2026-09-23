@@ -1,9 +1,10 @@
 <template>
-  <section ref="heroContainer" class="parallax-container w-full min-h-[600px] lg:h-[780px] flex flex-col gap-0 p-[24px_20px] lg:p-[36px_48px] justify-between items-start overflow-hidden relative">
+  <section ref="heroContainer" class="parallax-container w-full min-h-[600px] lg:h-[900px] flex flex-col gap-0 p-[24px_20px_100px] lg:p-[36px_48px_140px] justify-between items-start overflow-hidden relative">
     <img src="/images/hero-bg.webp" alt="Repair workshop" class="parallax-img z-0" />
 
     <div class="absolute inset-0 bg-[#00000050] mix-blend-multiply z-[1]" />
     <div class="absolute inset-0 [background-image:linear-gradient(95.456deg,_#00000070_2.755%,_#00000035_50%,_#00000010_97.245%)] z-[2]" />
+    <div class="absolute bottom-0 left-0 right-0 h-[180px] lg:h-[240px] bg-gradient-to-t from-white to-transparent z-[2]" />
 
     <div class="h-0 relative z-[3]" />
 
@@ -18,11 +19,11 @@
         </p>
 
         <div class="hero-entrance hero-entrance-delay-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-[14px]">
-          <NuxtLink to="/rr-board" class="flex items-center gap-[10px] px-6 py-[15px] bg-cream">
+          <NuxtLink to="/rr-board" class="flex items-center gap-[10px] px-6 py-[15px] bg-cream rounded-xl">
             <span class="font-dm-sans text-sm font-semibold text-navy whitespace-nowrap">{{ t('hero.ctaBoard') }}</span>
             <Icon name="lucide:arrow-right" class="w-4 h-4 text-navy" />
           </NuxtLink>
-          <a href="#" class="flex items-center gap-[10px] px-6 py-[15px] [outline:1px_solid_#F4F1E980] [outline-offset:-0.5px]">
+          <a href="#" class="flex items-center gap-[10px] px-6 py-[15px] [outline:1px_solid_#F4F1E980] [outline-offset:-0.5px] rounded-xl">
             <Icon name="lucide:message-circle" class="w-4 h-4 text-cream" />
             <span class="font-dm-sans text-sm font-semibold text-cream whitespace-nowrap">{{ t('hero.ctaDiscuss') }}</span>
           </a>

@@ -2,7 +2,6 @@
   <div>
     <HomeHero />
     <HomeProcess />
-    <HomeAbout />
     <HomeRrBoardIntro />
     <HomeBuilding />
     <HomeProduct />

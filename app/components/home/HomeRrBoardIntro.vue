@@ -1,5 +1,5 @@
 <template>
-  <section id="rr-board" class="w-full flex flex-col lg:flex-row gap-8 lg:gap-16 p-[48px_20px] lg:p-[88px_48px] bg-[#EDF3FE]">
+  <section id="rr-board" class="w-full flex flex-col lg:flex-row gap-8 lg:gap-16 p-[48px_20px] lg:p-[88px_48px] bg-white">
     <div
       v-motion
       :initial="{ opacity: 0, x: 40 }"

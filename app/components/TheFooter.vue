@@ -13,11 +13,11 @@
           {{ t('footer.heading') }}
         </h2>
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 lg:gap-3.5">
-          <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] bg-cream">
+          <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] bg-cream rounded-xl">
             <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-navy whitespace-nowrap">{{ t('footer.ctaWhatsapp') }}</span>
             <Icon name="lucide:message-circle" class="w-4 h-4 text-navy" />
           </a>
-          <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] [outline:1px_solid_#F3EFE44D] [outline-offset:-0.5px]">
+          <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] [outline:1px_solid_#F3EFE44D] [outline-offset:-0.5px] rounded-xl">
             <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-cream whitespace-nowrap">{{ t('footer.ctaCatalog') }}</span>
           </a>
         </div>
