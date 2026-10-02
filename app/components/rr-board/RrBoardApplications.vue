@@ -1,78 +1,74 @@
 <template>
-  <section class="w-full flex flex-col gap-10 lg:gap-14 p-[64px_20px] lg:p-[96px_48px] bg-cream">
+  <section class="w-full flex flex-col gap-10 lg:gap-12 p-[64px_20px] lg:p-[96px_48px] bg-cream">
     <div
       v-motion
       :initial="{ opacity: 0, y: 32 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-      class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:items-end"
+      class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[80px] lg:justify-between lg:items-end"
     >
-      <div class="flex-1 flex flex-col gap-3 lg:gap-[14px]">
-        <span class="font-mono text-[11px] tracking-[1.3px] text-blue-accent">
-          {{ t('rrPage.s4.tag') }}
-        </span>
-        <h2 class="font-dm-sans font-bold text-[32px] leading-[36px] lg:text-[46px] lg:leading-[51px] tracking-[-1px] lg:tracking-[-1.8px] text-navy">
-          {{ t('rrPage.s4.heading') }}
+      <div class="lg:w-[900px] flex flex-col gap-3 lg:gap-4">
+        <span class="font-mono text-[10px] tracking-[1.4px] text-blue-accent">{{ t('rrPage.apps.tag') }}</span>
+        <h2 class="font-dm-sans font-bold text-[34px] leading-[38px] lg:text-[52px] lg:leading-[54px] tracking-[-1.2px] lg:tracking-[-2.1px] text-navy">
+          {{ t('rrPage.apps.heading') }}
         </h2>
+        <p class="font-dm-sans text-[14px] leading-[23px] lg:text-[15px] lg:leading-[25px] text-[#0C2244]">
+          {{ t('rrPage.apps.sub') }}
+        </p>
       </div>
-      <p class="lg:w-[420px] shrink-0 font-dm-sans text-[14px] leading-[22px] lg:text-[15px] lg:leading-[24px] text-navy/65">
-        {{ t('rrPage.s4.subtitle') }}
-      </p>
+      <span class="hidden lg:block w-[200px] shrink-0 font-mono text-[10px] tracking-[1.2px] text-navy/45 text-right">
+        {{ t('rrPage.apps.count') }}
+      </span>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[18px]">
-      <div
-        v-for="(app, i) in applications" :key="app.index"
+    <div class="w-full flex flex-col gap-4">
+      <article
+        v-for="(app, i) in applications" :key="app.prefix"
         v-motion
         :initial="{ opacity: 0, y: 24 }"
-        :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: i * 120 } }"
-        class="flex flex-col bg-white overflow-hidden"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
+        class="w-full flex flex-col lg:flex-row lg:items-center p-3 lg:p-[14px] bg-white [outline:1px_solid_#0614281A] [outline-offset:-0.5px] rounded-[20px]"
       >
-        <div class="w-full h-[200px] lg:h-[300px] bg-navy/10" />
-        <div class="flex flex-col gap-3 p-5 lg:p-7">
-          <span class="font-mono text-[11px] tracking-[1px] text-blue-accent">{{ app.index }}</span>
-          <h3 class="font-dm-sans font-semibold text-[22px] leading-[26px] lg:text-[28px] lg:leading-[32px] tracking-[-0.8px] text-navy">
-            {{ t(app.titleKey) }}
+        <img :src="app.image" :alt="t(`${app.prefix}.title`)" loading="lazy" class="w-full lg:w-[520px] shrink-0 h-[220px] sm:h-[280px] lg:h-[320px] object-cover rounded-[14px]" />
+        <div class="flex-1 flex flex-col gap-3.5 p-[20px_8px_8px] lg:p-[20px_32px_20px_40px]">
+          <span class="font-mono text-[10.5px] tracking-[1.2px] text-blue-accent">
+            — {{ String(i + 1).padStart(2, '0') }} · {{ t('rrPage.apps.label') }}
+          </span>
+          <h3 class="font-dm-sans font-semibold text-[24px] leading-[30px] lg:text-[30px] lg:leading-[35px] tracking-[-0.8px] lg:tracking-[-1.1px] text-navy">
+            {{ t(`${app.prefix}.title`) }}
           </h3>
-          <p class="font-dm-sans text-[13px] leading-[20px] lg:text-[14px] lg:leading-[22px] text-navy/65">
-            {{ t(app.descKey) }}
+          <p class="font-dm-sans text-[14px] leading-[23px] lg:text-[15px] lg:leading-[25px] text-[#0C2244]">
+            {{ t(`${app.prefix}.body`) }}
           </p>
-          <a href="#" class="flex items-center gap-2 pt-2.5">
-            <span class="font-dm-sans text-[13px] font-semibold text-blue-accent">{{ t('rrPage.s4.seeDetail') }}</span>
-            <Icon name="lucide:arrow-up-right" class="w-3.5 h-3.5 text-blue-accent" />
-          </a>
+          <div class="flex flex-wrap gap-2">
+            <span
+              v-for="tag in ['tag1', 'tag2', 'tag3']" :key="tag"
+              class="px-[13px] py-[7px] bg-cream rounded-full font-mono text-[9.5px] tracking-[0.8px] text-[#0C2244]"
+            >{{ t(`${app.prefix}.${tag}`) }}</span>
+          </div>
+          <div v-if="app.client" class="flex items-center gap-3 pt-2.5 border-t border-[#0614281A]">
+            <span class="font-mono text-[9.5px] tracking-[1.2px] text-navy/45">{{ t('rrPage.apps.client') }}</span>
+            <span class="flex-1 font-dm-sans text-[13.5px] leading-[20px] text-navy">{{ t(app.client) }}</span>
+          </div>
         </div>
-      </div>
+      </article>
     </div>
 
     <div
       v-motion
       :initial="{ opacity: 0, y: 32 }"
-      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600, delay: 200 } }"
-      class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[60px] lg:justify-between lg:items-end pt-14 border-t border-navy/8"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
+      class="w-full flex flex-col items-center gap-5 p-[40px_20px_44px] lg:p-[48px_48px_52px] bg-blue-accent rounded-[20px] text-center"
     >
-      <div class="flex-1 flex flex-col gap-2.5 max-w-[680px]">
-        <h3 class="font-dm-sans font-bold text-[26px] leading-[30px] lg:text-[34px] lg:leading-[39px] tracking-[-1px] lg:tracking-[-1.4px] text-navy">
-          {{ t('rrPage.s4.ctaHeading') }}
-        </h3>
-        <p class="font-dm-sans text-[14px] leading-[23px] lg:text-[15px] lg:leading-[26px] text-navy/65">
-          {{ t('rrPage.s4.ctaBody') }}
-        </p>
-      </div>
-      <div class="flex flex-col gap-2.5 lg:items-end">
-        <div class="flex flex-col sm:flex-row gap-3">
-          <a href="#" class="flex items-center gap-2.5 px-6 py-[15px] bg-blue-accent">
-            <Icon name="lucide:message-circle" class="w-4 h-4 text-cream" />
-            <span class="font-dm-sans text-sm font-semibold text-cream whitespace-nowrap">{{ t('rrPage.s4.ctaConsult') }}</span>
-          </a>
-          <a href="#" class="flex items-center gap-2.5 px-6 py-[15px] [outline:1px_solid_#06142833] [outline-offset:-0.5px]">
-            <Icon name="lucide:download" class="w-4 h-4 text-navy" />
-            <span class="font-dm-sans text-sm font-semibold text-navy whitespace-nowrap">{{ t('rrPage.s4.ctaSpec') }}</span>
-          </a>
-        </div>
-        <span class="font-mono text-[10px] tracking-[0.8px] text-navy/50">
-          {{ t('rrPage.s4.ctaNote') }}
-        </span>
-      </div>
+      <h3 class="max-w-[700px] font-dm-sans font-bold text-[26px] leading-[31px] lg:text-[34px] lg:leading-[39px] tracking-[-0.9px] lg:tracking-[-1.3px] text-cream">
+        {{ t('rrPage.apps.ctaHeading') }}
+      </h3>
+      <p class="max-w-[560px] font-dm-sans text-[14px] leading-[23px] lg:text-[15px] lg:leading-[25px] text-cream/80">
+        {{ t('rrPage.apps.ctaBody') }}
+      </p>
+      <NuxtLink to="/contact" class="flex items-center gap-2.5 px-6 py-[15px] bg-cream rounded-xl">
+        <span class="font-dm-sans text-sm font-semibold text-navy whitespace-nowrap">{{ t('rrPage.apps.ctaButton') }}</span>
+        <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-navy" />
+      </NuxtLink>
     </div>
   </section>
 </template>
@@ -80,12 +76,10 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
+// Client logos from the design (Artboard3/4/5) are not in the repo yet; only text clients are rendered.
 const applications = [
-  { index: '[ 01 ]', titleKey: 'rrPage.s4.app1.title', descKey: 'rrPage.s4.app1.desc' },
-  { index: '[ 02 ]', titleKey: 'rrPage.s4.app2.title', descKey: 'rrPage.s4.app2.desc' },
-  { index: '[ 03 ]', titleKey: 'rrPage.s4.app3.title', descKey: 'rrPage.s4.app3.desc' },
-  { index: '[ 04 ]', titleKey: 'rrPage.s4.app4.title', descKey: 'rrPage.s4.app4.desc' },
-  { index: '[ 05 ]', titleKey: 'rrPage.s4.app5.title', descKey: 'rrPage.s4.app5.desc' },
-  { index: '[ 06 ]', titleKey: 'rrPage.s4.app6.title', descKey: 'rrPage.s4.app6.desc' },
+  { prefix: 'rrPage.apps.a1', image: '/images/facade.webp', client: null },
+  { prefix: 'rrPage.apps.a2', image: '/images/cublices.webp', client: 'rrPage.apps.a2.client' },
+  { prefix: 'rrPage.apps.a3', image: '/images/school.webp', client: null },
 ]
 </script>

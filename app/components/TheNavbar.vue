@@ -139,9 +139,9 @@ const solid = computed(() => !isHome.value || scrolled.value)
 const links = [
   { labelKey: 'nav.home', to: '/' },
   { labelKey: 'nav.rrBoard', to: '/rr-board' },
-  { labelKey: 'nav.application', to: '/application' },
-  { labelKey: 'nav.projects', to: '/projects' },
-  { labelKey: 'nav.about', to: '/about' },
+  { labelKey: 'nav.customProject', to: '/custom-project' },
+  { labelKey: 'nav.portfolio', to: '/portfolio' },
+  { labelKey: 'nav.contactLink', to: '/contact' },
 ]
 
 onMounted(() => {

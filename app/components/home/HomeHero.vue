@@ -9,7 +9,7 @@
     <div class="h-0 relative z-[3]" />
 
     <div class="w-full flex flex-col lg:flex-row gap-8 lg:gap-[80px] pt-[72px] items-start relative z-[3]">
-      <div class="hero-entrance hero-entrance-delay-1 font-dm-sans font-medium text-[24px] leading-[32px] lg:text-[34px] lg:leading-[44px] tracking-[-1px] text-cream lg:w-[300px] shrink-0">
+      <div class="hero-entrance hero-entrance-delay-1 font-dm-sans font-medium text-[24px] leading-[32px] lg:text-[34px] lg:leading-[44px] tracking-[-1px] text-cream shrink-0 whitespace-pre-line">
         {{ t('hero.label') }}
       </div>
 

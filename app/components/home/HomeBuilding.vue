@@ -12,12 +12,9 @@
           {{ t('building.heading') }}
         </h2>
       </div>
-      <p class="lg:w-[420px] shrink-0 font-dm-sans text-[13px] leading-[20px] lg:text-[15px] lg:leading-6 text-[#F3EFE4A6]">
-        {{ t('building.subtitle') }}
-      </p>
     </div>
 
-    <div class="w-full flex flex-col lg:flex-row gap-4 lg:gap-6">
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6">
       <div
         v-for="(app, i) in buildingApps" :key="app.titleKey"
         v-motion
@@ -40,22 +37,6 @@
         </div>
       </div>
     </div>
-
-    <div
-      v-motion
-      :initial="{ opacity: 0, y: 24 }"
-      :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: 300 } }"
-      class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 lg:gap-3.5 pt-4"
-    >
-      <!-- <a href="#" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] bg-cream rounded-[12px]">
-        <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-navy whitespace-nowrap">{{ t('building.ctaBoard') }}</span>
-        <Icon name="lucide:arrow-right" class="w-4 h-4 text-navy" />
-      </a> -->
-      <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-5 lg:px-6 py-[13px] lg:py-[15px] [outline:1px_solid_#F3EFE459] [outline-offset:-0.5px] rounded-[12px]">
-        <Icon name="lucide:message-circle" class="w-4 h-4 text-cream" />
-        <span class="font-dm-sans text-[13px] lg:text-sm font-semibold text-cream whitespace-nowrap">{{ t('building.ctaDiscuss') }}</span>
-      </a>
-    </div>
   </section>
 </template>
 
@@ -67,14 +48,28 @@ const buildingApps = [
     index: '[ 01 ]',
     titleKey: 'building.app1.title',
     descKey: 'building.app1.desc',
-    image: '/images/facade.webp',
+    image: '/images/design.webp',
     link: '#',
   },
   {
     index: '[ 02 ]',
     titleKey: 'building.app2.title',
     descKey: 'building.app2.desc',
-    image: '/images/cublices.webp',
+    image: '/images/events.webp',
+    link: '#',
+  },
+  {
+    index: '[ 03 ]',
+    titleKey: 'building.app3.title',
+    descKey: 'building.app3.desc',
+    image: '/images/product.webp',
+    link: '#',
+  },
+  {
+    index: '[ 04 ]',
+    titleKey: 'building.app4.title',
+    descKey: 'building.app4.desc',
+    image: '/images/csr.webp',
     link: '#',
   },
 ]
