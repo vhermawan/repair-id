@@ -2,7 +2,7 @@
   <section class="w-full flex flex-col gap-8 lg:gap-[48px] p-[112px_20px_0] lg:p-[140px_48px_0]">
     <div class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:justify-between lg:items-end">
       <div class="lg:w-[820px] flex flex-col gap-4 lg:gap-[20px]">
-        <span class="hero-entrance hero-entrance-delay-1 font-mono text-[10px] tracking-[1.4px] text-blue-accent whitespace-nowrap">
+        <span class="hero-entrance hero-entrance-delay-1 font-dm-sans font-bold text-[10px] tracking-[1.4px] text-blue-accent whitespace-nowrap">
           {{ t('contactPage.heroTag') }}
         </span>
         <h1 class="hero-entrance hero-entrance-delay-2 font-dm-sans font-bold text-[44px] leading-[46px] lg:text-[86px] lg:leading-[84px] tracking-[-1.6px] lg:tracking-[-3.4px] text-navy whitespace-pre-line">

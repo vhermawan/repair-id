@@ -1,7 +1,7 @@
 <template>
   <section class="w-full flex flex-col items-center p-[112px_20px_0] lg:p-[156px_48px_0] bg-cream">
     <div class="w-full flex flex-col gap-5 items-center pb-10 lg:pb-14 text-center">
-      <span class="hero-entrance hero-entrance-delay-1 font-mono text-[10px] lg:text-[11px] tracking-[1.2px] text-[#0C2244]">
+      <span class="hero-entrance hero-entrance-delay-1 font-dm-sans font-bold text-[10px] lg:text-[11px] tracking-[1.2px] text-[#0C2244]">
         {{ t('rrPage.hero.since') }}
       </span>
       <h1 class="hero-entrance hero-entrance-delay-2 max-w-[900px] font-dm-sans font-bold text-[44px] leading-[46px] lg:text-[76px] lg:leading-[76px] tracking-[-1.6px] lg:tracking-[-3px] text-navy">

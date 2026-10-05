@@ -2,7 +2,7 @@
   <section class="w-full flex flex-col gap-8 lg:gap-[56px] p-[112px_20px_0] lg:p-[160px_48px_0] bg-white">
     <div class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:justify-between lg:items-end">
       <div class="hero-entrance hero-entrance-delay-1 flex-1 max-w-[920px] flex flex-col gap-4 lg:gap-5">
-        <span class="font-mono text-[10px] tracking-[1.4px] text-[#005FE7]">{{ t('hero.eyebrow') }}</span>
+        <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-[#005FE7]">{{ t('hero.eyebrow') }}</span>
         <h1 class="font-dm-sans font-bold text-[40px] leading-[42px] tracking-[-1.5px] lg:text-[72px] lg:leading-[71px] lg:tracking-[-2.8px] text-navy whitespace-pre-line">
           {{ t('hero.headline') }}
         </h1>
@@ -24,7 +24,7 @@
 
     <div class="hero-entrance hero-entrance-delay-4 w-full flex justify-center lg:pt-[40px]">
       <a href="#rr-board" @click.prevent="scrollToRrBoard" class="flex items-center gap-2 px-[26px] py-[13px] bg-[#005FE7] rounded-full">
-        <span class="font-mono text-[11px] tracking-[1.2px] text-white whitespace-nowrap">{{ t('hero.ctaBoard') }}</span>
+        <span class="font-dm-sans font-medium text-[11px] tracking-[1.2px] text-white whitespace-nowrap">{{ t('hero.ctaBoard') }}</span>
       </a>
     </div>
   </section>

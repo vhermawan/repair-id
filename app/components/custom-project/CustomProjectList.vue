@@ -38,11 +38,11 @@
           </p>
           <dl class="w-full flex flex-col gap-3 pt-1">
             <div class="flex flex-col gap-1 pt-3 border-t border-[#0614281A]">
-              <dt class="font-mono text-[9px] tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalItem') }}</dt>
+              <dt class="font-dm-sans font-medium text-[9px] tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalItem') }}</dt>
               <dd class="font-dm-sans font-semibold text-[14px] text-navy">{{ t(`customProjectPage.projects.${project.key}.items`) }}</dd>
             </div>
             <div class="flex flex-col gap-1 pt-3 border-t border-[#0614281A]">
-              <dt class="font-mono text-[9px] tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalWaste') }}</dt>
+              <dt class="font-dm-sans font-medium text-[9px] tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalWaste') }}</dt>
               <dd class="font-dm-sans font-semibold text-[14px] text-navy">{{ t(`customProjectPage.projects.${project.key}.waste`) }}</dd>
             </div>
           </dl>

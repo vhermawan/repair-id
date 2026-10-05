@@ -40,7 +40,7 @@
             : '[outline:1px_solid_#F4F1E966] [outline-offset:-0.5px]'"
         >
           <button
-            class="font-mono text-[11px] font-semibold tracking-[0.5px] px-2.5 lg:px-3 py-1 lg:py-1.5 rounded-full whitespace-nowrap transition-colors"
+            class="font-dm-sans text-[11px] font-semibold tracking-[0.5px] px-2.5 lg:px-3 py-1 lg:py-1.5 rounded-full whitespace-nowrap transition-colors"
             :class="locale === 'id'
               ? (solid && !menuOpen ? 'bg-navy text-cream' : 'bg-cream text-navy')
               : (solid && !menuOpen ? 'text-navy/40' : 'text-[#D8E5FF]') + ' bg-transparent'"
@@ -49,7 +49,7 @@
             ID
           </button>
           <button
-            class="font-mono text-[11px] font-semibold tracking-[0.5px] px-2.5 lg:px-3 py-1 lg:py-1.5 rounded-full whitespace-nowrap transition-colors"
+            class="font-dm-sans text-[11px] font-semibold tracking-[0.5px] px-2.5 lg:px-3 py-1 lg:py-1.5 rounded-full whitespace-nowrap transition-colors"
             :class="locale === 'en'
               ? (solid && !menuOpen ? 'bg-navy text-cream' : 'bg-cream text-navy')
               : (solid && !menuOpen ? 'text-navy/40' : 'text-[#D8E5FF]') + ' bg-transparent'"
@@ -106,7 +106,7 @@
             @click="menuOpen = false"
           >
             <div class="flex items-center gap-3">
-              <span class="font-mono text-[11px] tracking-[0.5px] text-[#A9C9FF]">{{ String(i + 1).padStart(2, '0') }}</span>
+              <span class="font-dm-sans font-medium text-[11px] tracking-[0.5px] text-[#A9C9FF]">{{ String(i + 1).padStart(2, '0') }}</span>
               <span class="font-dm-sans font-bold text-[28px] tracking-[-0.8px] text-cream">{{ t(link.labelKey) }}</span>
             </div>
             <Icon name="lucide:arrow-up-right" class="w-5 h-5 text-cream" />
@@ -119,7 +119,7 @@
             <Icon name="lucide:message-circle" class="w-4 h-4 text-navy" />
             <span class="font-dm-sans text-[13px] font-semibold text-navy whitespace-nowrap">{{ t('nav.whatsapp') }}</span>
           </a>
-          <span class="font-mono text-[11px] tracking-[0.5px] text-[#A9C9FF] text-center">
+          <span class="font-dm-sans font-medium text-[11px] tracking-[0.5px] text-[#A9C9FF] text-center">
             {{ t('nav.contactInfo') }}
           </span>
         </div>

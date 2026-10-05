@@ -7,7 +7,7 @@
       class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[80px] lg:justify-between lg:items-end"
     >
       <div class="lg:w-[900px] flex flex-col gap-3 lg:gap-4">
-        <span class="font-mono text-[10px] tracking-[1.4px] text-blue-accent">{{ t('rrPage.apps.tag') }}</span>
+        <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-blue-accent">{{ t('rrPage.apps.tag') }}</span>
         <h2 class="font-dm-sans font-bold text-[34px] leading-[38px] lg:text-[52px] lg:leading-[54px] tracking-[-1.2px] lg:tracking-[-2.1px] text-navy">
           {{ t('rrPage.apps.heading') }}
         </h2>
@@ -15,7 +15,7 @@
           {{ t('rrPage.apps.sub') }}
         </p>
       </div>
-      <span class="hidden lg:block w-[200px] shrink-0 font-mono text-[10px] tracking-[1.2px] text-navy/45 text-right">
+      <span class="hidden lg:block w-[200px] shrink-0 font-dm-sans font-medium text-[10px] tracking-[1.2px] text-navy/45 text-right">
         {{ t('rrPage.apps.count') }}
       </span>
     </div>
@@ -30,7 +30,7 @@
       >
         <img :src="app.image" :alt="t(`${app.prefix}.title`)" loading="lazy" class="w-full lg:w-[520px] shrink-0 h-[220px] sm:h-[280px] lg:h-[320px] object-cover" />
         <div class="flex-1 flex flex-col gap-3.5 p-[20px_8px_8px] lg:p-[20px_32px_20px_40px]">
-          <span class="font-mono text-[10.5px] tracking-[1.2px] text-blue-accent">
+          <span class="font-dm-sans font-medium text-[10.5px] tracking-[1.2px] text-blue-accent">
             — {{ String(i + 1).padStart(2, '0') }} · {{ t('rrPage.apps.label') }}
           </span>
           <h3 class="font-dm-sans font-semibold text-[24px] leading-[30px] lg:text-[30px] lg:leading-[35px] tracking-[-0.8px] lg:tracking-[-1.1px] text-navy">
@@ -42,11 +42,11 @@
           <div class="flex flex-wrap gap-2">
             <span
               v-for="tag in ['tag1', 'tag2', 'tag3']" :key="tag"
-              class="px-[13px] py-[7px] [outline:1px_solid_#0614281A] [outline-offset:-0.5px] rounded-full font-mono text-[9.5px] tracking-[0.8px] text-[#0C2244]"
+              class="px-[13px] py-[7px] [outline:1px_solid_#0614281A] [outline-offset:-0.5px] rounded-full font-dm-sans font-medium text-[9.5px] tracking-[0.8px] text-[#0C2244]"
             >{{ t(`${app.prefix}.${tag}`) }}</span>
           </div>
           <div v-if="app.client" class="flex items-center gap-3 pt-2.5 border-t border-[#0614281A]">
-            <span class="font-mono text-[9.5px] tracking-[1.2px] text-navy/45">{{ t('rrPage.apps.client') }}</span>
+            <span class="font-dm-sans font-medium text-[9.5px] tracking-[1.2px] text-navy/45">{{ t('rrPage.apps.client') }}</span>
             <span class="flex-1 font-dm-sans text-[13.5px] leading-[20px] text-navy">{{ t(app.client) }}</span>
           </div>
         </div>

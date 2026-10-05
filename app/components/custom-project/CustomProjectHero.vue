@@ -1,6 +1,6 @@
 <template>
   <section class="w-full flex flex-col gap-5 items-center p-[112px_20px_64px] lg:p-[156px_48px_88px] overflow-hidden">
-    <span class="hero-entrance hero-entrance-delay-1 font-mono text-[10px] tracking-[1.4px] text-blue-accent whitespace-nowrap">
+    <span class="hero-entrance hero-entrance-delay-1 font-dm-sans font-bold text-[10px] tracking-[1.4px] text-blue-accent whitespace-nowrap">
       {{ t('customProjectPage.hero.tag') }}
     </span>
     <h1 class="hero-entrance hero-entrance-delay-2 max-w-[900px] font-dm-sans font-bold text-[44px] leading-[46px] lg:text-[64px] lg:leading-[65px] tracking-[-1.6px] lg:tracking-[-2.6px] text-navy text-center">
@@ -31,17 +31,17 @@
               class="w-full h-full object-cover rounded-[14px]"
             >
             <span
-              class="absolute left-1/2 bottom-3 -translate-x-1/2 px-3.5 py-[7px] bg-navy rounded-full font-mono text-[10px] tracking-[0.8px] text-white whitespace-nowrap pointer-events-none transition-[opacity,transform] duration-200 ease-out motion-reduce:transition-none"
+              class="absolute left-1/2 bottom-3 -translate-x-1/2 px-3.5 py-[7px] bg-navy rounded-full font-dm-sans font-medium text-[10px] tracking-[0.8px] text-white whitespace-nowrap pointer-events-none transition-[opacity,transform] duration-200 ease-out motion-reduce:transition-none"
               :class="hovered === i ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'"
             >
               {{ t(card.labelKey) }}
             </span>
           </div>
         </div>
-        <span class="absolute left-[29px] top-[18px] z-[7] px-3.5 py-[7px] bg-blue-accent rounded-full font-mono text-[10px] tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
+        <span class="absolute left-[29px] top-[18px] z-[7] px-3.5 py-[7px] bg-blue-accent rounded-full font-dm-sans font-medium text-[10px] tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
           {{ t('customProjectPage.products.displayTable') }}
         </span>
-        <span class="absolute left-[959px] top-[34px] z-[8] px-3.5 py-[7px] bg-navy rounded-full font-mono text-[10px] tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
+        <span class="absolute left-[959px] top-[34px] z-[8] px-3.5 py-[7px] bg-navy rounded-full font-dm-sans font-medium text-[10px] tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
           {{ t('customProjectPage.products.phoneHolder') }}
         </span>
       </div>

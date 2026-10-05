@@ -31,7 +31,7 @@
         class="lg:w-80 shrink-0 flex flex-col gap-4 lg:gap-[18px]"
       >
         <div v-for="item in contacts" :key="item.key" class="w-full flex flex-col gap-[4px] lg:gap-[5px]">
-          <span class="font-mono text-[10px] tracking-[1.2px] text-[#A9C9FF] whitespace-nowrap">{{ item.key }}</span>
+          <span class="font-dm-sans font-medium text-[10px] tracking-[1.2px] text-[#A9C9FF] whitespace-nowrap">{{ item.key }}</span>
           <a v-if="item.href" :href="item.href" target="_blank" rel="noopener noreferrer" class="w-full font-dm-sans text-[13px] lg:text-sm leading-[21px] text-cream hover:underline">{{ item.value }}</a>
           <span v-else class="w-full font-dm-sans text-[13px] lg:text-sm leading-[21px] text-cream">{{ item.value }}</span>
         </div>
@@ -45,7 +45,7 @@
         alt="Repair Material Studio"
         class="h-[48px] lg:h-[96px] max-w-full w-auto object-contain opacity-10"
       />
-      <span class="font-mono text-[9px] lg:text-[10px] tracking-[0.8px] text-[#F3EFE480] whitespace-nowrap">
+      <span class="font-dm-sans font-medium text-[9px] lg:text-[10px] tracking-[0.8px] text-[#F3EFE480] whitespace-nowrap">
         {{ t('footer.copyright') }}
       </span>
     </div>

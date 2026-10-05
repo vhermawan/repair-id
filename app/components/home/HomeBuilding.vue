@@ -6,7 +6,7 @@
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
       class="w-full flex flex-col gap-3 lg:gap-4"
     >
-      <span class="font-mono text-[10px] tracking-[1.4px] text-[#005FE7]">{{ t('building.tag') }}</span>
+      <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-[#005FE7]">{{ t('building.tag') }}</span>
       <h2 class="font-dm-sans font-bold text-[32px] leading-[36px] tracking-[-1.2px] lg:text-[46px] lg:leading-[49px] lg:tracking-[-1.8px] text-navy">
         {{ t('building.heading') }}
       </h2>

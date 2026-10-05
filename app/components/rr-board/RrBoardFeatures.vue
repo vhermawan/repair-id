@@ -10,7 +10,7 @@
         {{ t('rrPage.features.sub') }}
       </p>
       <div class="lg:w-[780px] flex flex-col gap-3 lg:gap-[14px] lg:items-end">
-        <span class="font-mono text-[10px] tracking-[1.4px] text-blue-accent">{{ t('rrPage.features.tag') }}</span>
+        <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-blue-accent">{{ t('rrPage.features.tag') }}</span>
         <h2 class="font-dm-sans font-bold text-[34px] leading-[38px] lg:text-[52px] lg:leading-[54px] tracking-[-1.2px] lg:tracking-[-2.1px] text-navy lg:text-right">
           {{ t('rrPage.features.heading') }}
         </h2>
@@ -28,7 +28,7 @@
         <img :src="feature.image" :alt="t(`${feature.prefix}.title`)" loading="lazy" class="w-full h-[220px] lg:h-[260px] object-cover" />
         <div class="flex flex-col gap-3 p-[4px_8px_12px] lg:p-[4px_12px_14px]">
           <div class="flex items-center gap-3">
-            <span class="font-mono text-[10.5px] tracking-[1.2px] text-blue-accent whitespace-nowrap">— {{ String(i + 1).padStart(2, '0') }}</span>
+            <span class="font-dm-sans font-medium text-[10.5px] tracking-[1.2px] text-blue-accent whitespace-nowrap">— {{ String(i + 1).padStart(2, '0') }}</span>
             <h3 class="flex-1 font-dm-sans font-semibold text-[20px] leading-[25px] lg:text-[24px] lg:leading-[29px] tracking-[-0.6px] lg:tracking-[-0.9px] text-navy">
               {{ t(`${feature.prefix}.title`) }}
             </h3>
@@ -39,7 +39,7 @@
           <div class="flex flex-wrap gap-2 pt-1">
             <span
               v-for="tag in ['tag1', 'tag2']" :key="tag"
-              class="px-[13px] py-[7px] [outline:1px_solid_#0614281A] [outline-offset:-0.5px] rounded-full font-mono text-[9.5px] tracking-[0.8px] text-[#0C2244]"
+              class="px-[13px] py-[7px] [outline:1px_solid_#0614281A] [outline-offset:-0.5px] rounded-full font-dm-sans font-medium text-[9.5px] tracking-[0.8px] text-[#0C2244]"
             >{{ t(`${feature.prefix}.${tag}`) }}</span>
           </div>
         </div>

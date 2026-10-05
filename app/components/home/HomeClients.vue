@@ -6,7 +6,7 @@
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
       class="w-full flex flex-col gap-2 lg:flex-row lg:justify-between lg:items-end"
     >
-      <span class="font-mono text-[11px] tracking-[1.2px] text-[#06142899] whitespace-nowrap">{{ t('clients.tag') }}</span>
+      <span class="font-dm-sans font-bold text-[11px] tracking-[1.2px] text-[#06142899] whitespace-nowrap">{{ t('clients.tag') }}</span>
       <span class="font-dm-sans text-[12px] lg:text-sm text-[#061428CC]">
         {{ t('clients.subtitle') }}
       </span>

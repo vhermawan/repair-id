@@ -6,7 +6,7 @@
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
       class="w-full flex flex-col lg:flex-row gap-4 lg:gap-[80px] lg:justify-between lg:items-end"
     >
-      <span class="font-mono text-[10px] tracking-[1.4px] text-[#005FE7] whitespace-nowrap">{{ t('impact.tag') }}</span>
+      <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-[#005FE7] whitespace-nowrap">{{ t('impact.tag') }}</span>
       <p class="lg:w-[620px] shrink-0 font-dm-sans text-[16px] leading-[24px] text-navy">
         {{ t('impact.body') }}
       </p>

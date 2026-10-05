@@ -7,7 +7,7 @@
       class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:items-end"
     >
       <div class="flex-1 flex flex-col gap-3 lg:gap-[14px]">
-        <span class="font-mono text-[11px] tracking-[1.2px] text-blue-accent">
+        <span class="font-dm-sans font-bold text-[11px] tracking-[1.2px] text-blue-accent">
           {{ t('projectsPage.s1.tag') }}
         </span>
         <h2 class="font-dm-sans font-bold text-[32px] leading-[36px] lg:text-[46px] lg:leading-[49px] tracking-[-1px] lg:tracking-[-1.8px] text-navy">
@@ -39,7 +39,7 @@
           <p class="font-inter text-[14px] lg:text-[15px] leading-[24px] text-navy/65 max-w-[560px]">
             {{ t(service.descKey) }}
           </p>
-          <span class="font-mono text-[10px] tracking-[1.1px] text-blue-accent">
+          <span class="font-dm-sans font-medium text-[10px] tracking-[1.1px] text-blue-accent">
             {{ t(service.metaKey) }}
           </span>
         </div>

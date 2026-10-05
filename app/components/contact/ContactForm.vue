@@ -17,7 +17,7 @@
 
       <dl class="w-full lg:w-[300px] shrink-0 grid grid-cols-2 lg:grid-cols-1 gap-5">
         <div v-for="item in contacts" :key="item.labelKey" class="flex flex-col gap-[5px]">
-          <dt class="font-mono text-[10px] tracking-[1.2px] text-blue-accent">{{ t(item.labelKey) }}</dt>
+          <dt class="font-dm-sans font-medium text-[10px] tracking-[1.2px] text-blue-accent">{{ t(item.labelKey) }}</dt>
           <dd class="m-0 font-dm-sans text-[14px] leading-[21px] text-navy break-words">
             <a v-if="item.href" :href="item.href" target="_blank" rel="noopener noreferrer" class="hover:underline">{{ item.value }}</a>
             <template v-else>{{ item.value }}</template>
@@ -35,17 +35,17 @@
     >
       <div class="w-full flex flex-col lg:flex-row gap-7 lg:gap-[32px]">
         <label class="flex-1 flex flex-col gap-2">
-          <span class="font-mono text-[10px] tracking-[1.2px] text-[#0C2244]">{{ t('contactPage.form.name') }}</span>
+          <span class="font-dm-sans font-medium text-[10px] tracking-[1.2px] text-[#0C2244]">{{ t('contactPage.form.name') }}</span>
           <input v-model.trim="form.name" type="text" required autocomplete="name" :placeholder="t('contactPage.form.namePlaceholder')" :class="fieldClass" />
         </label>
         <label class="flex-1 flex flex-col gap-2">
-          <span class="font-mono text-[10px] tracking-[1.2px] text-[#0C2244]">{{ t('contactPage.form.company') }}</span>
+          <span class="font-dm-sans font-medium text-[10px] tracking-[1.2px] text-[#0C2244]">{{ t('contactPage.form.company') }}</span>
           <input v-model.trim="form.company" type="text" autocomplete="organization" :placeholder="t('contactPage.form.companyPlaceholder')" :class="fieldClass" />
         </label>
       </div>
 
       <fieldset class="w-full m-0 p-0 border-0">
-        <legend class="mb-3 p-0 font-mono text-[10px] tracking-[1.2px] text-[#0C2244]">{{ t('contactPage.form.category') }}</legend>
+        <legend class="mb-3 p-0 font-dm-sans font-medium text-[10px] tracking-[1.2px] text-[#0C2244]">{{ t('contactPage.form.category') }}</legend>
         <div class="flex flex-wrap gap-[10px]">
           <button
             v-for="key in categories" :key="key"
@@ -63,13 +63,13 @@
       </fieldset>
 
       <label class="w-full flex flex-col gap-2">
-        <span class="font-mono text-[10px] tracking-[1.2px] text-[#0C2244]">{{ t('contactPage.form.needs') }}</span>
+        <span class="font-dm-sans font-medium text-[10px] tracking-[1.2px] text-[#0C2244]">{{ t('contactPage.form.needs') }}</span>
         <textarea v-model.trim="form.needs" required rows="5" :placeholder="t('contactPage.form.needsPlaceholder')" :class="[fieldClass, 'resize-y']" />
       </label>
 
       <div class="w-full flex flex-col lg:flex-row gap-7 lg:gap-[32px] lg:items-end">
         <label class="w-full lg:w-[520px] shrink-0 flex flex-col gap-2">
-          <span class="font-mono text-[10px] tracking-[1.2px] text-[#0C2244]">{{ t('contactPage.form.whatsapp') }}</span>
+          <span class="font-dm-sans font-medium text-[10px] tracking-[1.2px] text-[#0C2244]">{{ t('contactPage.form.whatsapp') }}</span>
           <input v-model.trim="form.whatsapp" type="tel" required autocomplete="tel" placeholder="+62 ..." :class="fieldClass" />
         </label>
         <div class="flex-1 flex lg:justify-end lg:pb-1">

@@ -6,7 +6,7 @@
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
       class="lg:w-[740px] flex flex-col gap-4"
     >
-      <span class="font-mono text-[10px] tracking-[1.4px] text-blue-accent whitespace-nowrap">{{ t('customProjectPage.order.tag') }}</span>
+      <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-blue-accent whitespace-nowrap">{{ t('customProjectPage.order.tag') }}</span>
       <h2 class="font-dm-sans font-bold text-[30px] leading-[34px] lg:text-[46px] lg:leading-[49px] tracking-[-1px] lg:tracking-[-1.8px] text-navy">
         {{ t('customProjectPage.order.heading') }}
       </h2>
@@ -21,7 +21,7 @@
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: 100 + i * 100 } }"
         class="flex flex-col gap-2.5 pt-6 lg:pt-7 pr-6"
       >
-        <span class="font-mono text-[11px] tracking-[1.2px] text-blue-accent">{{ num }}</span>
+        <span class="font-dm-sans font-medium text-[11px] tracking-[1.2px] text-blue-accent">{{ num }}</span>
         <h3 class="font-dm-sans font-bold text-[20px] leading-[24px] tracking-[-0.6px] text-navy">
           {{ t(`customProjectPage.order.${num}.title`) }}
         </h3>

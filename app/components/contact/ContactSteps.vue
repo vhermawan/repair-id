@@ -7,7 +7,7 @@
       class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[80px] lg:justify-between lg:items-end"
     >
       <div class="lg:w-[740px] flex flex-col gap-4">
-        <span class="font-mono text-[10px] tracking-[1.4px] text-blue-accent whitespace-nowrap">{{ t('contactPage.steps.tag') }}</span>
+        <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-blue-accent whitespace-nowrap">{{ t('contactPage.steps.tag') }}</span>
         <h2 class="font-dm-sans font-bold text-[30px] leading-[34px] lg:text-[46px] lg:leading-[49px] tracking-[-1px] lg:tracking-[-1.8px] text-navy">
           {{ t('contactPage.steps.heading') }}
         </h2>
@@ -26,7 +26,7 @@
         class="flex flex-col gap-5 p-[24px_0_28px] lg:p-[28px_56px_36px_0] border-b lg:border-b-0 lg:border-r lg:last:border-r-0 border-[#0614281F]"
       >
         <div class="w-full flex justify-between items-center">
-          <span class="font-mono text-[11px] tracking-[1.2px] text-blue-accent">{{ step.num }}</span>
+          <span class="font-dm-sans font-medium text-[11px] tracking-[1.2px] text-blue-accent">{{ step.num }}</span>
           <Icon :name="step.icon" size="18" class="text-[#0C2244]" />
         </div>
         <div class="w-full flex flex-col gap-[10px]">
