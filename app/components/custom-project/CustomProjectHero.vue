@@ -10,18 +10,38 @@
     <!-- Card fan: fixed-size stage scaled down on small screens -->
     <div class="hero-entrance hero-entrance-delay-3 w-full h-[170px] sm:h-[290px] lg:h-[450px] relative">
       <div class="absolute left-1/2 top-0 w-[1200px] h-[450px] -translate-x-1/2 origin-top scale-[0.34] sm:scale-[0.6] lg:scale-100">
-        <img
+        <div
           v-for="(card, i) in cards"
           :key="card.image"
-          :src="card.image"
-          :alt="t(card.labelKey)"
-          class="absolute w-[206px] h-[280px] object-cover rounded-[14px] origin-top-left shadow-[0_10px_28px_0_#0614281F]"
-          :style="{ left: `${43 + i * 146}px`, top: `${card.top}px`, transform: `rotate(${card.rotate}deg)`, zIndex: i }"
+          tabindex="0"
+          class="absolute w-[206px] h-[280px] origin-top-left outline-none"
+          :style="{ left: `${43 + i * 146}px`, top: `${card.top}px`, transform: `rotate(${card.rotate}deg)`, zIndex: hovered === i ? 20 : i }"
+          @mouseenter="hovered = i"
+          @mouseleave="hovered = null"
+          @focus="hovered = i"
+          @blur="hovered = null"
         >
-        <span class="absolute left-[29px] top-[18px] z-[7] px-3.5 py-[7px] bg-blue-accent rounded-full font-mono text-[10px] tracking-[0.8px] text-white whitespace-nowrap">
+          <div
+            class="relative w-full h-full rounded-[14px] transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] motion-reduce:transition-none"
+            :class="hovered === i ? '-translate-y-4 scale-[1.08] shadow-[0_24px_48px_0_#06142833]' : 'shadow-[0_10px_28px_0_#0614281F]'"
+          >
+            <img
+              :src="card.image"
+              :alt="t(card.labelKey)"
+              class="w-full h-full object-cover rounded-[14px]"
+            >
+            <span
+              class="absolute left-1/2 bottom-3 -translate-x-1/2 px-3.5 py-[7px] bg-navy rounded-full font-mono text-[10px] tracking-[0.8px] text-white whitespace-nowrap pointer-events-none transition-[opacity,transform] duration-200 ease-out motion-reduce:transition-none"
+              :class="hovered === i ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'"
+            >
+              {{ t(card.labelKey) }}
+            </span>
+          </div>
+        </div>
+        <span class="absolute left-[29px] top-[18px] z-[7] px-3.5 py-[7px] bg-blue-accent rounded-full font-mono text-[10px] tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
           {{ t('customProjectPage.products.displayTable') }}
         </span>
-        <span class="absolute left-[959px] top-[34px] z-[8] px-3.5 py-[7px] bg-navy rounded-full font-mono text-[10px] tracking-[0.8px] text-white whitespace-nowrap">
+        <span class="absolute left-[959px] top-[34px] z-[8] px-3.5 py-[7px] bg-navy rounded-full font-mono text-[10px] tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
           {{ t('customProjectPage.products.phoneHolder') }}
         </span>
       </div>
@@ -44,6 +64,8 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+
+const hovered = ref<number | null>(null)
 
 const cards = [
   { image: '/images/custom-project/product-display-table.webp', labelKey: 'customProjectPage.products.displayTable', rotate: -15, top: 118 },
