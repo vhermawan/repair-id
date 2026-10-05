@@ -8,14 +8,14 @@
     </h1>
 
     <!-- Card fan: fixed-size stage scaled down on small screens -->
-    <div class="hero-entrance hero-entrance-delay-3 w-full h-[170px] sm:h-[290px] lg:h-[450px] relative">
+    <div class="w-full h-[170px] sm:h-[290px] lg:h-[450px] relative">
       <div class="absolute left-1/2 top-0 w-[1200px] h-[450px] -translate-x-1/2 origin-top scale-[0.34] sm:scale-[0.6] lg:scale-100">
         <div
           v-for="(card, i) in cards"
           :key="card.image"
           tabindex="0"
-          class="absolute w-[206px] h-[280px] origin-top-left outline-none"
-          :style="{ left: `${43 + i * 146}px`, top: `${card.top}px`, transform: `rotate(${card.rotate}deg)`, zIndex: hovered === i ? 20 : i }"
+          class="hero-card-in absolute w-[206px] h-[280px] origin-top-left outline-none"
+          :style="{ left: `${43 + i * 146}px`, top: `${card.top}px`, transform: `rotate(${card.rotate}deg)`, zIndex: hovered === i ? 20 : i, animationDelay: `${0.45 + i * 0.09}s` }"
           @mouseenter="hovered = i"
           @mouseleave="hovered = null"
           @focus="hovered = i"
@@ -38,10 +38,10 @@
             </span>
           </div>
         </div>
-        <span class="absolute left-[29px] top-[18px] z-[7] px-3.5 py-[7px] bg-blue-accent rounded-full font-dm-sans font-medium text-[10px] tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
+        <span class="hero-card-in [animation-delay:1.15s] absolute left-[29px] top-[18px] z-[7] px-3.5 py-[7px] bg-blue-accent rounded-full font-dm-sans font-medium text-[10px] tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
           {{ t('customProjectPage.products.displayTable') }}
         </span>
-        <span class="absolute left-[959px] top-[34px] z-[8] px-3.5 py-[7px] bg-navy rounded-full font-dm-sans font-medium text-[10px] tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
+        <span class="hero-card-in [animation-delay:1.15s] absolute left-[959px] top-[34px] z-[8] px-3.5 py-[7px] bg-navy rounded-full font-dm-sans font-medium text-[10px] tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
           {{ t('customProjectPage.products.phoneHolder') }}
         </span>
       </div>
