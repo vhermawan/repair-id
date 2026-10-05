@@ -51,7 +51,7 @@
       {{ t('customProjectPage.hero.body') }}
     </p>
     <div class="hero-entrance hero-entrance-delay-4 flex flex-col sm:flex-row gap-3 pt-2 w-full sm:w-auto">
-      <a href="#products" class="flex items-center justify-center gap-2.5 px-[26px] py-3.5 bg-navy rounded-full">
+      <a href="#products" @click.prevent="scrollToProducts" class="flex items-center justify-center gap-2.5 px-[26px] py-3.5 bg-navy rounded-full">
         <span class="font-dm-sans text-sm font-semibold text-white whitespace-nowrap">{{ t('customProjectPage.hero.ctaProducts') }}</span>
         <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-white" />
       </a>
@@ -66,6 +66,10 @@
 const { t } = useI18n()
 
 const hovered = ref<number | null>(null)
+
+const scrollToProducts = () => {
+  document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })
+}
 
 const cards = [
   { image: '/images/custom-project/product-display-table.webp', labelKey: 'customProjectPage.products.displayTable', rotate: -15, top: 118 },

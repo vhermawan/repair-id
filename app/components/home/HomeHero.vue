@@ -22,9 +22,12 @@
       />
     </div>
 
-    <div class="hero-entrance hero-entrance-delay-4 w-full flex justify-center lg:pt-[40px]">
+    <div class="hero-entrance hero-entrance-delay-4 w-full flex flex-wrap justify-center gap-3 lg:pt-[40px]">
       <a href="#rr-board" @click.prevent="scrollToRrBoard" class="flex items-center gap-2 px-[26px] py-[13px] bg-[#005FE7] rounded-full">
         <span class="font-dm-sans font-medium text-[11px] tracking-[1.2px] text-white whitespace-nowrap">{{ t('hero.ctaBoard') }}</span>
+      </a>
+      <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-[26px] py-[13px] [outline:1px_solid_#06142833] [outline-offset:-0.5px] rounded-full">
+        <span class="font-dm-sans font-medium text-[11px] tracking-[1.2px] text-navy whitespace-nowrap">{{ t('hero.ctaDiscuss') }}</span>
       </a>
     </div>
   </section>

@@ -47,10 +47,10 @@
             </div>
           </dl>
           <div class="pt-2">
-            <NuxtLink to="/portfolio" class="inline-flex items-center gap-2.5 px-[22px] py-3 bg-blue-accent rounded-full">
+            <a :href="projectDocUrl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-[22px] py-3 bg-blue-accent rounded-full">
               <span class="font-dm-sans text-sm font-semibold text-white whitespace-nowrap">{{ t('customProjectPage.projects.cta') }}</span>
               <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-white" />
-            </NuxtLink>
+            </a>
           </div>
         </div>
       </article>
@@ -60,6 +60,8 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+
+const projectDocUrl = 'https://drive.google.com/file/d/1gOGmrZoOBdvREINAOaPHfGAYAGPyIvRR/view'
 
 const projects = [
   { key: 'schoolSet', image: '/images/custom-project/project-school-set.webp' },

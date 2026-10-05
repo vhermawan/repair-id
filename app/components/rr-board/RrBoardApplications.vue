@@ -65,10 +65,10 @@
       <p class="max-w-[560px] font-dm-sans text-[14px] leading-[23px] lg:text-[15px] lg:leading-[25px] text-[#0C2244]">
         {{ t('rrPage.apps.ctaBody') }}
       </p>
-      <NuxtLink to="/contact" class="flex items-center gap-2.5 px-6 py-[15px] bg-blue-accent rounded-full">
+      <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 px-6 py-[15px] bg-blue-accent rounded-full">
         <span class="font-dm-sans text-sm font-semibold text-white whitespace-nowrap">{{ t('rrPage.apps.ctaButton') }}</span>
         <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-white" />
-      </NuxtLink>
+      </a>
     </div>
   </section>
 </template>

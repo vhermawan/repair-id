@@ -21,7 +21,7 @@
           <span class="font-dm-sans text-sm font-semibold text-navy whitespace-nowrap">{{ t('rrBoardIntro.ctaConsult') }}</span>
           <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-navy" />
         </a>
-        <a href="https://w4c.id/LVPGoodsCatalogue" download target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-6 py-[14px] bg-[#005FE7] rounded-full">
+        <a href="https://drive.google.com/file/d/1l1lH4kcBTzydOxQBjxEUtHJs6iwUaUVX/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-6 py-[14px] bg-[#005FE7] rounded-full">
           <span class="font-dm-sans text-sm font-semibold text-white whitespace-nowrap">{{ t('rrBoardIntro.ctaSpec') }}</span>
           <Icon name="lucide:download" class="w-4 h-4 text-white" />
         </a>

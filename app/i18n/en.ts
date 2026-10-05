@@ -3,7 +3,6 @@ export default {
   'nav.home': 'Home',
   'nav.rrBoard': 'RR Board',
   'nav.customProject': 'Custom Project',
-  'nav.portfolio': 'Portfolio',
   'nav.contactLink': 'Contact',
   'nav.contact': 'Contact Us',
   'nav.whatsapp': 'Chat via WhatsApp',
@@ -13,8 +12,8 @@ export default {
   'hero.label': 'From Sachets to Board,\nFrom Board to Product',
   'hero.body': 'Repair develops circular material by transforming low-value plastics into a 1.2 m x 2.4 m board for commercial applications',
   'hero.eyebrow': '[ REPAIR PROJECT ]',
-  'hero.headline': 'From sachets to material,\nfrom sachet to product.',
-  'hero.intro': 'Repair develops circular materials by transforming low-value plastics into materials for commercial applications.',
+  'hero.headline': 'From Sachets to Board,\nFrom Board to Product.',
+  'hero.intro': 'Repair develops circular material by transforming low-value plastics into a 1.2 m x 2.4 m board for commercial applications.',
   'hero.ctaBoard': 'Explore More',
   'hero.ctaDiscuss': 'Talk with Us',
   'hero.since': '[ SINCE 2019 · JAKARTA, INDONESIA ]',
@@ -28,7 +27,7 @@ export default {
   // Impact
   'impact.tag': '[ OUR IMPACT ]',
   'impact.heading': 'Our Impact',
-  'impact.body': '100% made from low-value plastic, we give unwanted plastic like sachets and plastic bags a new purpose by transforming them into functional materials for products and the built environment.',
+  'impact.body': '100% made from low-value plastic, we give unwanted plastics like sachets and plastic bags a longer life, diverting them from the environment, into a material desired by designers and end users.',
   'impact.stat1.value': '34K',
   'impact.stat1.unit': 'kg',
   'impact.stat1.desc': 'of low value plastics transformed',
@@ -54,7 +53,7 @@ export default {
   // RR Board as Building Materials
   'rrBoardIntro.tag': '[ RR BOARD AS BUILDING MATERIALS ]',
   'rrBoardIntro.heading': 'RR Board',
-  'rrBoardIntro.body': 'RR Board is a circular material made in a 1.2 x 2.4 m2 board format, giving designers and businesses the freedom to explore, design, and create across a wide range of applications.',
+  'rrBoardIntro.body': 'RR Board is a circular material made in a 1.2 x 2.4 m board format, giving designers and businesses the freedom to explore, design, and create across a wide range of applications.',
   'rrBoardIntro.ctaConsult': 'Consult Your Needs',
   'rrBoardIntro.ctaSpec': 'Download Spec Sheet',
   'rrBoardIntro.facade.title': 'Facade Application',
@@ -100,9 +99,9 @@ export default {
 
   // RR Board page — Hero
   'rrPage.hero.since': 'A CIRCULAR BUILDING MATERIAL, PRESSED IN BANDUNG SINCE 2019.',
-  'rrPage.hero.titleLine1': 'A Circular Board,',
-  'rrPage.hero.titleLine2': 'Made To Be Built With',
-  'rrPage.hero.lede': 'Made from 100% low-value plastics — sachets, plastic bags, and food wrappers — pressed into a 1.2 × 2.4 m board you can cut, drill, and build with.',
+  'rrPage.hero.title': 'RR Board',
+  'rrPage.hero.lede': 'RR Board is a circular material made in a 1.2 x 2.4 m board format, giving designers and businesses the freedom to explore, design, and create across a wide range of applications.',
+  'rrPage.hero.lede2': 'Made from 100% low-value plastics, including sachets/MLP, plastic bags, and food wrappers.',
   'rrPage.hero.ctaSpec': 'Download Spec Sheet',
   'rrPage.hero.statValue': '100%',
   'rrPage.hero.statCaption': 'Low-value plastic, nothing virgin',
@@ -112,7 +111,7 @@ export default {
 
   // RR Board page — S1 Specifications
   'rrPage.specs.tag': '[ 01 — SPECIFICATIONS ]',
-  'rrPage.specs.heading': 'One format, three thicknesses.',
+  'rrPage.specs.heading': 'Specifications',
   'rrPage.specs.sub': 'Standard board format with selectable thickness, weight, and finish — ready for commercial fabrication.',
   'rrPage.specs.imageAlt': 'Stacked RR Board panels',
   'rrPage.specs.finishMozaic': 'MOZAIC',
@@ -127,16 +126,16 @@ export default {
   'rrPage.specs.weight.value': '28 / 32 / 44 kg',
   'rrPage.specs.weight.note': 'Per board',
   'rrPage.specs.price.key': 'PRICE',
-  'rrPage.specs.price.value': 'Start from Rp 140.000 / m²',
+  'rrPage.specs.price.value': 'Start from Rp 140.000 per m²',
   'rrPage.specs.price.note': 'Depends on thickness & volume',
   'rrPage.specs.color.key': 'COLOR',
   'rrPage.specs.color.mozaic': 'Mozaic',
   'rrPage.specs.color.dark': 'Dark',
-  'rrPage.specs.color.more': 'other colors limitedly available',
+  'rrPage.specs.color.more': 'and other colors limitedly available',
 
   // RR Board page — S2 Features & Benefits
   'rrPage.features.tag': '[ 02 — FEATURES & BENEFITS ]',
-  'rrPage.features.heading': 'Built for commercial fabrication.',
+  'rrPage.features.heading': 'Features & Benefits',
   'rrPage.features.sub': 'Size, workability, and durability — tested against the demands of real projects.',
   'rrPage.features.f1.title': 'Commercial-Size Boards',
   'rrPage.features.f1.body': 'Available in a full-size 1.2 × 2.4 m format, making it suitable for commercial fabrication while minimizing joints and material waste.',
@@ -169,7 +168,7 @@ export default {
 
   // RR Board page — S4 Applications
   'rrPage.apps.tag': '[ 04 — APPLICATIONS ]',
-  'rrPage.apps.heading': 'Top RR Board applications.',
+  'rrPage.apps.heading': 'Top RR Board Applications',
   'rrPage.apps.sub': 'Designed for versatility, RR Board can be fabricated into various applications across architecture, interiors, and furniture.',
   'rrPage.apps.count': '03 — APPLICATIONS',
   'rrPage.apps.label': 'APPLICATION',
@@ -192,7 +191,7 @@ export default {
   'rrPage.apps.a3.tag3': 'Custom',
   'rrPage.apps.ctaHeading': 'Have an application in mind?',
   'rrPage.apps.ctaBody': 'Send us your drawing or reference — we will work out the board, the finish, and the fabrication with you.',
-  'rrPage.apps.ctaButton': 'Consult your project',
+  'rrPage.apps.ctaButton': 'Consult Your Project',
 
   // Projects page — Hero
   'projectsPage.heroTag': '[ PROJECTS & SERVICES ]',
@@ -308,18 +307,18 @@ export default {
   'customProjectPage.projects.cta': 'See Project',
   'customProjectPage.projects.schoolSet.title': 'Manulife School Set',
   'customProjectPage.projects.schoolSet.desc': 'Circular furniture made from RR Board for a learning environment.',
-  'customProjectPage.projects.schoolSet.items': '90 set',
-  'customProjectPage.projects.schoolSet.waste': '1.400 kg / 1,4 ton',
+  'customProjectPage.projects.schoolSet.items': '90 sets',
+  'customProjectPage.projects.schoolSet.waste': '1,400 kg / 1.4 tons',
   'customProjectPage.projects.miloBin.title': 'Milo Waste Bin',
   'customProjectPage.projects.miloBin.desc': 'Made from Milo waste, transformed into functional waste bins for schools.',
-  'customProjectPage.projects.miloBin.items': '21 waste bin',
+  'customProjectPage.projects.miloBin.items': '21 waste bins',
   'customProjectPage.projects.miloBin.waste': '336 kg',
   'customProjectPage.projects.ecoRunfest.title': 'Pertamina Eco RunFest Merchandise',
   'customProjectPage.projects.ecoRunfest.desc': 'Event merchandise made from RR Board, turning waste into everyday items like keychains and phone holders.',
-  'customProjectPage.projects.ecoRunfest.items': '250 keychain, 150 phone holders',
+  'customProjectPage.projects.ecoRunfest.items': '250 keychains, 150 phone holders',
   'customProjectPage.projects.ecoRunfest.waste': '42 kg',
   'customProjectPage.order.tag': '[ HOW TO ORDER ]',
-  'customProjectPage.order.heading': 'From selection to delivery, made simple.',
+  'customProjectPage.order.heading': 'From Selection to Delivery, Made Simple',
   'customProjectPage.order.01.title': 'Choose Your Product',
   'customProjectPage.order.01.body': 'Explore our existing products and applications, or send us your design.',
   'customProjectPage.order.02.title': 'Confirm Your Requirements',
@@ -334,7 +333,6 @@ export default {
 
   // Stub pages
   'page.customProject': 'Custom Project',
-  'page.portfolio': 'Portfolio',
   'page.contact': 'Contact',
   'page.comingSoon': 'Coming soon.',
 } as Record<string, string>

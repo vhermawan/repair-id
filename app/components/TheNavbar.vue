@@ -138,7 +138,6 @@ const links = [
   { labelKey: 'nav.home', to: '/' },
   { labelKey: 'nav.rrBoard', to: '/rr-board' },
   { labelKey: 'nav.customProject', to: '/custom-project' },
-  { labelKey: 'nav.portfolio', to: '/portfolio' },
   { labelKey: 'nav.contactLink', to: '/contact' },
 ]
 

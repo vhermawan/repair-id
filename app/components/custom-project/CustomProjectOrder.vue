@@ -32,10 +32,10 @@
     </ol>
 
     <div class="flex flex-col sm:flex-row gap-3">
-      <NuxtLink to="/contact" class="flex items-center justify-center gap-2.5 px-[26px] py-3.5 bg-blue-accent rounded-full">
+      <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-[26px] py-3.5 bg-blue-accent rounded-full">
         <span class="font-dm-sans text-sm font-semibold text-white whitespace-nowrap">{{ t('customProjectPage.order.ctaOrder') }}</span>
         <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-white" />
-      </NuxtLink>
+      </a>
       <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-[26px] py-3.5 [outline:1px_solid_#06142833] [outline-offset:-0.5px] rounded-full">
         <span class="font-dm-sans text-sm font-semibold text-navy whitespace-nowrap">{{ t('customProjectPage.order.ctaDiscuss') }}</span>
         <Icon name="lucide:message-circle" class="w-4 h-4 text-navy" />

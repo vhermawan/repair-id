@@ -5,14 +5,15 @@
         {{ t('rrPage.hero.since') }}
       </span>
       <h1 class="hero-entrance hero-entrance-delay-2 max-w-[900px] font-dm-sans font-bold text-[44px] leading-[46px] lg:text-[76px] lg:leading-[76px] tracking-[-1.6px] lg:tracking-[-3px] text-navy">
-        {{ t('rrPage.hero.titleLine1') }}<br>{{ t('rrPage.hero.titleLine2') }}
+        {{ t('rrPage.hero.title') }}
       </h1>
-      <p class="hero-entrance hero-entrance-delay-3 max-w-[640px] font-dm-sans text-[15px] leading-[23px] lg:text-[16px] lg:leading-[25px] text-[#0C2244]">
-        {{ t('rrPage.hero.lede') }}
-      </p>
+      <div class="hero-entrance hero-entrance-delay-3 max-w-[640px] flex flex-col gap-3 font-dm-sans text-[15px] leading-[23px] lg:text-[16px] lg:leading-[25px] text-[#0C2244]">
+        <p>{{ t('rrPage.hero.lede') }}</p>
+        <p>{{ t('rrPage.hero.lede2') }}</p>
+      </div>
       <div class="hero-entrance hero-entrance-delay-4 pt-3">
         <a
-          href="https://w4c.id/LVPGoodsCatalogue"
+          href="https://drive.google.com/file/d/1l1lH4kcBTzydOxQBjxEUtHJs6iwUaUVX/view"
           target="_blank"
           rel="noopener noreferrer"
           class="flex items-center gap-3.5 p-[8px_8px_8px_26px] bg-navy rounded-full"
