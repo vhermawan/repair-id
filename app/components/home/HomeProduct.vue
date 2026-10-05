@@ -63,14 +63,14 @@ const products = [
     index: '[ 01 ]',
     titleKey: 'product.item1.title',
     descKey: 'product.item1.desc',
-    image: '/images/wastebin.webp',
+    image: '/images/home/wastebin.webp',
     link: '#',
   },
   {
     index: '[ 02 ]',
     titleKey: 'product.item2.title',
     descKey: 'product.item2.desc',
-    image: '/images/school.webp',
+    image: '/images/rr-board/school.webp',
     link: '#',
   },
 ]

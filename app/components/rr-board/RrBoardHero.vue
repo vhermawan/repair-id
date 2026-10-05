@@ -1,42 +1,62 @@
 <template>
-  <section class="w-full pt-[64px] lg:pt-[76px] bg-white">
-    <div
-      ref="heroContainer"
-      class="parallax-container w-full min-h-[520px] lg:h-[520px] flex flex-col p-[32px_20px_96px] lg:p-[40px_48px_150px] justify-between lg:justify-end items-start overflow-hidden relative"
-    >
-      <img src="/images/rr-board-terrazzo-blue.webp" alt="RR Board surface" class="parallax-img z-0" />
-      <div class="absolute inset-0 bg-[#00000050] mix-blend-multiply z-[1]" />
-      <div class="absolute inset-0 [background-image:linear-gradient(95.456deg,_#00000070_2.755%,_#00000035_50%,_#00000010_97.245%)] z-[1]" />
-      <div class="absolute left-0 right-0 bottom-0 h-[96px] lg:h-[120px] [background-image:linear-gradient(180deg,_#FFFFFF00_0%,_#FFFFFFB3_45%,_#FFFFFF_80%,_#FFFFFF_100%)] z-[3]" />
-
-      <span class="hero-entrance hero-entrance-delay-1 lg:absolute lg:left-12 lg:top-10 relative z-[2] font-mono text-[10px] tracking-[1.2px] text-cream/50">
+  <section class="w-full flex flex-col items-center p-[112px_20px_0] lg:p-[156px_48px_0] bg-cream">
+    <div class="w-full flex flex-col gap-5 items-center pb-10 lg:pb-14 text-center">
+      <span class="hero-entrance hero-entrance-delay-1 font-mono text-[10px] lg:text-[11px] tracking-[1.2px] text-[#0C2244]">
         {{ t('rrPage.hero.since') }}
       </span>
+      <h1 class="hero-entrance hero-entrance-delay-2 max-w-[900px] font-dm-sans font-bold text-[44px] leading-[46px] lg:text-[76px] lg:leading-[76px] tracking-[-1.6px] lg:tracking-[-3px] text-navy">
+        {{ t('rrPage.hero.titleLine1') }}<br>{{ t('rrPage.hero.titleLine2') }}
+      </h1>
+      <p class="hero-entrance hero-entrance-delay-3 max-w-[640px] font-dm-sans text-[15px] leading-[23px] lg:text-[16px] lg:leading-[25px] text-[#0C2244]">
+        {{ t('rrPage.hero.lede') }}
+      </p>
+      <div class="hero-entrance hero-entrance-delay-4 pt-3">
+        <a
+          href="https://w4c.id/LVPGoodsCatalogue"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-3.5 p-[8px_8px_8px_26px] bg-navy rounded-full"
+        >
+          <span class="font-dm-sans text-[15px] font-semibold text-cream whitespace-nowrap">{{ t('rrPage.hero.ctaSpec') }}</span>
+          <span class="w-9 h-9 flex items-center justify-center bg-cream rounded-full">
+            <Icon name="lucide:arrow-up-right" class="w-[17px] h-[17px] text-navy" />
+          </span>
+        </a>
+      </div>
+    </div>
 
-      <div class="w-full flex flex-col lg:flex-row gap-8 lg:gap-[72px] pt-12 lg:pt-0 items-start lg:items-end relative z-[2]">
-        <div class="flex-1 flex flex-col gap-3 lg:gap-[18px]">
-          <h1 class="hero-entrance hero-entrance-delay-2 font-dm-sans font-bold text-[56px] leading-[52px] lg:text-[88px] lg:leading-[79px] tracking-[-2px] lg:tracking-[-3.8px] text-cream">
-            {{ t('rrPage.hero.title') }}
-          </h1>
-          <p class="hero-entrance hero-entrance-delay-3 font-dm-sans font-medium text-[18px] leading-[24px] lg:text-[22px] lg:leading-[28px] tracking-[-0.6px] lg:tracking-[-0.9px] text-cream/80">
-            {{ t('rrPage.hero.lede') }}
-          </p>
+    <div
+      ref="heroContainer"
+      class="hero-entrance hero-entrance-delay-4 parallax-container relative w-full h-[520px] lg:h-[640px] flex flex-col justify-between p-[24px_20px_0] lg:p-[40px_40px_0] rounded-[20px] lg:rounded-[28px] overflow-hidden"
+    >
+      <img src="/images/rr-board/board-3.webp" alt="RR Board dark surface" class="parallax-img z-0" />
+      <div class="absolute inset-0 z-[1] [background-image:linear-gradient(90deg,_#06142899_0%,_#06142833_45%,_#06142899_100%)]" />
+
+      <div class="relative z-[2] flex flex-col gap-1.5">
+        <span class="font-dm-sans font-bold text-[48px] leading-[48px] lg:text-[64px] lg:leading-[64px] tracking-[-1.8px] lg:tracking-[-2.4px] text-white">
+          {{ t('rrPage.hero.statValue') }}
+        </span>
+        <span class="w-[200px] font-dm-sans text-[13px] leading-[18px] text-white/80">
+          {{ t('rrPage.hero.statCaption') }}
+        </span>
+      </div>
+
+      <div class="relative z-[2] w-full flex flex-col gap-7 items-end">
+        <div class="w-full max-w-[300px] flex flex-col gap-2 text-right">
+          <span class="font-dm-sans font-bold text-[22px] leading-[24px] lg:text-[28px] lg:leading-[29px] tracking-[-1px] text-white">
+            {{ t('rrPage.hero.noteTitle') }}
+          </span>
+          <span class="font-dm-sans text-[13px] leading-[19px] text-white/80">
+            {{ t('rrPage.hero.noteBody') }}
+          </span>
         </div>
-
-        <div class="hero-entrance hero-entrance-delay-4 w-full lg:w-[460px] shrink-0 flex flex-col gap-6">
-          <p class="font-dm-sans text-[14px] leading-[24px] lg:text-[15px] lg:leading-[26px] text-cream/85">
-            {{ t('rrPage.hero.body') }}
-          </p>
-          <div class="flex flex-col sm:flex-row gap-3">
-            <a href="https://w4c.id/LVPGoodsCatalogue" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-6 py-[15px] bg-cream rounded-xl">
-              <span class="font-dm-sans text-sm font-semibold text-navy whitespace-nowrap">{{ t('rrPage.hero.ctaSpec') }}</span>
-              <Icon name="lucide:download" class="w-4 h-4 text-navy" />
-            </a>
-            <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-[9px] px-[22px] py-[15px] [outline:1px_solid_#F4F1E966] [outline-offset:-0.5px] rounded-xl">
-              <span class="font-dm-sans text-sm font-semibold text-cream whitespace-nowrap">{{ t('rrPage.hero.ctaAsk') }}</span>
-              <Icon name="lucide:message-circle" class="w-[15px] h-[15px] text-cream" />
-            </a>
-          </div>
+        <div class="w-full flex justify-center">
+          <ul class="grid grid-cols-2 lg:flex gap-x-5 gap-y-3 lg:gap-[34px] p-[14px_20px_16px] lg:p-[16px_34px_18px] bg-cream rounded-t-[20px] lg:rounded-t-full">
+            <li v-for="spec in specBar" :key="spec.labelKey" class="flex items-center gap-[9px]">
+              <Icon :name="spec.icon" class="w-4 h-4 shrink-0 text-navy" />
+              <span class="font-dm-sans text-[13px] lg:text-[14px] font-semibold text-navy whitespace-nowrap">{{ t(spec.labelKey) }}</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -46,4 +66,11 @@
 <script setup lang="ts">
 const { t } = useI18n()
 const { target: heroContainer } = useParallax(0.3)
+
+const specBar = [
+  { icon: 'lucide:ruler', labelKey: 'rrPage.specs.size.value' },
+  { icon: 'lucide:layers', labelKey: 'rrPage.specs.thickness.value' },
+  { icon: 'lucide:weight', labelKey: 'rrPage.specs.weight.value' },
+  { icon: 'lucide:droplets', labelKey: 'rrPage.hero.waterResistant' },
+]
 </script>

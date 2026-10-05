@@ -23,9 +23,9 @@
         v-motion
         :initial="{ opacity: 0, y: 24 }"
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: (i % 2) * 120 } }"
-        class="flex flex-col gap-5 p-3 lg:p-[14px] bg-white [outline:1px_solid_#0614281A] [outline-offset:-0.5px] rounded-[20px]"
+        class="flex flex-col gap-5 py-3 lg:p-[14px] border-t border-[#0614281A]"
       >
-        <img :src="feature.image" :alt="t(`${feature.prefix}.title`)" loading="lazy" class="w-full h-[220px] lg:h-[260px] object-cover rounded-xl" />
+        <img :src="feature.image" :alt="t(`${feature.prefix}.title`)" loading="lazy" class="w-full h-[220px] lg:h-[260px] object-cover" />
         <div class="flex flex-col gap-3 p-[4px_8px_12px] lg:p-[4px_12px_14px]">
           <div class="flex items-center gap-3">
             <span class="font-mono text-[10.5px] tracking-[1.2px] text-blue-accent whitespace-nowrap">— {{ String(i + 1).padStart(2, '0') }}</span>
@@ -39,7 +39,7 @@
           <div class="flex flex-wrap gap-2 pt-1">
             <span
               v-for="tag in ['tag1', 'tag2']" :key="tag"
-              class="px-[13px] py-[7px] bg-cream rounded-full font-mono text-[9.5px] tracking-[0.8px] text-[#0C2244]"
+              class="px-[13px] py-[7px] [outline:1px_solid_#0614281A] [outline-offset:-0.5px] rounded-full font-mono text-[9.5px] tracking-[0.8px] text-[#0C2244]"
             >{{ t(`${feature.prefix}.${tag}`) }}</span>
           </div>
         </div>
@@ -52,9 +52,9 @@
 const { t } = useI18n()
 
 const features = [
-  { prefix: 'rrPage.features.f1', image: '/images/commercial.webp' },
-  { prefix: 'rrPage.features.f2', image: '/images/bendable.webp' },
-  { prefix: 'rrPage.features.f3', image: '/images/suitable.webp' },
-  { prefix: 'rrPage.features.f4', image: '/images/plastic.webp' },
+  { prefix: 'rrPage.features.f1', image: '/images/rr-board/commercial.webp' },
+  { prefix: 'rrPage.features.f2', image: '/images/rr-board/bendable.webp' },
+  { prefix: 'rrPage.features.f3', image: '/images/rr-board/suitable.webp' },
+  { prefix: 'rrPage.features.f4', image: '/images/rr-board/plastic.webp' },
 ]
 </script>

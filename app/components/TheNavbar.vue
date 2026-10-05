@@ -130,11 +130,9 @@
 
 <script setup lang="ts">
 const { t, locale, setLocale } = useI18n()
-const route = useRoute()
-const isHome = computed(() => route.path === '/')
-const scrolled = ref(false)
 const menuOpen = ref(false)
-const solid = computed(() => !isHome.value || scrolled.value)
+// Every page, home included, now starts on a light background
+const solid = true
 
 const links = [
   { labelKey: 'nav.home', to: '/' },
@@ -143,14 +141,6 @@ const links = [
   { labelKey: 'nav.portfolio', to: '/portfolio' },
   { labelKey: 'nav.contactLink', to: '/contact' },
 ]
-
-onMounted(() => {
-  const onScroll = () => {
-    scrolled.value = window.scrollY > 80
-  }
-  window.addEventListener('scroll', onScroll, { passive: true })
-  onUnmounted(() => window.removeEventListener('scroll', onScroll))
-})
 
 watch(menuOpen, (open) => {
   document.body.style.overflow = open ? 'hidden' : ''
