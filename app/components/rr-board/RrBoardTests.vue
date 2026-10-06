@@ -95,8 +95,8 @@ const { t } = useI18n()
 
 const tests = [
   { key: 'rrPage.tests.t1', youtubeId: 'yfqzOj6eI0I' },
-  { key: 'rrPage.tests.t2', youtubeId: 'id2dW-Vegg8' },
   { key: 'rrPage.tests.t3', youtubeId: 'IJq92vQhUGs' },
+  { key: 'rrPage.tests.t2', youtubeId: 'id2dW-Vegg8' },
   { key: 'rrPage.tests.t4', youtubeId: 'mzQPqyLXbm0' },
   { key: 'rrPage.tests.t5', youtubeId: '1mGeP-gur9s' },
 ]
