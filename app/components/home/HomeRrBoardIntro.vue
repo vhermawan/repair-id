@@ -1,59 +1,44 @@
 <template>
-  <section id="rr-board" class="w-full flex flex-col lg:flex-row gap-8 lg:gap-16 p-[48px_20px] lg:p-[88px_48px] bg-white">
+  <section id="rr-board" class="w-full flex flex-col lg:flex-row gap-8 lg:gap-16 lg:items-center p-[56px_20px] lg:p-[88px_48px] bg-cream">
     <div
       v-motion
-      :initial="{ opacity: 0, x: 40 }"
-      :visible-once="{ opacity: 1, x: 0, transition: { duration: 700 } }"
+      :initial="{ opacity: 0, y: 24 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
       class="flex-1 flex flex-col gap-5 lg:gap-6"
     >
-      <span class="font-mono text-[11px] tracking-[1.2px] text-[#005FE7]">{{ t('rrBoardIntro.tag') }}</span>
-      <h2 class="w-full font-dm-sans font-bold text-[32px] leading-[36px] lg:text-[52px] lg:leading-[56px] tracking-[-1.5px] lg:tracking-[-2px] text-[#062A5C]">
+      <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-[#005FE7]">{{ t('rrBoardIntro.tag') }}</span>
+      <h2 class="font-dm-sans font-bold text-[32px] leading-[36px] tracking-[-1.2px] lg:text-[46px] lg:leading-[49px] lg:tracking-[-1.8px] text-navy">
         {{ t('rrBoardIntro.heading') }}
       </h2>
-      <p class="w-full font-dm-sans text-[14px] leading-[22px] lg:text-base lg:leading-[26px] text-[#062A5CCC]">
+      <p class="max-w-[580px] font-dm-sans text-[14px] leading-[22px] lg:text-base lg:leading-[26px] text-[#0C2244]">
         {{ t('rrBoardIntro.body') }}
       </p>
 
-      <div class="lg:hidden flex flex-col gap-2">
-        <img src="/images/board-1.webp" alt="RR Board stacked panels" class="w-full h-[200px] object-cover rounded" />
-        <div class="flex gap-2">
-          <img src="/images/board-2.webp" alt="Terrazzo colorful" class="flex-1 min-w-0 h-[140px] object-cover rounded" />
-          <img src="/images/board-3.webp" alt="Terrazzo blue" class="flex-1 min-w-0 h-[140px] object-cover rounded" />
-        </div>
-      </div>
+      <img src="/images/rr-board/board-1.webp" alt="RR Board stacked panels" class="lg:hidden w-full h-[240px] object-cover rounded" />
 
-      <div class="flex flex-col gap-0">
-        <div v-for="spec in rrBoardSpecs" :key="spec.keyKey"
-          class="flex justify-between items-center py-3 lg:py-[14px] border-t border-[#D6E4FD]">
-          <span class="font-mono text-[10px] lg:text-[11px] tracking-[0.6px] text-[#0044A8]">{{ t(spec.keyKey) }}</span>
-          <span class="font-dm-sans text-[13px] lg:text-sm font-medium text-[#062A5C]">{{ t(spec.valueKey) }}</span>
-        </div>
+      <div class="flex flex-col sm:flex-row gap-3 pt-3">
+        <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-6 py-[14px] [outline:1px_solid_#06142833] [outline-offset:-0.5px] rounded-full">
+          <span class="font-dm-sans text-sm font-semibold text-navy whitespace-nowrap">{{ t('rrBoardIntro.ctaConsult') }}</span>
+          <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-navy" />
+        </a>
+        <a href="https://drive.google.com/file/d/1l1lH4kcBTzydOxQBjxEUtHJs6iwUaUVX/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-6 py-[14px] bg-[#005FE7] rounded-full">
+          <span class="font-dm-sans text-sm font-semibold text-white whitespace-nowrap">{{ t('rrBoardIntro.ctaSpec') }}</span>
+          <Icon name="lucide:download" class="w-4 h-4 text-white" />
+        </a>
       </div>
     </div>
 
     <div
       v-motion
-      :initial="{ opacity: 0, x: -40 }"
-      :visible-once="{ opacity: 1, x: 0, transition: { duration: 700, delay: 200 } }"
-      class="hidden lg:flex w-full lg:w-[55%] shrink-0 flex-col gap-2"
+      :initial="{ opacity: 0, y: 24 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600, delay: 150 } }"
+      class="hidden lg:flex w-[600px] max-w-[45%] shrink-0"
     >
-      <img src="/images/board-1.webp" alt="RR Board stacked panels" class="w-full h-[320px] object-cover rounded" />
-      <div class="flex gap-2">
-        <img src="/images/board-2.webp" alt="Terrazzo colorful" class="flex-1 min-w-0 h-[200px] object-cover rounded" />
-        <img src="/images/board-3.webp" alt="Terrazzo blue" class="flex-1 min-w-0 h-[200px] object-cover rounded" />
-      </div>
+      <img src="/images/rr-board/board-1.webp" alt="RR Board stacked panels" loading="lazy" class="w-full h-[440px] object-cover rounded" />
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 const { t } = useI18n()
-
-const rrBoardSpecs = [
-  { keyKey: 'rrBoardIntro.spec1.key', valueKey: 'rrBoardIntro.spec1.value' },
-  { keyKey: 'rrBoardIntro.spec2.key', valueKey: 'rrBoardIntro.spec2.value' },
-  { keyKey: 'rrBoardIntro.spec3.key', valueKey: 'rrBoardIntro.spec3.value' },
-  { keyKey: 'rrBoardIntro.spec4.key', valueKey: 'rrBoardIntro.spec4.value' },
-  { keyKey: 'rrBoardIntro.spec5.key', valueKey: 'rrBoardIntro.spec5.value' },
-]
 </script>

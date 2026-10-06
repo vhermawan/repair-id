@@ -9,7 +9,7 @@
     <div class="h-0 relative z-[3]" />
 
     <div class="w-full flex flex-col lg:flex-row gap-8 lg:gap-[80px] pt-16 lg:pt-[60px] items-start relative z-[3]">
-      <span class="hero-entrance hero-entrance-delay-1 font-mono text-[10px] lg:text-[11px] tracking-[1.2px] text-[#A9C9FF] lg:w-[300px] shrink-0">
+      <span class="hero-entrance hero-entrance-delay-1 font-dm-sans font-bold text-[10px] lg:text-[11px] tracking-[1.2px] text-[#A9C9FF] lg:w-[300px] shrink-0">
         {{ t('projectsPage.heroTag') }}
       </span>
       <div class="flex-1 flex flex-col gap-5 lg:gap-[28px]">
@@ -23,7 +23,7 @@
     </div>
 
     <div class="hero-entrance hero-entrance-delay-4 w-full flex justify-between items-center pt-[22px] border-t border-cream/20 relative z-[3]">
-      <span class="font-mono text-[9px] lg:text-[10px] tracking-[1.2px] text-[#A9C9FF]">
+      <span class="font-dm-sans font-semibold text-[9px] lg:text-[10px] tracking-[1.2px] text-[#A9C9FF]">
         {{ t('projectsPage.heroStat') }}
       </span>
       <span class="font-inter text-[12px] lg:text-[13px] text-cream">

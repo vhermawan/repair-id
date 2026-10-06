@@ -16,7 +16,6 @@ export default {
       },
       fontFamily: {
         'dm-sans': ['DM Sans', 'system-ui', 'sans-serif'],
-        mono: ['JetBrains Mono', 'system-ui', 'sans-serif'],
         serif: ['Instrument Serif', 'serif'],
       },
     },

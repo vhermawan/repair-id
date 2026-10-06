@@ -9,7 +9,7 @@
         class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:items-end"
       >
         <div class="flex-1 flex flex-col gap-3 lg:gap-[14px]">
-          <span class="font-mono text-[11px] tracking-[1.2px] text-blue-accent">
+          <span class="font-dm-sans font-bold text-[11px] tracking-[1.2px] text-blue-accent">
             {{ t('projectsPage.s2.tag') }}
           </span>
           <h2 class="font-dm-sans font-bold text-[32px] leading-[36px] lg:text-[46px] lg:leading-[49px] tracking-[-1px] lg:tracking-[-1.8px] text-navy">
@@ -26,12 +26,12 @@
     <div class="w-full flex flex-col gap-0 px-5 lg:px-12 pb-10 lg:pb-14">
       <!-- Scrub bar -->
       <div class="w-full flex items-center gap-4 pb-7">
-        <span class="font-mono text-[10px] tracking-[1px] text-navy/56">01.</span>
+        <span class="font-dm-sans font-medium text-[10px] tracking-[1px] text-navy/56">01.</span>
         <div class="flex-1 h-[10px] relative">
           <div class="absolute left-0 top-[5px] w-full h-px bg-navy/20" />
           <div class="absolute left-[14%] top-[1px] w-[9px] h-[9px] bg-navy rounded-full" />
         </div>
-        <span class="font-mono text-[10px] tracking-[1px] text-navy/56">05.</span>
+        <span class="font-dm-sans font-medium text-[10px] tracking-[1px] text-navy/56">05.</span>
       </div>
 
       <!-- Project cards row -->
@@ -89,10 +89,10 @@
             {{ t(filter.key) }}
           </span>
         </div>
-        <span class="flex-1 font-mono text-[10px] tracking-[1.2px] text-navy/56 text-center hidden lg:block">
+        <span class="flex-1 font-dm-sans font-medium text-[10px] tracking-[1.2px] text-navy/56 text-center hidden lg:block">
           01 — 05
         </span>
-        <span class="font-mono text-[10px] tracking-[1.2px] text-navy/56">
+        <span class="font-dm-sans font-semibold text-[10px] tracking-[1.2px] text-navy/56">
           {{ t('projectsPage.s2.hint') }}
         </span>
       </div>

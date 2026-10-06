@@ -1,44 +1,46 @@
 <template>
-  <section ref="heroContainer" class="parallax-container w-full min-h-[600px] lg:h-[900px] flex flex-col gap-0 p-[24px_20px_100px] lg:p-[36px_48px_140px] justify-between items-start overflow-hidden relative">
-    <img src="/images/hero-bg.webp" alt="Repair workshop" class="parallax-img z-0" />
-
-    <div class="absolute inset-0 bg-[#00000050] mix-blend-multiply z-[1]" />
-    <div class="absolute inset-0 [background-image:linear-gradient(95.456deg,_#00000070_2.755%,_#00000035_50%,_#00000010_97.245%)] z-[2]" />
-    <div class="absolute bottom-0 left-0 right-0 h-[180px] lg:h-[240px] bg-gradient-to-t from-white to-transparent z-[2]" />
-
-    <div class="h-0 relative z-[3]" />
-
-    <div class="w-full flex flex-col lg:flex-row gap-8 lg:gap-[80px] pt-[72px] items-start relative z-[3]">
-      <div class="hero-entrance hero-entrance-delay-1 font-dm-sans font-medium text-[24px] leading-[32px] lg:text-[34px] lg:leading-[44px] tracking-[-1px] text-cream lg:w-[300px] shrink-0">
-        {{ t('hero.label') }}
+  <section class="w-full flex flex-col gap-8 lg:gap-[56px] p-[112px_20px_0] lg:p-[160px_48px_0] bg-white">
+    <div class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:justify-between lg:items-end">
+      <div class="hero-entrance hero-entrance-delay-1 flex-1 max-w-[920px] flex flex-col gap-4 lg:gap-5">
+        <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-[#005FE7]">{{ t('hero.eyebrow') }}</span>
+        <h1 class="font-dm-sans font-bold text-[40px] leading-[42px] tracking-[-1.5px] lg:text-[72px] lg:leading-[71px] lg:tracking-[-2.8px] text-navy whitespace-pre-line">
+          {{ t('hero.headline') }}
+        </h1>
       </div>
 
-      <div class="flex-1 flex flex-col gap-[38px]">
-        <p class="hero-entrance hero-entrance-delay-2 font-dm-sans font-medium text-[24px] leading-[32px] lg:text-[34px] lg:leading-[44px] tracking-[-1px] text-cream">
-          {{ t('hero.body') }}
-        </p>
-
-        <div class="hero-entrance hero-entrance-delay-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-[14px]">
-          <a href="#rr-board" @click.prevent="scrollToRrBoard" class="flex items-center gap-[10px] px-6 py-[15px] bg-cream rounded-xl">
-            <span class="font-dm-sans text-sm font-semibold text-navy whitespace-nowrap">{{ t('hero.ctaBoard') }}</span>
-            <Icon name="lucide:arrow-right" class="w-4 h-4 text-navy" />
-          </a>
-          <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center gap-[10px] px-6 py-[15px] [outline:1px_solid_#F4F1E980] [outline-offset:-0.5px] rounded-xl">
-            <Icon name="lucide:message-circle" class="w-4 h-4 text-cream" />
-            <span class="font-dm-sans text-sm font-semibold text-cream whitespace-nowrap">{{ t('hero.ctaDiscuss') }}</span>
-          </a>
-        </div>
-      </div>
+      <p class="hero-entrance hero-entrance-delay-2 lg:w-[330px] shrink-0 lg:pb-[14px] font-dm-sans text-[15px] leading-[23px] text-[#0C2244]">
+        {{ t('hero.intro') }}
+      </p>
     </div>
 
-    <div class="hero-entrance hero-entrance-delay-4 w-full flex flex-col gap-3 lg:flex-row lg:justify-between lg:items-center pt-5 lg:pt-[26px] relative z-[3]" style="gap: 80px">
-     
+    <div class="hero-entrance hero-entrance-delay-3 w-full grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <img
+        v-for="image in images" :key="image.src"
+        :src="image.src"
+        :alt="image.alt"
+        class="w-full h-[220px] sm:h-[260px] lg:h-[360px] object-cover"
+      />
+    </div>
+
+    <div class="hero-entrance hero-entrance-delay-4 w-full flex flex-wrap justify-center gap-3 lg:pt-[40px]">
+      <a href="#rr-board" @click.prevent="scrollToRrBoard" class="flex items-center gap-2 px-[26px] py-[13px] bg-[#005FE7] rounded-full">
+        <span class="font-dm-sans font-medium text-[11px] tracking-[1.2px] text-white whitespace-nowrap">{{ t('hero.ctaBoard') }}</span>
+      </a>
+      <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-[26px] py-[13px] [outline:1px_solid_#06142833] [outline-offset:-0.5px] rounded-full">
+        <span class="font-dm-sans font-medium text-[11px] tracking-[1.2px] text-navy whitespace-nowrap">{{ t('hero.ctaDiscuss') }}</span>
+      </a>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 const { t } = useI18n()
+
+const images = [
+  { src: '/images/home/hero-bins.webp', alt: 'Recycled waste bins made from RR Board' },
+  { src: '/images/home/hero-keychain.webp', alt: 'Recycled plastic keychains' },
+  { src: '/images/home/hero-stool.webp', alt: 'Stool made from RR Board' },
+]
 
 const scrollToRrBoard = () => {
   document.getElementById('rr-board')?.scrollIntoView({ behavior: 'smooth' })

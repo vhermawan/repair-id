@@ -8,7 +8,7 @@
       class="w-full lg:w-[400px] shrink-0 flex flex-col gap-6 lg:gap-7"
     >
       <div class="flex flex-col gap-[10px] lg:gap-[14px]">
-        <span class="font-mono text-[11px] tracking-[1.2px] text-[#005FE7]">{{ t('product.tag') }}</span>
+        <span class="font-dm-sans font-bold text-[11px] tracking-[1.2px] text-[#005FE7]">{{ t('product.tag') }}</span>
         <h2 class="w-full font-dm-sans font-bold text-[28px] leading-[32px] lg:text-[46px] lg:leading-[51px] tracking-[-1.2px] lg:tracking-[-1.8px] text-navy">
           {{ t('product.heading') }}
         </h2>
@@ -41,7 +41,7 @@
           <img :src="product.image" :alt="t(product.titleKey)" class="w-full h-full object-cover" />
         </div>
         <div class="flex-1 flex flex-col gap-3 p-5 lg:p-[32px_36px] justify-center">
-          <span class="font-mono text-[10px] lg:text-[11px] tracking-[1px] text-[#005FE7]">{{ product.index }}</span>
+          <span class="font-dm-sans font-medium text-[10px] lg:text-[11px] tracking-[1px] text-[#005FE7]">{{ product.index }}</span>
           <h3 class="font-dm-sans font-semibold text-[20px] leading-[24px] lg:text-[28px] lg:leading-[32px] tracking-[-0.5px] lg:tracking-[-0.8px] text-navy">{{ t(product.titleKey) }}</h3>
           <p class="font-dm-sans text-[13px] leading-[20px] lg:text-sm lg:leading-[22px] text-[#10201A99]">{{ t(product.descKey) }}</p>
           <div class="pt-1.5 lg:pt-2.5" />
@@ -63,14 +63,14 @@ const products = [
     index: '[ 01 ]',
     titleKey: 'product.item1.title',
     descKey: 'product.item1.desc',
-    image: '/images/wastebin.webp',
+    image: '/images/home/wastebin.webp',
     link: '#',
   },
   {
     index: '[ 02 ]',
     titleKey: 'product.item2.title',
     descKey: 'product.item2.desc',
-    image: '/images/school.webp',
+    image: '/images/rr-board/school.webp',
     link: '#',
   },
 ]

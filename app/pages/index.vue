@@ -4,8 +4,7 @@
     <HomeProcess />
     <HomeRrBoardIntro />
     <HomeBuilding />
-    <HomeProduct />
-    <HomeClients />
+    <!-- <HomeClients /> -->
     <TheFooter />
   </div>
 </template>

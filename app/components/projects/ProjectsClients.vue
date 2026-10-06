@@ -4,7 +4,7 @@
       v-motion
       :initial="{ opacity: 0, y: 16 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 400 } }"
-      class="font-mono text-[11px] tracking-[1.2px] text-blue-accent"
+      class="font-dm-sans font-bold text-[11px] tracking-[1.2px] text-blue-accent"
     >
       {{ t('projectsPage.clients.tag') }}
     </span>

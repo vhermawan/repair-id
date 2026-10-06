@@ -7,7 +7,7 @@
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
         class="lg:w-[300px] shrink-0 flex flex-col gap-2 lg:gap-[14px]"
       >
-        <span class="font-mono text-[11px] tracking-[1.2px] text-[#CFE0FF]">{{ t('about.tag') }}</span>
+        <span class="font-dm-sans font-bold text-[11px] tracking-[1.2px] text-[#CFE0FF]">{{ t('about.tag') }}</span>
         <span class="font-dm-sans text-[13px] leading-[20px] text-[#F3EFE4B3]">
           {{ t('about.subtitle') }}
         </span>
