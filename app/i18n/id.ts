@@ -159,12 +159,14 @@ export default {
   'rrPage.tests.heading': 'Teruji, bukan sekadar klaim.',
   'rrPage.tests.sub': 'Placeholder — hasil uji material akan segera tersedia.',
   'rrPage.tests.pending': 'Hasil menyusul',
-  'rrPage.tests.t1': 'Ketahanan benturan',
-  'rrPage.tests.t2': 'Penyerapan air',
-  'rrPage.tests.t3': 'Kekerasan permukaan',
-  'rrPage.tests.t4': 'Daya cengkeram sekrup',
+  'rrPage.tests.t1': 'Ketahanan noda',
+  'rrPage.tests.t2': 'Ketahanan benturan',
+  'rrPage.tests.t3': 'Daya cengkeram sekrup',
+  'rrPage.tests.t4': 'Ketahanan panas',
+  'rrPage.tests.t5': 'Penyerapan air',
   'rrPage.tests.prev': 'Uji sebelumnya',
   'rrPage.tests.next': 'Uji berikutnya',
+  'rrPage.tests.play': 'Putar video',
 
   // RR Board page — S4 Applications
   'rrPage.apps.tag': '[ 04 — APLIKASI ]',

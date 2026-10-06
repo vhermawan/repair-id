@@ -159,12 +159,14 @@ export default {
   'rrPage.tests.heading': 'Tested, not claimed.',
   'rrPage.tests.sub': 'Placeholder — material test results to be supplied.',
   'rrPage.tests.pending': 'Result pending',
-  'rrPage.tests.t1': 'Impact resistance',
-  'rrPage.tests.t2': 'Water absorption',
-  'rrPage.tests.t3': 'Surface hardness',
-  'rrPage.tests.t4': 'Screw holding',
+  'rrPage.tests.t1': 'Stain resistance',
+  'rrPage.tests.t2': 'Impact resistance',
+  'rrPage.tests.t3': 'Screw holding',
+  'rrPage.tests.t4': 'Heat resistance',
+  'rrPage.tests.t5': 'Water absorption',
   'rrPage.tests.prev': 'Previous test',
   'rrPage.tests.next': 'Next test',
+  'rrPage.tests.play': 'Play video',
 
   // RR Board page — S4 Applications
   'rrPage.apps.tag': '[ 04 — APPLICATIONS ]',
