@@ -9,7 +9,7 @@
       <h2 class="font-dm-sans font-bold text-[26px] lg:text-[30px] tracking-[-1px] text-navy">
         {{ t('customProjectPage.projects.heading') }}
       </h2>
-      <p class="max-w-[620px] font-dm-sans text-[15px] leading-[23px] lg:text-[16px] lg:leading-[25px] text-[#0C2244]">
+      <p class="max-w-[720px] font-dm-sans text-[16px] leading-[25px] lg:text-[18px] lg:leading-[29px] text-[#0C2244]">
         {{ t('customProjectPage.projects.subtitle') }}
       </p>
     </div>
@@ -46,12 +46,6 @@
               <dd class="font-dm-sans font-semibold text-[14px] text-navy">{{ t(`customProjectPage.projects.${project.key}.waste`) }}</dd>
             </div>
           </dl>
-          <div class="pt-2">
-            <a :href="projectDocUrl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-[22px] py-3 bg-blue-accent rounded-full">
-              <span class="font-dm-sans text-sm font-semibold text-white whitespace-nowrap">{{ t('customProjectPage.projects.cta') }}</span>
-              <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-white" />
-            </a>
-          </div>
         </div>
       </article>
     </div>
@@ -60,8 +54,6 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-
-const projectDocUrl = 'https://drive.google.com/file/d/1gOGmrZoOBdvREINAOaPHfGAYAGPyIvRR/view'
 
 const projects = [
   { key: 'schoolSet', image: '/images/custom-project/project-school-set.webp' },

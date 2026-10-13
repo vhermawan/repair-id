@@ -14,7 +14,7 @@
         <img
           src="/logo.png"
           alt="Repair Material Studio"
-          class="h-[28px] lg:h-[36px] w-auto"
+          class="h-[36px] lg:h-[52px] w-auto"
           :class="solid && !menuOpen ? 'invert' : ''"
         />
       </NuxtLink>

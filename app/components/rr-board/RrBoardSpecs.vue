@@ -7,7 +7,6 @@
       class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[80px] lg:justify-between lg:items-end"
     >
       <div class="lg:w-[780px] flex flex-col gap-3 lg:gap-[14px]">
-        <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-blue-accent">{{ t('rrPage.specs.tag') }}</span>
         <h2 class="font-dm-sans font-bold text-[34px] leading-[38px] lg:text-[52px] lg:leading-[54px] tracking-[-1.2px] lg:tracking-[-2.1px] text-navy">
           {{ t('rrPage.specs.heading') }}
         </h2>
@@ -60,16 +59,8 @@
 
         <div class="flex flex-col gap-3 pt-[22px]">
           <span class="font-dm-sans font-medium text-[10px] tracking-[1.2px] text-blue-accent">{{ t('rrPage.specs.color.key') }}</span>
-          <div class="flex flex-wrap items-center gap-2.5">
-            <div
-              v-for="color in colors" :key="color.labelKey"
-              class="flex items-center gap-[9px] p-[7px_13px_7px_7px] [outline:1px_solid_#0614281A] [outline-offset:-0.5px]"
-            >
-              <span class="w-[18px] h-[18px] shrink-0" :style="{ backgroundColor: color.hex }" />
-              <span class="font-dm-sans text-[13px] text-navy">{{ t(color.labelKey) }}</span>
-            </div>
-            <span class="font-dm-sans text-[12.5px] text-navy/45">{{ t('rrPage.specs.color.more') }}</span>
-          </div>
+          <p class="font-dm-sans font-semibold text-[18px] leading-[26px] lg:text-[20px] lg:leading-[28px] tracking-[-0.4px] text-navy">{{ t('rrPage.specs.color.body') }}</p>
+          <p class="font-dm-sans text-[14px] leading-[22px] lg:text-[15px] lg:leading-[24px] text-[#0C2244]">{{ t('rrPage.specs.color.note') }}</p>
         </div>
       </div>
     </div>
@@ -88,10 +79,5 @@ const specs = [
   { prefix: 'rrPage.specs.size' },
   { prefix: 'rrPage.specs.thickness' },
   { prefix: 'rrPage.specs.weight' },
-]
-
-const colors = [
-  { hex: '#8C8577', labelKey: 'rrPage.specs.color.mozaic' },
-  { hex: '#1C1C1C', labelKey: 'rrPage.specs.color.dark' },
 ]
 </script>

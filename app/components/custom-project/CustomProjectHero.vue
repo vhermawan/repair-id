@@ -1,8 +1,5 @@
 <template>
   <section class="w-full flex flex-col gap-5 items-center p-[112px_20px_64px] lg:p-[156px_48px_88px] overflow-hidden">
-    <span class="hero-entrance hero-entrance-delay-1 font-dm-sans font-bold text-[10px] tracking-[1.4px] text-blue-accent whitespace-nowrap">
-      {{ t('customProjectPage.hero.tag') }}
-    </span>
     <h1 class="hero-entrance hero-entrance-delay-2 max-w-[900px] font-dm-sans font-bold text-[44px] leading-[46px] lg:text-[64px] lg:leading-[65px] tracking-[-1.6px] lg:tracking-[-2.6px] text-navy text-center">
       {{ t('customProjectPage.hero.title') }}
     </h1>
@@ -47,7 +44,7 @@
       </div>
     </div>
 
-    <p class="hero-entrance hero-entrance-delay-4 max-w-[620px] font-dm-sans text-[15px] leading-[23px] lg:text-[16px] lg:leading-[25px] text-[#0C2244] text-center">
+    <p class="hero-entrance hero-entrance-delay-4 max-w-[680px] font-dm-sans text-[17px] leading-[27px] lg:text-[19px] lg:leading-[30px] text-[#0C2244] text-center">
       {{ t('customProjectPage.hero.body') }}
     </p>
     <div class="hero-entrance hero-entrance-delay-4 flex flex-col sm:flex-row gap-3 pt-2 w-full sm:w-auto">

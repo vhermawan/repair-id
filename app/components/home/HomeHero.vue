@@ -1,14 +1,11 @@
 <template>
-  <section class="w-full flex flex-col gap-8 lg:gap-[56px] p-[112px_20px_0] lg:p-[160px_48px_0] bg-white">
+  <section class="w-full flex flex-col gap-8 lg:gap-[56px] p-[112px_20px_64px] lg:p-[160px_48px_104px] bg-white">
     <div class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:justify-between lg:items-end">
-      <div class="hero-entrance hero-entrance-delay-1 flex-1 max-w-[920px] flex flex-col gap-4 lg:gap-5">
-        <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-[#005FE7]">{{ t('hero.eyebrow') }}</span>
-        <h1 class="font-dm-sans font-bold text-[40px] leading-[42px] tracking-[-1.5px] lg:text-[72px] lg:leading-[71px] lg:tracking-[-2.8px] text-navy whitespace-pre-line">
-          {{ t('hero.headline') }}
-        </h1>
-      </div>
+      <h1 class="hero-entrance hero-entrance-delay-1 flex-1 max-w-[920px] font-dm-sans font-bold text-[40px] leading-[42px] tracking-[-1.5px] lg:text-[72px] lg:leading-[71px] lg:tracking-[-2.8px] text-navy whitespace-pre-line">
+        {{ t('hero.headline') }}
+      </h1>
 
-      <p class="hero-entrance hero-entrance-delay-2 lg:w-[330px] shrink-0 lg:pb-[14px] font-dm-sans text-[15px] leading-[23px] text-[#0C2244]">
+      <p class="hero-entrance hero-entrance-delay-2 lg:w-[420px] shrink-0 lg:pb-[10px] font-dm-sans text-[17px] leading-[27px] lg:text-[19px] lg:leading-[30px] text-[#0C2244]">
         {{ t('hero.intro') }}
       </p>
     </div>
@@ -18,17 +15,8 @@
         v-for="image in images" :key="image.src"
         :src="image.src"
         :alt="image.alt"
-        class="w-full h-[220px] sm:h-[260px] lg:h-[360px] object-cover"
+        class="w-full aspect-[4/5] object-cover"
       />
-    </div>
-
-    <div class="hero-entrance hero-entrance-delay-4 w-full flex flex-wrap justify-center gap-3 lg:pt-[40px]">
-      <a href="#rr-board" @click.prevent="scrollToRrBoard" class="flex items-center gap-2 px-[26px] py-[13px] bg-[#005FE7] rounded-full">
-        <span class="font-dm-sans font-medium text-[11px] tracking-[1.2px] text-white whitespace-nowrap">{{ t('hero.ctaBoard') }}</span>
-      </a>
-      <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-[26px] py-[13px] [outline:1px_solid_#06142833] [outline-offset:-0.5px] rounded-full">
-        <span class="font-dm-sans font-medium text-[11px] tracking-[1.2px] text-navy whitespace-nowrap">{{ t('hero.ctaDiscuss') }}</span>
-      </a>
     </div>
   </section>
 </template>
@@ -37,12 +25,8 @@
 const { t } = useI18n()
 
 const images = [
-  { src: '/images/home/hero-bins.webp', alt: 'Recycled waste bins made from RR Board' },
-  { src: '/images/home/hero-keychain.webp', alt: 'Recycled plastic keychains' },
-  { src: '/images/home/hero-stool.webp', alt: 'Stool made from RR Board' },
+  { src: '/images/home/impact-waste.webp', alt: 'Low-value plastic waste' },
+  { src: '/images/rr-board/board-1.webp', alt: 'RR Board panels' },
+  { src: '/images/home/hero-stool.webp', alt: 'Products made from RR Board' },
 ]
-
-const scrollToRrBoard = () => {
-  document.getElementById('rr-board')?.scrollIntoView({ behavior: 'smooth' })
-}
 </script>

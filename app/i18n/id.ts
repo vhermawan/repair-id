@@ -11,11 +11,8 @@ export default {
   // Hero
   'hero.label': 'Dari Sachet Menjadi Papan,\nDari Papan Menjadi Produk',
   'hero.body': 'Repair mengembangkan material sirkular dengan mengolah plastik bernilai rendah menjadi papan 1.2 m x 2.4 m yang dapat digunakan untuk berbagai kebutuhan komersial.',
-  'hero.eyebrow': '[ REPAIR PROJECT ]',
   'hero.headline': 'Dari Sachet Menjadi Papan,\nDari Papan Menjadi Produk.',
-  'hero.intro': 'Repair mengembangkan material sirkular dengan mengolah plastik bernilai rendah menjadi papan 1.2 m x 2.4 m yang dapat digunakan untuk berbagai kebutuhan komersial.',
-  'hero.ctaBoard': 'Jelajahi Lebih Lanjut',
-  'hero.ctaDiscuss': 'Diskusi Dengan Kami',
+  'hero.intro': 'Sachet dan kantong plastik yang sering terabaikan, kini menjadi material untuk berbagai kebutuhan. Dari event hingga interior dan produk custom, temukan apa yang bisa dibuat bersama Repair.',
   'hero.since': '[ SEJAK 2019 \u00B7 JAKARTA, INDONESIA ]',
   'hero.metric1.value': '+120 ton',
   'hero.metric1.label': 'plastik terolah',
@@ -25,19 +22,13 @@ export default {
   'hero.metric3.label': 'dapat dilebur ulang',
 
   // Impact
-  'impact.tag': '[ DAMPAK KAMI ]',
-  'impact.heading': 'Dampak Kami',
-  'impact.body': 'Terbuat 100% dari plastik bernilai rendah, plastik seperti kemasan saset dan kantong plastik yang sering terbengkalai, kini kami beri masa pakai lebih panjang, mengalihkannya dari lingkungan dan mengubahnya menjadi material yang diminati para desainer serta pengguna akhir.',
-  'impact.stat1.value': '34K',
-  'impact.stat1.unit': 'kg',
-  'impact.stat1.desc': 'plastik bernilai rendah telah diolah',
-  'impact.stat2.value': '2.5K',
-  'impact.stat2.unit': 'produk',
-  'impact.stat2.desc': 'telah diproduksi',
-  'impact.stat3.value': '1.2K',
-  'impact.stat3.unit': 'm\u00B2',
-  'impact.stat3.desc': 'area telah menggunakan RR Board',
-  'impact.imageCaption': 'Plastik bernilai rendah dikumpulkan sebelum diolah',
+  'impact.heading': 'DAMPAK KAMI',
+  'impact.stat1.value': '34,000 kg',
+  'impact.stat1.desc': 'Plastik bernilai rendah telah diolah',
+  'impact.stat2.value': '2,500 produk',
+  'impact.stat2.desc': 'Telah diproduksi',
+  'impact.stat3.value': '1,200 m2',
+  'impact.stat3.desc': 'Area telah menggunakan RR Board',
 
   // About Repair
   'about.tag': '[ TENTANG REPAIR ]',
@@ -62,17 +53,19 @@ export default {
   'rrBoardIntro.toilet.desc': 'Dibangun untuk lingkungan lembap, RR Board menawarkan permukaan tahan air dan tahan lama yang dapat difabrikasi menjadi kubikel toilet fungsional.',
 
   // Building Application
-  'building.tag': '[ KEGUNAAN ]',
-  'building.heading': 'Dirancang Sesuai Kebutuhan Anda',
-  'building.app1.title': 'Design & Build',
-  'building.app1.desc': 'Hadirkan material sirkular ke dalam interior, arsitektur, dan ruang komersial. Mulai dari rekomendasi material hingga proses fabrikasi, kami membantu mewujudkan setiap ide.',
-  'building.app2.title': 'Events & Trade Show',
-  'building.app2.desc': 'Buat merchandise dan kebutuhan acara yang lebih bermakna dari material daur ulang. Lebih dari sekadar barang, kami membantu mendorong acaramu agar memiliki cerita.',
-  'building.app3.title': 'Product & Furniture',
-  'building.app3.desc': 'Ubah RR Board menjadi produk yang dirancang untuk penggunaan sehari-hari. Mulai dari furnitur hingga berbagai produk fungsional, kami mengembangkan dan memproduksinya sesuai kebutuhan Anda.',
-  'building.app4.title': 'CSR & EPR',
-  'building.app4.desc': 'Kami membantu bisnis mengubah limbah menjadi produk, material, dan berbagai aplikasi, sehingga dampak lingkungan yang dihasilkan dapat terlihat dan dirasakan secara lebih nyata.',
-  'building.seeApp': 'Lihat aplikasi',
+  'building.heading': 'Apa yang Bisa Kita Wujudkan Bersama?',
+  'building.card1.title': 'Events & Activations',
+  'building.card1.cta': 'Catalogue for Events',
+  'building.card1.desc': 'Merchandise, signage, display, dan perlengkapan event yang dibuat sesuai kebutuhan acara dan identitas brand.',
+  'building.card2.title': 'Workshop & Manufacturing',
+  'building.card2.cta': 'Be our partner',
+  'building.card2.desc': 'Eksplorasi RR Board sebagai alternatif material untuk produksi furnitur dan kebutuhan pembelian berulang.',
+  'building.card3.title': 'Design & Build',
+  'building.card3.cta': 'Explore our material',
+  'building.card3.desc': 'Material daur ulang untuk fasad, cladding, interior, dan berbagai elemen desain yang fungsional.',
+  'building.card4.title': 'Brands & Corporates',
+  'building.card4.cta': 'Explore our products',
+  'building.card4.desc': 'Produk custom dan inisiatif circularity untuk kebutuhan brand serta perusahaan.',
 
   // End Product
   'product.tag': '[ RR BOARD SEBAGAI PRODUK ]',
@@ -87,8 +80,8 @@ export default {
   'product.ctaDiscuss': 'Konsultasikan Kebutuhan Anda',
 
   // Clients
-  'clients.tag': '[ KLIEN KAMI ]',
   'clients.subtitle': 'Dipercaya arsitek, kontraktor, dan brand yang serius soal material.',
+  'clients.heading': 'Klien Kami',
 
   // Footer
   'footer.heading': 'Punya proyek? Kirim kebutuhan Anda, kami hitung bersama.',
@@ -110,7 +103,6 @@ export default {
   'rrPage.hero.waterResistant': 'Tahan air',
 
   // RR Board page — S1 Specifications
-  'rrPage.specs.tag': '[ 01 — SPESIFIKASI ]',
   'rrPage.specs.heading': 'Spesifikasi',
   'rrPage.specs.sub': 'Format papan standar dengan pilihan ketebalan, berat, dan finishing — siap untuk fabrikasi komersial.',
   'rrPage.specs.imageAlt': 'Tumpukan panel RR Board',
@@ -128,37 +120,24 @@ export default {
   'rrPage.specs.price.key': 'HARGA',
   'rrPage.specs.price.value': 'Mulai dari Rp 140.000 per m²',
   'rrPage.specs.price.note': 'Tergantung ketebalan & volume',
-  'rrPage.specs.color.key': 'WARNA',
-  'rrPage.specs.color.mozaic': 'Mozaic',
-  'rrPage.specs.color.dark': 'Dark',
-  'rrPage.specs.color.more': 'dan warna lain tersedia terbatas',
+  'rrPage.specs.color.key': 'PILIHAN WARNA & POLA',
+  'rrPage.specs.color.body': 'Warna natural RR Board mengikuti campuran plastik yang digunakan.',
+  'rrPage.specs.color.note': 'Pilihan warna khusus tersedia untuk ketebalan 10 mm dan 12 mm, tergantung stok yang tersedia, dengan biaya tambahan Rp25.000 per papan. Warna yang sudah habis tidak dapat dipesan kembali.',
 
   // RR Board page — S2 Features & Benefits
-  'rrPage.features.tag': '[ 02 — FITUR & KEUNGGULAN ]',
   'rrPage.features.heading': 'Fitur dan Keunggulan',
   'rrPage.features.sub': 'Ukuran, kemudahan pengerjaan, dan ketahanan — diuji sesuai kebutuhan proyek nyata.',
-  'rrPage.features.f1.title': 'Ukuran Board Komersial',
-  'rrPage.features.f1.body': 'Tersedia dalam ukuran 1,2 × 2,4 m, sehingga cocok untuk kebutuhan fabrikasi komersial dengan sambungan yang lebih minim dan penggunaan material yang lebih efisien.',
-  'rrPage.features.f1.tag1': '1,2 × 2,4 m',
-  'rrPage.features.f1.tag2': 'Lebih sedikit sambungan',
-  'rrPage.features.f2.title': 'Dapat Dilengkungkan dengan Teknik Kerf',
-  'rrPage.features.f2.body': 'Dapat dibuat lengkung menggunakan teknik kerf bending, membuka lebih banyak kemungkinan untuk aplikasi yang kreatif sekaligus fungsional.',
-  'rrPage.features.f2.tag1': 'Kerf bending',
-  'rrPage.features.f2.tag2': 'Bentuk lengkung',
-  'rrPage.features.f3.title': 'Cocok untuk Penggunaan Outdoor',
-  'rrPage.features.f3.body': 'Dirancang untuk menghadapi penggunaan sehari-hari dengan ketahanan yang lama, cocok digunakan untuk aplikasi eksterior dan komersial.',
-  'rrPage.features.f3.tag1': 'Tahan benturan',
-  'rrPage.features.f3.tag2': 'Siap eksterior',
-  'rrPage.features.f4.title': '100% dari Plastik Bernilai Rendah',
-  'rrPage.features.f4.body': 'Terbuat dari sachet dan kantong kresek, memberikan kehidupan baru sampah tertolak, menjadi material yang bernilai dan dapat digunakan secara komersial.',
-  'rrPage.features.f4.tag1': '100% daur ulang',
-  'rrPage.features.f4.tag2': 'Sachet / MLP',
+  'rrPage.features.f1.title': 'Lebih Luas',
+  'rrPage.features.f1.body': 'Dengan ukuran 1,2 × 2,4 m per lembar, RR Board ideal untuk aplikasi berskala besar, menghasilkan permukaan yang lebih menyatu dengan lebih sedikit sambungan.',
+  'rrPage.features.f2.title': 'Tahan Air',
+  'rrPage.features.f2.body': 'Material tahan air yang dapat digunakan untuk aplikasi outdoor tertentu dan area lembap, mulai dari cubicle kamar mandi hingga fasilitas di sekitar kolam renang.',
+  'rrPage.features.f3.title': 'Gunakan Peralatan Workshop yang Sudah Ada',
+  'rrPage.features.f3.body': 'Potong, bentuk, dan kreasikan RR Board menggunakan peralatan workshop yang umum digunakan, seperti gergaji dan mesin CNC. Tidak perlu investasi mesin khusus untuk pemotongan dan pembentukan standar.',
+  'rrPage.features.f4.title': 'Lengkungan dengan Teknik yang Mudah',
+  'rrPage.features.f4.body': 'Bentuk RR Board menjadi desain melengkung dengan teknik kerf bending seperti pada plywood, tanpa memerlukan heat gun. Lebih banyak kemungkinan untuk furnitur, fixture, dan instalasi kreatif.',
 
   // RR Board page — S3 Material Test
-  'rrPage.tests.tag': '[ 03 — UJI MATERIAL ]',
   'rrPage.tests.heading': 'Teruji, bukan sekadar klaim.',
-  'rrPage.tests.sub': 'Placeholder — hasil uji material akan segera tersedia.',
-  'rrPage.tests.pending': 'Hasil menyusul',
   'rrPage.tests.t1': 'Ketahanan noda',
   'rrPage.tests.t2': 'Ketahanan benturan',
   'rrPage.tests.t3': 'Daya cengkeram sekrup',
@@ -169,10 +148,8 @@ export default {
   'rrPage.tests.play': 'Putar video',
 
   // RR Board page — S4 Applications
-  'rrPage.apps.tag': '[ 04 — APLIKASI ]',
   'rrPage.apps.heading': 'Aplikasi utama RR Board.',
   'rrPage.apps.sub': 'Dirancang serbaguna, RR Board dapat difabrikasi menjadi berbagai aplikasi di bidang arsitektur, interior, dan furnitur.',
-  'rrPage.apps.count': '03 — APLIKASI',
   'rrPage.apps.label': 'APLIKASI',
   'rrPage.apps.client': 'KLIEN',
   'rrPage.apps.a1.title': 'Fasad & Cladding',
@@ -191,9 +168,11 @@ export default {
   'rrPage.apps.a3.tag1': 'Furnitur',
   'rrPage.apps.a3.tag2': 'Tabletop',
   'rrPage.apps.a3.tag3': 'Custom',
-  'rrPage.apps.ctaHeading': 'Punya ide aplikasi?',
-  'rrPage.apps.ctaBody': 'Kirimkan gambar atau referensi Anda — kami akan menentukan papan, finishing, dan fabrikasinya bersama Anda.',
-  'rrPage.apps.ctaButton': 'Konsultasikan proyek Anda',
+  'rrPage.colors.heading': 'Setiap Papan Punya Karakternya Sendiri.',
+  'rrPage.colors.body': 'Tidak ada dua RR Board yang benar-benar sama. Warna dan pola naturalnya terbentuk dari campuran plastik daur ulang, menjadikan setiap papan unik.',
+  'rrPage.colors.body2': 'Lihat bagaimana karakter alami ini menjadi bagian dari desain berbagai proyek kami.',
+  'rrPage.colors.label': 'Warna Natural di Proyek Nyata',
+  'rrPage.features.ctaSpec': 'Unduh Spesifikasi Material',
 
   // Projects page — Hero
   'projectsPage.heroTag': '[ PROJECTS & SERVICES ]',
@@ -288,9 +267,8 @@ export default {
   'contactPage.info.responseValue': 'Dalam 24 jam kerja',
 
   // Custom project page
-  'customProjectPage.hero.tag': '[ PRODUK & PROYEK ]',
   'customProjectPage.hero.title': 'Product & Project',
-  'customProjectPage.hero.body': 'Lihat berbagai aplikasi dari RR Board, dari produk fungsional hingga project custom, didesain dan diproduksi untuk berbagai kebutuhan dan ruang.',
+  'customProjectPage.hero.body': 'Lihat berbagai kemungkinan bersama Repair Project, dari produk fungsional hingga produk dan proyek custom, didesain dan diproduksi untuk berbagai kebutuhan dan ruang.',
   'customProjectPage.hero.ctaProducts': 'Lihat Semua Produk',
   'customProjectPage.hero.ctaDiscuss': 'Diskusi dengan Kami',
   'customProjectPage.products.heading': 'Produk',
@@ -301,12 +279,10 @@ export default {
   'customProjectPage.products.keychain': 'Gantungan Kunci',
   'customProjectPage.products.medals': 'Medali',
   'customProjectPage.products.phoneHolder': 'Phone Holder',
-  'customProjectPage.products.cta': 'Konsultasikan Kebutuhan Anda',
-  'customProjectPage.projects.heading': 'Project',
-  'customProjectPage.projects.subtitle': 'Lihat bagaimana RR Board dapat diolah menjadi produk, furnitur, hingga ruang fungsional melalui berbagai proyek nyata.',
+  'customProjectPage.projects.heading': 'Featured Projects',
+  'customProjectPage.projects.subtitle': 'Lihat bagaimana berbagai brand dan perusahaan bekerja sama dengan Repair untuk mengubah plastik daur ulang menjadi produk fungsional, sekaligus menghasilkan dampak material yang terukur.',
   'customProjectPage.projects.totalItem': 'TOTAL ITEM',
   'customProjectPage.projects.totalWaste': 'TOTAL SAMPAH',
-  'customProjectPage.projects.cta': 'Lihat Proyek',
   'customProjectPage.projects.schoolSet.title': 'Manulife School Set',
   'customProjectPage.projects.schoolSet.desc': 'Furniture sirkular berbahan RR Board untuk mendukung lingkungan belajar di sekolah.',
   'customProjectPage.projects.schoolSet.items': '90 set',
@@ -329,10 +305,25 @@ export default {
   'customProjectPage.order.03.body': 'Setelah spesifikasi dan pesanan dikonfirmasi, proses produksi dimulai. Waktu produksi umumnya 2–4 minggu.',
   'customProjectPage.order.04.title': 'Pengiriman',
   'customProjectPage.order.04.body': 'Produk yang telah selesai akan dikemas dengan aman dan dikirim ke lokasi yang disepakati.',
-  'customProjectPage.order.ctaOrder': 'Pesan Sekarang',
   'customProjectPage.order.ctaDiscuss': 'Diskusi dengan Kami',
-  'customProjectPage.clients.heading': 'Klien Kami',
 
+
+  // RR Board page — Material supply
+  'rrSupply.ctaPartner': 'Be our partner',
+  'rrSupply.ctaBuy': 'Buy RR Board',
+  'rrSupply.heading': 'Siap Berkarya dengan RR Board?',
+  'rrSupply.body': 'Baik Anda sedang mengeksplorasi material baru maupun mencari papan untuk produksi, tim kami siap membantu menemukan solusi yang tepat.',
+
+  // Why low-value plastic
+  'whyPlastic.heading': 'Keputusan Material Anda Dapat Memberi Dampak yang Lebih Besar.',
+  'whyPlastic.body': 'Plastik sachet dan kantong sekali pakai sering berakhir mencemari lingkungan karena sulit didaur ulang. Dengan memilih RR Board, Anda memberi plastik rendah nilai kesempatan kedua sebagai papan fungsional untuk berbagai kebutuhan.',
+  'whyPlastic.imageAlt': 'Sampah plastik bernilai rendah sebelum diolah',
+
+  // Custom project page — Explore products
+  'customProjectPage.explore.catalogue.body': 'Untuk brand, perusahaan, desainer, dan siapa pun yang ingin mengeksplorasi kemungkinan produk dari Repair.',
+  'customProjectPage.explore.catalogue.cta': 'Lihat Katalog Produk',
+  'customProjectPage.explore.events.body': 'Untuk merchandise event, aktivasi, perlengkapan booth, dan berbagai aplikasi untuk acara.',
+  'customProjectPage.explore.events.cta': 'Lihat Katalog Event',
   // Stub pages
   'page.customProject': 'Proyek Kustom',
   'page.contact': 'Kontak',

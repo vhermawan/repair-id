@@ -1,123 +1,45 @@
 <template>
-  <section class="w-full flex flex-col gap-6 lg:gap-10 p-[48px_20px] lg:p-[72px_48px] bg-white">
-    <div
+  <section class="w-full flex flex-col gap-8 lg:gap-12 p-[64px_20px] lg:p-[104px_48px] bg-white">
+    <h2
       v-motion
-      :initial="{ opacity: 0, y: 32 }"
+      :initial="{ opacity: 0, y: 24 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-      class="w-full flex flex-col gap-2 lg:flex-row lg:justify-between lg:items-end"
+      class="font-dm-sans font-bold text-[32px] leading-[36px] tracking-[-1.2px] lg:text-[46px] lg:leading-[49px] lg:tracking-[-1.8px] text-navy"
     >
-      <span class="font-dm-sans font-bold text-[11px] tracking-[1.2px] text-[#06142899] whitespace-nowrap">{{ t('clients.tag') }}</span>
-      <span class="font-dm-sans text-[12px] lg:text-sm text-[#061428CC]">
-        {{ t('clients.subtitle') }}
-      </span>
-    </div>
+      {{ t('clients.heading') }}
+    </h2>
 
-    <!-- Row 1: scroll left -->
-    <div class="overflow-hidden">
-      <div class="marquee">
-        <div class="marquee-track">
-          <div
-            v-for="client in row1"
-            :key="client"
-            class="flex-shrink-0 w-[50vw] lg:w-[25vw] h-[120px] lg:h-[150px] flex items-center justify-center border-b border-[#e5e5e5]"
-          >
-            <img :src="`/images/clients/${client}`" :alt="client" class="max-h-[120px] lg:max-h-[170px] w-auto object-contain transition-transform duration-300 hover:scale-125" />
-          </div>
-          <div
-            v-for="client in row1"
-            :key="`dup-${client}`"
-            class="flex-shrink-0 w-[50vw] lg:w-[25vw] h-[120px] lg:h-[150px] flex items-center justify-center border-b border-[#e5e5e5]"
-          >
-            <img :src="`/images/clients/${client}`" :alt="client" class="max-h-[120px] lg:max-h-[170px] w-auto object-contain transition-transform duration-300 hover:scale-125" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Row 2: scroll right -->
-    <div class="overflow-hidden">
-      <div class="marquee">
-        <div class="marquee-track marquee-track--reverse">
-          <div
-            v-for="client in row2"
-            :key="client"
-            class="flex-shrink-0 w-[50vw] lg:w-[25vw] h-[120px] lg:h-[150px] flex items-center justify-center border-b border-[#e5e5e5]"
-          >
-            <img :src="`/images/clients/${client}`" :alt="client" class="max-h-[120px] lg:max-h-[170px] w-auto object-contain transition-transform duration-300 hover:scale-125" />
-          </div>
-          <div
-            v-for="client in row2"
-            :key="`dup-${client}`"
-            class="flex-shrink-0 w-[50vw] lg:w-[25vw] h-[120px] lg:h-[150px] flex items-center justify-center border-b border-[#e5e5e5]"
-          >
-            <img :src="`/images/clients/${client}`" :alt="client" class="max-h-[120px] lg:max-h-[170px] w-auto object-contain transition-transform duration-300 hover:scale-125" />
-          </div>
-        </div>
-      </div>
-    </div>
+    <ul class="w-full grid grid-cols-2 sm:grid-cols-4 border-t border-l border-[#0614281A]">
+      <li
+        v-for="client in clients"
+        :key="client.file"
+        class="h-[110px] lg:h-[150px] flex items-center justify-center p-4 border-r border-b border-[#0614281A]"
+      >
+        <img :src="`/images/clients/${client.file}`" :alt="client.name" loading="lazy" class="max-h-full max-w-full w-auto object-contain" />
+      </li>
+    </ul>
   </section>
 </template>
 
 <script setup lang="ts">
 const { t } = useI18n()
 
-const row1 = [
-  'aloha.png',
-  'arena.png',
-  'goodday.png',
-  'indosat.png',
-  'keppel.png',
-  'manulife.png',
-  'mayora.png',
-  'nestle.png',
-]
-
-const row2 = [
-  'pamerindo.png',
-  'pertamina.png',
-  'pln.png',
-  'sana.png',
-  'thengono.png',
-  'toyota.png',
-  'tuan.png',
-  'tuku.png',
+const clients = [
+  { file: 'manulife.png', name: 'Manulife' },
+  { file: 'pertamina.png', name: 'Pertamina' },
+  { file: 'thengono.png', name: 'K-Thengono Design Studio' },
+  { file: 'arena.png', name: 'Arena Gourmet' },
+  { file: 'tuku.png', name: 'Tuku' },
+  { file: 'mayora.png', name: 'Mayora' },
+  { file: 'nestle.png', name: 'Nestlé Milo' },
+  { file: 'aloha.png', name: 'Aloha' },
+  { file: 'toyota.png', name: 'Kala Toyota' },
+  { file: 'keppel.png', name: 'Keppel' },
+  { file: 'pln.png', name: 'PLN' },
+  { file: 'goodday.png', name: 'Good Day' },
+  { file: 'pamerindo.png', name: 'Pamerindo' },
+  { file: 'indosat.png', name: 'Indosat' },
+  { file: 'sana.png', name: 'Sana' },
+  { file: 'tuan.png', name: 'Tuan Sua' },
 ]
 </script>
-
-<style scoped>
-.marquee {
-  width: 100%;
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: scroll-left 25s linear infinite;
-}
-
-.marquee-track--reverse {
-  animation: scroll-right 25s linear infinite;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes scroll-right {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-.marquee:hover .marquee-track {
-  animation-play-state: paused;
-}
-</style>

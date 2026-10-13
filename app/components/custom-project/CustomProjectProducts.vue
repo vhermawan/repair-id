@@ -9,32 +9,33 @@
       {{ t('customProjectPage.products.heading') }}
     </h2>
 
-    <div class="w-full grid grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-6 lg:gap-x-4 lg:gap-y-7">
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
       <div
-        v-for="(product, i) in products"
-        :key="product.labelKey"
+        v-for="(catalogue, i) in catalogues"
+        :key="catalogue.prefix"
         v-motion
         :initial="{ opacity: 0, y: 24 }"
-        :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: (i % 3) * 100 } }"
-        class="flex flex-col gap-3 lg:gap-3.5"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: i * 120 } }"
+        class="flex flex-col gap-6 p-4 lg:p-5 bg-cream"
       >
         <img
-          :src="product.image"
-          :alt="t(product.labelKey)"
+          :src="catalogue.image"
+          :alt="t(`${catalogue.prefix}.cta`)"
           loading="lazy"
-          class="w-full h-[180px] sm:h-[240px] lg:h-[300px] object-cover"
+          class="w-full aspect-[4/3] object-cover"
         >
-        <span class="font-dm-sans font-semibold text-[14px] lg:text-[15px] text-navy">
-          {{ t(product.labelKey) }}
-        </span>
+        <div class="flex flex-col gap-5 p-[0_4px_8px]">
+          <p class="font-dm-sans text-[16px] leading-[25px] lg:text-[18px] lg:leading-[29px] text-[#0C2244]">
+            {{ t(`${catalogue.prefix}.body`) }}
+          </p>
+          <div>
+            <a :href="catalogue.href" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-[26px] py-3.5 bg-blue-accent rounded-full">
+              <span class="font-dm-sans text-sm font-semibold text-white whitespace-nowrap">{{ t(`${catalogue.prefix}.cta`) }}</span>
+              <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-white" />
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="w-full flex justify-center pt-4">
-      <NuxtLink to="/contact" class="flex items-center justify-center gap-2.5 px-[26px] py-3.5 bg-blue-accent rounded-full">
-        <span class="font-dm-sans text-sm font-semibold text-white whitespace-nowrap">{{ t('customProjectPage.products.cta') }}</span>
-        <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-white" />
-      </NuxtLink>
     </div>
   </section>
 </template>
@@ -42,13 +43,8 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-const products = [
-  { image: '/images/custom-project/product-display-table.webp', labelKey: 'customProjectPage.products.displayTable' },
-  { image: '/images/custom-project/product-waste-bin.webp', labelKey: 'customProjectPage.products.wasteBin' },
-  { image: '/images/custom-project/product-furniture.webp', labelKey: 'customProjectPage.products.furniture' },
-  { image: '/images/custom-project/product-placard.webp', labelKey: 'customProjectPage.products.placard' },
-  { image: '/images/custom-project/product-keychain.webp', labelKey: 'customProjectPage.products.keychain' },
-  { image: '/images/custom-project/product-medals.webp', labelKey: 'customProjectPage.products.medals' },
-  { image: '/images/custom-project/product-phone-holder.webp', labelKey: 'customProjectPage.products.phoneHolder' },
+const catalogues = [
+  { prefix: 'customProjectPage.explore.catalogue', image: '/images/custom-project/product-display-table.webp', href: 'https://w4c.id/RepairProjectCatalogue' },
+  { prefix: 'customProjectPage.explore.events', image: '/images/custom-project/product-keychain.webp', href: 'https://w4c.id/RepairForEvents' },
 ]
 </script>

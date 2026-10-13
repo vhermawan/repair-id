@@ -11,11 +11,8 @@ export default {
   // Hero
   'hero.label': 'From Sachets to Board,\nFrom Board to Product',
   'hero.body': 'Repair develops circular material by transforming low-value plastics into a 1.2 m x 2.4 m board for commercial applications',
-  'hero.eyebrow': '[ REPAIR PROJECT ]',
   'hero.headline': 'From Sachets to Board,\nFrom Board to Product.',
-  'hero.intro': 'Repair develops circular material by transforming low-value plastics into a 1.2 m x 2.4 m board for commercial applications.',
-  'hero.ctaBoard': 'Explore More',
-  'hero.ctaDiscuss': 'Talk with Us',
+  'hero.intro': 'Often overlooked, sachets and plastic bags are now being transformed into materials for a variety of uses. From events to interiors and custom products, discover what can be created with Repair.',
   'hero.since': '[ SINCE 2019 · JAKARTA, INDONESIA ]',
   'hero.metric1.value': '+120 tons',
   'hero.metric1.label': 'plastic processed',
@@ -25,19 +22,13 @@ export default {
   'hero.metric3.label': 're-meltable',
 
   // Impact
-  'impact.tag': '[ OUR IMPACT ]',
-  'impact.heading': 'Our Impact',
-  'impact.body': '100% made from low-value plastic, we give unwanted plastics like sachets and plastic bags a longer life, diverting them from the environment, into a material desired by designers and end users.',
-  'impact.stat1.value': '34K',
-  'impact.stat1.unit': 'kg',
-  'impact.stat1.desc': 'of low value plastics transformed',
-  'impact.stat2.value': '2.5K',
-  'impact.stat2.unit': 'pcs',
-  'impact.stat2.desc': 'of products produced',
-  'impact.stat3.value': '1.2K',
-  'impact.stat3.unit': 'm²',
-  'impact.stat3.desc': 'area covered in RR Board',
-  'impact.imageCaption': 'Low-value plastics collected before processing',
+  'impact.heading': 'OUR IMPACT',
+  'impact.stat1.value': '34,000 kg',
+  'impact.stat1.desc': 'Low-value plastic upcycled',
+  'impact.stat2.value': '2,500 products',
+  'impact.stat2.desc': 'Produced',
+  'impact.stat3.value': '1,200 m2',
+  'impact.stat3.desc': 'Area using RR Board',
 
   // About Repair
   'about.tag': '[ ABOUT REPAIR ]',
@@ -62,17 +53,19 @@ export default {
   'rrBoardIntro.toilet.desc': 'Built for humid environments, RR Board offers a water-resistant, durable surface that can be fabricated into functional toilet cubicles.',
 
   // Building Application
-  'building.tag': '[ USE CASES ]',
-  'building.heading': 'Designed For Your Needs',
-  'building.app1.title': 'Design & Build',
-  'building.app1.desc': 'Bring circular materials into interiors, architecture, and commercial spaces. From material suggestions to fabrication, we help bring your ideas to life.',
-  'building.app2.title': 'Events & Tradeshow',
-  'building.app2.desc': 'Create meaningful merchandise and event essentials from recycled materials. Not just a product, we turn your event needs into products with a story.',
-  'building.app3.title': 'Product & Furniture',
-  'building.app3.desc': 'Turn RR Board into products made for everyday use. From furniture to functional pieces, we develop and produce based on your needs.',
-  'building.app4.title': 'CSR & EPR',
-  'building.app4.desc': 'We help businesses transform waste into products, materials, and real-world applications, making the impact more visible and tangible.',
-  'building.seeApp': 'See application',
+  'building.heading': 'What Can We Create Together?',
+  'building.card1.title': 'Events & Activations',
+  'building.card1.cta': 'Catalogue for Events',
+  'building.card1.desc': 'Merchandise, signage, displays, and event equipment tailored to specific event needs and brand identity.',
+  'building.card2.title': 'Workshop & Manufacturing',
+  'building.card2.cta': 'Be our partner',
+  'building.card2.desc': 'Exploring RR Board as an alternative material for furniture production and recurring procurement needs.',
+  'building.card3.title': 'Design & Build',
+  'building.card3.cta': 'Explore our material',
+  'building.card3.desc': 'Recycled materials for facades, cladding, interiors, and various functional design elements.',
+  'building.card4.title': 'Brands & Corporates',
+  'building.card4.cta': 'Explore our products',
+  'building.card4.desc': 'Custom products and circularity initiatives for brands and corporate needs.',
 
   // End Product
   'product.tag': '[ RR BOARD AS PRODUCT ]',
@@ -87,8 +80,8 @@ export default {
   'product.ctaDiscuss': 'Consult Your Needs',
 
   // Clients
-  'clients.tag': '[ OUR CLIENTS ]',
   'clients.subtitle': 'Trusted by architects, contractors, and brands serious about materials.',
+  'clients.heading': 'Our Clients',
 
   // Footer
   'footer.heading': 'Have a project? Send your requirements, we\'ll calculate together.',
@@ -110,7 +103,6 @@ export default {
   'rrPage.hero.waterResistant': 'Water resistant',
 
   // RR Board page — S1 Specifications
-  'rrPage.specs.tag': '[ 01 — SPECIFICATIONS ]',
   'rrPage.specs.heading': 'Specifications',
   'rrPage.specs.sub': 'Standard board format with selectable thickness, weight, and finish — ready for commercial fabrication.',
   'rrPage.specs.imageAlt': 'Stacked RR Board panels',
@@ -128,37 +120,24 @@ export default {
   'rrPage.specs.price.key': 'PRICE',
   'rrPage.specs.price.value': 'Start from Rp 140.000 per m²',
   'rrPage.specs.price.note': 'Depends on thickness & volume',
-  'rrPage.specs.color.key': 'COLOR',
-  'rrPage.specs.color.mozaic': 'Mozaic',
-  'rrPage.specs.color.dark': 'Dark',
-  'rrPage.specs.color.more': 'and other colors limitedly available',
+  'rrPage.specs.color.key': 'COLORS & PATTERNS',
+  'rrPage.specs.color.body': "RR Board's natural color reflects the mix of recycled plastics used.",
+  'rrPage.specs.color.note': 'Selected colors are available for 10 mm and 12 mm boards only, subject to existing stock, with an additional Rp25,000 charge. Once a color is sold out, it cannot be reordered.',
 
   // RR Board page — S2 Features & Benefits
-  'rrPage.features.tag': '[ 02 — FEATURES & BENEFITS ]',
   'rrPage.features.heading': 'Features & Benefits',
   'rrPage.features.sub': 'Size, workability, and durability — tested against the demands of real projects.',
-  'rrPage.features.f1.title': 'Commercial-Size Boards',
-  'rrPage.features.f1.body': 'Available in a full-size 1.2 × 2.4 m format, making it suitable for commercial fabrication while minimizing joints and material waste.',
-  'rrPage.features.f1.tag1': '1.2 × 2.4 m',
-  'rrPage.features.f1.tag2': 'Less joints',
-  'rrPage.features.f2.title': 'Bendable with Kerfing',
-  'rrPage.features.f2.body': 'Can be shaped into curved forms using the kerf bending technique, opening up more possibilities for creative and functional applications.',
-  'rrPage.features.f2.tag1': 'Kerf bending',
-  'rrPage.features.f2.tag2': 'Curved forms',
-  'rrPage.features.f3.title': 'Suitable for Outdoor Use',
-  'rrPage.features.f3.body': 'Designed to withstand everyday use with good impact resistance and surface hardness, making it suitable for selected exterior and commercial applications.',
-  'rrPage.features.f3.tag1': 'Impact resistant',
-  'rrPage.features.f3.tag2': 'Exterior ready',
-  'rrPage.features.f4.title': 'Made 100% From Low Value Plastics',
-  'rrPage.features.f4.body': 'Made entirely from sachets & plastic bags, giving unwanted waste a new life as durable, commercially viable material.',
-  'rrPage.features.f4.tag1': '100% recycled',
-  'rrPage.features.f4.tag2': 'Sachet / MLP',
+  'rrPage.features.f1.title': 'Go Bigger, Seamlessly',
+  'rrPage.features.f1.body': 'Available in full-size 1.2 × 2.4 m sheets, RR Board is ideal for large-scale applications, creating seamless-looking surfaces with fewer joints.',
+  'rrPage.features.f2.title': 'Water Resistant',
+  'rrPage.features.f2.body': 'Water-resistant and versatile, RR Board is suitable for selected outdoor applications and moisture-prone spaces, from bathroom cubicles to poolside fixtures.',
+  'rrPage.features.f3.title': 'Work with Tools You Already Have',
+  'rrPage.features.f3.body': 'Cut, shape, and customize RR Board using familiar workshop tools, including saws and CNC routers. No specialized machinery needed for standard cutting and shaping.',
+  'rrPage.features.f4.title': 'Curves with Simple Technique',
+  'rrPage.features.f4.body': 'Create curved designs using kerf bending techniques, just like working with plywood. No heat gun required, opening up possibilities for furniture, fixtures, and creative installations.',
 
   // RR Board page — S3 Material Test
-  'rrPage.tests.tag': '[ 03 — MATERIAL TEST ]',
   'rrPage.tests.heading': 'Tested, not claimed.',
-  'rrPage.tests.sub': 'Placeholder — material test results to be supplied.',
-  'rrPage.tests.pending': 'Result pending',
   'rrPage.tests.t1': 'Stain resistance',
   'rrPage.tests.t2': 'Impact resistance',
   'rrPage.tests.t3': 'Screw holding',
@@ -169,10 +148,8 @@ export default {
   'rrPage.tests.play': 'Play video',
 
   // RR Board page — S4 Applications
-  'rrPage.apps.tag': '[ 04 — APPLICATIONS ]',
   'rrPage.apps.heading': 'Top RR Board Applications',
   'rrPage.apps.sub': 'Designed for versatility, RR Board can be fabricated into various applications across architecture, interiors, and furniture.',
-  'rrPage.apps.count': '03 — APPLICATIONS',
   'rrPage.apps.label': 'APPLICATION',
   'rrPage.apps.client': 'CLIENT',
   'rrPage.apps.a1.title': 'Facade & Cladding',
@@ -191,9 +168,11 @@ export default {
   'rrPage.apps.a3.tag1': 'Furniture',
   'rrPage.apps.a3.tag2': 'Tabletop',
   'rrPage.apps.a3.tag3': 'Custom',
-  'rrPage.apps.ctaHeading': 'Have an application in mind?',
-  'rrPage.apps.ctaBody': 'Send us your drawing or reference — we will work out the board, the finish, and the fabrication with you.',
-  'rrPage.apps.ctaButton': 'Consult Your Project',
+  'rrPage.colors.heading': 'Naturally Unique.\nBeautifully Unrepeatable.',
+  'rrPage.colors.body': 'No two RR Boards look exactly alike. Their natural colors and patterns are shaped by the recycled plastics within, making every board one of a kind.',
+  'rrPage.colors.body2': 'Discover how our clients turn these unexpected patterns into beautiful, functional designs.',
+  'rrPage.colors.label': 'Natural Colors in Real Projects',
+  'rrPage.features.ctaSpec': 'Download Spec Sheet',
 
   // Projects page — Hero
   'projectsPage.heroTag': '[ PROJECTS & SERVICES ]',
@@ -288,9 +267,8 @@ export default {
   'contactPage.info.responseValue': 'Within 24 working hours',
 
   // Custom project page
-  'customProjectPage.hero.tag': '[ PRODUCT & PROJECT ]',
   'customProjectPage.hero.title': 'Product & Project',
-  'customProjectPage.hero.body': "Explore what's possible with RR Board, from functional products to custom pieces and projects, made for different needs and spaces.",
+  'customProjectPage.hero.body': "Explore what's possible with Repair Project, from functional products to custom pieces and projects, made for different needs and spaces.",
   'customProjectPage.hero.ctaProducts': 'See All Products',
   'customProjectPage.hero.ctaDiscuss': 'Discuss with Us',
   'customProjectPage.products.heading': 'Product',
@@ -301,12 +279,10 @@ export default {
   'customProjectPage.products.keychain': 'Keychain',
   'customProjectPage.products.medals': 'Medals',
   'customProjectPage.products.phoneHolder': 'Phone Holder',
-  'customProjectPage.products.cta': 'Consult Your Need',
-  'customProjectPage.projects.heading': 'Project',
-  'customProjectPage.projects.subtitle': 'See how RR Board can be transformed into products, furniture, and functional spaces through real-world projects.',
+  'customProjectPage.projects.heading': 'Featured Projects',
+  'customProjectPage.projects.subtitle': 'See how brands and businesses have worked with Repair to turn recycled plastics into functional products, bringing real-world applications and measurable material impact together.',
   'customProjectPage.projects.totalItem': 'TOTAL ITEM',
   'customProjectPage.projects.totalWaste': 'TOTAL WASTE',
-  'customProjectPage.projects.cta': 'See Project',
   'customProjectPage.projects.schoolSet.title': 'Manulife School Set',
   'customProjectPage.projects.schoolSet.desc': 'Circular furniture made from RR Board for a learning environment.',
   'customProjectPage.projects.schoolSet.items': '90 sets',
@@ -329,10 +305,25 @@ export default {
   'customProjectPage.order.03.body': 'Once the specifications and order are confirmed, production begins. Typical lead time is 2–4 weeks.',
   'customProjectPage.order.04.title': 'Delivery',
   'customProjectPage.order.04.body': 'Your finished products are carefully packed and delivered to the agreed location.',
-  'customProjectPage.order.ctaOrder': 'Order Now',
   'customProjectPage.order.ctaDiscuss': 'Discuss with Us',
-  'customProjectPage.clients.heading': 'Our Clients',
 
+
+  // RR Board page — Material supply
+  'rrSupply.ctaPartner': 'Be our partner',
+  'rrSupply.ctaBuy': 'Buy RR Board',
+  'rrSupply.heading': 'Ready to Build with RR Board?',
+  'rrSupply.body': "Whether you're exploring a new material or sourcing boards for production, our team is here to help you find the right solution.",
+
+  // Why low-value plastic
+  'whyPlastic.heading': 'Your Material Choice Can Make a Bigger Difference.',
+  'whyPlastic.body': 'Sachets and single-use plastic bags often end up polluting the environment because they are difficult to recycle. By choosing RR Board, you give low-value plastic a second chance, transforming it into functional boards for a variety of needs.',
+  'whyPlastic.imageAlt': 'Low-value plastic waste collected before processing',
+
+  // Custom project page — Explore products
+  'customProjectPage.explore.catalogue.body': "For brands, corporates, designers, and anyone exploring Repair's product possibilities.",
+  'customProjectPage.explore.catalogue.cta': 'View Product Catalogue',
+  'customProjectPage.explore.events.body': 'For event merchandise, activations, booth fixtures, and event-related applications.',
+  'customProjectPage.explore.events.cta': 'Explore Event Catalogue',
   // Stub pages
   'page.customProject': 'Custom Project',
   'page.contact': 'Contact',
