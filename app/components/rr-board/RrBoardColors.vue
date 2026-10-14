@@ -45,5 +45,14 @@ const photos = [
   { image: '/images/rr-board/facade.webp', project: 'Aloha PIK 2' },
   { image: '/images/rr-board/cublices.webp', project: 'St. Benedictus' },
   { image: '/images/rr-board/suitable.webp', project: 'St. Benedictus' },
+
+  { image: '/images/custom-project/project-school-set.webp', project: 'Manulife' },
+  { image: '/images/home/csr.webp', project: 'Manulife' },
+  { image: '/images/rr-board/school.webp', project: 'Manulife' },
+  { image: '/images/rr-board/board-2.webp', project: 'Aloha PIK 2' },
+  { image: '/images/rr-board/board-3.webp', project: 'Aloha PIK 2' },
+  { image: '/images/rr-board/facade.webp', project: 'Aloha PIK 2' },
+  { image: '/images/rr-board/cublices.webp', project: 'St. Benedictus' },
+  { image: '/images/rr-board/suitable.webp', project: 'St. Benedictus' },
 ]
 </script>

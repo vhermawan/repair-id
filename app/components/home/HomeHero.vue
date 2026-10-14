@@ -15,7 +15,7 @@
         v-for="image in images" :key="image.src"
         :src="image.src"
         :alt="image.alt"
-        class="w-full aspect-[4/5] object-cover"
+        class="w-full aspect-[4/3] sm:aspect-square object-cover"
       />
     </div>
   </section>

@@ -7,7 +7,7 @@
       <h1 class="hero-entrance hero-entrance-delay-2 max-w-[900px] font-dm-sans font-bold text-[44px] leading-[46px] lg:text-[76px] lg:leading-[76px] tracking-[-1.6px] lg:tracking-[-3px] text-navy">
         {{ t('rrPage.hero.title') }}
       </h1>
-      <div class="hero-entrance hero-entrance-delay-3 max-w-[720px] flex flex-col gap-3 font-dm-sans text-[17px] leading-[27px] lg:text-[19px] lg:leading-[30px] text-[#0C2244]">
+      <div class="hero-entrance hero-entrance-delay-3 max-w-[760px] flex flex-col gap-3 font-dm-sans text-[17px] leading-[27px] lg:text-[19px] lg:leading-[30px] text-[#0C2244]">
         <p>{{ t('rrPage.hero.lede') }}</p>
         <p>{{ t('rrPage.hero.lede2') }}</p>
       </div>
