@@ -20,7 +20,7 @@
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600, delay: 150 } }"
       class="w-full lg:w-[600px] lg:max-w-[48%] shrink-0"
     >
-      <img src="/images/home/impact-waste.webp" :alt="t('whyPlastic.imageAlt')" loading="lazy" class="w-full aspect-[4/3] object-cover" />
+      <img src="/images/home/trash.webp" :alt="t('whyPlastic.imageAlt')" loading="lazy" class="w-full aspect-[4/3] object-cover" />
     </div>
   </section>
 </template>

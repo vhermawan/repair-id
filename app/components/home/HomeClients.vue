@@ -11,11 +11,23 @@
 
     <ul class="w-full grid grid-cols-2 sm:grid-cols-4 border-t border-l border-[#0614281A]">
       <li
-        v-for="client in clients"
+        v-for="(client, i) in clients"
         :key="client.file"
-        class="h-[110px] lg:h-[150px] flex items-center justify-center p-4 border-r border-b border-[#0614281A]"
+        class="group h-[110px] lg:h-[150px] flex items-center justify-center p-4 border-r border-b border-[#0614281A] transition-colors duration-300 hover:bg-cream"
       >
-        <img :src="`/images/clients/${client.file}`" :alt="client.name" loading="lazy" class="max-h-full max-w-full w-auto object-contain" />
+        <div
+          v-motion
+          :initial="{ opacity: 0, y: 16, scale: 0.92 }"
+          :visible-once="{ opacity: 1, y: 0, scale: 1, transition: { duration: 500, delay: waveDelay(i) } }"
+          class="h-full w-full flex items-center justify-center"
+        >
+          <img
+            :src="`/images/clients/${client.file}`"
+            :alt="client.name"
+            loading="lazy"
+            class="max-h-full max-w-full w-auto object-contain transition-transform duration-300 ease-out group-hover:scale-110"
+          />
+        </div>
       </li>
     </ul>
   </section>
@@ -42,4 +54,9 @@ const clients = [
   { file: 'sana.png', name: 'Sana' },
   { file: 'tuan.png', name: 'Tuan Sua' },
 ]
+
+// Diagonal wave on the 4-column desktop grid: cells on the same diagonal appear together.
+function waveDelay(i: number) {
+  return ((i % 4) + Math.floor(i / 4)) * 70
+}
 </script>

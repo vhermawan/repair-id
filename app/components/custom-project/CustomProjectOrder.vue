@@ -6,7 +6,6 @@
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
       class="lg:w-[740px] flex flex-col gap-4"
     >
-      <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-blue-accent whitespace-nowrap">{{ t('customProjectPage.order.tag') }}</span>
       <h2 class="font-dm-sans font-bold text-[30px] leading-[34px] lg:text-[46px] lg:leading-[49px] tracking-[-1px] lg:tracking-[-1.8px] text-navy">
         {{ t('customProjectPage.order.heading') }}
       </h2>

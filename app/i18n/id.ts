@@ -5,7 +5,7 @@ export default {
   'nav.customProject': 'Proyek Kustom',
   'nav.contactLink': 'Kontak',
   'nav.contact': 'Hubungi Kami',
-  'nav.whatsapp': 'Chat via WhatsApp',
+  'nav.whatsapp': 'Chat lewat WhatsApp',
   'nav.contactInfo': 'halo@repair.id \u00B7 +62 812 0000 0000',
 
   // Hero
@@ -54,17 +54,17 @@ export default {
 
   // Building Application
   'building.heading': 'Apa yang Bisa Kita Wujudkan Bersama?',
-  'building.card1.title': 'Events & Activations',
-  'building.card1.cta': 'Catalogue for Events',
+  'building.card1.title': 'Event & Aktivasi',
+  'building.card1.cta': 'Katalog untuk Event',
   'building.card1.desc': 'Merchandise, signage, display, dan perlengkapan event yang dibuat sesuai kebutuhan acara dan identitas brand.',
-  'building.card2.title': 'Workshop & Manufacturing',
-  'building.card2.cta': 'Be our partner',
+  'building.card2.title': 'Workshop & Manufaktur',
+  'building.card2.cta': 'Jadi Mitra Kami',
   'building.card2.desc': 'Eksplorasi RR Board sebagai alternatif material untuk produksi furnitur dan kebutuhan pembelian berulang.',
   'building.card3.title': 'Design & Build',
-  'building.card3.cta': 'Explore our material',
+  'building.card3.cta': 'Jelajahi material kami',
   'building.card3.desc': 'Material daur ulang untuk fasad, cladding, interior, dan berbagai elemen desain yang fungsional.',
-  'building.card4.title': 'Brands & Corporates',
-  'building.card4.cta': 'Explore our products',
+  'building.card4.title': 'Brand & Korporat',
+  'building.card4.cta': 'Jelajahi produk kami',
   'building.card4.desc': 'Produk custom dan inisiatif circularity untuk kebutuhan brand serta perusahaan.',
 
   // End Product
@@ -85,7 +85,7 @@ export default {
 
   // Footer
   'footer.heading': 'Punya proyek? Kirim kebutuhan Anda, kami hitung bersama.',
-  'footer.ctaWhatsapp': 'Chat via WhatsApp',
+  'footer.ctaWhatsapp': 'Chat lewat WhatsApp',
   'footer.ctaCatalog': 'Unduh katalog RR Board',
   'footer.workshop': 'Jl. Raya Bogor KM 27, Jakarta Timur',
   'footer.copyright': '\u00A9 2026 Repair Material Studio',
@@ -166,12 +166,16 @@ export default {
   'rrPage.apps.a3.title': 'Furnitur',
   'rrPage.apps.a3.body': 'Dari meja dan tempat duduk hingga produk custom, RR Board dapat difabrikasi menjadi furnitur fungsional dengan karakter material daur ulang yang khas.',
   'rrPage.apps.a3.tag1': 'Furnitur',
-  'rrPage.apps.a3.tag2': 'Tabletop',
-  'rrPage.apps.a3.tag3': 'Custom',
+  'rrPage.apps.a3.tag2': 'Permukaan meja',
+  'rrPage.apps.a3.tag3': 'Kustom',
   'rrPage.colors.heading': 'Setiap Papan Punya Karakternya Sendiri.',
   'rrPage.colors.body': 'Tidak ada dua RR Board yang benar-benar sama. Warna dan pola naturalnya terbentuk dari campuran plastik daur ulang, menjadikan setiap papan unik.',
   'rrPage.colors.body2': 'Lihat bagaimana karakter alami ini menjadi bagian dari desain berbagai proyek kami.',
   'rrPage.colors.label': 'Warna Natural di Proyek Nyata',
+  'rrPage.colors.zoom': 'Lihat foto',
+  'rrPage.colors.close': 'Tutup',
+  'rrPage.colors.prev': 'Foto sebelumnya',
+  'rrPage.colors.next': 'Foto berikutnya',
   'rrPage.features.ctaSpec': 'Unduh Spesifikasi Material',
 
   // Projects page — Hero
@@ -229,11 +233,9 @@ export default {
   'projectsPage.cta.catalog': 'Lihat katalog produk jadi',
 
   // Contact page
-  'contactPage.heroTag': '[ KONTAK ]',
   'contactPage.heroTitle': 'Ceritakan\nKebutuhanmu',
   'contactPage.heroBody': 'Punya kebutuhan produk, desain, atau referensi? Ceritakan ke kami — tim sales akan membalas dalam 24 jam.',
   'contactPage.heroImageAlt': 'Gantungan kunci dari RR Board',
-  'contactPage.steps.tag': '[ CARA PESAN ]',
   'contactPage.steps.heading': 'Dari memilih sampai pengiriman, dibuat mudah.',
   'contactPage.steps.note': 'Empat langkah dari memilih produk sampai diantar ke lokasimu.',
   'contactPage.steps.01.title': 'Pilih Produk',
@@ -252,7 +254,7 @@ export default {
   'contactPage.form.companyPlaceholder': 'Perusahaan / organisasi',
   'contactPage.form.category': 'KATEGORI KEBUTUHAN',
   'contactPage.form.cat.design': 'Design & Build',
-  'contactPage.form.cat.event': 'Event & Tradeshow',
+  'contactPage.form.cat.event': 'Event & Pameran',
   'contactPage.form.cat.product': 'Produk & Furnitur',
   'contactPage.form.cat.csr': 'CSR & EPR',
   'contactPage.form.needs': 'CERITAKAN KEBUTUHANMU',
@@ -267,23 +269,23 @@ export default {
   'contactPage.info.responseValue': 'Dalam 24 jam kerja',
 
   // Custom project page
-  'customProjectPage.hero.title': 'Product & Project',
+  'customProjectPage.hero.title': 'Produk & Proyek',
   'customProjectPage.hero.body': 'Lihat berbagai kemungkinan bersama Repair Project, dari produk fungsional hingga produk dan proyek custom, didesain dan diproduksi untuk berbagai kebutuhan dan ruang.',
   'customProjectPage.hero.ctaProducts': 'Lihat Semua Produk',
   'customProjectPage.hero.ctaDiscuss': 'Diskusi dengan Kami',
   'customProjectPage.products.heading': 'Produk',
   'customProjectPage.products.displayTable': 'Meja Display',
   'customProjectPage.products.wasteBin': 'Tempat Sampah',
-  'customProjectPage.products.furniture': 'Furniture',
+  'customProjectPage.products.furniture': 'Furnitur',
   'customProjectPage.products.placard': 'Plakat',
   'customProjectPage.products.keychain': 'Gantungan Kunci',
   'customProjectPage.products.medals': 'Medali',
   'customProjectPage.products.phoneHolder': 'Phone Holder',
-  'customProjectPage.projects.heading': 'Featured Projects',
+  'customProjectPage.projects.heading': 'Proyek Unggulan',
   'customProjectPage.projects.subtitle': 'Lihat bagaimana berbagai brand dan perusahaan bekerja sama dengan Repair untuk mengubah plastik daur ulang menjadi produk fungsional, sekaligus menghasilkan dampak material yang terukur.',
   'customProjectPage.projects.totalItem': 'TOTAL ITEM',
   'customProjectPage.projects.totalWaste': 'TOTAL SAMPAH',
-  'customProjectPage.projects.schoolSet.title': 'Manulife School Set',
+  'customProjectPage.projects.schoolSet.title': 'Set Sekolah Manulife',
   'customProjectPage.projects.schoolSet.desc': 'Furniture sirkular berbahan RR Board untuk mendukung lingkungan belajar di sekolah.',
   'customProjectPage.projects.schoolSet.items': '90 set',
   'customProjectPage.projects.schoolSet.waste': '1.400 kg / 1,4 ton',
@@ -291,11 +293,10 @@ export default {
   'customProjectPage.projects.miloBin.desc': 'Mengolah limbah kemasan Milo menjadi tempat sampah fungsional untuk lingkungan sekolah.',
   'customProjectPage.projects.miloBin.items': '21 tempat sampah',
   'customProjectPage.projects.miloBin.waste': '336 kg',
-  'customProjectPage.projects.ecoRunfest.title': 'Pertamina Eco RunFest Merchandise',
+  'customProjectPage.projects.ecoRunfest.title': 'Merchandise Pertamina Eco RunFest',
   'customProjectPage.projects.ecoRunfest.desc': 'Merchandise berbahan RR Board, mengubah limbah menjadi berbagai produk fungsional seperti gantungan kunci dan phone holder.',
   'customProjectPage.projects.ecoRunfest.items': '250 gantungan kunci, 150 phone holder',
   'customProjectPage.projects.ecoRunfest.waste': '42 kg',
-  'customProjectPage.order.tag': '[ CARA PEMESANAN ]',
   'customProjectPage.order.heading': 'Memilih dan Menerima, Dibuat Sederhana',
   'customProjectPage.order.01.title': 'Pilih Produk',
   'customProjectPage.order.01.body': 'Temukan produk dan aplikasi yang sudah tersedia, atau kirimkan desain-mu.',
@@ -309,8 +310,8 @@ export default {
 
 
   // RR Board page — Material supply
-  'rrSupply.ctaPartner': 'Be our partner',
-  'rrSupply.ctaBuy': 'Buy RR Board',
+  'rrSupply.ctaPartner': 'Jadi Mitra Kami',
+  'rrSupply.ctaBuy': 'Beli RR Board',
   'rrSupply.heading': 'Siap Berkarya dengan RR Board?',
   'rrSupply.body': 'Baik Anda sedang mengeksplorasi material baru maupun mencari papan untuk produksi, tim kami siap membantu menemukan solusi yang tepat.',
 

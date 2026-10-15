@@ -22,14 +22,18 @@
         v-motion
         :initial="{ opacity: 0, y: 24 }"
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
-        class="w-full flex flex-col lg:flex-row lg:items-center gap-2 lg:gap-0 py-4 lg:py-6 border-t border-[#0614281A]"
+        class="w-full flex flex-col lg:items-center gap-2 lg:gap-0 py-4 lg:py-6 border-t border-[#0614281A]"
+        :class="i % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'"
       >
-        <img :src="app.image" :alt="t(`${app.prefix}.title`)" loading="lazy" class="w-full lg:w-[58%] shrink-0 aspect-[3/2] object-cover" />
-        <div class="flex-1 flex flex-col gap-3.5 p-[20px_8px_8px] lg:p-[20px_32px_20px_40px]">
+        <img :src="app.image" :alt="t(`${app.prefix}.title`)" loading="lazy" class="w-full lg:w-[42%] shrink-0 aspect-square object-cover" />
+        <div
+          class="flex-1 flex flex-col gap-3.5 p-[20px_8px_8px]"
+          :class="i % 2 === 0 ? 'lg:p-[20px_40px_20px_0]' : 'lg:p-[20px_32px_20px_40px]'"
+        >
           <span class="font-dm-sans font-medium text-[12px] tracking-[1.2px] text-blue-accent">
             — {{ String(i + 1).padStart(2, '0') }} · {{ t('rrPage.apps.label') }}
           </span>
-          <h3 class="font-dm-sans font-semibold text-[24px] leading-[30px] lg:text-[30px] lg:leading-[35px] tracking-[-0.8px] lg:tracking-[-1.1px] text-navy">
+          <h3 class="font-dm-sans font-semibold text-[26px] leading-[31px] lg:text-[34px] lg:leading-[39px] tracking-[-0.8px] lg:tracking-[-1.2px] text-navy">
             {{ t(`${app.prefix}.title`) }}
           </h3>
           <p class="font-dm-sans text-[16px] leading-[25px] lg:text-[18px] lg:leading-[29px] text-[#0C2244]">
@@ -42,8 +46,8 @@
             >{{ t(`${app.prefix}.${tag}`) }}</span>
           </div>
           <div v-if="app.client" class="flex items-center gap-3 pt-2.5 border-t border-[#0614281A]">
-            <span class="font-dm-sans font-medium text-[11px] tracking-[1.2px] text-navy/45">{{ t('rrPage.apps.client') }}</span>
-            <span class="flex-1 font-dm-sans text-[15px] leading-[22px] text-navy">{{ t(app.client) }}</span>
+            <span class="font-dm-sans font-medium text-[12px] tracking-[1.2px] text-navy/45">{{ t('rrPage.apps.client') }}</span>
+            <span class="flex-1 font-dm-sans text-[16px] leading-[24px] text-navy">{{ t(app.client) }}</span>
           </div>
         </div>
       </article>
@@ -58,6 +62,6 @@ const { t } = useI18n()
 const applications = [
   { prefix: 'rrPage.apps.a1', image: '/images/rr-board/facade.webp', client: null },
   { prefix: 'rrPage.apps.a2', image: '/images/rr-board/cublices.webp', client: 'rrPage.apps.a2.client' },
-  { prefix: 'rrPage.apps.a3', image: '/images/rr-board/school.webp', client: null },
+  { prefix: 'rrPage.apps.a3', image: '/images/rr-board/furniture.webp', client: null },
 ]
 </script>

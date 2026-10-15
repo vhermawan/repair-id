@@ -172,6 +172,10 @@ export default {
   'rrPage.colors.body': 'No two RR Boards look exactly alike. Their natural colors and patterns are shaped by the recycled plastics within, making every board one of a kind.',
   'rrPage.colors.body2': 'Discover how our clients turn these unexpected patterns into beautiful, functional designs.',
   'rrPage.colors.label': 'Natural Colors in Real Projects',
+  'rrPage.colors.zoom': 'View photo',
+  'rrPage.colors.close': 'Close',
+  'rrPage.colors.prev': 'Previous photo',
+  'rrPage.colors.next': 'Next photo',
   'rrPage.features.ctaSpec': 'Download Spec Sheet',
 
   // Projects page — Hero
@@ -229,11 +233,9 @@ export default {
   'projectsPage.cta.catalog': 'Browse finished products',
 
   // Contact page
-  'contactPage.heroTag': '[ CONTACT ]',
   'contactPage.heroTitle': 'Tell Us\nYour Needs',
   'contactPage.heroBody': 'Have a product need, design, or reference in mind? Tell us about it — our sales team will get back to you within 24 hours.',
   'contactPage.heroImageAlt': 'Keychains made from RR Board',
-  'contactPage.steps.tag': '[ HOW TO ORDER ]',
   'contactPage.steps.heading': 'From selection to delivery, made simple.',
   'contactPage.steps.note': 'Four steps from choosing a product to delivery at your door.',
   'contactPage.steps.01.title': 'Choose Your Product',
@@ -295,7 +297,6 @@ export default {
   'customProjectPage.projects.ecoRunfest.desc': 'Event merchandise made from RR Board, turning waste into everyday items like keychains and phone holders.',
   'customProjectPage.projects.ecoRunfest.items': '250 keychains, 150 phone holders',
   'customProjectPage.projects.ecoRunfest.waste': '42 kg',
-  'customProjectPage.order.tag': '[ HOW TO ORDER ]',
   'customProjectPage.order.heading': 'From Selection to Delivery, Made Simple',
   'customProjectPage.order.01.title': 'Choose Your Product',
   'customProjectPage.order.01.body': 'Explore our existing products and applications, or send us your design.',

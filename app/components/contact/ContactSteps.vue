@@ -7,7 +7,6 @@
       class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[80px] lg:justify-between lg:items-end"
     >
       <div class="lg:w-[740px] flex flex-col gap-4">
-        <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-blue-accent whitespace-nowrap">{{ t('contactPage.steps.tag') }}</span>
         <h2 class="font-dm-sans font-bold text-[30px] leading-[34px] lg:text-[46px] lg:leading-[49px] tracking-[-1px] lg:tracking-[-1.8px] text-navy">
           {{ t('contactPage.steps.heading') }}
         </h2>

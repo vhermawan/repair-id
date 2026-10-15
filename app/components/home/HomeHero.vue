@@ -10,13 +10,19 @@
       </p>
     </div>
 
-    <div class="hero-entrance hero-entrance-delay-3 w-full grid grid-cols-1 sm:grid-cols-3 gap-3">
-      <img
-        v-for="image in images" :key="image.src"
-        :src="image.src"
-        :alt="image.alt"
-        class="w-full aspect-[4/3] sm:aspect-square object-cover"
-      />
+    <div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div
+        v-for="(image, i) in images" :key="image.src"
+        class="hero-img-reveal group w-full aspect-[4/3] sm:aspect-square overflow-hidden"
+        :style="{ animationDelay: `${0.45 + i * 0.15}s` }"
+      >
+        <img
+          :src="image.src"
+          :alt="image.alt"
+          class="hero-img-zoom w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          :style="{ animationDelay: `${0.45 + i * 0.15}s` }"
+        />
+      </div>
     </div>
   </section>
 </template>
@@ -25,8 +31,8 @@
 const { t } = useI18n()
 
 const images = [
-  { src: '/images/home/impact-waste.webp', alt: 'Low-value plastic waste' },
-  { src: '/images/rr-board/board-1.webp', alt: 'RR Board panels' },
-  { src: '/images/home/hero-stool.webp', alt: 'Products made from RR Board' },
+  { src: '/images/home/low-value-plastic.webp', alt: 'Low-value plastic waste' },
+  { src: '/images/home/rr-board.webp', alt: 'RR Board panels' },
+  { src: '/images/home/medal.webp', alt: 'Products made from RR Board' },
 ]
 </script>

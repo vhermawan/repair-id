@@ -23,10 +23,18 @@
       <div class="hidden lg:flex items-center gap-[34px]">
         <NuxtLink
           v-for="link in links" :key="link.to" :to="link.to"
-          class="font-dm-sans text-[13px] whitespace-nowrap"
-          :class="solid ? 'text-navy' : 'text-cream'"
+          class="relative py-1.5 font-dm-sans text-[13px] whitespace-nowrap transition-colors duration-200"
+          :class="isActive(link.to)
+            ? (solid ? 'text-navy' : 'text-cream')
+            : (solid ? 'text-navy/60 hover:text-navy' : 'text-cream/70 hover:text-cream')"
+          :aria-current="isActive(link.to) ? 'page' : undefined"
         >
           {{ t(link.labelKey) }}
+          <span
+            class="absolute left-0 right-0 -bottom-0.5 h-[2px] rounded-full bg-blue-accent origin-left transition-transform duration-300 ease-out"
+            :class="isActive(link.to) ? 'scale-x-100' : 'scale-x-0'"
+            aria-hidden="true"
+          />
         </NuxtLink>
       </div>
 
@@ -103,11 +111,13 @@
           <NuxtLink
             v-for="(link, i) in links" :key="link.labelKey" :to="link.to"
             class="flex items-center justify-between py-5 border-t border-[#FFFFFF30]"
+            :aria-current="isActive(link.to) ? 'page' : undefined"
             @click="menuOpen = false"
           >
             <div class="flex items-center gap-3">
-              <span class="font-dm-sans font-medium text-[11px] tracking-[0.5px] text-[#A9C9FF]">{{ String(i + 1).padStart(2, '0') }}</span>
-              <span class="font-dm-sans font-bold text-[28px] tracking-[-0.8px] text-cream">{{ t(link.labelKey) }}</span>
+              <span class="font-dm-sans font-medium text-[11px] tracking-[0.5px]" :class="isActive(link.to) ? 'text-cream' : 'text-[#A9C9FF]'">{{ String(i + 1).padStart(2, '0') }}</span>
+              <span class="font-dm-sans font-bold text-[28px] tracking-[-0.8px]" :class="isActive(link.to) ? 'text-cream' : 'text-cream/70'">{{ t(link.labelKey) }}</span>
+              <span v-if="isActive(link.to)" class="w-2 h-2 rounded-full bg-cream" aria-hidden="true" />
             </div>
             <Icon name="lucide:arrow-up-right" class="w-5 h-5 text-cream" />
           </NuxtLink>
@@ -140,6 +150,12 @@ const links = [
   { labelKey: 'nav.customProject', to: '/custom-project' },
   { labelKey: 'nav.contactLink', to: '/contact' },
 ]
+
+const route = useRoute()
+
+function isActive(to: string) {
+  return to === '/' ? route.path === '/' : route.path === to || route.path.startsWith(`${to}/`)
+}
 
 watch(menuOpen, (open) => {
   document.body.style.overflow = open ? 'hidden' : ''

@@ -22,7 +22,7 @@
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
         class="w-full flex flex-col md:flex-row md:items-center gap-6 md:gap-10 lg:gap-16 py-6 lg:py-8 border-t border-[#0614281A]"
       >
-        <img :src="feature.image" :alt="t(`${feature.prefix}.title`)" loading="lazy" class="w-full md:w-1/2 shrink-0 aspect-[3/2] object-cover" />
+        <img :src="feature.image" :alt="t(`${feature.prefix}.title`)" loading="lazy" :style="feature.position ? { objectPosition: feature.position } : undefined" class="w-full md:w-1/2 shrink-0 aspect-[4/3] object-cover" />
         <div class="flex-1 flex flex-col gap-4">
           <span class="font-dm-sans font-medium text-[12px] tracking-[1.2px] text-blue-accent">— {{ String(i + 1).padStart(2, '0') }}</span>
           <h3 class="font-dm-sans font-semibold text-[26px] leading-[31px] lg:text-[34px] lg:leading-[39px] tracking-[-0.8px] lg:tracking-[-1.2px] text-navy">
@@ -52,10 +52,10 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-const features = [
+const features: { prefix: string, image: string, position?: string }[] = [
   { prefix: 'rrPage.features.f1', image: '/images/rr-board/commercial.webp' },
   { prefix: 'rrPage.features.f2', image: '/images/rr-board/suitable.webp' },
-  { prefix: 'rrPage.features.f3', image: '/images/rr-board/plastic.webp' },
+  { prefix: 'rrPage.features.f3', image: '/images/home/workshop.webp', position: '50% 55%' },
   { prefix: 'rrPage.features.f4', image: '/images/rr-board/bendable.webp' },
 ]
 </script>

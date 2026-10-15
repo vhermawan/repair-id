@@ -24,6 +24,26 @@
   to   { opacity: 1; translate: 0 0; scale: 1; }
 }
 
+/* Hero image reveal: frame wipes open bottom-up while the photo settles from a slight zoom.
+   Zoom uses `scale` so hover `transform: scale()` on the same image still composes. */
+.hero-img-reveal {
+  animation: heroImgReveal 1.1s cubic-bezier(0.65, 0, 0.35, 1) backwards;
+}
+
+.hero-img-zoom {
+  animation: heroImgZoom 1.6s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+@keyframes heroImgReveal {
+  from { clip-path: inset(100% 0 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes heroImgZoom {
+  from { scale: 1.18; }
+  to   { scale: 1; }
+}
+
 /* ── Parallax ── */
 .parallax-container {
   overflow: hidden;
@@ -48,7 +68,9 @@
 /* ── Reduced Motion ── */
 @media (prefers-reduced-motion: reduce) {
   .hero-entrance,
-  .hero-card-in {
+  .hero-card-in,
+  .hero-img-reveal,
+  .hero-img-zoom {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;

@@ -52,7 +52,7 @@ const { t } = useI18n()
 
 const cards = [
   { prefix: 'building.card1', image: '/images/home/events.webp', href: 'https://w4c.id/RepairForEvents' },
-  { prefix: 'building.card2', image: '/images/home/product.webp', href: 'https://w4c.id/RepairForWorkshops' },
+  { prefix: 'building.card2', image: '/images/home/workshop.webp', href: 'https://w4c.id/RepairForWorkshops' },
   { prefix: 'building.card3', image: '/images/home/design-build.webp', to: '/rr-board' },
   { prefix: 'building.card4', image: '/images/home/csr.webp', to: '/custom-project' },
 ]

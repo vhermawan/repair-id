@@ -27,23 +27,23 @@
           :src="project.image"
           :alt="t(`customProjectPage.projects.${project.key}.title`)"
           loading="lazy"
-          class="w-full lg:flex-1 h-[240px] sm:h-[320px] lg:h-[380px] object-cover"
+          class="w-full lg:w-[560px] xl:w-[640px] shrink-0 aspect-[4/3] object-cover"
         >
-        <div class="lg:w-[420px] shrink-0 flex flex-col gap-[18px]">
-          <h3 class="font-dm-sans font-bold text-[22px] leading-[26px] lg:text-[26px] lg:leading-[30px] tracking-[-0.9px] text-navy">
+        <div class="flex-1 min-w-0 flex flex-col gap-5">
+          <h3 class="font-dm-sans font-bold text-[24px] leading-[30px] lg:text-[30px] lg:leading-[36px] tracking-[-1px] text-navy">
             {{ t(`customProjectPage.projects.${project.key}.title`) }}
           </h3>
-          <p class="font-dm-sans text-[14px] leading-[22px] text-[#0C2244]">
+          <p class="font-dm-sans text-[16px] leading-[25px] lg:text-[18px] lg:leading-[29px] text-[#0C2244]">
             {{ t(`customProjectPage.projects.${project.key}.desc`) }}
           </p>
-          <dl class="w-full flex flex-col gap-3 pt-1">
-            <div class="flex flex-col gap-1 pt-3 border-t border-[#0614281A]">
-              <dt class="font-dm-sans font-medium text-[9px] tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalItem') }}</dt>
-              <dd class="font-dm-sans font-semibold text-[14px] text-navy">{{ t(`customProjectPage.projects.${project.key}.items`) }}</dd>
+          <dl class="w-full flex flex-col gap-4 pt-1">
+            <div class="flex flex-col gap-1 pt-4 border-t border-[#0614281A]">
+              <dt class="font-dm-sans font-medium text-[12px] lg:text-[13px] tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalItem') }}</dt>
+              <dd class="font-dm-sans font-semibold text-[18px] lg:text-[20px] text-navy">{{ t(`customProjectPage.projects.${project.key}.items`) }}</dd>
             </div>
-            <div class="flex flex-col gap-1 pt-3 border-t border-[#0614281A]">
-              <dt class="font-dm-sans font-medium text-[9px] tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalWaste') }}</dt>
-              <dd class="font-dm-sans font-semibold text-[14px] text-navy">{{ t(`customProjectPage.projects.${project.key}.waste`) }}</dd>
+            <div class="flex flex-col gap-1 pt-4 border-t border-[#0614281A]">
+              <dt class="font-dm-sans font-medium text-[12px] lg:text-[13px] tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalWaste') }}</dt>
+              <dd class="font-dm-sans font-semibold text-[18px] lg:text-[20px] text-navy">{{ t(`customProjectPage.projects.${project.key}.waste`) }}</dd>
             </div>
           </dl>
         </div>
