@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  css: ['~/assets/css/animations.css'],
+  css: ['~/assets/css/animations.css', '~/assets/css/typography.css'],
   app: {
     head: {
       title: 'Repair: Circular Material for Commercial',

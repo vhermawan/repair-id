@@ -14,7 +14,7 @@
         <img
           src="/logo.png"
           alt="Repair Material Studio"
-          class="h-[28px] lg:h-[36px] w-auto"
+          class="h-[36px] lg:h-[52px] w-auto"
           :class="solid && !menuOpen ? 'invert' : ''"
         />
       </NuxtLink>
@@ -23,10 +23,18 @@
       <div class="hidden lg:flex items-center gap-[34px]">
         <NuxtLink
           v-for="link in links" :key="link.to" :to="link.to"
-          class="font-dm-sans text-[13px] whitespace-nowrap"
-          :class="solid ? 'text-navy' : 'text-cream'"
+          class="relative py-1.5 font-dm-sans type-caption whitespace-nowrap transition-colors duration-200"
+          :class="isActive(link.to)
+            ? (solid ? 'text-navy' : 'text-cream')
+            : (solid ? 'text-navy/60 hover:text-navy' : 'text-cream/70 hover:text-cream')"
+          :aria-current="isActive(link.to) ? 'page' : undefined"
         >
           {{ t(link.labelKey) }}
+          <span
+            class="absolute left-0 right-0 -bottom-0.5 h-[2px] rounded-full bg-blue-accent origin-left transition-transform duration-300 ease-out"
+            :class="isActive(link.to) ? 'scale-x-100' : 'scale-x-0'"
+            aria-hidden="true"
+          />
         </NuxtLink>
       </div>
 
@@ -40,7 +48,7 @@
             : '[outline:1px_solid_#F4F1E966] [outline-offset:-0.5px]'"
         >
           <button
-            class="font-dm-sans text-[11px] font-semibold tracking-[0.5px] px-2.5 lg:px-3 py-1 lg:py-1.5 rounded-full whitespace-nowrap transition-colors"
+            class="font-dm-sans type-eyebrow font-semibold tracking-[0.5px] px-2.5 lg:px-3 py-1 lg:py-1.5 rounded-full whitespace-nowrap transition-colors"
             :class="locale === 'id'
               ? (solid && !menuOpen ? 'bg-navy text-cream' : 'bg-cream text-navy')
               : (solid && !menuOpen ? 'text-navy/40' : 'text-[#D8E5FF]') + ' bg-transparent'"
@@ -49,7 +57,7 @@
             ID
           </button>
           <button
-            class="font-dm-sans text-[11px] font-semibold tracking-[0.5px] px-2.5 lg:px-3 py-1 lg:py-1.5 rounded-full whitespace-nowrap transition-colors"
+            class="font-dm-sans type-eyebrow font-semibold tracking-[0.5px] px-2.5 lg:px-3 py-1 lg:py-1.5 rounded-full whitespace-nowrap transition-colors"
             :class="locale === 'en'
               ? (solid && !menuOpen ? 'bg-navy text-cream' : 'bg-cream text-navy')
               : (solid && !menuOpen ? 'text-navy/40' : 'text-[#D8E5FF]') + ' bg-transparent'"
@@ -67,7 +75,7 @@
           class="hidden lg:flex items-center gap-2 px-[18px] py-[11px] rounded-xl"
           :class="solid ? '[outline:1px_solid_#06142833] [outline-offset:-0.5px]' : 'bg-cream'"
         >
-          <span class="font-dm-sans text-[13px] font-semibold text-navy whitespace-nowrap">
+          <span class="font-dm-sans type-cta-sm font-semibold text-navy whitespace-nowrap">
             {{ t('nav.contact') }}
           </span>
           <Icon name="lucide:arrow-up-right" class="w-[15px] h-[15px] text-navy" />
@@ -103,11 +111,13 @@
           <NuxtLink
             v-for="(link, i) in links" :key="link.labelKey" :to="link.to"
             class="flex items-center justify-between py-5 border-t border-[#FFFFFF30]"
+            :aria-current="isActive(link.to) ? 'page' : undefined"
             @click="menuOpen = false"
           >
             <div class="flex items-center gap-3">
-              <span class="font-dm-sans font-medium text-[11px] tracking-[0.5px] text-[#A9C9FF]">{{ String(i + 1).padStart(2, '0') }}</span>
-              <span class="font-dm-sans font-bold text-[28px] tracking-[-0.8px] text-cream">{{ t(link.labelKey) }}</span>
+              <span class="font-dm-sans font-medium type-eyebrow tracking-[0.5px]" :class="isActive(link.to) ? 'text-cream' : 'text-[#A9C9FF]'">{{ String(i + 1).padStart(2, '0') }}</span>
+              <span class="font-dm-sans font-bold type-h3" :class="isActive(link.to) ? 'text-cream' : 'text-cream/70'">{{ t(link.labelKey) }}</span>
+              <span v-if="isActive(link.to)" class="w-2 h-2 rounded-full bg-cream" aria-hidden="true" />
             </div>
             <Icon name="lucide:arrow-up-right" class="w-5 h-5 text-cream" />
           </NuxtLink>
@@ -117,9 +127,9 @@
         <div class="flex flex-col gap-4">
           <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-5 py-[15px] bg-cream rounded-sm">
             <Icon name="lucide:message-circle" class="w-4 h-4 text-navy" />
-            <span class="font-dm-sans text-[13px] font-semibold text-navy whitespace-nowrap">{{ t('nav.whatsapp') }}</span>
+            <span class="font-dm-sans type-cta-sm font-semibold text-navy whitespace-nowrap">{{ t('nav.whatsapp') }}</span>
           </a>
-          <span class="font-dm-sans font-medium text-[11px] tracking-[0.5px] text-[#A9C9FF] text-center">
+          <span class="font-dm-sans font-medium type-eyebrow tracking-[0.5px] text-[#A9C9FF] text-center">
             {{ t('nav.contactInfo') }}
           </span>
         </div>
@@ -140,6 +150,12 @@ const links = [
   { labelKey: 'nav.customProject', to: '/custom-project' },
   { labelKey: 'nav.contactLink', to: '/contact' },
 ]
+
+const route = useRoute()
+
+function isActive(to: string) {
+  return to === '/' ? route.path === '/' : route.path === to || route.path.startsWith(`${to}/`)
+}
 
 watch(menuOpen, (open) => {
   document.body.style.overflow = open ? 'hidden' : ''

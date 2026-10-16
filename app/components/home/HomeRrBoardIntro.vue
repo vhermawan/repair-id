@@ -6,11 +6,11 @@
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
       class="flex-1 flex flex-col gap-5 lg:gap-6"
     >
-      <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-[#005FE7]">{{ t('rrBoardIntro.tag') }}</span>
-      <h2 class="font-dm-sans font-bold text-[32px] leading-[36px] tracking-[-1.2px] lg:text-[46px] lg:leading-[49px] lg:tracking-[-1.8px] text-navy">
+      <span class="font-dm-sans font-bold type-eyebrow tracking-[1.4px] text-[#005FE7]">{{ t('rrBoardIntro.tag') }}</span>
+      <h2 class="font-dm-sans font-bold type-h2 text-navy">
         {{ t('rrBoardIntro.heading') }}
       </h2>
-      <p class="max-w-[580px] font-dm-sans text-[14px] leading-[22px] lg:text-base lg:leading-[26px] text-[#0C2244]">
+      <p class="max-w-[580px] font-dm-sans type-body text-[#0C2244]">
         {{ t('rrBoardIntro.body') }}
       </p>
 
@@ -18,11 +18,11 @@
 
       <div class="flex flex-col sm:flex-row gap-3 pt-3">
         <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-6 py-[14px] [outline:1px_solid_#06142833] [outline-offset:-0.5px] rounded-full">
-          <span class="font-dm-sans text-sm font-semibold text-navy whitespace-nowrap">{{ t('rrBoardIntro.ctaConsult') }}</span>
+          <span class="font-dm-sans type-cta font-semibold text-navy whitespace-nowrap">{{ t('rrBoardIntro.ctaConsult') }}</span>
           <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-navy" />
         </a>
         <a href="https://drive.google.com/file/d/1l1lH4kcBTzydOxQBjxEUtHJs6iwUaUVX/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-6 py-[14px] bg-[#005FE7] rounded-full">
-          <span class="font-dm-sans text-sm font-semibold text-white whitespace-nowrap">{{ t('rrBoardIntro.ctaSpec') }}</span>
+          <span class="font-dm-sans type-cta font-semibold text-white whitespace-nowrap">{{ t('rrBoardIntro.ctaSpec') }}</span>
           <Icon name="lucide:download" class="w-4 h-4 text-white" />
         </a>
       </div>

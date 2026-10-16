@@ -1,10 +1,10 @@
 <template>
   <div>
     <HomeHero />
-    <HomeProcess />
-    <HomeRrBoardIntro />
     <HomeBuilding />
-    <!-- <HomeClients /> -->
+    <HomeWhyPlastic />
+    <HomeProcess />
+    <HomeClients />
     <TheFooter />
   </div>
 </template>

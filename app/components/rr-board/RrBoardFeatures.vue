@@ -1,49 +1,50 @@
 <template>
-  <section class="w-full flex flex-col gap-10 lg:gap-12 p-[64px_20px] lg:p-[96px_48px] bg-cream">
+  <section class="w-full flex flex-col gap-10 lg:gap-12 p-[64px_20px] lg:p-[96px_48px] bg-white">
     <div
       v-motion
       :initial="{ opacity: 0, y: 32 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-      class="w-full flex flex-col-reverse lg:flex-row gap-5 lg:gap-[80px] lg:justify-between lg:items-end"
+      class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[64px] lg:justify-between lg:items-end"
     >
-      <p class="lg:w-[340px] shrink-0 font-dm-sans text-[14px] leading-[22px] lg:text-[14.5px] lg:leading-[24px] text-[#0C2244]">
+      <h2 class="lg:flex-1 lg:max-w-[780px] font-dm-sans font-bold type-h2 text-navy">
+        {{ t('rrPage.features.heading') }}
+      </h2>
+      <p class="lg:w-[480px] xl:w-[560px] 2xl:w-[620px] shrink-0 font-dm-sans type-body text-[#0C2244]">
         {{ t('rrPage.features.sub') }}
       </p>
-      <div class="lg:w-[780px] flex flex-col gap-3 lg:gap-[14px] lg:items-end">
-        <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-blue-accent">{{ t('rrPage.features.tag') }}</span>
-        <h2 class="font-dm-sans font-bold text-[34px] leading-[38px] lg:text-[52px] lg:leading-[54px] tracking-[-1.2px] lg:tracking-[-2.1px] text-navy lg:text-right">
-          {{ t('rrPage.features.heading') }}
-        </h2>
-      </div>
     </div>
 
-    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="w-full flex flex-col">
       <article
         v-for="(feature, i) in features" :key="feature.prefix"
         v-motion
         :initial="{ opacity: 0, y: 24 }"
-        :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: (i % 2) * 120 } }"
-        class="flex flex-col gap-5 py-3 lg:p-[14px] border-t border-[#0614281A]"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
+        class="w-full flex flex-col md:flex-row md:items-center gap-6 md:gap-10 lg:gap-16 py-6 lg:py-8 border-t border-[#0614281A]"
       >
-        <img :src="feature.image" :alt="t(`${feature.prefix}.title`)" loading="lazy" class="w-full h-[220px] lg:h-[260px] object-cover" />
-        <div class="flex flex-col gap-3 p-[4px_8px_12px] lg:p-[4px_12px_14px]">
-          <div class="flex items-center gap-3">
-            <span class="font-dm-sans font-medium text-[10.5px] tracking-[1.2px] text-blue-accent whitespace-nowrap">— {{ String(i + 1).padStart(2, '0') }}</span>
-            <h3 class="flex-1 font-dm-sans font-semibold text-[20px] leading-[25px] lg:text-[24px] lg:leading-[29px] tracking-[-0.6px] lg:tracking-[-0.9px] text-navy">
-              {{ t(`${feature.prefix}.title`) }}
-            </h3>
-          </div>
-          <p class="font-dm-sans text-[14px] leading-[22px] lg:text-[14.5px] lg:leading-[23px] text-[#0C2244]">
+        <img :src="feature.image" :alt="t(`${feature.prefix}.title`)" loading="lazy" :style="feature.position ? { objectPosition: feature.position } : undefined" class="w-full md:w-1/2 shrink-0 aspect-[4/3] object-cover" />
+        <div class="flex-1 flex flex-col gap-4">
+          <span class="font-dm-sans font-medium type-caption tracking-[1.2px] text-blue-accent">— {{ String(i + 1).padStart(2, '0') }}</span>
+          <h3 class="font-dm-sans font-semibold type-h3 text-navy">
+            {{ t(`${feature.prefix}.title`) }}
+          </h3>
+          <p class="max-w-[520px] font-dm-sans type-body text-[#0C2244]">
             {{ t(`${feature.prefix}.body`) }}
           </p>
-          <div class="flex flex-wrap gap-2 pt-1">
-            <span
-              v-for="tag in ['tag1', 'tag2']" :key="tag"
-              class="px-[13px] py-[7px] [outline:1px_solid_#0614281A] [outline-offset:-0.5px] rounded-full font-dm-sans font-medium text-[9.5px] tracking-[0.8px] text-[#0C2244]"
-            >{{ t(`${feature.prefix}.${tag}`) }}</span>
-          </div>
         </div>
       </article>
+    </div>
+
+    <div class="w-full flex justify-center">
+      <a
+        href="https://drive.google.com/file/d/1l1lH4kcBTzydOxQBjxEUtHJs6iwUaUVX/view"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2.5 px-[26px] py-[15px] bg-blue-accent rounded-full"
+      >
+        <span class="font-dm-sans type-cta font-semibold text-white whitespace-nowrap">{{ t('rrPage.features.ctaSpec') }}</span>
+        <Icon name="lucide:download" class="w-4 h-4 text-white" />
+      </a>
     </div>
   </section>
 </template>
@@ -51,10 +52,10 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-const features = [
+const features: { prefix: string, image: string, position?: string }[] = [
   { prefix: 'rrPage.features.f1', image: '/images/rr-board/commercial.webp' },
-  { prefix: 'rrPage.features.f2', image: '/images/rr-board/bendable.webp' },
-  { prefix: 'rrPage.features.f3', image: '/images/rr-board/suitable.webp' },
-  { prefix: 'rrPage.features.f4', image: '/images/rr-board/plastic.webp' },
+  { prefix: 'rrPage.features.f2', image: '/images/rr-board/suitable.webp' },
+  { prefix: 'rrPage.features.f3', image: '/images/home/workshop.webp', position: '50% 55%' },
+  { prefix: 'rrPage.features.f4', image: '/images/rr-board/bendable.webp' },
 ]
 </script>

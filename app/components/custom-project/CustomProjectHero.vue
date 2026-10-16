@@ -1,9 +1,6 @@
 <template>
   <section class="w-full flex flex-col gap-5 items-center p-[112px_20px_64px] lg:p-[156px_48px_88px] overflow-hidden">
-    <span class="hero-entrance hero-entrance-delay-1 font-dm-sans font-bold text-[10px] tracking-[1.4px] text-blue-accent whitespace-nowrap">
-      {{ t('customProjectPage.hero.tag') }}
-    </span>
-    <h1 class="hero-entrance hero-entrance-delay-2 max-w-[900px] font-dm-sans font-bold text-[44px] leading-[46px] lg:text-[64px] lg:leading-[65px] tracking-[-1.6px] lg:tracking-[-2.6px] text-navy text-center">
+    <h1 class="hero-entrance hero-entrance-delay-2 max-w-[900px] font-dm-sans font-bold type-display-sm text-navy text-center">
       {{ t('customProjectPage.hero.title') }}
     </h1>
 
@@ -31,32 +28,32 @@
               class="w-full h-full object-cover rounded-[14px]"
             >
             <span
-              class="absolute left-1/2 bottom-3 -translate-x-1/2 px-3.5 py-[7px] bg-navy rounded-full font-dm-sans font-medium text-[10px] tracking-[0.8px] text-white whitespace-nowrap pointer-events-none transition-[opacity,transform] duration-200 ease-out motion-reduce:transition-none"
+              class="absolute left-1/2 bottom-3 -translate-x-1/2 px-3.5 py-[7px] bg-navy rounded-full font-dm-sans font-medium type-micro tracking-[0.8px] text-white whitespace-nowrap pointer-events-none transition-[opacity,transform] duration-200 ease-out motion-reduce:transition-none"
               :class="hovered === i ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'"
             >
               {{ t(card.labelKey) }}
             </span>
           </div>
         </div>
-        <span class="hero-card-in [animation-delay:1.15s] absolute left-[29px] top-[18px] z-[7] px-3.5 py-[7px] bg-blue-accent rounded-full font-dm-sans font-medium text-[10px] tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
+        <span class="hero-card-in [animation-delay:1.15s] absolute left-[29px] top-[18px] z-[7] px-3.5 py-[7px] bg-blue-accent rounded-full font-dm-sans font-medium type-micro tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
           {{ t('customProjectPage.products.displayTable') }}
         </span>
-        <span class="hero-card-in [animation-delay:1.15s] absolute left-[959px] top-[34px] z-[8] px-3.5 py-[7px] bg-navy rounded-full font-dm-sans font-medium text-[10px] tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
+        <span class="hero-card-in [animation-delay:1.15s] absolute left-[959px] top-[34px] z-[8] px-3.5 py-[7px] bg-navy rounded-full font-dm-sans font-medium type-micro tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
           {{ t('customProjectPage.products.phoneHolder') }}
         </span>
       </div>
     </div>
 
-    <p class="hero-entrance hero-entrance-delay-4 max-w-[620px] font-dm-sans text-[15px] leading-[23px] lg:text-[16px] lg:leading-[25px] text-[#0C2244] text-center">
+    <p class="hero-entrance hero-entrance-delay-4 max-w-[680px] font-dm-sans type-lead text-[#0C2244] text-center">
       {{ t('customProjectPage.hero.body') }}
     </p>
     <div class="hero-entrance hero-entrance-delay-4 flex flex-col sm:flex-row gap-3 pt-2 w-full sm:w-auto">
       <a href="#products" @click.prevent="scrollToProducts" class="flex items-center justify-center gap-2.5 px-[26px] py-3.5 bg-navy rounded-full">
-        <span class="font-dm-sans text-sm font-semibold text-white whitespace-nowrap">{{ t('customProjectPage.hero.ctaProducts') }}</span>
+        <span class="font-dm-sans type-cta font-semibold text-white whitespace-nowrap">{{ t('customProjectPage.hero.ctaProducts') }}</span>
         <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-white" />
       </a>
       <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-[26px] py-3.5 [outline:1px_solid_#06142833] [outline-offset:-0.5px] rounded-full">
-        <span class="font-dm-sans text-sm font-semibold text-navy whitespace-nowrap">{{ t('customProjectPage.hero.ctaDiscuss') }}</span>
+        <span class="font-dm-sans type-cta font-semibold text-navy whitespace-nowrap">{{ t('customProjectPage.hero.ctaDiscuss') }}</span>
       </a>
     </div>
   </section>

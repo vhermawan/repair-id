@@ -9,24 +9,24 @@
     <div class="h-0 relative z-[3]" />
 
     <div class="w-full flex flex-col lg:flex-row gap-8 lg:gap-[80px] pt-16 lg:pt-[60px] items-start relative z-[3]">
-      <span class="hero-entrance hero-entrance-delay-1 font-dm-sans font-bold text-[10px] lg:text-[11px] tracking-[1.2px] text-[#A9C9FF] lg:w-[300px] shrink-0">
+      <span class="hero-entrance hero-entrance-delay-1 font-dm-sans font-bold type-eyebrow tracking-[1.2px] text-[#A9C9FF] lg:w-[300px] shrink-0">
         {{ t('projectsPage.heroTag') }}
       </span>
       <div class="flex-1 flex flex-col gap-5 lg:gap-[28px]">
-        <h1 class="hero-entrance hero-entrance-delay-2 font-dm-sans font-bold text-[36px] leading-[40px] lg:text-[58px] lg:leading-[61px] tracking-[-1.5px] lg:tracking-[-2.4px] text-cream">
+        <h1 class="hero-entrance hero-entrance-delay-2 font-dm-sans font-bold type-display-sm text-cream">
           {{ t('projectsPage.heroTitle') }}
         </h1>
-        <p class="hero-entrance hero-entrance-delay-3 font-inter text-[15px] leading-[24px] lg:text-[16px] lg:leading-[26px] text-cream/70 max-w-[680px]">
+        <p class="hero-entrance hero-entrance-delay-3 font-inter type-lead text-cream/70 max-w-[680px]">
           {{ t('projectsPage.heroBody') }}
         </p>
       </div>
     </div>
 
     <div class="hero-entrance hero-entrance-delay-4 w-full flex justify-between items-center pt-[22px] border-t border-cream/20 relative z-[3]">
-      <span class="font-dm-sans font-semibold text-[9px] lg:text-[10px] tracking-[1.2px] text-[#A9C9FF]">
+      <span class="font-dm-sans font-semibold type-micro tracking-[1.2px] text-[#A9C9FF]">
         {{ t('projectsPage.heroStat') }}
       </span>
-      <span class="font-inter text-[12px] lg:text-[13px] text-cream">
+      <span class="font-inter type-caption text-cream">
         {{ t('projectsPage.heroScroll') }}
       </span>
     </div>

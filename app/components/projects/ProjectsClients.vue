@@ -4,7 +4,7 @@
       v-motion
       :initial="{ opacity: 0, y: 16 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 400 } }"
-      class="font-dm-sans font-bold text-[11px] tracking-[1.2px] text-blue-accent"
+      class="font-dm-sans font-bold type-eyebrow tracking-[1.2px] text-blue-accent"
     >
       {{ t('projectsPage.clients.tag') }}
     </span>
@@ -16,7 +16,7 @@
         v-motion
         :initial="{ opacity: 0, y: 16 }"
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 400, delay: i * 80 } }"
-        class="font-dm-sans font-semibold text-[15px] lg:text-[18px] tracking-[-0.4px] text-navy/56 py-3 lg:py-0"
+        class="font-dm-sans font-semibold type-h5 text-navy/56 py-3 lg:py-0"
       >
         {{ client }}
       </span>

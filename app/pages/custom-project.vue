@@ -4,7 +4,6 @@
     <CustomProjectProducts />
     <CustomProjectList />
     <CustomProjectOrder />
-    <CustomProjectClients />
     <TheFooter />
   </div>
 </template>

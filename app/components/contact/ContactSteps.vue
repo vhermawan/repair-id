@@ -4,15 +4,14 @@
       v-motion
       :initial="{ opacity: 0, y: 24 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
-      class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[80px] lg:justify-between lg:items-end"
+      class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[64px] lg:justify-between lg:items-end"
     >
-      <div class="lg:w-[740px] flex flex-col gap-4">
-        <span class="font-dm-sans font-bold text-[10px] tracking-[1.4px] text-blue-accent whitespace-nowrap">{{ t('contactPage.steps.tag') }}</span>
-        <h2 class="font-dm-sans font-bold text-[30px] leading-[34px] lg:text-[46px] lg:leading-[49px] tracking-[-1px] lg:tracking-[-1.8px] text-navy">
+      <div class="lg:flex-1 lg:max-w-[740px] flex flex-col gap-4">
+        <h2 class="font-dm-sans font-bold type-h2 text-navy">
           {{ t('contactPage.steps.heading') }}
         </h2>
       </div>
-      <p class="lg:w-[300px] shrink-0 font-dm-sans text-[14px] leading-[22px] text-[#0C2244]">
+      <p class="lg:w-[480px] xl:w-[560px] 2xl:w-[620px] shrink-0 font-dm-sans type-body text-[#0C2244]">
         {{ t('contactPage.steps.note') }}
       </p>
     </div>
@@ -26,14 +25,14 @@
         class="flex flex-col gap-5 p-[24px_0_28px] lg:p-[28px_56px_36px_0] border-b lg:border-b-0 lg:border-r lg:last:border-r-0 border-[#0614281F]"
       >
         <div class="w-full flex justify-between items-center">
-          <span class="font-dm-sans font-medium text-[11px] tracking-[1.2px] text-blue-accent">{{ step.num }}</span>
+          <span class="font-dm-sans font-medium type-eyebrow tracking-[1.2px] text-blue-accent">{{ step.num }}</span>
           <Icon :name="step.icon" size="18" class="text-[#0C2244]" />
         </div>
         <div class="w-full flex flex-col gap-[10px]">
-          <h3 class="font-dm-sans font-semibold text-[19px] leading-[24px] lg:text-[21px] lg:leading-[25px] tracking-[-0.6px] text-navy">
+          <h3 class="font-dm-sans font-semibold type-h5 text-navy">
             {{ t(`contactPage.steps.${step.num}.title`) }}
           </h3>
-          <p class="font-dm-sans text-[14px] leading-[22px] text-[#0C2244]">
+          <p class="font-dm-sans type-body-sm text-[#0C2244]">
             {{ t(`contactPage.steps.${step.num}.body`) }}
           </p>
         </div>

@@ -6,10 +6,10 @@
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
       class="flex flex-col gap-4 lg:gap-10"
     >
-      <h2 class="font-dm-sans font-bold text-[26px] lg:text-[30px] tracking-[-1px] text-navy">
+      <h2 class="font-dm-sans font-bold type-h2 text-navy">
         {{ t('customProjectPage.projects.heading') }}
       </h2>
-      <p class="max-w-[620px] font-dm-sans text-[15px] leading-[23px] lg:text-[16px] lg:leading-[25px] text-[#0C2244]">
+      <p class="max-w-[720px] font-dm-sans type-body text-[#0C2244]">
         {{ t('customProjectPage.projects.subtitle') }}
       </p>
     </div>
@@ -27,31 +27,25 @@
           :src="project.image"
           :alt="t(`customProjectPage.projects.${project.key}.title`)"
           loading="lazy"
-          class="w-full lg:flex-1 h-[240px] sm:h-[320px] lg:h-[380px] object-cover"
+          class="w-full lg:w-[560px] xl:w-[640px] shrink-0 aspect-[4/3] object-cover"
         >
-        <div class="lg:w-[420px] shrink-0 flex flex-col gap-[18px]">
-          <h3 class="font-dm-sans font-bold text-[22px] leading-[26px] lg:text-[26px] lg:leading-[30px] tracking-[-0.9px] text-navy">
+        <div class="flex-1 min-w-0 flex flex-col gap-5">
+          <h3 class="font-dm-sans font-bold type-h4 text-navy">
             {{ t(`customProjectPage.projects.${project.key}.title`) }}
           </h3>
-          <p class="font-dm-sans text-[14px] leading-[22px] text-[#0C2244]">
+          <p class="font-dm-sans type-body text-[#0C2244]">
             {{ t(`customProjectPage.projects.${project.key}.desc`) }}
           </p>
-          <dl class="w-full flex flex-col gap-3 pt-1">
-            <div class="flex flex-col gap-1 pt-3 border-t border-[#0614281A]">
-              <dt class="font-dm-sans font-medium text-[9px] tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalItem') }}</dt>
-              <dd class="font-dm-sans font-semibold text-[14px] text-navy">{{ t(`customProjectPage.projects.${project.key}.items`) }}</dd>
+          <dl class="w-full flex flex-col gap-4 pt-1">
+            <div class="flex flex-col gap-1 pt-4 border-t border-[#0614281A]">
+              <dt class="font-dm-sans font-medium type-caption tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalItem') }}</dt>
+              <dd class="font-dm-sans font-semibold type-h5 text-navy">{{ t(`customProjectPage.projects.${project.key}.items`) }}</dd>
             </div>
-            <div class="flex flex-col gap-1 pt-3 border-t border-[#0614281A]">
-              <dt class="font-dm-sans font-medium text-[9px] tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalWaste') }}</dt>
-              <dd class="font-dm-sans font-semibold text-[14px] text-navy">{{ t(`customProjectPage.projects.${project.key}.waste`) }}</dd>
+            <div class="flex flex-col gap-1 pt-4 border-t border-[#0614281A]">
+              <dt class="font-dm-sans font-medium type-caption tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalWaste') }}</dt>
+              <dd class="font-dm-sans font-semibold type-h5 text-navy">{{ t(`customProjectPage.projects.${project.key}.waste`) }}</dd>
             </div>
           </dl>
-          <div class="pt-2">
-            <a :href="projectDocUrl" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-[22px] py-3 bg-blue-accent rounded-full">
-              <span class="font-dm-sans text-sm font-semibold text-white whitespace-nowrap">{{ t('customProjectPage.projects.cta') }}</span>
-              <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-white" />
-            </a>
-          </div>
         </div>
       </article>
     </div>
@@ -60,8 +54,6 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
-
-const projectDocUrl = 'https://drive.google.com/file/d/1gOGmrZoOBdvREINAOaPHfGAYAGPyIvRR/view'
 
 const projects = [
   { key: 'schoolSet', image: '/images/custom-project/project-school-set.webp' },
