@@ -4,12 +4,12 @@
       v-motion
       :initial="{ opacity: 0, y: 32 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-      class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[80px] lg:justify-between lg:items-end"
+      class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[64px] lg:justify-between lg:items-end"
     >
-      <h2 class="lg:w-[780px] font-dm-sans font-bold type-h2 text-navy whitespace-pre-line">
+      <h2 class="lg:flex-1 lg:max-w-[780px] font-dm-sans font-bold type-h2 text-navy whitespace-pre-line">
         {{ t('rrPage.colors.heading') }}
       </h2>
-      <div class="lg:w-[420px] shrink-0 flex flex-col gap-3 font-dm-sans type-body text-[#0C2244]">
+      <div class="lg:w-[480px] xl:w-[560px] 2xl:w-[620px] shrink-0 flex flex-col gap-3 font-dm-sans type-body text-[#0C2244]">
         <p>{{ t('rrPage.colors.body') }}</p>
         <p>{{ t('rrPage.colors.body2') }}</p>
       </div>
@@ -17,12 +17,12 @@
 
     <div class="w-full flex flex-col gap-4">
       <span class="font-dm-sans font-medium type-caption tracking-[1.2px] text-blue-accent">{{ t('rrPage.colors.label') }}</span>
-      <div class="w-full grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3">
+      <div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-2 lg:gap-3">
         <figure
           v-for="(photo, i) in photos" :key="photo.image"
           v-motion
           :initial="{ opacity: 0, y: 24 }"
-          :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: (i % 4) * 80 } }"
+          :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: i * 80 } }"
           class="group relative w-full aspect-square overflow-hidden"
         >
           <button type="button" class="absolute inset-0 w-full h-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-accent" :aria-label="`${t('rrPage.colors.zoom')}: ${photo.project}`" @click="open(i)">
@@ -76,20 +76,7 @@
 const { t } = useI18n()
 
 const photos = [
-  { image: '/images/rr-board/manulife-1.webp', project: 'Manulife' },
-  { image: '/images/rr-board/manulife-5.webp', project: 'Manulife' },
-  { image: '/images/rr-board/manulife-2.webp', project: 'Manulife' },
-  { image: '/images/rr-board/manulife-8.webp', project: 'Manulife' },
-  { image: '/images/rr-board/manulife-3.webp', project: 'Manulife' },
-  { image: '/images/rr-board/manulife-6.webp', project: 'Manulife' },
-  { image: '/images/rr-board/manulife-9.webp', project: 'Manulife' },
-  { image: '/images/rr-board/manulife-4.webp', project: 'Manulife' },
-  { image: '/images/rr-board/manulife-10.webp', project: 'Manulife' },
-  { image: '/images/rr-board/manulife-7.webp', project: 'Manulife' },
-  { image: '/images/rr-board/manulife-11.webp', project: 'Manulife' },
-  { image: '/images/rr-board/manulife-12.webp', project: 'Manulife' },
-  { image: '/images/home/csr.webp', project: 'Manulife' },
-  { image: '/images/rr-board/school.webp', project: 'Manulife' },
+  { image: '/images/rr-board/manulife.webp', project: 'Manulife' },
   { image: '/images/rr-board/aloha-1.webp', project: 'Aloha PIK 2' },
   { image: '/images/rr-board/benedictus-1.webp', project: 'St. Benedictus' },
 ]
