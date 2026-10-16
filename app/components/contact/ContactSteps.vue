@@ -4,14 +4,14 @@
       v-motion
       :initial="{ opacity: 0, y: 24 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
-      class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[80px] lg:justify-between lg:items-end"
+      class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[64px] lg:justify-between lg:items-end"
     >
-      <div class="lg:w-[740px] flex flex-col gap-4">
+      <div class="lg:flex-1 lg:max-w-[740px] flex flex-col gap-4">
         <h2 class="font-dm-sans font-bold type-h2 text-navy">
           {{ t('contactPage.steps.heading') }}
         </h2>
       </div>
-      <p class="lg:w-[300px] shrink-0 font-dm-sans type-body text-[#0C2244]">
+      <p class="lg:w-[480px] xl:w-[560px] 2xl:w-[620px] shrink-0 font-dm-sans type-body text-[#0C2244]">
         {{ t('contactPage.steps.note') }}
       </p>
     </div>

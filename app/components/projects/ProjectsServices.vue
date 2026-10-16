@@ -4,7 +4,7 @@
       v-motion
       :initial="{ opacity: 0, y: 32 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-      class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:items-end"
+      class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[64px] lg:items-end"
     >
       <div class="flex-1 flex flex-col gap-3 lg:gap-[14px]">
         <span class="font-dm-sans font-bold type-eyebrow tracking-[1.2px] text-blue-accent">
@@ -14,7 +14,7 @@
           {{ t('projectsPage.s1.heading') }}
         </h2>
       </div>
-      <p class="lg:w-[420px] shrink-0 font-inter type-body text-navy/56">
+      <p class="lg:w-[480px] xl:w-[560px] 2xl:w-[620px] shrink-0 font-inter type-body text-navy/56">
         {{ t('projectsPage.s1.subtitle') }}
       </p>
     </div>
