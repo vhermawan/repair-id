@@ -150,7 +150,6 @@ export default {
   // RR Board page — S4 Applications
   'rrPage.apps.heading': 'Top RR Board Applications',
   'rrPage.apps.sub': 'Designed for versatility, RR Board can be fabricated into various applications across architecture, interiors, and furniture.',
-  'rrPage.apps.label': 'APPLICATION',
   'rrPage.apps.client': 'CLIENT',
   'rrPage.apps.a1.title': 'Facade & Cladding',
   'rrPage.apps.a1.body': 'Create distinctive facade surfaces with RR Board, combining recycled material character with water resistance and durability for selected exterior applications.',

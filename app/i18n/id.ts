@@ -150,7 +150,6 @@ export default {
   // RR Board page — S4 Applications
   'rrPage.apps.heading': 'Aplikasi utama RR Board.',
   'rrPage.apps.sub': 'Dirancang serbaguna, RR Board dapat difabrikasi menjadi berbagai aplikasi di bidang arsitektur, interior, dan furnitur.',
-  'rrPage.apps.label': 'APLIKASI',
   'rrPage.apps.client': 'KLIEN',
   'rrPage.apps.a1.title': 'Fasad & Cladding',
   'rrPage.apps.a1.body': 'Ciptakan permukaan fasad yang khas dengan RR Board, memadukan karakter material daur ulang dengan ketahanan air dan keawetan untuk aplikasi eksterior tertentu.',
