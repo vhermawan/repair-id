@@ -1,0 +1,82 @@
+/*
+ * Central type scale. Each class carries its size per breakpoint
+ * (base / md 768 / lg 1024 / xl 1280 / 2xl 1536) so text grows with the
+ * layout instead of staying fixed while images scale up.
+ */
+
+.type-display { font-size: 40px; line-height: 42px; letter-spacing: -1.5px; }
+.type-display-sm { font-size: 38px; line-height: 41px; letter-spacing: -1.5px; }
+.type-h2 { font-size: 32px; line-height: 36px; letter-spacing: -1.2px; }
+.type-h3 { font-size: 26px; line-height: 31px; letter-spacing: -0.8px; }
+.type-h4 { font-size: 22px; line-height: 27px; letter-spacing: -0.6px; }
+.type-h5 { font-size: 18px; line-height: 24px; letter-spacing: -0.4px; }
+.type-lead { font-size: 17px; line-height: 27px; }
+.type-body { font-size: 16px; line-height: 25px; }
+.type-body-sm { font-size: 14px; line-height: 22px; }
+.type-caption { font-size: 13px; line-height: 20px; }
+.type-cta { font-size: 14px; line-height: 1.25; }
+.type-cta-sm { font-size: 13px; line-height: 1.25; }
+.type-eyebrow { font-size: 11px; }
+.type-micro { font-size: 10px; }
+
+@media (min-width: 768px) {
+  .type-display { font-size: 56px; line-height: 57px; letter-spacing: -2.2px; }
+  .type-display-sm { font-size: 50px; line-height: 52px; letter-spacing: -2px; }
+  .type-h2 { font-size: 38px; line-height: 42px; letter-spacing: -1.5px; }
+  .type-h3 { font-size: 28px; line-height: 33px; letter-spacing: -1px; }
+  .type-h4 { font-size: 24px; line-height: 29px; letter-spacing: -0.8px; }
+  .type-h5 { font-size: 19px; line-height: 25px; }
+  .type-lead { font-size: 18px; line-height: 28px; }
+  .type-cta { font-size: 15px; }
+}
+
+@media (min-width: 1024px) {
+  .type-display { font-size: 72px; line-height: 71px; letter-spacing: -2.8px; }
+  .type-display-sm { font-size: 62px; line-height: 63px; letter-spacing: -2.5px; }
+  .type-h2 { font-size: 46px; line-height: 49px; letter-spacing: -1.8px; }
+  .type-h3 { font-size: 34px; line-height: 39px; letter-spacing: -1.2px; }
+  .type-h4 { font-size: 28px; line-height: 34px; letter-spacing: -1px; }
+  .type-h5 { font-size: 20px; line-height: 27px; letter-spacing: -0.5px; }
+  .type-lead { font-size: 19px; line-height: 30px; }
+  .type-body { font-size: 18px; line-height: 29px; }
+  .type-body-sm { font-size: 15px; line-height: 24px; }
+  .type-caption { font-size: 14px; line-height: 21px; }
+  .type-cta { font-size: 16px; }
+  .type-cta-sm { font-size: 14px; }
+  .type-eyebrow { font-size: 12px; }
+  .type-micro { font-size: 11px; }
+}
+
+@media (min-width: 1280px) {
+  .type-display { font-size: 80px; line-height: 79px; letter-spacing: -3.1px; }
+  .type-display-sm { font-size: 68px; line-height: 69px; letter-spacing: -2.7px; }
+  .type-h2 { font-size: 52px; line-height: 55px; letter-spacing: -2px; }
+  .type-h3 { font-size: 38px; line-height: 43px; letter-spacing: -1.4px; }
+  .type-h4 { font-size: 32px; line-height: 38px; letter-spacing: -1.1px; }
+  .type-h5 { font-size: 22px; line-height: 29px; }
+  .type-lead { font-size: 21px; line-height: 33px; }
+  .type-body { font-size: 20px; line-height: 31px; }
+  .type-body-sm { font-size: 16px; line-height: 26px; }
+  .type-caption { font-size: 15px; line-height: 22px; }
+  .type-cta { font-size: 17px; }
+  .type-cta-sm { font-size: 15px; }
+  .type-eyebrow { font-size: 13px; }
+  .type-micro { font-size: 11.5px; }
+}
+
+@media (min-width: 1536px) {
+  .type-display { font-size: 88px; line-height: 86px; letter-spacing: -3.4px; }
+  .type-display-sm { font-size: 74px; line-height: 75px; letter-spacing: -2.9px; }
+  .type-h2 { font-size: 56px; line-height: 59px; letter-spacing: -2.2px; }
+  .type-h3 { font-size: 40px; line-height: 45px; letter-spacing: -1.5px; }
+  .type-h4 { font-size: 34px; line-height: 40px; letter-spacing: -1.2px; }
+  .type-h5 { font-size: 24px; line-height: 31px; letter-spacing: -0.6px; }
+  .type-lead { font-size: 22px; line-height: 35px; }
+  .type-body { font-size: 21px; line-height: 33px; }
+  .type-body-sm { font-size: 17px; line-height: 27px; }
+  .type-caption { font-size: 16px; line-height: 24px; }
+  .type-cta { font-size: 18px; }
+  .type-cta-sm { font-size: 16px; }
+  .type-eyebrow { font-size: 14px; }
+  .type-micro { font-size: 12px; }
+}

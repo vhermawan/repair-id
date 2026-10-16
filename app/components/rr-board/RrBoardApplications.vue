@@ -7,10 +7,10 @@
       class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[80px] lg:justify-between lg:items-end"
     >
       <div class="lg:w-[900px] flex flex-col gap-3 lg:gap-4">
-        <h2 class="font-dm-sans font-bold text-[34px] leading-[38px] lg:text-[52px] lg:leading-[54px] tracking-[-1.2px] lg:tracking-[-2.1px] text-navy">
+        <h2 class="font-dm-sans font-bold type-h2 text-navy">
           {{ t('rrPage.apps.heading') }}
         </h2>
-        <p class="font-dm-sans text-[16px] leading-[25px] lg:text-[18px] lg:leading-[29px] text-[#0C2244]">
+        <p class="font-dm-sans type-body text-[#0C2244]">
           {{ t('rrPage.apps.sub') }}
         </p>
       </div>
@@ -30,24 +30,21 @@
           class="flex-1 flex flex-col gap-3.5 p-[20px_8px_8px]"
           :class="i % 2 === 0 ? 'lg:p-[20px_40px_20px_0]' : 'lg:p-[20px_32px_20px_40px]'"
         >
-          <span class="font-dm-sans font-medium text-[12px] tracking-[1.2px] text-blue-accent">
-            — {{ String(i + 1).padStart(2, '0') }} · {{ t('rrPage.apps.label') }}
-          </span>
-          <h3 class="font-dm-sans font-semibold text-[26px] leading-[31px] lg:text-[34px] lg:leading-[39px] tracking-[-0.8px] lg:tracking-[-1.2px] text-navy">
+          <h3 class="font-dm-sans font-semibold type-h3 text-navy">
             {{ t(`${app.prefix}.title`) }}
           </h3>
-          <p class="font-dm-sans text-[16px] leading-[25px] lg:text-[18px] lg:leading-[29px] text-[#0C2244]">
+          <p class="font-dm-sans type-body text-[#0C2244]">
             {{ t(`${app.prefix}.body`) }}
           </p>
           <div class="flex flex-wrap gap-2">
             <span
               v-for="tag in ['tag1', 'tag2', 'tag3']" :key="tag"
-              class="px-[13px] py-[7px] [outline:1px_solid_#0614281A] [outline-offset:-0.5px] rounded-full font-dm-sans font-medium text-[12px] tracking-[0.6px] text-[#0C2244]"
+              class="px-[13px] py-[7px] [outline:1px_solid_#0614281A] [outline-offset:-0.5px] rounded-full font-dm-sans font-medium type-caption tracking-[0.6px] text-[#0C2244]"
             >{{ t(`${app.prefix}.${tag}`) }}</span>
           </div>
           <div v-if="app.client" class="flex items-center gap-3 pt-2.5 border-t border-[#0614281A]">
-            <span class="font-dm-sans font-medium text-[12px] tracking-[1.2px] text-navy/45">{{ t('rrPage.apps.client') }}</span>
-            <span class="flex-1 font-dm-sans text-[16px] leading-[24px] text-navy">{{ t(app.client) }}</span>
+            <span class="font-dm-sans font-medium type-caption tracking-[1.2px] text-navy/45">{{ t('rrPage.apps.client') }}</span>
+            <span class="flex-1 font-dm-sans type-body text-navy">{{ t(app.client) }}</span>
           </div>
         </div>
       </article>

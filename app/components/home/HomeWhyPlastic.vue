@@ -6,10 +6,10 @@
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
       class="flex-1 flex flex-col gap-5 lg:gap-6"
     >
-      <h2 class="font-dm-sans font-bold text-[32px] leading-[36px] tracking-[-1.2px] lg:text-[46px] lg:leading-[49px] lg:tracking-[-1.8px] text-navy">
+      <h2 class="font-dm-sans font-bold type-h2 text-navy">
         {{ t('whyPlastic.heading') }}
       </h2>
-      <p class="max-w-[580px] font-dm-sans text-[16px] leading-[25px] lg:text-[18px] lg:leading-[29px] text-[#0C2244]">
+      <p class="max-w-[580px] font-dm-sans type-body text-[#0C2244]">
         {{ t('whyPlastic.body') }}
       </p>
     </div>

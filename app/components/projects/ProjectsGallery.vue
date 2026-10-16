@@ -9,14 +9,14 @@
         class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:items-end"
       >
         <div class="flex-1 flex flex-col gap-3 lg:gap-[14px]">
-          <span class="font-dm-sans font-bold text-[11px] tracking-[1.2px] text-blue-accent">
+          <span class="font-dm-sans font-bold type-eyebrow tracking-[1.2px] text-blue-accent">
             {{ t('projectsPage.s2.tag') }}
           </span>
-          <h2 class="font-dm-sans font-bold text-[32px] leading-[36px] lg:text-[46px] lg:leading-[49px] tracking-[-1px] lg:tracking-[-1.8px] text-navy">
+          <h2 class="font-dm-sans font-bold type-h2 text-navy">
             {{ t('projectsPage.s2.heading') }}
           </h2>
         </div>
-        <p class="lg:w-[420px] shrink-0 font-inter text-[14px] leading-[22px] lg:text-[15px] lg:leading-[24px] text-navy/56">
+        <p class="lg:w-[420px] shrink-0 font-inter type-body text-navy/56">
           {{ t('projectsPage.s2.subtitle') }}
         </p>
       </div>
@@ -26,12 +26,12 @@
     <div class="w-full flex flex-col gap-0 px-5 lg:px-12 pb-10 lg:pb-14">
       <!-- Scrub bar -->
       <div class="w-full flex items-center gap-4 pb-7">
-        <span class="font-dm-sans font-medium text-[10px] tracking-[1px] text-navy/56">01.</span>
+        <span class="font-dm-sans font-medium type-micro tracking-[1px] text-navy/56">01.</span>
         <div class="flex-1 h-[10px] relative">
           <div class="absolute left-0 top-[5px] w-full h-px bg-navy/20" />
           <div class="absolute left-[14%] top-[1px] w-[9px] h-[9px] bg-navy rounded-full" />
         </div>
-        <span class="font-dm-sans font-medium text-[10px] tracking-[1px] text-navy/56">05.</span>
+        <span class="font-dm-sans font-medium type-micro tracking-[1px] text-navy/56">05.</span>
       </div>
 
       <!-- Project cards row -->
@@ -54,14 +54,14 @@
               <img :src="card.image" :alt="t(card.titleKey)" class="w-full h-full object-cover" />
             </div>
             <div class="w-full flex gap-[10px]">
-              <span class="font-serif text-[24px] lg:text-[30px] leading-[27px] text-navy">
+              <span class="font-serif type-h4 text-navy">
                 {{ card.number }}
               </span>
               <div class="flex-1 flex flex-col gap-[2px] pt-[6px]">
-                <span class="font-inter font-semibold text-[13px] leading-[16px] text-navy">
+                <span class="font-inter font-semibold type-caption text-navy">
                   {{ t(card.titleKey) }}
                 </span>
-                <span class="font-inter text-[12px] leading-[16px] text-navy/56">
+                <span class="font-inter type-caption text-navy/56">
                   {{ t(card.locKey) }}
                 </span>
               </div>
@@ -83,16 +83,16 @@
           <span
             v-for="filter in filters"
             :key="filter.key"
-            class="font-inter text-[12px] cursor-pointer"
+            class="font-inter type-caption cursor-pointer"
             :class="filter.active ? 'font-semibold text-navy' : 'text-navy/56'"
           >
             {{ t(filter.key) }}
           </span>
         </div>
-        <span class="flex-1 font-dm-sans font-medium text-[10px] tracking-[1.2px] text-navy/56 text-center hidden lg:block">
+        <span class="flex-1 font-dm-sans font-medium type-micro tracking-[1.2px] text-navy/56 text-center hidden lg:block">
           01 — 05
         </span>
-        <span class="font-dm-sans font-semibold text-[10px] tracking-[1.2px] text-navy/56">
+        <span class="font-dm-sans font-semibold type-micro tracking-[1.2px] text-navy/56">
           {{ t('projectsPage.s2.hint') }}
         </span>
       </div>

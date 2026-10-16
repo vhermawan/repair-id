@@ -4,7 +4,7 @@
       v-motion
       :initial="{ opacity: 0, y: 24 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
-      class="font-dm-sans font-bold text-[40px] leading-[42px] tracking-[-1.5px] lg:text-[72px] lg:leading-[71px] lg:tracking-[-2.8px] text-navy"
+      class="font-dm-sans font-bold type-display text-navy"
     >
       {{ t('impact.heading') }}
     </h2>
@@ -17,8 +17,8 @@
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: 100 + i * 100 } }"
         class="flex-1 flex flex-col gap-3 pt-6 sm:pt-9 pr-8"
       >
-        <span class="font-dm-sans font-bold text-[40px] leading-[44px] tracking-[-1.4px] lg:text-[56px] lg:leading-[60px] lg:tracking-[-2.2px] text-navy whitespace-nowrap">{{ t(`${stat}.value`) }}</span>
-        <p class="max-w-[260px] font-dm-sans text-[16px] leading-[24px] lg:text-[17px] lg:leading-[26px] text-[#0C2244]">{{ t(`${stat}.desc`) }}</p>
+        <span class="font-dm-sans font-bold type-display-sm text-navy whitespace-nowrap">{{ t(`${stat}.value`) }}</span>
+        <p class="max-w-[260px] font-dm-sans type-body text-[#0C2244]">{{ t(`${stat}.desc`) }}</p>
       </div>
     </div>
   </section>

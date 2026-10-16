@@ -4,7 +4,7 @@
       v-motion
       :initial="{ opacity: 0, y: 24 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-      class="font-dm-sans font-bold text-[32px] leading-[36px] tracking-[-1.2px] lg:text-[46px] lg:leading-[49px] lg:tracking-[-1.8px] text-navy"
+      class="font-dm-sans font-bold type-h2 text-navy"
     >
       {{ t('clients.heading') }}
     </h2>

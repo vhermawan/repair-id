@@ -4,7 +4,7 @@
       v-motion
       :initial="{ opacity: 0, y: 24 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
-      class="font-dm-sans font-bold text-[26px] lg:text-[30px] tracking-[-1px] text-navy"
+      class="font-dm-sans font-bold type-h2 text-navy"
     >
       {{ t('customProjectPage.products.heading') }}
     </h2>
@@ -25,13 +25,13 @@
           class="w-full aspect-[4/3] object-cover"
         >
         <div class="flex flex-col gap-5 p-[0_4px_8px]">
-          <p class="font-dm-sans text-[16px] leading-[25px] lg:text-[18px] lg:leading-[29px] text-[#0C2244]">
+          <p class="font-dm-sans type-lead text-[#0C2244]">
             {{ t(`${catalogue.prefix}.body`) }}
           </p>
           <div>
-            <a :href="catalogue.href" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-[26px] py-3.5 bg-blue-accent rounded-full">
-              <span class="font-dm-sans text-sm font-semibold text-white whitespace-nowrap">{{ t(`${catalogue.prefix}.cta`) }}</span>
-              <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-white" />
+            <a :href="catalogue.href" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-[26px] py-3.5 lg:px-8 lg:py-4 xl:py-[18px] 2xl:px-9 2xl:py-5 bg-blue-accent rounded-full">
+              <span class="font-dm-sans type-cta font-semibold text-white whitespace-nowrap">{{ t(`${catalogue.prefix}.cta`) }}</span>
+              <Icon name="lucide:arrow-up-right" class="w-4 h-4 lg:w-[18px] lg:h-[18px] xl:w-5 xl:h-5 text-white" />
             </a>
           </div>
         </div>

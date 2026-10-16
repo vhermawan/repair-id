@@ -6,10 +6,10 @@
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
       class="flex flex-col gap-4 lg:gap-10"
     >
-      <h2 class="font-dm-sans font-bold text-[26px] lg:text-[30px] tracking-[-1px] text-navy">
+      <h2 class="font-dm-sans font-bold type-h2 text-navy">
         {{ t('customProjectPage.projects.heading') }}
       </h2>
-      <p class="max-w-[720px] font-dm-sans text-[16px] leading-[25px] lg:text-[18px] lg:leading-[29px] text-[#0C2244]">
+      <p class="max-w-[720px] font-dm-sans type-body text-[#0C2244]">
         {{ t('customProjectPage.projects.subtitle') }}
       </p>
     </div>
@@ -30,20 +30,20 @@
           class="w-full lg:w-[560px] xl:w-[640px] shrink-0 aspect-[4/3] object-cover"
         >
         <div class="flex-1 min-w-0 flex flex-col gap-5">
-          <h3 class="font-dm-sans font-bold text-[24px] leading-[30px] lg:text-[30px] lg:leading-[36px] tracking-[-1px] text-navy">
+          <h3 class="font-dm-sans font-bold type-h4 text-navy">
             {{ t(`customProjectPage.projects.${project.key}.title`) }}
           </h3>
-          <p class="font-dm-sans text-[16px] leading-[25px] lg:text-[18px] lg:leading-[29px] text-[#0C2244]">
+          <p class="font-dm-sans type-body text-[#0C2244]">
             {{ t(`customProjectPage.projects.${project.key}.desc`) }}
           </p>
           <dl class="w-full flex flex-col gap-4 pt-1">
             <div class="flex flex-col gap-1 pt-4 border-t border-[#0614281A]">
-              <dt class="font-dm-sans font-medium text-[12px] lg:text-[13px] tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalItem') }}</dt>
-              <dd class="font-dm-sans font-semibold text-[18px] lg:text-[20px] text-navy">{{ t(`customProjectPage.projects.${project.key}.items`) }}</dd>
+              <dt class="font-dm-sans font-medium type-caption tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalItem') }}</dt>
+              <dd class="font-dm-sans font-semibold type-h5 text-navy">{{ t(`customProjectPage.projects.${project.key}.items`) }}</dd>
             </div>
             <div class="flex flex-col gap-1 pt-4 border-t border-[#0614281A]">
-              <dt class="font-dm-sans font-medium text-[12px] lg:text-[13px] tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalWaste') }}</dt>
-              <dd class="font-dm-sans font-semibold text-[18px] lg:text-[20px] text-navy">{{ t(`customProjectPage.projects.${project.key}.waste`) }}</dd>
+              <dt class="font-dm-sans font-medium type-caption tracking-[1.2px] text-[#06142873]">{{ t('customProjectPage.projects.totalWaste') }}</dt>
+              <dd class="font-dm-sans font-semibold type-h5 text-navy">{{ t(`customProjectPage.projects.${project.key}.waste`) }}</dd>
             </div>
           </dl>
         </div>

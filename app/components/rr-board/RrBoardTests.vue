@@ -6,7 +6,7 @@
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
       class="w-full flex flex-col gap-3 lg:gap-[14px] items-center text-center"
     >
-      <h2 class="max-w-[820px] font-dm-sans font-bold text-[34px] leading-[38px] lg:text-[52px] lg:leading-[54px] tracking-[-1.2px] lg:tracking-[-2.1px] text-navy">
+      <h2 class="max-w-[820px] font-dm-sans font-bold type-h2 text-navy">
         {{ t('rrPage.tests.heading') }}
       </h2>
     </div>
@@ -51,12 +51,12 @@
             </span>
           </button>
         </div>
-        <span class="px-1 font-dm-sans text-[16px] font-semibold text-navy">{{ t(test.key) }}</span>
+        <span class="px-1 font-dm-sans type-body font-semibold text-navy">{{ t(test.key) }}</span>
       </div>
     </div>
 
     <div class="w-full flex items-center justify-center gap-4">
-      <span class="font-dm-sans font-medium text-[10px] tracking-[1.2px] text-[#0C2244] tabular-nums">
+      <span class="font-dm-sans font-medium type-micro tracking-[1.2px] text-[#0C2244] tabular-nums">
         {{ String(active + 1).padStart(2, '0') }} / {{ String(positions).padStart(2, '0') }}
       </span>
       <div class="flex gap-2">

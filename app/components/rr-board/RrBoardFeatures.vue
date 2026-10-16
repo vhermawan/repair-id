@@ -6,10 +6,10 @@
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
       class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[80px] lg:justify-between lg:items-end"
     >
-      <h2 class="lg:w-[780px] font-dm-sans font-bold text-[34px] leading-[38px] lg:text-[52px] lg:leading-[54px] tracking-[-1.2px] lg:tracking-[-2.1px] text-navy">
+      <h2 class="lg:w-[780px] font-dm-sans font-bold type-h2 text-navy">
         {{ t('rrPage.features.heading') }}
       </h2>
-      <p class="lg:w-[380px] shrink-0 font-dm-sans text-[16px] leading-[25px] lg:text-[17px] lg:leading-[27px] text-[#0C2244]">
+      <p class="lg:w-[380px] shrink-0 font-dm-sans type-body text-[#0C2244]">
         {{ t('rrPage.features.sub') }}
       </p>
     </div>
@@ -24,11 +24,11 @@
       >
         <img :src="feature.image" :alt="t(`${feature.prefix}.title`)" loading="lazy" :style="feature.position ? { objectPosition: feature.position } : undefined" class="w-full md:w-1/2 shrink-0 aspect-[4/3] object-cover" />
         <div class="flex-1 flex flex-col gap-4">
-          <span class="font-dm-sans font-medium text-[12px] tracking-[1.2px] text-blue-accent">— {{ String(i + 1).padStart(2, '0') }}</span>
-          <h3 class="font-dm-sans font-semibold text-[26px] leading-[31px] lg:text-[34px] lg:leading-[39px] tracking-[-0.8px] lg:tracking-[-1.2px] text-navy">
+          <span class="font-dm-sans font-medium type-caption tracking-[1.2px] text-blue-accent">— {{ String(i + 1).padStart(2, '0') }}</span>
+          <h3 class="font-dm-sans font-semibold type-h3 text-navy">
             {{ t(`${feature.prefix}.title`) }}
           </h3>
-          <p class="max-w-[520px] font-dm-sans text-[16px] leading-[25px] lg:text-[18px] lg:leading-[29px] text-[#0C2244]">
+          <p class="max-w-[520px] font-dm-sans type-body text-[#0C2244]">
             {{ t(`${feature.prefix}.body`) }}
           </p>
         </div>
@@ -42,7 +42,7 @@
         rel="noopener noreferrer"
         class="flex items-center gap-2.5 px-[26px] py-[15px] bg-blue-accent rounded-full"
       >
-        <span class="font-dm-sans text-sm font-semibold text-white whitespace-nowrap">{{ t('rrPage.features.ctaSpec') }}</span>
+        <span class="font-dm-sans type-cta font-semibold text-white whitespace-nowrap">{{ t('rrPage.features.ctaSpec') }}</span>
         <Icon name="lucide:download" class="w-4 h-4 text-white" />
       </a>
     </div>
