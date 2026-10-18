@@ -1,12 +1,12 @@
 <template>
-  <section class="w-full flex flex-col gap-8 lg:gap-10 p-[64px_20px] lg:p-[96px_48px] bg-cream">
+  <section class="w-full flex flex-col gap-8 lg:gap-10 p-[64px_20px] lg:p-[96px_48px] bg-[#F3F0E9]">
     <div
       v-motion
       :initial="{ opacity: 0, y: 32 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
       class="w-full flex flex-col gap-3 lg:gap-[14px] items-center text-center"
     >
-      <h2 class="max-w-[820px] font-dm-sans font-bold type-h2 text-navy">
+      <h2 class="max-w-[820px] font-dm-sans font-normal text-[#111317] text-[32px] leading-[36px] tracking-[-0.6px] lg:text-[40px] lg:leading-[44px]">
         {{ t('rrPage.tests.heading') }}
       </h2>
     </div>
@@ -21,9 +21,9 @@
         v-motion
         :initial="{ opacity: 0, y: 24 }"
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: i * 100 } }"
-        class="snap-center sm:snap-start shrink-0 w-full sm:w-[calc((100%-16px)/2)] lg:w-[calc((100%-48px)/4)] flex flex-col gap-3 py-3 lg:p-[14px] border-t border-[#0614281A]"
+        class="snap-center sm:snap-start shrink-0 w-full sm:w-[calc((100%-16px)/2)] lg:w-[calc((100%-48px)/4)] flex flex-col gap-3 py-3 lg:p-[14px] border-t border-[#E3DFD6]"
       >
-        <div class="relative w-full h-[400px] overflow-hidden bg-[#E6E2D8]">
+        <div class="relative w-full h-[400px] overflow-hidden bg-[#E3DFD6]">
           <iframe
             v-if="playing === i"
             :src="`https://www.youtube-nocookie.com/embed/${test.youtubeId}?autoplay=1&rel=0&playsinline=1`"
@@ -46,17 +46,17 @@
               class="absolute inset-0 w-full h-full object-cover"
               @error="onThumbError($event, test.youtubeId)"
             >
-            <span class="relative w-12 h-12 flex items-center justify-center rounded-full bg-white/90 text-navy transition-transform duration-200 group-hover:scale-105 group-active:scale-95">
+            <span class="relative w-12 h-12 flex items-center justify-center rounded-full bg-white/90 text-[#111317] transition-transform duration-200 group-hover:scale-105 group-active:scale-95">
               <Icon name="lucide:play" class="w-5 h-5 translate-x-[1px]" />
             </span>
           </button>
         </div>
-        <span class="px-1 font-dm-sans type-body font-semibold text-navy">{{ t(test.key) }}</span>
+        <span class="px-1 font-dm-sans font-normal text-[18px] leading-[28px] lg:text-[20px] lg:leading-[31px] text-[#111317]">{{ t(test.key) }}</span>
       </div>
     </div>
 
     <div class="w-full flex items-center justify-center gap-4">
-      <span class="font-dm-sans font-medium type-micro tracking-[1.2px] text-[#0C2244] tabular-nums">
+      <span class="font-dm-mono text-[12px] leading-[16px] tracking-[1.3px] text-[#5A5D63] tabular-nums">
         {{ String(active + 1).padStart(2, '0') }} / {{ String(positions).padStart(2, '0') }}
       </span>
       <div class="flex gap-2">
@@ -64,19 +64,19 @@
           type="button"
           :aria-label="t('rrPage.tests.prev')"
           :disabled="!scrollable || atStart"
-          class="w-[38px] h-[38px] flex items-center justify-center [outline:1px_solid_#0614281A] [outline-offset:-0.5px] rounded-full transition-opacity disabled:opacity-40"
+          class="w-[38px] h-[38px] flex items-center justify-center [outline:1px_solid_#E3DFD6] [outline-offset:-0.5px] rounded-full transition-opacity disabled:opacity-40"
           @click="go(-1)"
         >
-          <Icon name="lucide:arrow-left" class="w-[15px] h-[15px] text-navy" />
+          <Icon name="lucide:arrow-left" class="w-[15px] h-[15px] text-[#111317]" />
         </button>
         <button
           type="button"
           :aria-label="t('rrPage.tests.next')"
           :disabled="!scrollable || atEnd"
-          class="w-[38px] h-[38px] flex items-center justify-center [outline:1px_solid_#0614281A] [outline-offset:-0.5px] rounded-full transition-opacity disabled:opacity-40"
+          class="w-[38px] h-[38px] flex items-center justify-center [outline:1px_solid_#E3DFD6] [outline-offset:-0.5px] rounded-full transition-opacity disabled:opacity-40"
           @click="go(1)"
         >
-          <Icon name="lucide:arrow-right" class="w-[15px] h-[15px] text-navy" />
+          <Icon name="lucide:arrow-right" class="w-[15px] h-[15px] text-[#111317]" />
         </button>
       </div>
     </div>

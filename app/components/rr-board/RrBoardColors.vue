@@ -1,22 +1,22 @@
 <template>
-  <section class="w-full flex flex-col gap-10 lg:gap-12 p-[64px_20px] lg:p-[96px_48px] bg-cream">
+  <section class="w-full flex flex-col gap-10 lg:gap-12 p-[64px_20px] lg:p-[96px_48px] bg-[#F3F0E9]">
     <div
       v-motion
       :initial="{ opacity: 0, y: 32 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
       class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[64px] lg:justify-between lg:items-end"
     >
-      <h2 class="lg:flex-1 lg:max-w-[780px] font-dm-sans font-bold type-h2 text-navy whitespace-pre-line">
+      <h2 class="lg:flex-1 lg:max-w-[780px] font-dm-sans font-normal text-[#111317] text-[32px] leading-[36px] tracking-[-0.6px] lg:text-[40px] lg:leading-[44px] whitespace-pre-line">
         {{ t('rrPage.colors.heading') }}
       </h2>
-      <div class="lg:w-[480px] xl:w-[560px] 2xl:w-[620px] shrink-0 flex flex-col gap-3 font-dm-sans type-body text-[#0C2244]">
+      <div class="lg:w-[480px] xl:w-[560px] shrink-0 flex flex-col gap-3 font-dm-sans text-[#5A5D63] text-[18px] leading-[28px] lg:text-[20px] lg:leading-[31px]">
         <p>{{ t('rrPage.colors.body') }}</p>
         <p>{{ t('rrPage.colors.body2') }}</p>
       </div>
     </div>
 
     <div class="w-full flex flex-col gap-4">
-      <span class="font-dm-sans font-medium type-caption tracking-[1.2px] text-blue-accent">{{ t('rrPage.colors.label') }}</span>
+      <span class="font-dm-sans text-[15px] leading-[22px] tracking-[1.2px] text-[#111317]">{{ t('rrPage.colors.label') }}</span>
       <div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-2 lg:gap-3">
         <figure
           v-for="(photo, i) in photos" :key="photo.image"
@@ -25,10 +25,10 @@
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: i * 80 } }"
           class="group relative w-full aspect-square overflow-hidden"
         >
-          <button type="button" class="absolute inset-0 w-full h-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-accent" :aria-label="`${t('rrPage.colors.zoom')}: ${photo.project}`" @click="open(i)">
+          <button type="button" class="absolute inset-0 w-full h-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0B5FFF]" :aria-label="`${t('rrPage.colors.zoom')}: ${photo.project}`" @click="open(i)">
             <img :src="photo.image" :alt="photo.project" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" />
           </button>
-          <figcaption class="pointer-events-none absolute left-2.5 bottom-2.5 px-2.5 py-1 bg-navy/70 rounded-full font-dm-sans font-medium type-eyebrow text-white">{{ photo.project }}</figcaption>
+          <figcaption class="pointer-events-none absolute left-2.5 bottom-2.5 px-2.5 py-1 bg-[#111317]/70 rounded-full font-dm-sans text-[13px] leading-[20px] text-white">{{ photo.project }}</figcaption>
         </figure>
       </div>
     </div>
@@ -45,7 +45,7 @@
           role="dialog"
           aria-modal="true"
           :aria-label="photos[active].project"
-          class="fixed inset-0 z-[100] flex items-center justify-center bg-navy/90 p-4 lg:p-12"
+          class="fixed inset-0 z-[100] flex items-center justify-center bg-[#111317]/90 p-4 lg:p-12"
           @click.self="close"
         >
           <img
@@ -54,7 +54,7 @@
             :alt="photos[active].project"
             class="max-w-full max-h-[calc(100vh-128px)] object-contain"
           />
-          <span class="absolute left-1/2 -translate-x-1/2 bottom-5 lg:bottom-6 px-3 py-1.5 bg-white/10 rounded-full font-dm-sans font-medium type-caption text-white tabular-nums">
+          <span class="absolute left-1/2 -translate-x-1/2 bottom-5 lg:bottom-6 px-3 py-1.5 bg-white/10 rounded-full font-dm-sans text-[13px] leading-[20px] text-white tabular-nums">
             {{ photos[active].project }} · {{ active + 1 }}/{{ photos.length }}
           </span>
           <button type="button" class="absolute top-4 right-4 lg:top-6 lg:right-6 w-11 h-11 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white" :aria-label="t('rrPage.colors.close')" @click="close">

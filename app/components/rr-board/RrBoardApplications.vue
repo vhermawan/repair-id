@@ -4,52 +4,45 @@
       v-motion
       :initial="{ opacity: 0, y: 32 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-      class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[80px] lg:justify-between lg:items-end"
+      class="w-full lg:max-w-[900px] flex flex-col gap-3 lg:gap-4"
     >
-      <div class="lg:w-[900px] flex flex-col gap-3 lg:gap-4">
-        <h2 class="font-dm-sans font-bold type-h2 text-navy">
-          {{ t('rrPage.apps.heading') }}
-        </h2>
-        <p class="font-dm-sans type-body text-[#0C2244]">
-          {{ t('rrPage.apps.sub') }}
-        </p>
-      </div>
+      <h2 class="font-dm-sans font-normal text-[#111317] text-[32px] leading-[36px] tracking-[-0.6px] lg:text-[40px] lg:leading-[44px]">
+        {{ t('rrPage.apps.heading') }}
+      </h2>
+      <p class="font-dm-sans text-[#5A5D63] text-[18px] leading-[28px] lg:text-[20px] lg:leading-[31px]">
+        {{ t('rrPage.apps.sub') }}
+      </p>
     </div>
 
-    <div class="w-full flex flex-col gap-4">
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
       <article
         v-for="(app, i) in applications" :key="app.prefix"
         v-motion
         :initial="{ opacity: 0, y: 24 }"
-        :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
-        class="w-full flex flex-col lg:items-center gap-2 lg:gap-0 py-4 lg:py-6 border-t border-[#0614281A]"
-        :class="i % 2 === 0 ? 'lg:flex-row-reverse' : 'lg:flex-row'"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: i * 100 } }"
+        class="flex flex-col gap-5 border-t border-[#E3DFD6]"
       >
-        <img :src="app.image" :alt="t(`${app.prefix}.title`)" loading="lazy" class="w-full lg:w-[42%] shrink-0 aspect-square object-cover" />
-        <div
-          class="flex-1 flex flex-col gap-3.5 p-[20px_8px_8px]"
-          :class="i % 2 === 0 ? 'lg:p-[20px_40px_20px_0]' : 'lg:p-[20px_32px_20px_40px]'"
-        >
-          <h3 class="font-dm-sans font-semibold type-h3 text-navy">
+        <img :src="app.image" :alt="t(`${app.prefix}.title`)" loading="lazy" class="w-full h-[260px] lg:h-[300px] rounded-[4px] object-cover" />
+        <div class="flex flex-col gap-3.5">
+          <h3 class="font-dm-sans font-normal text-[#111317] text-[30px] leading-[35px] tracking-[-1px] lg:text-[38px] lg:leading-[43px] lg:tracking-[-1.4px]">
             {{ t(`${app.prefix}.title`) }}
           </h3>
-          <p class="font-dm-sans type-body text-[#0C2244]">
+          <p class="font-dm-sans text-[16px] leading-[26px] text-[#5A5D63]">
             {{ t(`${app.prefix}.body`) }}
           </p>
           <div class="flex flex-wrap gap-2">
             <span
               v-for="tag in ['tag1', 'tag2', 'tag3']" :key="tag"
-              class="px-[13px] py-[7px] [outline:1px_solid_#0614281A] [outline-offset:-0.5px] rounded-full font-dm-sans font-medium type-caption tracking-[0.6px] text-[#0C2244]"
+              class="px-[13px] py-[7px] [outline:1px_solid_#E3DFD6] [outline-offset:-0.5px] rounded-full font-dm-sans text-[15px] leading-[22px] tracking-[0.6px] text-[#5A5D63]"
             >{{ t(`${app.prefix}.${tag}`) }}</span>
           </div>
-          <div v-if="app.client" class="flex items-center gap-3 pt-2.5 border-t border-[#0614281A]">
-            <span class="font-dm-sans font-medium type-caption tracking-[1.2px] text-navy/45">{{ t('rrPage.apps.client') }}</span>
-            <span class="flex-1 font-dm-sans type-body text-navy">{{ t(app.client) }}</span>
+          <div v-if="app.client" class="flex flex-col gap-1 pt-[11px] border-t border-[#E3DFD6]">
+            <span class="font-dm-mono text-[12px] leading-[16px] lg:text-[13px] tracking-[1.3px] uppercase text-[#5A5D63]">{{ t('rrPage.apps.client') }}</span>
+            <span class="font-dm-sans text-[18px] leading-[28px] lg:text-[20px] lg:leading-[31px] text-[#111317]">{{ t(app.client) }}</span>
           </div>
         </div>
       </article>
     </div>
-
   </section>
 </template>
 
