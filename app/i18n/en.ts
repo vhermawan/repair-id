@@ -22,6 +22,7 @@ export default {
   'hero.metric3.label': 're-meltable',
 
   // Impact
+  'impact.title': 'We turn sachet waste\ninto building material.',
   'impact.heading': 'OUR IMPACT',
   'impact.stat1.value': '34,000 kg',
   'impact.stat1.desc': 'Low-value plastic upcycled',
@@ -53,6 +54,7 @@ export default {
   'rrBoardIntro.toilet.desc': 'Built for humid environments, RR Board offers a water-resistant, durable surface that can be fabricated into functional toilet cubicles.',
 
   // Building Application
+  'building.label': 'What we make',
   'building.heading': 'What Can We Create Together?',
   'building.card1.title': 'Events & Activations',
   'building.card1.cta': 'Catalogue for Events',
@@ -81,6 +83,7 @@ export default {
 
   // Clients
   'clients.subtitle': 'Trusted by architects, contractors, and brands serious about materials.',
+  'clients.label': 'Trusted by',
   'clients.heading': 'Our Clients',
 
   // Footer
@@ -315,6 +318,7 @@ export default {
   'rrSupply.body': "Whether you're exploring a new material or sourcing boards for production, our team is here to help you find the right solution.",
 
   // Why low-value plastic
+  'whyPlastic.label': 'Why it matters',
   'whyPlastic.heading': 'Your Material Choice Can Make a Bigger Difference.',
   'whyPlastic.body': 'Sachets and single-use plastic bags often end up polluting the environment because they are difficult to recycle. By choosing RR Board, you give low-value plastic a second chance, transforming it into functional boards for a variety of needs.',
   'whyPlastic.imageAlt': 'Low-value plastic waste collected before processing',
