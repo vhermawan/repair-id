@@ -22,6 +22,7 @@ export default {
   'hero.metric3.label': 'dapat dilebur ulang',
 
   // Impact
+  'impact.title': 'Kami mengubah sampah sachet\nmenjadi material bangunan.',
   'impact.heading': 'DAMPAK KAMI',
   'impact.stat1.value': '34,000 kg',
   'impact.stat1.desc': 'Plastik bernilai rendah telah diolah',
@@ -53,6 +54,7 @@ export default {
   'rrBoardIntro.toilet.desc': 'Dibangun untuk lingkungan lembap, RR Board menawarkan permukaan tahan air dan tahan lama yang dapat difabrikasi menjadi kubikel toilet fungsional.',
 
   // Building Application
+  'building.label': 'Apa yang kami buat',
   'building.heading': 'Apa yang Bisa Kita Wujudkan Bersama?',
   'building.card1.title': 'Event & Aktivasi',
   'building.card1.cta': 'Katalog untuk Event',
@@ -81,6 +83,7 @@ export default {
 
   // Clients
   'clients.subtitle': 'Dipercaya arsitek, kontraktor, dan brand yang serius soal material.',
+  'clients.label': 'Dipercaya oleh',
   'clients.heading': 'Klien Kami',
 
   // Footer
@@ -268,11 +271,13 @@ export default {
   'contactPage.info.responseValue': 'Dalam 24 jam kerja',
 
   // Custom project page
+  'customProjectPage.hero.eyebrow': 'Custom & Kolaborasi',
   'customProjectPage.hero.title': 'Produk & Proyek',
   'customProjectPage.hero.body': 'Lihat berbagai kemungkinan bersama Repair Project, dari produk fungsional hingga produk dan proyek custom, didesain dan diproduksi untuk berbagai kebutuhan dan ruang.',
   'customProjectPage.hero.ctaProducts': 'Lihat Semua Produk',
   'customProjectPage.hero.ctaDiscuss': 'Diskusi dengan Kami',
-  'customProjectPage.products.heading': 'Produk',
+  'customProjectPage.products.eyebrow': 'Yang Kami Tawarkan',
+  'customProjectPage.products.heading': 'Apa yang Bisa Kami Buat untuk Anda',
   'customProjectPage.products.displayTable': 'Meja Display',
   'customProjectPage.products.wasteBin': 'Tempat Sampah',
   'customProjectPage.products.furniture': 'Furnitur',
@@ -280,6 +285,7 @@ export default {
   'customProjectPage.products.keychain': 'Gantungan Kunci',
   'customProjectPage.products.medals': 'Medali',
   'customProjectPage.products.phoneHolder': 'Phone Holder',
+  'customProjectPage.projects.eyebrow': 'Karya Pilihan',
   'customProjectPage.projects.heading': 'Proyek Unggulan',
   'customProjectPage.projects.subtitle': 'Lihat bagaimana berbagai brand dan perusahaan bekerja sama dengan Repair untuk mengubah plastik daur ulang menjadi produk fungsional, sekaligus menghasilkan dampak material yang terukur.',
   'customProjectPage.projects.totalItem': 'TOTAL ITEM',
@@ -296,6 +302,7 @@ export default {
   'customProjectPage.projects.ecoRunfest.desc': 'Merchandise berbahan RR Board, mengubah limbah menjadi berbagai produk fungsional seperti gantungan kunci dan phone holder.',
   'customProjectPage.projects.ecoRunfest.items': '250 gantungan kunci, 150 phone holder',
   'customProjectPage.projects.ecoRunfest.waste': '42 kg',
+  'customProjectPage.order.eyebrow': 'Cara Kerja',
   'customProjectPage.order.heading': 'Memilih dan Menerima, Dibuat Sederhana',
   'customProjectPage.order.01.title': 'Pilih Produk',
   'customProjectPage.order.01.body': 'Temukan produk dan aplikasi yang sudah tersedia, atau kirimkan desain-mu.',
@@ -315,13 +322,18 @@ export default {
   'rrSupply.body': 'Baik Anda sedang mengeksplorasi material baru maupun mencari papan untuk produksi, tim kami siap membantu menemukan solusi yang tepat.',
 
   // Why low-value plastic
+  'whyPlastic.label': 'Mengapa ini penting',
   'whyPlastic.heading': 'Keputusan Material Anda Dapat Memberi Dampak yang Lebih Besar.',
   'whyPlastic.body': 'Plastik sachet dan kantong sekali pakai sering berakhir mencemari lingkungan karena sulit didaur ulang. Dengan memilih RR Board, Anda memberi plastik rendah nilai kesempatan kedua sebagai papan fungsional untuk berbagai kebutuhan.',
   'whyPlastic.imageAlt': 'Sampah plastik bernilai rendah sebelum diolah',
 
   // Custom project page — Explore products
+  'customProjectPage.explore.catalogue.title': 'Katalog Produk',
+  'customProjectPage.explore.catalogue.meta': 'Branding • Desain Produk',
   'customProjectPage.explore.catalogue.body': 'Untuk brand, perusahaan, desainer, dan siapa pun yang ingin mengeksplorasi kemungkinan produk dari Repair.',
   'customProjectPage.explore.catalogue.cta': 'Lihat Katalog Produk',
+  'customProjectPage.explore.events.title': 'Event & Merchandise',
+  'customProjectPage.explore.events.meta': 'Event • Merchandise',
   'customProjectPage.explore.events.body': 'Untuk merchandise event, aktivasi, perlengkapan booth, dan berbagai aplikasi untuk acara.',
   'customProjectPage.explore.events.cta': 'Lihat Katalog Event',
   // Stub pages
