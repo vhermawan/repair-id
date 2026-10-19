@@ -1,39 +1,40 @@
 <template>
-  <section class="w-full flex flex-col gap-8 lg:gap-12 p-[0_20px_64px] lg:p-[0_48px_104px]">
+  <section class="w-full flex flex-col gap-10 lg:gap-12 px-5 py-20 lg:p-[140px_48px] bg-white">
     <div
       v-motion
       :initial="{ opacity: 0, y: 24 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
-      class="lg:w-[740px] flex flex-col gap-4"
+      class="flex flex-col gap-4"
     >
-      <h2 class="font-dm-sans font-bold type-h2 text-navy">
+      <HomeSectionLabel>{{ t('customProjectPage.order.eyebrow') }}</HomeSectionLabel>
+      <h2 class="lg:w-[740px] font-dm-sans font-normal text-[#111317] text-[32px] leading-[36px] tracking-[-0.6px] lg:text-[40px] lg:leading-[44px]">
         {{ t('customProjectPage.order.heading') }}
       </h2>
     </div>
 
-    <ol class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 border-t border-[#0614281A]">
+    <ol class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8">
       <li
         v-for="(num, i) in steps"
         :key="num"
         v-motion
         :initial="{ opacity: 0, y: 24 }"
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: 100 + i * 100 } }"
-        class="flex flex-col gap-2.5 pt-6 lg:pt-7 pr-6"
+        class="flex flex-col gap-3 pt-6 pr-6 border-t border-[#E3DFD6]"
       >
-        <span class="font-dm-sans font-medium type-eyebrow tracking-[1.2px] text-blue-accent">{{ num }}</span>
-        <h3 class="font-dm-sans font-bold type-h5 text-navy">
+        <span class="font-dm-mono text-[12px] leading-[16px] lg:text-[13px] tracking-[1.3px] text-[#5A5D63]">{{ num }}</span>
+        <h3 class="font-dm-sans font-normal text-[#111317] text-[22px] leading-[28px] lg:text-[24px] lg:leading-[30px] tracking-[-0.4px]">
           {{ t(`customProjectPage.order.${num}.title`) }}
         </h3>
-        <p class="font-dm-sans type-body-sm text-[#0C2244]">
+        <p class="font-dm-sans text-[#5A5D63] text-[16px] leading-[26px] lg:text-[18px] lg:leading-[29px]">
           {{ t(`customProjectPage.order.${num}.body`) }}
         </p>
       </li>
     </ol>
 
-    <div class="flex flex-col sm:flex-row gap-3">
-      <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-[26px] py-3.5 bg-blue-accent rounded-full">
-        <span class="font-dm-sans type-cta font-semibold text-white whitespace-nowrap">{{ t('customProjectPage.order.ctaDiscuss') }}</span>
-        <Icon name="lucide:message-circle" class="w-4 h-4 text-white" />
+    <div class="flex flex-col sm:flex-row gap-3 pt-4">
+      <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-6 py-[15px] bg-[#111317] hover:bg-[#0B5FFF] rounded-full transition-colors">
+        <span class="font-dm-sans text-[16px] leading-[21px] text-white whitespace-nowrap">{{ t('customProjectPage.order.ctaDiscuss') }}</span>
+        <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-white" />
       </a>
     </div>
   </section>

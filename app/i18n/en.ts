@@ -271,11 +271,13 @@ export default {
   'contactPage.info.responseValue': 'Within 24 working hours',
 
   // Custom project page
+  'customProjectPage.hero.eyebrow': 'Custom & Collaboration',
   'customProjectPage.hero.title': 'Product & Project',
   'customProjectPage.hero.body': "Explore what's possible with Repair Project, from functional products to custom pieces and projects, made for different needs and spaces.",
   'customProjectPage.hero.ctaProducts': 'See All Products',
   'customProjectPage.hero.ctaDiscuss': 'Discuss with Us',
-  'customProjectPage.products.heading': 'Product',
+  'customProjectPage.products.eyebrow': 'What We Offer',
+  'customProjectPage.products.heading': 'What We Can Make for You',
   'customProjectPage.products.displayTable': 'Display Table',
   'customProjectPage.products.wasteBin': 'Waste Bin',
   'customProjectPage.products.furniture': 'Furniture',
@@ -283,6 +285,7 @@ export default {
   'customProjectPage.products.keychain': 'Keychain',
   'customProjectPage.products.medals': 'Medals',
   'customProjectPage.products.phoneHolder': 'Phone Holder',
+  'customProjectPage.projects.eyebrow': 'Selected Work',
   'customProjectPage.projects.heading': 'Featured Projects',
   'customProjectPage.projects.subtitle': 'See how brands and businesses have worked with Repair to turn recycled plastics into functional products, bringing real-world applications and measurable material impact together.',
   'customProjectPage.projects.totalItem': 'TOTAL ITEM',
@@ -299,6 +302,7 @@ export default {
   'customProjectPage.projects.ecoRunfest.desc': 'Event merchandise made from RR Board, turning waste into everyday items like keychains and phone holders.',
   'customProjectPage.projects.ecoRunfest.items': '250 keychains, 150 phone holders',
   'customProjectPage.projects.ecoRunfest.waste': '42 kg',
+  'customProjectPage.order.eyebrow': 'How It Works',
   'customProjectPage.order.heading': 'From Selection to Delivery, Made Simple',
   'customProjectPage.order.01.title': 'Choose Your Product',
   'customProjectPage.order.01.body': 'Explore our existing products and applications, or send us your design.',
@@ -324,8 +328,12 @@ export default {
   'whyPlastic.imageAlt': 'Low-value plastic waste collected before processing',
 
   // Custom project page — Explore products
+  'customProjectPage.explore.catalogue.title': 'Product Catalogue',
+  'customProjectPage.explore.catalogue.meta': 'Branding • Product Design',
   'customProjectPage.explore.catalogue.body': "For brands, corporates, designers, and anyone exploring Repair's product possibilities.",
   'customProjectPage.explore.catalogue.cta': 'View Product Catalogue',
+  'customProjectPage.explore.events.title': 'Event & Merchandise',
+  'customProjectPage.explore.events.meta': 'Events • Merchandise',
   'customProjectPage.explore.events.body': 'For event merchandise, activations, booth fixtures, and event-related applications.',
   'customProjectPage.explore.events.cta': 'Explore Event Catalogue',
   // Stub pages

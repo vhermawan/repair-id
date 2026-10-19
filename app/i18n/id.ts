@@ -271,11 +271,13 @@ export default {
   'contactPage.info.responseValue': 'Dalam 24 jam kerja',
 
   // Custom project page
+  'customProjectPage.hero.eyebrow': 'Custom & Kolaborasi',
   'customProjectPage.hero.title': 'Produk & Proyek',
   'customProjectPage.hero.body': 'Lihat berbagai kemungkinan bersama Repair Project, dari produk fungsional hingga produk dan proyek custom, didesain dan diproduksi untuk berbagai kebutuhan dan ruang.',
   'customProjectPage.hero.ctaProducts': 'Lihat Semua Produk',
   'customProjectPage.hero.ctaDiscuss': 'Diskusi dengan Kami',
-  'customProjectPage.products.heading': 'Produk',
+  'customProjectPage.products.eyebrow': 'Yang Kami Tawarkan',
+  'customProjectPage.products.heading': 'Apa yang Bisa Kami Buat untuk Anda',
   'customProjectPage.products.displayTable': 'Meja Display',
   'customProjectPage.products.wasteBin': 'Tempat Sampah',
   'customProjectPage.products.furniture': 'Furnitur',
@@ -283,6 +285,7 @@ export default {
   'customProjectPage.products.keychain': 'Gantungan Kunci',
   'customProjectPage.products.medals': 'Medali',
   'customProjectPage.products.phoneHolder': 'Phone Holder',
+  'customProjectPage.projects.eyebrow': 'Karya Pilihan',
   'customProjectPage.projects.heading': 'Proyek Unggulan',
   'customProjectPage.projects.subtitle': 'Lihat bagaimana berbagai brand dan perusahaan bekerja sama dengan Repair untuk mengubah plastik daur ulang menjadi produk fungsional, sekaligus menghasilkan dampak material yang terukur.',
   'customProjectPage.projects.totalItem': 'TOTAL ITEM',
@@ -299,6 +302,7 @@ export default {
   'customProjectPage.projects.ecoRunfest.desc': 'Merchandise berbahan RR Board, mengubah limbah menjadi berbagai produk fungsional seperti gantungan kunci dan phone holder.',
   'customProjectPage.projects.ecoRunfest.items': '250 gantungan kunci, 150 phone holder',
   'customProjectPage.projects.ecoRunfest.waste': '42 kg',
+  'customProjectPage.order.eyebrow': 'Cara Kerja',
   'customProjectPage.order.heading': 'Memilih dan Menerima, Dibuat Sederhana',
   'customProjectPage.order.01.title': 'Pilih Produk',
   'customProjectPage.order.01.body': 'Temukan produk dan aplikasi yang sudah tersedia, atau kirimkan desain-mu.',
@@ -324,8 +328,12 @@ export default {
   'whyPlastic.imageAlt': 'Sampah plastik bernilai rendah sebelum diolah',
 
   // Custom project page — Explore products
+  'customProjectPage.explore.catalogue.title': 'Katalog Produk',
+  'customProjectPage.explore.catalogue.meta': 'Branding • Desain Produk',
   'customProjectPage.explore.catalogue.body': 'Untuk brand, perusahaan, desainer, dan siapa pun yang ingin mengeksplorasi kemungkinan produk dari Repair.',
   'customProjectPage.explore.catalogue.cta': 'Lihat Katalog Produk',
+  'customProjectPage.explore.events.title': 'Event & Merchandise',
+  'customProjectPage.explore.events.meta': 'Event • Merchandise',
   'customProjectPage.explore.events.body': 'Untuk merchandise event, aktivasi, perlengkapan booth, dan berbagai aplikasi untuk acara.',
   'customProjectPage.explore.events.cta': 'Lihat Katalog Event',
   // Stub pages
