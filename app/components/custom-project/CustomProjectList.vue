@@ -59,13 +59,15 @@
 
       <div
         ref="track"
-        class="flex-1 min-w-0 h-[440px] lg:h-full flex gap-4 lg:gap-6 overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        class="-mx-5 lg:mx-0 lg:flex-1 min-w-0 h-[520px] sm:h-[580px] lg:h-full flex gap-4 lg:gap-6 overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         @scroll.passive="onScroll"
       >
+        <!-- Leading space so the first card sits centered on mobile -->
+        <div aria-hidden="true" class="shrink-0 w-[calc(10%-16px)] lg:hidden" />
         <article
           v-for="project in projects"
           :key="project.key"
-          class="group relative w-[85%] lg:w-[calc((100%-24px)/2)] h-full shrink-0 snap-start rounded-[16px] overflow-hidden"
+          class="group relative w-[80%] lg:w-[calc((100%-24px)/2)] h-full shrink-0 snap-center lg:snap-start rounded-[16px] overflow-hidden"
         >
           <img
             :src="project.image"
@@ -90,8 +92,8 @@
             </div>
           </div>
         </article>
-        <!-- Trailing space so the last card can snap to the start -->
-        <div aria-hidden="true" class="shrink-0 w-[calc(15%-16px)] lg:w-[calc((100%-24px)/2)]" />
+        <!-- Trailing space so the last card can center (mobile) or snap to the start (desktop) -->
+        <div aria-hidden="true" class="shrink-0 w-[calc(10%-16px)] lg:w-[calc((100%-24px)/2)]" />
       </div>
     </div>
   </section>
@@ -113,7 +115,7 @@ const pad = (n: number) => String(n).padStart(2, '0')
 
 const cardStep = () => {
   const el = track.value
-  const card = el?.firstElementChild as HTMLElement | null
+  const card = el?.querySelector('article')
   if (!el || !card) return 0
   return card.offsetWidth + parseFloat(getComputedStyle(el).columnGap || '0')
 }
