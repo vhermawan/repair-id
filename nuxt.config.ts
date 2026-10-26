@@ -25,6 +25,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       'DM Sans': { wght: '100..1000' },
+      'DM Mono': { wght: [400] },
       'Instrument Serif': { ital: [400] },
     },
     display: 'swap',

@@ -2,11 +2,11 @@
   <section class="w-full flex flex-col gap-8 lg:gap-[48px] p-[112px_20px_0] lg:p-[140px_48px_0]">
     <div class="w-full flex flex-col lg:flex-row gap-6 lg:gap-[80px] lg:justify-between lg:items-end">
       <div class="lg:w-[820px] flex flex-col gap-4 lg:gap-[20px]">
-        <h1 class="hero-entrance hero-entrance-delay-1 font-dm-sans font-bold type-display text-navy whitespace-pre-line">
+        <h1 class="hero-entrance hero-entrance-delay-1 font-dm-sans font-normal text-[#111317] text-[44px] leading-[48px] tracking-[-1px] lg:text-[60px] lg:leading-[63px] lg:tracking-[-1.2px] whitespace-pre-line">
           {{ t('contactPage.heroTitle') }}
         </h1>
       </div>
-      <p class="hero-entrance hero-entrance-delay-2 lg:w-[360px] shrink-0 lg:pb-4 font-dm-sans type-lead text-[#0C2244]">
+      <p class="hero-entrance hero-entrance-delay-2 lg:w-[360px] shrink-0 lg:pb-4 font-dm-sans text-[#5A5D63] text-[18px] leading-[28px] lg:text-[20px] lg:leading-[31px]">
         {{ t('contactPage.heroBody') }}
       </p>
     </div>

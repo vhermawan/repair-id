@@ -7,11 +7,11 @@
       class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[64px] lg:justify-between lg:items-end"
     >
       <div class="lg:flex-1 lg:max-w-[740px] flex flex-col gap-4">
-        <h2 class="font-dm-sans font-bold type-h2 text-navy">
+        <h2 class="font-dm-sans font-normal text-[#111317] text-[32px] leading-[36px] tracking-[-0.6px] lg:text-[40px] lg:leading-[44px]">
           {{ t('contactPage.steps.heading') }}
         </h2>
       </div>
-      <p class="lg:w-[480px] xl:w-[560px] 2xl:w-[620px] shrink-0 font-dm-sans type-body text-[#0C2244]">
+      <p class="lg:w-[480px] xl:w-[560px] 2xl:w-[620px] shrink-0 font-dm-sans text-[#5A5D63] text-[16px] leading-[26px] lg:text-[18px] lg:leading-[29px]">
         {{ t('contactPage.steps.note') }}
       </p>
     </div>
@@ -25,14 +25,14 @@
         class="flex flex-col gap-5 p-[24px_0_28px] lg:p-[28px_56px_36px_0] border-b lg:border-b-0 lg:border-r lg:last:border-r-0 border-[#0614281F]"
       >
         <div class="w-full flex justify-between items-center">
-          <span class="font-dm-sans font-medium type-eyebrow tracking-[1.2px] text-blue-accent">{{ step.num }}</span>
-          <Icon :name="step.icon" size="18" class="text-[#0C2244]" />
+          <span class="font-dm-mono text-[12px] leading-[16px] lg:text-[13px] tracking-[1.3px] text-[#5A5D63]">{{ step.num }}</span>
+          <Icon :name="step.icon" size="18" class="text-[#5A5D63]" />
         </div>
         <div class="w-full flex flex-col gap-[10px]">
-          <h3 class="font-dm-sans font-semibold type-h5 text-navy">
+          <h3 class="font-dm-sans font-normal text-[#111317] text-[22px] leading-[28px] lg:text-[24px] lg:leading-[30px] tracking-[-0.4px]">
             {{ t(`contactPage.steps.${step.num}.title`) }}
           </h3>
-          <p class="font-dm-sans type-body-sm text-[#0C2244]">
+          <p class="font-dm-sans text-[#5A5D63] text-[16px] leading-[26px]">
             {{ t(`contactPage.steps.${step.num}.body`) }}
           </p>
         </div>

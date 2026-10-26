@@ -1,11 +1,26 @@
 <template>
-  <section class="w-full flex flex-col gap-5 items-center p-[112px_20px_64px] lg:p-[156px_48px_88px] overflow-hidden">
-    <h1 class="hero-entrance hero-entrance-delay-2 max-w-[900px] font-dm-sans font-bold type-display-sm text-navy text-center">
+  <section class="w-full flex flex-col gap-5 items-center p-[112px_20px_64px] lg:p-[140px_48px_120px] bg-[#F3F0E9] overflow-hidden">
+    <div class="hero-entrance hero-entrance-delay-1">
+      <HomeSectionLabel>{{ t('customProjectPage.hero.eyebrow') }}</HomeSectionLabel>
+    </div>
+    <h1 class="hero-entrance hero-entrance-delay-2 max-w-[900px] font-dm-sans font-normal text-[#111317] text-center text-[44px] leading-[48px] tracking-[-1px] lg:text-[60px] lg:leading-[63px] lg:tracking-[-1.2px]">
       {{ t('customProjectPage.hero.title') }}
     </h1>
+    <p class="hero-entrance hero-entrance-delay-3 max-w-[680px] font-dm-sans text-[#5A5D63] text-center text-[18px] leading-[28px] lg:text-[20px] lg:leading-[31px]">
+      {{ t('customProjectPage.hero.body') }}
+    </p>
+    <div class="hero-entrance hero-entrance-delay-3 flex flex-col sm:flex-row gap-3 pt-4 w-full sm:w-auto">
+      <a href="#products" @click.prevent="scrollToProducts" class="group flex items-center justify-center gap-2.5 px-6 py-[15px] bg-[#111317] hover:bg-[#0B5FFF] rounded-full transition-colors">
+        <span class="font-dm-sans text-[16px] leading-[21px] text-white whitespace-nowrap">{{ t('customProjectPage.hero.ctaProducts') }}</span>
+        <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-white" />
+      </a>
+      <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-6 py-[15px] [outline:1px_solid_#11131733] [outline-offset:-1px] hover:[outline-color:#111317] rounded-full transition-[outline-color]">
+        <span class="font-dm-sans text-[16px] leading-[21px] text-[#111317] whitespace-nowrap">{{ t('customProjectPage.hero.ctaDiscuss') }}</span>
+      </a>
+    </div>
 
     <!-- Card fan: fixed-size stage scaled down on small screens -->
-    <div class="w-full h-[170px] sm:h-[290px] lg:h-[450px] relative">
+    <div class="hero-entrance hero-entrance-delay-4 w-full h-[170px] sm:h-[290px] lg:h-[450px] relative mt-6 lg:mt-0">
       <div class="absolute left-1/2 top-0 w-[1200px] h-[450px] -translate-x-1/2 origin-top scale-[0.34] sm:scale-[0.6] lg:scale-100">
         <div
           v-for="(card, i) in cards"
@@ -19,42 +34,29 @@
           @blur="hovered = null"
         >
           <div
-            class="relative w-full h-full rounded-[14px] transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] motion-reduce:transition-none"
-            :class="hovered === i ? '-translate-y-4 scale-[1.08] shadow-[0_24px_48px_0_#06142833]' : 'shadow-[0_10px_28px_0_#0614281F]'"
+            class="relative w-full h-full rounded-[4px] transition-[transform,box-shadow] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] motion-reduce:transition-none"
+            :class="hovered === i ? '-translate-y-4 scale-[1.08] shadow-[0_24px_48px_0_#11131733]' : 'shadow-[0_10px_28px_0_#1113171F]'"
           >
             <img
               :src="card.image"
               :alt="t(card.labelKey)"
-              class="w-full h-full object-cover rounded-[14px]"
+              class="w-full h-full object-cover rounded-[4px]"
             >
             <span
-              class="absolute left-1/2 bottom-3 -translate-x-1/2 px-3.5 py-[7px] bg-navy rounded-full font-dm-sans font-medium type-micro tracking-[0.8px] text-white whitespace-nowrap pointer-events-none transition-[opacity,transform] duration-200 ease-out motion-reduce:transition-none"
+              class="absolute left-1/2 bottom-3 -translate-x-1/2 px-3.5 py-[7px] bg-[#111317] rounded-full font-dm-mono text-[11.5px] leading-[17px] tracking-[1px] text-white whitespace-nowrap pointer-events-none transition-[opacity,transform] duration-200 ease-out motion-reduce:transition-none"
               :class="hovered === i ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'"
             >
               {{ t(card.labelKey) }}
             </span>
           </div>
         </div>
-        <span class="hero-card-in [animation-delay:1.15s] absolute left-[29px] top-[18px] z-[7] px-3.5 py-[7px] bg-blue-accent rounded-full font-dm-sans font-medium type-micro tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
+        <span class="hero-card-in [animation-delay:1.15s] absolute left-[29px] top-[18px] z-[7] px-3.5 py-[7px] bg-[#111317] rounded-full font-dm-mono text-[11.5px] leading-[17px] tracking-[1px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
           {{ t('customProjectPage.products.displayTable') }}
         </span>
-        <span class="hero-card-in [animation-delay:1.15s] absolute left-[959px] top-[34px] z-[8] px-3.5 py-[7px] bg-navy rounded-full font-dm-sans font-medium type-micro tracking-[0.8px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
+        <span class="hero-card-in [animation-delay:1.15s] absolute left-[959px] top-[34px] z-[8] px-3.5 py-[7px] bg-[#111317] rounded-full font-dm-mono text-[11.5px] leading-[17px] tracking-[1px] text-white whitespace-nowrap transition-opacity duration-200" :class="hovered !== null && 'opacity-0'">
           {{ t('customProjectPage.products.phoneHolder') }}
         </span>
       </div>
-    </div>
-
-    <p class="hero-entrance hero-entrance-delay-4 max-w-[680px] font-dm-sans type-lead text-[#0C2244] text-center">
-      {{ t('customProjectPage.hero.body') }}
-    </p>
-    <div class="hero-entrance hero-entrance-delay-4 flex flex-col sm:flex-row gap-3 pt-2 w-full sm:w-auto">
-      <a href="#products" @click.prevent="scrollToProducts" class="flex items-center justify-center gap-2.5 px-[26px] py-3.5 bg-navy rounded-full">
-        <span class="font-dm-sans type-cta font-semibold text-white whitespace-nowrap">{{ t('customProjectPage.hero.ctaProducts') }}</span>
-        <Icon name="lucide:arrow-up-right" class="w-4 h-4 text-white" />
-      </a>
-      <a href="https://wa.me/6282258044904" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2.5 px-[26px] py-3.5 [outline:1px_solid_#06142833] [outline-offset:-0.5px] rounded-full">
-        <span class="font-dm-sans type-cta font-semibold text-navy whitespace-nowrap">{{ t('customProjectPage.hero.ctaDiscuss') }}</span>
-      </a>
     </div>
   </section>
 </template>
