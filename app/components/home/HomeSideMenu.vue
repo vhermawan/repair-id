@@ -36,7 +36,22 @@
       enter-from-class="opacity-0"
       leave-to-class="opacity-0"
     >
-      <div v-if="open" class="fixed inset-0 z-50 bg-black/75" aria-hidden="true" @click="open = false" />
+      <div
+        v-if="open"
+        class="fixed inset-0 z-50 bg-black/75 lg:cursor-none"
+        aria-hidden="true"
+        @click="open = false"
+        @pointermove="pointer = { x: $event.clientX, y: $event.clientY }"
+        @pointerleave="pointer = null"
+      >
+        <span
+          v-if="pointer"
+          class="hidden lg:flex absolute w-16 h-16 -ml-8 -mt-8 items-center justify-center rounded-full border border-white pointer-events-none"
+          :style="{ left: `${pointer.x}px`, top: `${pointer.y}px` }"
+        >
+          <Icon name="lucide:x" class="w-7 h-7 text-white" />
+        </span>
+      </div>
     </Transition>
 
     <Transition
@@ -71,7 +86,7 @@
         <nav class="mt-14 flex flex-col gap-4 lg:absolute lg:left-[6.82vw] lg:top-[22.4vh] lg:mt-0 lg:gap-[3.5vh]">
           <NuxtLink
             v-for="link in links" :key="link.to" :to="link.to"
-            class="group self-start flex flex-col font-dm-sans text-[40px] leading-[1.05] uppercase text-white lg:text-[5vw] lg:leading-[1.04]"
+            class="group self-start flex flex-col outline-none font-dm-sans text-[40px] leading-[1.05] uppercase text-white lg:text-[5vw] lg:leading-[1.04]"
             @click="open = false"
           >
             {{ t(link.labelKey) }}
@@ -96,6 +111,7 @@
 const { t } = useI18n()
 const open = useState('homeMenuOpen', () => false)
 const panel = ref<HTMLElement | null>(null)
+const pointer = ref<{ x: number, y: number } | null>(null)
 
 const links = [
   { labelKey: 'nav.rrBoard', to: '/rr-board' },
@@ -111,6 +127,7 @@ const contacts = [
 
 watch(open, async (isOpen) => {
   document.body.style.overflow = isOpen ? 'hidden' : ''
+  pointer.value = null
   if (isOpen) {
     await nextTick()
     panel.value?.querySelector<HTMLElement>('nav a')?.focus()
