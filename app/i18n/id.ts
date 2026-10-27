@@ -81,7 +81,7 @@ export default {
 
   // Clients
   'clients.subtitle': 'Dipercaya arsitek, kontraktor, dan brand yang serius soal material.',
-  'clients.heading': 'Klien Kami',
+  'clients.heading': 'Klien',
 
   // Footer
   'footer.heading': 'Punya proyek? Kirim kebutuhan Anda, kami hitung bersama.',
@@ -318,6 +318,13 @@ export default {
   'whyPlastic.heading': 'Keputusan Material Anda Dapat Memberi Dampak yang Lebih Besar.',
   'whyPlastic.body': 'Plastik sachet dan kantong sekali pakai sering berakhir mencemari lingkungan karena sulit didaur ulang. Dengan memilih RR Board, Anda memberi plastik rendah nilai kesempatan kedua sebagai papan fungsional untuk berbagai kebutuhan.',
   'whyPlastic.imageAlt': 'Sampah plastik bernilai rendah sebelum diolah',
+  'whyPlastic.headingLines': 'Keputusan Material\nAnda\nDapat Memberi\nDampak yang\nLebih Besar.',
+  'hero.imageAlt': 'Tangan memegang cacahan plastik sachet',
+  'hero.socialLabel': 'Kanal kontak',
+  'hero.menu': 'Buka menu',
+  'hero.close': 'Tutup menu',
+  'homeBanner.imageAlt': 'Panel RR Board dengan berbagai campuran warna',
+  'homeContact.getInTouch': 'Hubungi Kami',
 
   // Custom project page — Explore products
   'customProjectPage.explore.catalogue.body': 'Untuk brand, perusahaan, desainer, dan siapa pun yang ingin mengeksplorasi kemungkinan produk dari Repair.',
