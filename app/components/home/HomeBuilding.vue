@@ -28,7 +28,7 @@
           :src="card.image" alt="" loading="lazy"
           class="w-full aspect-[4/3] object-cover lg:absolute lg:inset-0 lg:h-full lg:aspect-auto lg:opacity-0 lg:transition-opacity lg:duration-500 lg:group-hover:opacity-100 lg:group-focus-visible:opacity-100"
         />
-        <h3 class="px-5 pt-6 font-dm-sans font-light text-[40px] leading-[1.06] whitespace-pre-line lg:px-[2.07vw] lg:pt-[1.5vw] lg:text-[4.17vw]">
+        <h3 class="px-5 pt-6 font-dm-sans font-light text-[34px] leading-[1.06] whitespace-pre-line lg:px-[2.07vw] lg:pt-[1.5vw] lg:text-[3.65vw]">
           {{ t(`${card.prefix}.title`) }}
         </h3>
         <p class="px-5 pt-3 font-dm-sans text-base lg:max-w-[28.2vw] lg:px-[2.07vw] lg:pt-0 lg:pb-[1.82vw] lg:text-[clamp(16px,1.04vw,20px)]">
