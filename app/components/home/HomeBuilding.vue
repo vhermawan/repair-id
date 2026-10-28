@@ -4,7 +4,7 @@
       v-motion
       :initial="{ opacity: 0, y: 24 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-      class="max-w-[909px] font-dm-sans text-[40px] leading-[1.05] uppercase text-black whitespace-pre-line lg:text-[5vw] lg:leading-[1.04]"
+      class="max-w-[909px] font-dm-sans text-[30px] leading-[1.05] uppercase text-black whitespace-pre-line lg:text-[5vw] lg:leading-[1.04]"
       :class="locale === 'id' ? 'lg:max-w-none' : 'lg:max-w-[47.3vw]'"
     >
       {{ t('building.heading') }}
