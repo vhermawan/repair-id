@@ -1,5 +1,5 @@
 <template>
-  <section class="relative w-full h-svh min-h-[640px] lg:h-[56.25vw] lg:min-h-0 overflow-hidden bg-black">
+  <section class="relative w-full h-svh min-h-[640px] lg:min-h-[560px] overflow-hidden bg-black">
     <video
       ref="video"
       class="absolute inset-0 w-full h-full object-cover"
