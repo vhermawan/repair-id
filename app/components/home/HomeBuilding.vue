@@ -50,8 +50,8 @@ const { t, locale } = useI18n()
 
 const cards = [
   { prefix: 'building.card1', image: '/images/home/events.webp', href: 'https://w4c.id/RepairForEvents', position: 'lg:left-[4.465vw] lg:top-[5.65vw]' },
-  { prefix: 'building.card2', image: '/images/home/workshop-cutting.webp', href: 'https://w4c.id/RepairForWorkshops', position: 'lg:left-[calc(41.486vw-1px)] lg:top-0' },
+  { prefix: 'building.card2', image: '/images/home/workshop-cutting.webp', href: 'https://w4c.id/RepairForWorkshops', position: 'lg:left-[calc(41.485vw-1px)] lg:top-0' },
   { prefix: 'building.card3', image: '/images/home/design-build.webp', to: '/rr-board', position: 'lg:left-0 lg:top-[33.044vw]' },
-  { prefix: 'building.card4', image: '/images/home/csr.webp', to: '/custom-project', position: 'lg:left-[calc(37.021vw-1px)] lg:top-[calc(27.118vw-1px)]' },
+  { prefix: 'building.card4', image: '/images/home/csr.webp', to: '/custom-project', position: 'lg:left-[calc(37.02vw-1px)] lg:top-[calc(27.12vw-1px)]' },
 ]
 </script>
