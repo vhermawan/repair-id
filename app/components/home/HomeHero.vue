@@ -12,7 +12,6 @@
       preload="metadata"
     >
       <source src="/videos/home/hero-720.mp4" type="video/mp4" media="(max-width: 1023px)" />
-      <source src="/videos/home/hero-1080.webm" type="video/webm" />
       <source src="/videos/home/hero-1080.mp4" type="video/mp4" />
     </video>
     <div class="absolute inset-0 bg-black/20" aria-hidden="true" />
