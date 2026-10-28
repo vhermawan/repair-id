@@ -324,6 +324,7 @@ export default {
   'hero.menu': 'Buka menu',
   'hero.close': 'Tutup menu',
   'homeBanner.imageAlt': 'Panel RR Board dengan berbagai campuran warna',
+  'homeContact.heading': 'Punya proyek?\nKirim kebutuhan Anda,\nkami hitung bersama.',
   'homeContact.getInTouch': 'Hubungi Kami',
 
   // Custom project page — Explore products

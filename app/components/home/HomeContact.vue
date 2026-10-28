@@ -4,9 +4,9 @@
       v-motion
       :initial="{ opacity: 0, y: 32 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-      class="max-w-[1040px] lg:max-w-[54.2vw] font-dm-sans text-[40px] leading-none text-white lg:text-[4.17vw]"
+      class="max-w-[1040px] font-dm-sans text-[40px] leading-none text-white whitespace-pre-line lg:max-w-none lg:text-[4.17vw]"
     >
-      {{ t('footer.heading') }}
+      {{ t('homeContact.heading') }}
     </h2>
 
     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:flex lg:justify-between lg:gap-6 font-dm-sans text-base uppercase text-white lg:text-[clamp(16px,1.04vw,20px)]">

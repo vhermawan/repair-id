@@ -324,6 +324,7 @@ export default {
   'hero.menu': 'Open menu',
   'hero.close': 'Close menu',
   'homeBanner.imageAlt': 'RR Board panels in different colour mixes',
+  'homeContact.heading': 'Have a project?\nSend your requirements,\nwe\'ll calculate together.',
   'homeContact.getInTouch': 'Get In Touch',
 
   // Custom project page — Explore products
