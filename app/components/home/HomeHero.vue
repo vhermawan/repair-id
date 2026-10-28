@@ -1,11 +1,20 @@
 <template>
   <section class="relative w-full h-svh min-h-[640px] lg:h-[56.25vw] lg:min-h-0 overflow-hidden bg-black">
-    <img
-      src="/images/home/hero-sachet-hands.webp"
-      :alt="t('hero.imageAlt')"
+    <video
+      ref="video"
       class="absolute inset-0 w-full h-full object-cover"
-      fetchpriority="high"
-    />
+      poster="/images/home/hero-poster.webp"
+      :aria-label="t('hero.imageAlt')"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+    >
+      <source src="/videos/home/hero-720.mp4" type="video/mp4" media="(max-width: 1023px)" />
+      <source src="/videos/home/hero-1080.webm" type="video/webm" />
+      <source src="/videos/home/hero-1080.mp4" type="video/mp4" />
+    </video>
     <div class="absolute inset-0 bg-black/20" aria-hidden="true" />
     <div class="lg:hidden absolute inset-0 bg-black/25" aria-hidden="true" />
 
@@ -67,6 +76,11 @@
 <script setup lang="ts">
 const { t, locale, setLocale } = useI18n()
 const menuOpen = useState('homeMenuOpen', () => false)
+const video = ref<HTMLVideoElement | null>(null)
+
+onMounted(() => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) video.value?.pause()
+})
 
 const links = [
   { labelKey: 'nav.home', to: '/' },
