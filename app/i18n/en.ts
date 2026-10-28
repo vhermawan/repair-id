@@ -53,7 +53,7 @@ export default {
   'rrBoardIntro.toilet.desc': 'Built for humid environments, RR Board offers a water-resistant, durable surface that can be fabricated into functional toilet cubicles.',
 
   // Building Application
-  'building.heading': 'What Can We Create Together?',
+  'building.heading': 'What Can We\nCreate Together?',
   'building.card1.title': 'Events & Activations',
   'building.card1.cta': 'Catalogue for Events',
   'building.card1.desc': 'Merchandise, signage, displays, and event equipment tailored to specific event needs and brand identity.',
