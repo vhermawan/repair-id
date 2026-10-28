@@ -12,8 +12,7 @@
         v-motion
         :initial="{ opacity: 0, y: 24 }"
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-        class="font-dm-sans text-[40px] leading-[1.05] uppercase text-white"
-        :class="locale === 'id' ? 'lg:text-[4.43vw] lg:leading-[1.024]' : 'lg:text-[5vw] lg:leading-[1.04]'"
+        class="font-dm-sans text-[40px] leading-[1.05] uppercase text-white lg:text-[4.17vw] lg:leading-[1.04]"
       >
         <span
           v-for="(line, i) in headingLines" :key="i"

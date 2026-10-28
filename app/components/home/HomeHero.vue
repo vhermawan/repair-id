@@ -18,12 +18,8 @@
     <div class="lg:hidden absolute inset-0 bg-black/25" aria-hidden="true" />
 
     <header class="absolute inset-x-0 top-0 flex items-center justify-between px-5 pt-5 lg:pl-[30.3vw] lg:pr-[5.16vw] lg:pt-[4.25vw]">
-      <NuxtLink to="/" class="lg:hidden flex items-start gap-2" aria-label="Repair Project">
-        <img src="/images/home/logo-mark.svg" alt="" class="shrink-0" />
-        <span class="flex flex-col shrink-0 gap-[6px]">
-          <img src="/images/home/logo-repair.svg" alt="" />
-          <img src="/images/home/logo-project.svg" alt="" />
-        </span>
+      <NuxtLink to="/" class="lg:hidden">
+        <img src="/images/home/logo.png" alt="Repair Project" width="640" height="170" class="w-[132px] h-auto" />
       </NuxtLink>
 
       <nav class="hidden lg:flex items-center gap-[3.85vw]">

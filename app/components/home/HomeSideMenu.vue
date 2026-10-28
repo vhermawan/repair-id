@@ -1,12 +1,8 @@
 <template>
   <div>
     <aside class="hidden lg:block fixed inset-y-0 left-0 z-40 w-[12.86vw] bg-black/25">
-      <NuxtLink to="/" class="absolute left-[2.74vw] top-[8.58vh] flex items-start gap-[0.44vw]" aria-label="Repair Project" @click="goHome">
-        <img src="/images/home/logo-mark.svg" alt="" class="shrink-0 w-[1.72vw] h-auto" />
-        <span class="flex flex-col shrink-0 gap-[0.27vw]">
-          <img src="/images/home/logo-repair.svg" alt="" class="w-[4.33vw] h-auto" />
-          <img src="/images/home/logo-project.svg" alt="" class="w-[4.33vw] h-auto" />
-        </span>
+      <NuxtLink to="/" class="absolute left-[2.74vw] top-[8.58vh]" @click="goHome">
+        <img src="/images/home/logo.png" alt="Repair Project" width="640" height="170" class="w-[7.39vw] h-auto" />
       </NuxtLink>
 
       <button
@@ -71,12 +67,8 @@
         @keydown.esc="open = false"
       >
         <div class="flex items-start justify-between lg:absolute lg:left-[6.82vw] lg:top-[8.1vh]">
-          <NuxtLink to="/" class="flex items-start gap-[9.6px] lg:gap-[0.5vw]" aria-label="Repair Project" @click="goHome">
-            <img src="/images/home/logo-mark.svg" alt="" class="shrink-0 lg:w-[1.96vw] lg:h-auto" />
-            <span class="flex flex-col shrink-0 gap-[6px] lg:gap-[0.31vw]">
-              <img src="/images/home/logo-repair.svg" alt="" class="lg:w-[4.92vw] lg:h-auto" />
-              <img src="/images/home/logo-project.svg" alt="" class="lg:w-[4.92vw] lg:h-auto" />
-            </span>
+          <NuxtLink to="/" @click="goHome">
+            <img src="/images/home/logo.png" alt="Repair Project" width="640" height="170" class="w-[132px] h-auto lg:w-[7.39vw]" />
           </NuxtLink>
           <button class="lg:hidden flex items-center justify-center w-10 h-10" :aria-label="t('hero.close')" @click="open = false">
             <Icon name="lucide:x" class="w-7 h-7 text-white" />

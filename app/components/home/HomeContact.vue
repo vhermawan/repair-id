@@ -4,7 +4,7 @@
       v-motion
       :initial="{ opacity: 0, y: 32 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-      class="max-w-[1040px] lg:max-w-[54.2vw] font-dm-sans text-[40px] leading-none text-white lg:text-[5vw]"
+      class="max-w-[1040px] lg:max-w-[54.2vw] font-dm-sans text-[40px] leading-none text-white lg:text-[4.17vw]"
     >
       {{ t('footer.heading') }}
     </h2>
