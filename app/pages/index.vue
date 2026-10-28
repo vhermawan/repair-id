@@ -1,10 +1,16 @@
 <template>
   <div>
+    <HomeSideMenu />
     <HomeHero />
     <HomeBuilding />
     <HomeWhyPlastic />
     <HomeProcess />
+    <HomeBanner />
     <HomeClients />
-    <TheFooter />
+    <HomeContact />
   </div>
 </template>
+
+<script setup lang="ts">
+definePageMeta({ layout: 'home' })
+</script>

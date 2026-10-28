@@ -22,7 +22,7 @@ export default {
   'hero.metric3.label': 'dapat dilebur ulang',
 
   // Impact
-  'impact.heading': 'DAMPAK KAMI',
+  'impact.heading': 'DAMPAK\nKAMI',
   'impact.stat1.value': '34,000 kg',
   'impact.stat1.desc': 'Plastik bernilai rendah telah diolah',
   'impact.stat2.value': '2,500 produk',
@@ -53,7 +53,7 @@ export default {
   'rrBoardIntro.toilet.desc': 'Dibangun untuk lingkungan lembap, RR Board menawarkan permukaan tahan air dan tahan lama yang dapat difabrikasi menjadi kubikel toilet fungsional.',
 
   // Building Application
-  'building.heading': 'Apa yang Bisa Kita Wujudkan Bersama?',
+  'building.heading': 'Apa yang Bisa Kita\nWujudkan Bersama?',
   'building.card1.title': 'Event & Aktivasi',
   'building.card1.cta': 'Katalog untuk Event',
   'building.card1.desc': 'Merchandise, signage, display, dan perlengkapan event yang dibuat sesuai kebutuhan acara dan identitas brand.',
@@ -81,7 +81,7 @@ export default {
 
   // Clients
   'clients.subtitle': 'Dipercaya arsitek, kontraktor, dan brand yang serius soal material.',
-  'clients.heading': 'Klien Kami',
+  'clients.heading': 'Klien',
 
   // Footer
   'footer.heading': 'Punya proyek? Kirim kebutuhan Anda, kami hitung bersama.',
@@ -318,6 +318,14 @@ export default {
   'whyPlastic.heading': 'Keputusan Material Anda Dapat Memberi Dampak yang Lebih Besar.',
   'whyPlastic.body': 'Plastik sachet dan kantong sekali pakai sering berakhir mencemari lingkungan karena sulit didaur ulang. Dengan memilih RR Board, Anda memberi plastik rendah nilai kesempatan kedua sebagai papan fungsional untuk berbagai kebutuhan.',
   'whyPlastic.imageAlt': 'Sampah plastik bernilai rendah sebelum diolah',
+  'whyPlastic.headingLines': 'Keputusan\nMaterial Anda\nDapat Memberi\nDampak yang\nLebih Besar',
+  'hero.imageAlt': 'Tangan memegang cacahan plastik sachet',
+  'hero.socialLabel': 'Kanal kontak',
+  'hero.menu': 'Buka menu',
+  'hero.close': 'Tutup menu',
+  'homeBanner.imageAlt': 'Panel RR Board dengan berbagai campuran warna',
+  'homeContact.heading': 'Punya proyek?\nKirim kebutuhan Anda,\nkami hitung bersama.',
+  'homeContact.getInTouch': 'Hubungi Kami',
 
   // Custom project page — Explore products
   'customProjectPage.explore.catalogue.body': 'Untuk brand, perusahaan, desainer, dan siapa pun yang ingin mengeksplorasi kemungkinan produk dari Repair.',

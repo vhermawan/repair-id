@@ -9,7 +9,7 @@ export default {
   'nav.contactInfo': 'halo@repair.id · +62 812 0000 0000',
 
   // Hero
-  'hero.label': 'From Sachets to Board,\nFrom Board to Product',
+  'hero.label': 'From Sachet to Board,\nFrom Board to Product',
   'hero.body': 'Repair develops circular material by transforming low-value plastics into a 1.2 m x 2.4 m board for commercial applications',
   'hero.headline': 'From Sachets to Board,\nFrom Board to Product.',
   'hero.intro': 'Often overlooked, sachets and plastic bags are now being transformed into materials for a variety of uses. From events to interiors and custom products, discover what can be created with Repair.',
@@ -53,7 +53,7 @@ export default {
   'rrBoardIntro.toilet.desc': 'Built for humid environments, RR Board offers a water-resistant, durable surface that can be fabricated into functional toilet cubicles.',
 
   // Building Application
-  'building.heading': 'What Can We Create Together?',
+  'building.heading': 'What Can We\nCreate Together?',
   'building.card1.title': 'Events & Activations',
   'building.card1.cta': 'Catalogue for Events',
   'building.card1.desc': 'Merchandise, signage, displays, and event equipment tailored to specific event needs and brand identity.',
@@ -81,7 +81,7 @@ export default {
 
   // Clients
   'clients.subtitle': 'Trusted by architects, contractors, and brands serious about materials.',
-  'clients.heading': 'Our Clients',
+  'clients.heading': 'Clients',
 
   // Footer
   'footer.heading': 'Have a project? Send your requirements, we\'ll calculate together.',
@@ -318,6 +318,14 @@ export default {
   'whyPlastic.heading': 'Your Material Choice Can Make a Bigger Difference.',
   'whyPlastic.body': 'Sachets and single-use plastic bags often end up polluting the environment because they are difficult to recycle. By choosing RR Board, you give low-value plastic a second chance, transforming it into functional boards for a variety of needs.',
   'whyPlastic.imageAlt': 'Low-value plastic waste collected before processing',
+  'whyPlastic.headingLines': 'Your Material\nChoice\nCan Make\nA Bigger\nDifference.',
+  'hero.imageAlt': 'Hands holding shredded sachet plastic',
+  'hero.socialLabel': 'Contact channels',
+  'hero.menu': 'Open menu',
+  'hero.close': 'Close menu',
+  'homeBanner.imageAlt': 'RR Board panels in different colour mixes',
+  'homeContact.heading': 'Have a project?\nSend your requirements,\nwe\'ll calculate together.',
+  'homeContact.getInTouch': 'Get In Touch',
 
   // Custom project page — Explore products
   'customProjectPage.explore.catalogue.body': "For brands, corporates, designers, and anyone exploring Repair's product possibilities.",
