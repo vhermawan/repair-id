@@ -20,8 +20,8 @@
 
     <header class="absolute inset-x-0 top-0 flex items-center justify-between px-5 pt-5 lg:pl-[30.3vw] lg:pr-[5.16vw] lg:pt-[4.25vw]">
       <NuxtLink to="/" class="lg:hidden flex items-start gap-2" aria-label="Repair Project">
-        <img src="/images/home/logo-mark.svg" alt="" />
-        <span class="flex flex-col gap-[6px]">
+        <img src="/images/home/logo-mark.svg" alt="" class="shrink-0" />
+        <span class="flex flex-col shrink-0 gap-[6px]">
           <img src="/images/home/logo-repair.svg" alt="" />
           <img src="/images/home/logo-project.svg" alt="" />
         </span>
@@ -66,7 +66,8 @@
       <p class="hero-entrance hero-entrance-delay-2 max-w-[420px] font-dm-sans text-base text-white lg:absolute lg:left-[75.78vw] lg:top-[13.1vw] lg:w-[19.08vw] lg:max-w-none lg:text-[clamp(16px,1.04vw,20px)]">
         {{ t('hero.body') }}
       </p>
-      <h1 class="hero-entrance hero-entrance-delay-1 order-first lg:order-none font-dm-sans font-semibold text-[40px] leading-[1.1] text-white whitespace-pre-line lg:absolute lg:left-[16.46vw] lg:bottom-[4.6vw] lg:text-[6.77vw] lg:leading-[1.17]">
+      <h1 class="hero-entrance hero-entrance-delay-1 order-first lg:order-none font-dm-sans font-semibold text-[40px] leading-[1.1] text-white whitespace-pre-line lg:absolute lg:left-[16.46vw] lg:bottom-[4.6vw] lg:leading-[1.17]"
+        :class="locale === 'id' ? 'lg:text-[5.95vw]' : 'lg:text-[6.77vw]'">
         {{ t('hero.label') }}
       </h1>
     </div>

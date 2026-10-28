@@ -12,11 +12,12 @@
         v-motion
         :initial="{ opacity: 0, y: 24 }"
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-        class="font-dm-sans text-[40px] leading-[1.05] uppercase text-white lg:text-[5vw] lg:leading-[1.04]"
+        class="font-dm-sans text-[40px] leading-[1.05] uppercase text-white"
+        :class="locale === 'id' ? 'lg:text-[4.43vw] lg:leading-[1.024]' : 'lg:text-[5vw] lg:leading-[1.04]'"
       >
         <span
           v-for="(line, i) in headingLines" :key="i"
-          class="block"
+          class="block lg:whitespace-nowrap"
           :style="{ paddingLeft: `${indents[i] ?? 0}em` }"
         >
           {{ line }}
@@ -36,8 +37,8 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
-const indents = [0, 0, 2.6, 1.45, 1.45]
+const indents = computed(() => locale.value === 'id' ? [0, 0, 2.13, 0.79, 0.79] : [0, 0, 2.6, 1.45, 1.45])
 const headingLines = computed(() => t('whyPlastic.headingLines').split('\n'))
 </script>
