@@ -62,7 +62,7 @@
     </header>
 
     <div class="absolute inset-x-0 bottom-0 flex flex-col gap-6 px-5 pb-10 lg:static lg:contents">
-      <p class="hero-entrance hero-entrance-delay-2 max-w-[420px] font-dm-sans text-base text-white lg:absolute lg:left-[75.78vw] lg:top-[13.1vw] lg:w-[19.08vw] lg:max-w-none lg:text-[clamp(16px,1.04vw,20px)]">
+      <p class="hero-entrance hero-entrance-delay-2 max-w-[420px] font-dm-sans text-lg leading-snug text-white lg:absolute lg:left-[73.34vw] lg:top-[13.1vw] lg:w-[21.5vw] lg:max-w-none lg:text-[clamp(18px,1.25vw,24px)]">
         {{ t('hero.body') }}
       </p>
       <h1 class="hero-entrance hero-entrance-delay-1 order-first lg:order-none font-dm-sans font-semibold text-[40px] leading-[1.1] text-white whitespace-pre-line lg:absolute lg:left-[16.46vw] lg:bottom-[4.6vw] lg:leading-[1.17]"
