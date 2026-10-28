@@ -1,7 +1,7 @@
 <template>
   <div>
     <aside class="hidden lg:block fixed inset-y-0 left-0 z-40 w-[12.86vw] bg-black/25">
-      <NuxtLink to="/" class="absolute left-[2.74vw] top-[8.58vh] flex items-start gap-[0.44vw]" aria-label="Repair Project">
+      <NuxtLink to="/" class="absolute left-[2.74vw] top-[8.58vh] flex items-start gap-[0.44vw]" aria-label="Repair Project" @click="goHome">
         <img src="/images/home/logo-mark.svg" alt="" class="shrink-0 w-[1.72vw] h-auto" />
         <span class="flex flex-col shrink-0 gap-[0.27vw]">
           <img src="/images/home/logo-repair.svg" alt="" class="w-[4.33vw] h-auto" />
@@ -71,7 +71,7 @@
         @keydown.esc="open = false"
       >
         <div class="flex items-start justify-between lg:absolute lg:left-[6.82vw] lg:top-[8.1vh]">
-          <NuxtLink to="/" class="flex items-start gap-[9.6px] lg:gap-[0.5vw]" aria-label="Repair Project" @click="open = false">
+          <NuxtLink to="/" class="flex items-start gap-[9.6px] lg:gap-[0.5vw]" aria-label="Repair Project" @click="goHome">
             <img src="/images/home/logo-mark.svg" alt="" class="shrink-0 lg:w-[1.96vw] lg:h-auto" />
             <span class="flex flex-col shrink-0 gap-[6px] lg:gap-[0.31vw]">
               <img src="/images/home/logo-repair.svg" alt="" class="lg:w-[4.92vw] lg:h-auto" />
@@ -124,6 +124,13 @@ const contacts = [
   { short: 'EMAIL', label: 'Email', value: 'carissa@repairproject.id', href: 'mailto:carissa@repairproject.id' },
   { short: 'IG', label: 'Instagram', value: '@repairproject.id', href: 'https://www.instagram.com/repairproject.id/' },
 ]
+
+async function goHome() {
+  open.value = false
+  await nextTick()
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' })
+}
 
 watch(open, async (isOpen) => {
   document.body.style.overflow = isOpen ? 'hidden' : ''
