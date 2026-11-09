@@ -1,67 +1,46 @@
 <template>
-  <section class="w-full flex flex-col gap-10 lg:gap-12 p-[64px_20px] lg:p-[96px_48px] bg-white">
-    <div
-      v-motion
-      :initial="{ opacity: 0, y: 32 }"
-      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-      class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[64px] lg:justify-between lg:items-end"
-    >
-      <div class="lg:flex-1 lg:max-w-[780px] flex flex-col gap-3 lg:gap-[14px]">
-        <h2 class="font-dm-sans font-bold type-h2 text-navy">
-          {{ t('rrPage.specs.heading') }}
-        </h2>
-      </div>
-      <p class="lg:w-[480px] xl:w-[560px] 2xl:w-[620px] shrink-0 font-dm-sans type-body text-[#0C2244]">
-        {{ t('rrPage.specs.sub') }}
-      </p>
-    </div>
+  <section class="w-full bg-white px-5 py-14 lg:pl-[12.86vw] lg:pr-[5.12vw] lg:pt-[2.6vw] lg:pb-[2.6vw]">
+    <h2 class="pb-4 border-b border-[#787878] font-dm-sans text-[32px] leading-tight uppercase tracking-[0.05em] text-black lg:pl-[5.3vw] lg:pb-[1.04vw] lg:text-[40px] lg:leading-[80px]">
+      {{ t('rrPage.specs.heading') }}
+    </h2>
 
-    <div class="w-full flex flex-col lg:flex-row gap-8 lg:gap-4 items-start">
-      <div
-        v-motion
-        :initial="{ opacity: 0, x: 40 }"
-        :visible-once="{ opacity: 1, x: 0, transition: { duration: 700, delay: 100 } }"
-        class="w-full lg:w-[520px] shrink-0 flex flex-col gap-[2px]"
-      >
-        <img src="/images/rr-board/board-1.webp" :alt="t('rrPage.specs.imageAlt')" class="w-full h-[240px] sm:h-[300px] lg:h-[360px] object-cover" />
-        <div class="w-full flex gap-[2px]">
-          <div v-for="finish in finishes" :key="finish.labelKey" class="relative flex-1 h-[110px] lg:h-[130px] overflow-hidden">
-            <img :src="finish.image" :alt="t(finish.labelKey)" class="absolute inset-0 w-full h-full object-cover" />
-            <span class="absolute left-2.5 bottom-2.5 font-dm-sans font-medium type-micro tracking-[1.2px] text-cream">{{ t(finish.labelKey) }}</span>
+    <div class="mt-8 flex flex-col gap-10 font-dm-sans text-base text-black lg:mt-[2.97vw] lg:flex-row lg:gap-[3.57vw] lg:pl-[3.74vw] lg:text-[clamp(16px,1.04vw,20px)]">
+      <img
+        src="/images/rr-board/redesign/board.webp"
+        :alt="t('rrPage.specs.imageAlt')"
+        loading="lazy"
+        class="w-full aspect-[613/735] object-cover object-bottom lg:w-[31.94vw] shrink-0"
+      />
+
+      <div class="flex-1 min-w-0 lg:pt-[1.3vw]">
+        <p class="max-w-[528px] leading-[1.3] lg:max-w-[27.52vw]">{{ t('rrPage.specs.sub') }}</p>
+
+        <dl class="mt-6 border-t border-[#787878] lg:mt-[2.2vw]">
+          <div
+            v-for="spec in specs" :key="spec"
+            class="grid grid-cols-[110px_1fr] gap-x-3 py-3 border-b border-[#787878] items-center lg:grid-cols-[12.45vw_14.3vw_1fr] lg:gap-x-0 lg:py-0 lg:h-[3.97vw]"
+          >
+            <dt class="text-[#787878]">{{ t(`rrPage.specs.${spec}.key`) }}</dt>
+            <dd>{{ t(`rrPage.specs.${spec}.value`) }}</dd>
+            <dd class="col-start-2 mt-1 text-sm text-[#A1A1A1] lg:col-start-3 lg:mt-0 lg:text-right lg:text-[clamp(13px,0.78vw,15px)]">{{ t(`rrPage.specs.${spec}.note`) }}</dd>
           </div>
-        </div>
-      </div>
 
-      <div
-        v-motion
-        :initial="{ opacity: 0, x: -40 }"
-        :visible-once="{ opacity: 1, x: 0, transition: { duration: 700, delay: 200 } }"
-        class="flex-1 w-full flex flex-col border-t border-[#0614281A]"
-      >
-        <div
-          v-for="spec in specs" :key="spec.prefix"
-          class="flex flex-col sm:flex-row gap-2 sm:gap-8 sm:justify-between sm:items-end py-5 lg:py-[22px] border-b border-[#0614281A]"
-        >
-          <div class="flex flex-col gap-1.5">
-            <span class="font-dm-sans font-medium type-micro tracking-[1.2px] text-blue-accent">{{ t(`${spec.prefix}.key`) }}</span>
-            <span class="font-dm-sans font-semibold type-h4 text-navy">{{ t(`${spec.prefix}.value`) }}</span>
+          <div class="grid grid-cols-[110px_1fr] gap-x-3 py-3 lg:grid-cols-[12.45vw_1fr] lg:gap-x-0 lg:py-0 lg:pt-[1.4vw]">
+            <dt class="text-[#787878]">{{ t('rrPage.specs.color.key') }}</dt>
+            <dd class="leading-[1.3] lg:max-w-[25.53vw]">{{ t('rrPage.specs.color.body') }}</dd>
           </div>
-          <span class="sm:w-[200px] shrink-0 font-dm-sans type-caption text-navy/45 sm:text-right">{{ t(`${spec.prefix}.note`) }}</span>
-        </div>
+        </dl>
 
-        <div class="flex flex-col sm:flex-row gap-2 sm:gap-8 sm:justify-between sm:items-end py-5 lg:p-[24px_0_26px]">
-          <div class="flex flex-col gap-1.5">
-            <span class="font-dm-sans font-medium type-micro tracking-[1.2px] text-blue-accent">{{ t('rrPage.specs.price.key') }}</span>
-            <span class="font-dm-sans font-semibold type-h4 text-navy">{{ t('rrPage.specs.price.value') }}</span>
-          </div>
-          <span class="sm:w-[200px] shrink-0 font-dm-sans type-caption text-navy/45 sm:text-right">{{ t('rrPage.specs.price.note') }}</span>
-        </div>
+        <ul class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:mt-[2.2vw] lg:flex lg:justify-between lg:gap-0">
+          <li v-for="finish in finishes" :key="finish.labelKey" class="flex flex-col gap-3 lg:w-[7.81vw] lg:gap-[1vw]">
+            <img :src="finish.image" :alt="t(finish.labelKey)" loading="lazy" class="w-full aspect-square object-cover" />
+            <span>{{ t(finish.labelKey) }}</span>
+          </li>
+        </ul>
 
-        <div class="flex flex-col gap-3 pt-[22px]">
-          <span class="font-dm-sans font-medium type-micro tracking-[1.2px] text-blue-accent">{{ t('rrPage.specs.color.key') }}</span>
-          <p class="font-dm-sans font-semibold type-h5 text-navy">{{ t('rrPage.specs.color.body') }}</p>
-          <p class="font-dm-sans type-body-sm text-[#0C2244]">{{ t('rrPage.specs.color.note') }}</p>
-        </div>
+        <p class="mt-6 text-sm leading-[22px] text-[#A1A1A1] lg:mt-[2.2vw] lg:ml-[12.45vw] lg:text-[clamp(13px,0.78vw,15px)] lg:leading-[1.47]">
+          {{ t('rrPage.specs.color.note') }}
+        </p>
       </div>
     </div>
   </section>
@@ -70,14 +49,12 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-const finishes = [
-  { image: '/images/rr-board/board-2.webp', labelKey: 'rrPage.specs.finishMozaic' },
-  { image: '/images/rr-board/board-3.webp', labelKey: 'rrPage.specs.finishDark' },
-]
+const specs = ['size', 'thickness', 'weight', 'price']
 
-const specs = [
-  { prefix: 'rrPage.specs.size' },
-  { prefix: 'rrPage.specs.thickness' },
-  { prefix: 'rrPage.specs.weight' },
+const finishes = [
+  { image: '/images/rr-board/redesign/finish-mozaic.webp', labelKey: 'rrPage.specs.finishMozaic' },
+  { image: '/images/rr-board/redesign/finish-dark.webp', labelKey: 'rrPage.specs.finishDark' },
+  { image: '/images/rr-board/redesign/finish-red.webp', labelKey: 'rrPage.specs.finishRed' },
+  { image: '/images/rr-board/redesign/finish-terra.webp', labelKey: 'rrPage.specs.finishTerra' },
 ]
 </script>

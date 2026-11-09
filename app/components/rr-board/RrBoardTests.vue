@@ -1,84 +1,64 @@
 <template>
-  <section class="w-full flex flex-col gap-8 lg:gap-10 p-[64px_20px] lg:p-[96px_48px] bg-cream">
-    <div
-      v-motion
-      :initial="{ opacity: 0, y: 32 }"
-      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-      class="w-full flex flex-col gap-3 lg:gap-[14px] items-center text-center"
-    >
-      <h2 class="max-w-[820px] font-dm-sans font-bold type-h2 text-navy">
-        {{ t('rrPage.tests.heading') }}
-      </h2>
-    </div>
+  <section class="w-full bg-white font-dm-sans pb-14 lg:pb-[3.77vw]">
+    <h2 class="px-5 text-[40px] leading-[1.05] uppercase tracking-[0.05em] text-black lg:px-0 lg:ml-[17.68vw] lg:w-[34vw] lg:text-[4.17vw] lg:leading-none">
+      {{ t('rrPage.tests.heading') }}
+    </h2>
 
     <div
       ref="track"
-      class="w-full flex gap-4 overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      class="mt-8 flex gap-4 py-2 pl-5 pr-[calc(22vw-20px)] overflow-x-auto snap-x snap-mandatory scroll-pl-5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:pr-[calc(55vw-20px)] lg:mt-[5.5vw] lg:gap-[2.26vw] lg:pl-[17.68vw] lg:pr-[59.68vw] lg:scroll-pl-[17.68vw]"
       @scroll.passive="sync"
+      @pointerleave="hovered = null"
     >
       <div
         v-for="(test, i) in tests" :key="test.key"
-        v-motion
-        :initial="{ opacity: 0, y: 24 }"
-        :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: i * 100 } }"
-        class="snap-center sm:snap-start shrink-0 w-full sm:w-[calc((100%-16px)/2)] lg:w-[calc((100%-48px)/4)] flex flex-col gap-3 py-3 lg:p-[14px] border-t border-[#0614281A]"
+        class="relative snap-start shrink-0 w-[78vw] aspect-[435/541] overflow-hidden bg-[#E6E2D8] shadow-[0_2px_6px_rgba(0,0,0,0.25)] transition-opacity duration-300 ease-out md:w-[45vw] lg:w-[22.64vw]"
+        :class="focused === i ? 'opacity-100' : 'opacity-50'"
+        @pointerenter="onPointerEnter($event, i)"
+        @focusin="hovered = i"
       >
-        <div class="relative w-full h-[400px] overflow-hidden bg-[#E6E2D8]">
-          <iframe
-            v-if="playing === i"
-            :src="`https://www.youtube-nocookie.com/embed/${test.youtubeId}?autoplay=1&rel=0&playsinline=1`"
-            :title="t(test.key)"
-            allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-            allowfullscreen
-            class="absolute inset-0 w-full h-full border-0"
-          />
-          <button
-            v-else
-            type="button"
-            :aria-label="`${t('rrPage.tests.play')}: ${t(test.key)}`"
-            class="group absolute inset-0 w-full h-full flex items-center justify-center"
-            @click="playing = i"
-          >
-            <img
-              :src="`https://i.ytimg.com/vi/${test.youtubeId}/oar2.jpg`"
-              alt=""
-              loading="lazy"
-              class="absolute inset-0 w-full h-full object-cover"
-              @error="onThumbError($event, test.youtubeId)"
-            >
-            <span class="relative w-12 h-12 flex items-center justify-center rounded-full bg-white/90 text-navy transition-transform duration-200 group-hover:scale-105 group-active:scale-95">
-              <Icon name="lucide:play" class="w-5 h-5 translate-x-[1px]" />
-            </span>
-          </button>
-        </div>
-        <span class="px-1 font-dm-sans type-body font-semibold text-navy">{{ t(test.key) }}</span>
+        <iframe
+          v-if="playing === i"
+          :src="`https://www.youtube-nocookie.com/embed/${test.youtubeId}?autoplay=1&rel=0&playsinline=1`"
+          :title="t(test.key)"
+          allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+          allowfullscreen
+          class="absolute inset-0 w-full h-full border-0"
+        />
+        <button
+          v-else
+          type="button"
+          :aria-label="`${t('rrPage.tests.play')}: ${t(test.key)}`"
+          class="group absolute inset-0 w-full h-full flex items-center justify-center"
+          @click="playing = i"
+        >
+          <RrBoardCrop :src="test.poster" alt="" :crop="test.crop" />
+          <span class="relative w-12 h-12 flex items-center justify-center rounded-full bg-white/90 text-black transition-transform duration-200 group-hover:scale-105 group-active:scale-95">
+            <Icon name="lucide:play" class="w-5 h-5 translate-x-[1px]" />
+          </span>
+        </button>
       </div>
     </div>
 
-    <div class="w-full flex items-center justify-center gap-4">
-      <span class="font-dm-sans font-medium type-micro tracking-[1.2px] text-[#0C2244] tabular-nums">
-        {{ String(active + 1).padStart(2, '0') }} / {{ String(positions).padStart(2, '0') }}
-      </span>
-      <div class="flex gap-2">
-        <button
-          type="button"
-          :aria-label="t('rrPage.tests.prev')"
-          :disabled="!scrollable || atStart"
-          class="w-[38px] h-[38px] flex items-center justify-center [outline:1px_solid_#0614281A] [outline-offset:-0.5px] rounded-full transition-opacity disabled:opacity-40"
-          @click="go(-1)"
-        >
-          <Icon name="lucide:arrow-left" class="w-[15px] h-[15px] text-navy" />
-        </button>
-        <button
-          type="button"
-          :aria-label="t('rrPage.tests.next')"
-          :disabled="!scrollable || atEnd"
-          class="w-[38px] h-[38px] flex items-center justify-center [outline:1px_solid_#0614281A] [outline-offset:-0.5px] rounded-full transition-opacity disabled:opacity-40"
-          @click="go(1)"
-        >
-          <Icon name="lucide:arrow-right" class="w-[15px] h-[15px] text-navy" />
-        </button>
-      </div>
+    <div class="mt-6 flex justify-center gap-[1.35vw] lg:mt-[4.86vw] lg:pl-[12.86vw]">
+      <button
+        type="button"
+        :aria-label="t('rrPage.tests.prev')"
+        :disabled="active === 0"
+        class="transition-opacity disabled:opacity-40"
+        @click="go(-1)"
+      >
+        <img src="/images/rr-board/redesign/carousel-prev.svg" alt="" width="54" height="54" class="w-[54px] h-[54px] -scale-x-100 lg:w-[2.81vw] lg:h-[2.81vw]" />
+      </button>
+      <button
+        type="button"
+        :aria-label="t('rrPage.tests.next')"
+        :disabled="active === tests.length - 1"
+        class="transition-opacity disabled:opacity-40"
+        @click="go(1)"
+      >
+        <img src="/images/rr-board/redesign/carousel-next.svg" alt="" width="54" height="54" class="w-[54px] h-[54px] lg:w-[2.81vw] lg:h-[2.81vw]" />
+      </button>
     </div>
   </section>
 </template>
@@ -86,52 +66,38 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-const tests = [
-  { key: 'rrPage.tests.t1', youtubeId: 'yfqzOj6eI0I' },
-  { key: 'rrPage.tests.t3', youtubeId: 'IJq92vQhUGs' },
-  { key: 'rrPage.tests.t2', youtubeId: 'id2dW-Vegg8' },
-  { key: 'rrPage.tests.t4', youtubeId: 'mzQPqyLXbm0' },
-  { key: 'rrPage.tests.t5', youtubeId: '1mGeP-gur9s' },
+const POSTER_CROP: [number, number, number, number] = [199.97, 100.42, -49.99, -0.21]
+
+const tests: { key: string, youtubeId: string, poster: string, crop: [number, number, number, number] }[] = [
+  { key: 'rrPage.tests.t5', youtubeId: '1mGeP-gur9s', poster: '/images/rr-board/redesign/test-1.webp', crop: POSTER_CROP },
+  { key: 'rrPage.tests.t4', youtubeId: 'mzQPqyLXbm0', poster: '/images/rr-board/redesign/test-2.webp', crop: POSTER_CROP },
+  { key: 'rrPage.tests.t2', youtubeId: 'id2dW-Vegg8', poster: '/images/rr-board/redesign/test-3.webp', crop: [200.19, 100.53, -49.99, -0.26] },
+  { key: 'rrPage.tests.t3', youtubeId: 'IJq92vQhUGs', poster: '/images/rr-board/redesign/test-4.webp', crop: [203.35, 102.12, -52.14, -1.06] },
+  { key: 'rrPage.tests.t1', youtubeId: 'yfqzOj6eI0I', poster: '/images/rr-board/redesign/test-5.webp', crop: POSTER_CROP },
 ]
 
-const playing = ref<number | null>(null)
-
-function onThumbError(e: Event, id: string) {
-  const img = e.target as HTMLImageElement
-  const fallback = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`
-  if (img.src !== fallback) img.src = fallback
-}
-
 const track = ref<HTMLElement | null>(null)
+const playing = ref<number | null>(null)
 const active = ref(0)
-const scrollable = ref(false)
-const atStart = ref(true)
-const atEnd = ref(false)
-const positions = ref(1)
+const hovered = ref<number | null>(null)
+const focused = computed(() => hovered.value ?? active.value)
+
+function onPointerEnter(e: PointerEvent, i: number) {
+  if (e.pointerType === 'mouse') hovered.value = i
+}
 
 function cardStep() {
   const el = track.value
   const card = el?.firstElementChild as HTMLElement | null
-  return card ? card.offsetWidth + 16 : 1
+  if (!el || !card) return 1
+  return card.offsetWidth + (parseFloat(getComputedStyle(el).columnGap) || 0)
 }
 
 function sync() {
   const el = track.value
   if (!el) return
-  scrollable.value = el.scrollWidth > el.clientWidth + 2
-  atStart.value = el.scrollLeft <= 2
-  atEnd.value = el.scrollLeft + el.clientWidth >= el.scrollWidth - 2
-  const step = cardStep()
-  const maxScroll = el.scrollWidth - el.clientWidth
-  positions.value = maxScroll > 2 ? Math.ceil((maxScroll - 2) / step) + 1 : 1
-  active.value = atEnd.value ? positions.value - 1 : Math.min(Math.round(el.scrollLeft / step), positions.value - 1)
+  active.value = Math.min(Math.round(el.scrollLeft / cardStep()), tests.length - 1)
 }
-
-onMounted(() => {
-  sync()
-  window.addEventListener('resize', sync, { passive: true })
-})
-onUnmounted(() => window.removeEventListener('resize', sync))
 
 function go(dir: number) {
   track.value?.scrollBy({ left: dir * cardStep(), behavior: 'smooth' })

@@ -1,36 +1,37 @@
 <template>
-  <section class="w-full flex flex-col gap-10 lg:gap-12 p-[64px_20px] lg:p-[96px_48px] bg-cream">
-    <div
-      v-motion
-      :initial="{ opacity: 0, y: 32 }"
-      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-      class="w-full flex flex-col lg:flex-row gap-5 lg:gap-[64px] lg:justify-between lg:items-end"
-    >
-      <h2 class="lg:flex-1 lg:max-w-[780px] font-dm-sans font-bold type-h2 text-navy whitespace-pre-line">
-        {{ t('rrPage.colors.heading') }}
+  <section class="relative w-full bg-[#2042EA]">
+    <div class="flex flex-col justify-between gap-10 px-5 py-14 text-white font-dm-sans lg:sticky lg:top-0 lg:h-screen lg:gap-[2vw] lg:px-0 lg:pl-[18.17vw] lg:pt-[4.56vw] lg:pb-[5.36vw]">
+      <h2 class="text-[40px] leading-[1.1] uppercase tracking-[0.05em] lg:text-[4.69vw] lg:leading-[1.11]">
+        <span
+          v-for="(line, i) in headingLines" :key="i"
+          class="block whitespace-nowrap"
+          :style="{ paddingLeft: `${indents[i] ?? 0}em` }"
+        >{{ line || ' ' }}</span>
       </h2>
-      <div class="lg:w-[480px] xl:w-[560px] 2xl:w-[620px] shrink-0 flex flex-col gap-3 font-dm-sans type-body text-[#0C2244]">
+      <div class="flex flex-col gap-6 text-base lg:w-[34.12vw] lg:gap-[1.3vw] lg:text-[clamp(16px,1.04vw,20px)]">
         <p>{{ t('rrPage.colors.body') }}</p>
         <p>{{ t('rrPage.colors.body2') }}</p>
       </div>
     </div>
 
-    <div class="w-full flex flex-col gap-4">
-      <span class="font-dm-sans font-medium type-caption tracking-[1.2px] text-blue-accent">{{ t('rrPage.colors.label') }}</span>
-      <div class="w-full grid grid-cols-1 sm:grid-cols-3 gap-2 lg:gap-3">
-        <figure
-          v-for="(photo, i) in photos" :key="photo.image"
-          v-motion
-          :initial="{ opacity: 0, y: 24 }"
-          :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: i * 80 } }"
-          class="group relative w-full aspect-square overflow-hidden"
+    <div class="relative z-10 flex flex-col gap-2 px-5 pb-14 lg:-mt-[100vh] lg:ml-[62.58vw] lg:w-[32.53vw] lg:gap-0 lg:p-0">
+      <figure
+        v-for="(photo, i) in photos" :key="photo.image"
+        class="group relative w-full aspect-[625/1080] overflow-hidden bg-[#D9D9D9]"
+      >
+        <button
+          type="button"
+          class="absolute inset-0 w-full h-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-white"
+          :aria-label="`${t('rrPage.colors.zoom')}: ${photo.project}`"
+          @click="open(i)"
         >
-          <button type="button" class="absolute inset-0 w-full h-full cursor-zoom-in focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-accent" :aria-label="`${t('rrPage.colors.zoom')}: ${photo.project}`" @click="open(i)">
-            <img :src="photo.image" :alt="photo.project" loading="lazy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105" />
-          </button>
-          <figcaption class="pointer-events-none absolute left-2.5 bottom-2.5 px-2.5 py-1 bg-navy/70 rounded-full font-dm-sans font-medium type-eyebrow text-white">{{ photo.project }}</figcaption>
-        </figure>
-      </div>
+          <RrBoardCrop v-if="photo.crop" :src="photo.image" :alt="photo.project" :crop="photo.crop" />
+          <img v-else :src="photo.image" :alt="photo.project" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-bottom" />
+        </button>
+        <figcaption class="pointer-events-none absolute left-4 bottom-4 font-dm-sans text-[22px] leading-none uppercase tracking-[0.05em] text-white lg:left-[3.41vw] lg:bottom-[2.4vw] lg:text-[1.56vw]">
+          {{ photo.project }}
+        </figcaption>
+      </figure>
     </div>
 
     <Teleport to="body">
@@ -73,12 +74,15 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
-const photos = [
-  { image: '/images/rr-board/manulife.webp', project: 'Manulife' },
-  { image: '/images/rr-board/aloha-1.webp', project: 'Aloha PIK 2' },
-  { image: '/images/rr-board/benedictus-1.webp', project: 'St. Benedictus' },
+const indents = computed(() => locale.value === 'en' ? [1.55, 0, 0, 0, 0.93] : [])
+const headingLines = computed(() => t('rrPage.colors.headingLines').split('\n'))
+
+const photos: { image: string, project: string, crop?: [number, number, number, number] }[] = [
+  { image: '/images/rr-board/redesign/manulife.webp', project: 'Manulife' },
+  { image: '/images/rr-board/redesign/aloha.webp', project: 'Aloha', crop: [158.33, 122.25, -29.16, -22.25] },
+  { image: '/images/rr-board/redesign/benedictus.webp', project: 'St. Benedictus', crop: [136.91, 105.72, -18.46, -5.72] },
 ]
 
 const active = ref<number | null>(null)
