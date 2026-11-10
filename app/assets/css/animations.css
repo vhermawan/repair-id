@@ -106,3 +106,31 @@
   from { opacity: 0; transform: translateY(-24px); }
   to   { opacity: 1; transform: none; }
 }
+
+/* RR Board applications: frame wipes open top-down while the photo settles from a zoomed, raised position */
+.rr-reveal[data-armed]:not(.is-revealed) {
+  clip-path: inset(0 0 100% 0);
+}
+
+.rr-reveal[data-armed]:not(.is-revealed) img {
+  scale: 1.25;
+  translate: 0 -8%;
+}
+
+.rr-reveal.is-revealed {
+  animation: rrWipeDown 1.2s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+.rr-reveal.is-revealed img {
+  animation: rrZoomSettle 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes rrWipeDown {
+  from { clip-path: inset(0 0 100% 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes rrZoomSettle {
+  from { scale: 1.25; translate: 0 -8%; }
+  to   { scale: 1; translate: 0 0; }
+}
