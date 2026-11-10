@@ -29,10 +29,10 @@
         <dl class="mt-6 border-t border-[#787878] lg:mt-[2.2vw]">
           <div
             v-for="spec in specs" :key="spec"
-            class="grid grid-cols-[110px_1fr] gap-x-3 py-3 border-b border-[#787878] items-center lg:grid-cols-[12.45vw_14.3vw_1fr] lg:gap-x-0 lg:py-0 lg:h-[3.97vw]"
+            class="grid grid-cols-[110px_1fr] gap-x-3 py-3 border-b border-[#787878] items-center lg:grid-cols-[12.45vw_max-content_1fr] lg:gap-x-[1.5vw] lg:py-0 lg:h-[3.97vw]"
           >
             <dt class="text-[#787878]">{{ t(`rrPage.specs.${spec}.key`) }}</dt>
-            <dd>{{ t(`rrPage.specs.${spec}.value`) }}</dd>
+            <dd class="lg:whitespace-nowrap">{{ t(`rrPage.specs.${spec}.value`) }}</dd>
             <dd class="col-start-2 mt-1 text-sm text-[#A1A1A1] lg:col-start-3 lg:mt-0 lg:text-right lg:text-[clamp(13px,0.78vw,15px)]">{{ t(`rrPage.specs.${spec}.note`) }}</dd>
           </div>
 
