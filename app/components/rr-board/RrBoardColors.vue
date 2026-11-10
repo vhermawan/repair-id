@@ -1,14 +1,22 @@
 <template>
   <section class="relative w-full bg-[#2042EA]">
     <div class="flex flex-col justify-between gap-10 px-5 py-14 text-white font-dm-sans lg:sticky lg:top-0 lg:h-screen lg:gap-[2vw] lg:px-0 lg:pl-[18.17vw] lg:pt-[4.56vw] lg:pb-[5.36vw]">
-      <h2 class="text-[40px] leading-[1.1] uppercase tracking-[0.05em] lg:text-[4.69vw] lg:leading-[1.11]">
+      <h2
+        v-motion
+        :initial="{ opacity: 0, y: 24 }"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
+        class="text-[40px] leading-[1.1] uppercase tracking-[0.05em] lg:text-[4.69vw] lg:leading-[1.11]">
         <span
           v-for="(line, i) in headingLines" :key="i"
           class="block whitespace-nowrap"
           :style="{ paddingLeft: `${indents[i] ?? 0}em` }"
         >{{ line || ' ' }}</span>
       </h2>
-      <div class="flex flex-col gap-6 text-base lg:w-[34.12vw] lg:gap-[1.3vw] lg:text-[clamp(16px,1.04vw,20px)]">
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 24 }"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 600, delay: 150 } }"
+        class="flex flex-col gap-6 text-base lg:w-[34.12vw] lg:gap-[1.3vw] lg:text-[clamp(16px,1.04vw,20px)]">
         <p>{{ t('rrPage.colors.body') }}</p>
         <p>{{ t('rrPage.colors.body2') }}</p>
       </div>
@@ -16,6 +24,9 @@
 
     <div class="relative z-10 flex flex-col gap-2 px-5 pb-14 lg:-mt-[100vh] lg:ml-[62.58vw] lg:w-[32.53vw] lg:gap-0 lg:p-0">
       <figure
+        v-motion
+        :initial="{ opacity: 0, y: 24 }"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
         v-for="(photo, i) in photos" :key="photo.image"
         class="group relative w-full aspect-[625/1080] overflow-hidden bg-[#D9D9D9]"
       >

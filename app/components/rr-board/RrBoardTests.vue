@@ -1,11 +1,18 @@
 <template>
   <section class="w-full bg-white font-dm-sans pb-14 lg:pb-[3.77vw]">
-    <h2 class="px-5 text-[40px] leading-[1.05] uppercase tracking-[0.05em] text-black lg:px-0 lg:ml-[17.68vw] lg:w-[34vw] lg:text-[4.17vw] lg:leading-none">
+    <h2
+      v-motion
+      :initial="{ opacity: 0, y: 24 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
+      class="px-5 text-[40px] leading-[1.05] uppercase tracking-[0.05em] text-black lg:px-0 lg:ml-[17.68vw] lg:w-[34vw] lg:text-[4.17vw] lg:leading-none">
       {{ t('rrPage.tests.heading') }}
     </h2>
 
     <div
       ref="track"
+      v-motion
+      :initial="{ opacity: 0, y: 24 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600, delay: 150 } }"
       class="mt-8 flex gap-4 py-2 pl-5 pr-[calc(22vw-20px)] overflow-x-auto snap-x snap-mandatory scroll-pl-5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:pr-[calc(55vw-20px)] lg:mt-[5.5vw] lg:gap-[2.26vw] lg:pl-[17.68vw] lg:pr-[59.68vw] lg:scroll-pl-[17.68vw]"
       @scroll.passive="sync"
       @pointerleave="hovered = null"

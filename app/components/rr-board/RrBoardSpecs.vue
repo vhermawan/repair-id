@@ -1,18 +1,29 @@
 <template>
   <section class="w-full bg-white px-5 py-14 lg:pl-[12.86vw] lg:pr-[5.12vw] lg:pt-[2.6vw] lg:pb-[2.6vw]">
-    <h2 class="pb-4 border-b border-[#787878] font-dm-sans text-[32px] leading-tight uppercase tracking-[0.05em] text-black lg:pl-[5.3vw] lg:pb-[1.04vw] lg:text-[40px] lg:leading-[80px]">
+    <h2
+      v-motion
+      :initial="{ opacity: 0, y: 24 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
+      class="pb-4 border-b border-[#787878] font-dm-sans text-[32px] leading-tight uppercase tracking-[0.05em] text-black lg:pl-[5.3vw] lg:pb-[1.04vw] lg:text-[40px] lg:leading-[80px]">
       {{ t('rrPage.specs.heading') }}
     </h2>
 
     <div class="mt-8 flex flex-col gap-10 font-dm-sans text-base text-black lg:mt-[2.97vw] lg:flex-row lg:gap-[3.57vw] lg:pl-[3.74vw] lg:text-[clamp(16px,1.04vw,20px)]">
       <img
+        v-motion
+        :initial="{ opacity: 0, y: 24 }"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 700, delay: 100 } }"
         src="/images/rr-board/redesign/board.webp"
         :alt="t('rrPage.specs.imageAlt')"
         loading="lazy"
         class="w-full aspect-[613/735] object-cover object-bottom lg:w-[31.94vw] shrink-0"
       />
 
-      <div class="flex-1 min-w-0 lg:pt-[1.3vw]">
+      <div
+        v-motion
+        :initial="{ opacity: 0, y: 24 }"
+        :visible-once="{ opacity: 1, y: 0, transition: { duration: 600, delay: 200 } }"
+        class="flex-1 min-w-0 lg:pt-[1.3vw]">
         <p class="max-w-[528px] leading-[1.3] lg:max-w-[27.52vw]">{{ t('rrPage.specs.sub') }}</p>
 
         <dl class="mt-6 border-t border-[#787878] lg:mt-[2.2vw]">
@@ -32,7 +43,13 @@
         </dl>
 
         <ul class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:mt-[2.2vw] lg:flex lg:justify-between lg:gap-0">
-          <li v-for="finish in finishes" :key="finish.labelKey" class="flex flex-col gap-3 lg:w-[7.81vw] lg:gap-[1vw]">
+          <li
+            v-for="(finish, i) in finishes" :key="finish.labelKey"
+            v-motion
+            :initial="{ opacity: 0, y: 24 }"
+            :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: i * 80 } }"
+            class="flex flex-col gap-3 lg:w-[7.81vw] lg:gap-[1vw]"
+          >
             <img :src="finish.image" :alt="t(finish.labelKey)" loading="lazy" class="w-full aspect-square object-cover" />
             <span>{{ t(finish.labelKey) }}</span>
           </li>

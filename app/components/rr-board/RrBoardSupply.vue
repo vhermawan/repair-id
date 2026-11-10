@@ -11,10 +11,18 @@
     >
       {{ t('rrSupply.heading') }}
     </h2>
-    <p class="relative max-w-[625px] text-base leading-[1.3] text-white lg:max-w-none lg:w-[32.53vw] lg:text-[clamp(16px,1.04vw,20px)]">
+    <p
+      v-motion
+      :initial="{ opacity: 0, y: 24 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600, delay: 150 } }"
+      class="relative max-w-[625px] text-base leading-[1.3] text-white lg:max-w-none lg:w-[32.53vw] lg:text-[clamp(16px,1.04vw,20px)]">
       {{ t('rrSupply.body') }}
     </p>
-    <div class="relative flex flex-col gap-3 sm:flex-row lg:gap-[1.1vw]">
+    <div
+      v-motion
+      :initial="{ opacity: 0, y: 24 }"
+      :visible-once="{ opacity: 1, y: 0, transition: { duration: 600, delay: 300 } }"
+      class="relative flex flex-col gap-3 sm:flex-row lg:gap-[1.1vw]">
       <a
         href="https://w4c.id/RepairForWorkshops"
         target="_blank"
