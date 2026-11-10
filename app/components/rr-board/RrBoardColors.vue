@@ -24,11 +24,12 @@
 
     <div class="relative z-10 flex flex-col gap-2 px-5 pb-14 lg:-mt-[100vh] lg:ml-[62.58vw] lg:w-[32.53vw] lg:gap-0 lg:p-0">
       <figure
+        v-for="(photo, i) in photos" :key="photo.image"
         v-motion
         :initial="{ opacity: 0, y: 24 }"
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-        v-for="(photo, i) in photos" :key="photo.image"
-        class="group relative w-full aspect-[625/1080] overflow-hidden bg-[#D9D9D9]"
+        class="group relative w-full overflow-hidden bg-[#D9D9D9]"
+        :class="photo.crop ? 'aspect-[625/1080]' : 'aspect-[3/4]'"
       >
         <button
           type="button"
@@ -37,7 +38,7 @@
           @click="open(i)"
         >
           <RrBoardCrop v-if="photo.crop" :src="photo.image" :alt="photo.project" :crop="photo.crop" />
-          <img v-else :src="photo.image" :alt="photo.project" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-bottom" />
+          <img v-else :src="photo.image" :alt="photo.project" loading="lazy" class="absolute inset-0 w-full h-full object-cover" />
         </button>
         <figcaption class="pointer-events-none absolute left-4 bottom-4 font-dm-sans text-[22px] leading-none uppercase tracking-[0.05em] text-white lg:left-[3.41vw] lg:bottom-[2.4vw] lg:text-[1.56vw]">
           {{ photo.project }}
