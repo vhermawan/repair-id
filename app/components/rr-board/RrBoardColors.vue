@@ -28,8 +28,7 @@
         v-motion
         :initial="{ opacity: 0, y: 24 }"
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-        class="group relative w-full overflow-hidden bg-[#D9D9D9]"
-        :class="photo.crop ? 'aspect-[625/1080]' : 'aspect-[3/4]'"
+        class="group relative w-full aspect-[625/1080] overflow-hidden bg-[#D9D9D9]"
       >
         <button
           type="button"
@@ -38,7 +37,7 @@
           @click="open(i)"
         >
           <RrBoardCrop v-if="photo.crop" :src="photo.image" :alt="photo.project" :crop="photo.crop" />
-          <img v-else :src="photo.image" :alt="photo.project" loading="lazy" class="absolute inset-0 w-full h-full object-cover" />
+          <img v-else :src="photo.image" :alt="photo.project" loading="lazy" class="absolute inset-0 w-full h-full object-fill" />
         </button>
         <figcaption class="pointer-events-none absolute left-4 bottom-4 font-dm-sans text-[22px] leading-none uppercase tracking-[0.05em] text-white lg:left-[3.41vw] lg:bottom-[2.4vw] lg:text-[1.56vw]">
           {{ photo.project }}
