@@ -5,7 +5,8 @@
       v-motion
       :initial="{ opacity: 0, y: 24 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
-      class="mb-4 max-w-[909px] font-dm-sans text-[30px] leading-[1.05] uppercase text-black whitespace-pre-line lg:absolute lg:left-0 lg:top-0 lg:mb-0 lg:max-w-none lg:text-[4.17vw] lg:leading-none"
+      class="mb-4 max-w-[909px] font-dm-sans text-[30px] leading-[1.05] uppercase tracking-[0.05em] text-black whitespace-pre-line lg:absolute lg:left-0 lg:top-0 lg:mb-0 lg:max-w-none lg:leading-none"
+      :class="locale === 'id' ? 'lg:text-[3.9vw]' : 'lg:text-[4.17vw]'"
     >
       {{ t('building.heading') }}
     </h2>
@@ -45,7 +46,7 @@
 <script setup lang="ts">
 import { NuxtLink } from '#components'
 
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 const cards = [
   { prefix: 'building.card1', inset: 'lg:pl-[1.54vw]', image: '/images/home/events.webp', href: 'https://w4c.id/RepairForEvents', position: 'lg:left-[20.4vw] lg:top-[16.6vw]' },
