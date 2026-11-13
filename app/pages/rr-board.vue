@@ -1,5 +1,6 @@
 <template>
   <div>
+    <HomeSideMenu />
     <RrBoardHero />
     <RrBoardSpecs />
     <RrBoardColors />
@@ -7,6 +8,10 @@
     <RrBoardTests />
     <RrBoardApplications />
     <RrBoardSupply />
-    <TheFooter />
+    <HomeContact />
   </div>
 </template>
+
+<script setup lang="ts">
+definePageMeta({ layout: 'home' })
+</script>

@@ -9,7 +9,7 @@ export default {
   'nav.contactInfo': 'halo@repair.id · +62 812 0000 0000',
 
   // Hero
-  'hero.label': 'From Sachets to Board,\nFrom Board to Product',
+  'hero.label': 'From Sachet to Board,\nFrom Board to Product',
   'hero.body': 'Repair develops circular material by transforming low-value plastics into a 1.2 m x 2.4 m board for commercial applications',
   'hero.headline': 'From Sachets to Board,\nFrom Board to Product.',
   'hero.intro': 'Often overlooked, sachets and plastic bags are now being transformed into materials for a variety of uses. From events to interiors and custom products, discover what can be created with Repair.',
@@ -53,7 +53,7 @@ export default {
   'rrBoardIntro.toilet.desc': 'Built for humid environments, RR Board offers a water-resistant, durable surface that can be fabricated into functional toilet cubicles.',
 
   // Building Application
-  'building.heading': 'What Can We Create Together?',
+  'building.heading': 'What Can We\nCreate Together?',
   'building.card1.title': 'Events & Activations',
   'building.card1.cta': 'Catalogue for Events',
   'building.card1.desc': 'Merchandise, signage, displays, and event equipment tailored to specific event needs and brand identity.',
@@ -81,7 +81,7 @@ export default {
 
   // Clients
   'clients.subtitle': 'Trusted by architects, contractors, and brands serious about materials.',
-  'clients.heading': 'Our Clients',
+  'clients.heading': 'Clients',
 
   // Footer
   'footer.heading': 'Have a project? Send your requirements, we\'ll calculate together.',
@@ -97,6 +97,7 @@ export default {
   'rrPage.hero.lede2': 'Made from 100% low-value plastics, including sachets/MLP, plastic bags, and food wrappers.',
   'rrPage.hero.ctaSpec': 'Download Spec Sheet',
   'rrPage.hero.statValue': '100%',
+  'rrPage.hero.cardLabel': 'Low-Value Plastic',
   'rrPage.hero.statCaption': 'Low-value plastic, nothing virgin',
   'rrPage.hero.noteTitle': 'Mozaic Finish',
   'rrPage.hero.noteBody': 'Pressed, sanded, and sealed — ready for cutting, routing, and CNC fabrication.',
@@ -106,21 +107,23 @@ export default {
   'rrPage.specs.heading': 'Specifications',
   'rrPage.specs.sub': 'Standard board format with selectable thickness, weight, and finish — ready for commercial fabrication.',
   'rrPage.specs.imageAlt': 'Stacked RR Board panels',
-  'rrPage.specs.finishMozaic': 'MOZAIC',
-  'rrPage.specs.finishDark': 'DARK',
-  'rrPage.specs.size.key': 'PANEL SIZE',
+  'rrPage.specs.finishMozaic': 'Mozaic',
+  'rrPage.specs.finishDark': 'Dark Coal',
+  'rrPage.specs.finishRed': 'Red',
+  'rrPage.specs.finishTerra': 'Terra',
+  'rrPage.specs.size.key': 'Panel Size',
   'rrPage.specs.size.value': '1.2 × 2.4 m',
   'rrPage.specs.size.note': 'Standard board format',
-  'rrPage.specs.thickness.key': 'THICKNESS',
+  'rrPage.specs.thickness.key': 'Thickness',
   'rrPage.specs.thickness.value': '10 / 12 / 16 mm',
   'rrPage.specs.thickness.note': 'Select per application',
-  'rrPage.specs.weight.key': 'WEIGHT',
+  'rrPage.specs.weight.key': 'Weight',
   'rrPage.specs.weight.value': '28 / 32 / 44 kg',
   'rrPage.specs.weight.note': 'Per board',
-  'rrPage.specs.price.key': 'PRICE',
+  'rrPage.specs.price.key': 'Price',
   'rrPage.specs.price.value': 'Start from Rp 140.000 per m²',
   'rrPage.specs.price.note': 'Depends on thickness & volume',
-  'rrPage.specs.color.key': 'COLORS & PATTERNS',
+  'rrPage.specs.color.key': 'Colors & Patterns',
   'rrPage.specs.color.body': "RR Board's natural color reflects the mix of recycled plastics used.",
   'rrPage.specs.color.note': 'Selected colors are available for 10 mm and 12 mm boards only, subject to existing stock, with an additional Rp25,000 charge. Once a color is sold out, it cannot be reordered.',
 
@@ -149,6 +152,7 @@ export default {
 
   // RR Board page — S4 Applications
   'rrPage.apps.heading': 'Top RR Board Applications',
+  'rrPage.apps.headingLines': 'Top RR Board\nApplications',
   'rrPage.apps.sub': 'Designed for versatility, RR Board can be fabricated into various applications across architecture, interiors, and furniture.',
   'rrPage.apps.client': 'CLIENT',
   'rrPage.apps.a1.title': 'Facade & Cladding',
@@ -167,7 +171,9 @@ export default {
   'rrPage.apps.a3.tag1': 'Furniture',
   'rrPage.apps.a3.tag2': 'Tabletop',
   'rrPage.apps.a3.tag3': 'Custom',
+  'rrPage.apps.a3.client': 'TUKU, Cirendeu',
   'rrPage.colors.heading': 'Naturally Unique.\nBeautifully Unrepeatable.',
+  'rrPage.colors.headingLines': 'Naturally\nUnique.\n\nBeautifully\nUnrepeatable.',
   'rrPage.colors.body': 'No two RR Boards look exactly alike. Their natural colors and patterns are shaped by the recycled plastics within, making every board one of a kind.',
   'rrPage.colors.body2': 'Discover how our clients turn these unexpected patterns into beautiful, functional designs.',
   'rrPage.colors.label': 'Natural Colors in Real Projects',
@@ -318,6 +324,14 @@ export default {
   'whyPlastic.heading': 'Your Material Choice Can Make a Bigger Difference.',
   'whyPlastic.body': 'Sachets and single-use plastic bags often end up polluting the environment because they are difficult to recycle. By choosing RR Board, you give low-value plastic a second chance, transforming it into functional boards for a variety of needs.',
   'whyPlastic.imageAlt': 'Low-value plastic waste collected before processing',
+  'whyPlastic.headingLines': 'Your Material\nChoice\nCan Make\nA Bigger\nDifference.',
+  'hero.imageAlt': 'Hands holding shredded sachet plastic',
+  'hero.socialLabel': 'Contact channels',
+  'hero.menu': 'Open menu',
+  'hero.close': 'Close menu',
+  'homeBanner.imageAlt': 'RR Board panels in different colour mixes',
+  'homeContact.heading': 'Have a project?\nSend your requirements,\nwe\'ll calculate together.',
+  'homeContact.getInTouch': 'Get In Touch',
 
   // Custom project page — Explore products
   'customProjectPage.explore.catalogue.body': "For brands, corporates, designers, and anyone exploring Repair's product possibilities.",

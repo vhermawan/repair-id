@@ -22,7 +22,7 @@ export default {
   'hero.metric3.label': 'dapat dilebur ulang',
 
   // Impact
-  'impact.heading': 'DAMPAK KAMI',
+  'impact.heading': 'DAMPAK\nKAMI',
   'impact.stat1.value': '34,000 kg',
   'impact.stat1.desc': 'Plastik bernilai rendah telah diolah',
   'impact.stat2.value': '2,500 produk',
@@ -53,7 +53,7 @@ export default {
   'rrBoardIntro.toilet.desc': 'Dibangun untuk lingkungan lembap, RR Board menawarkan permukaan tahan air dan tahan lama yang dapat difabrikasi menjadi kubikel toilet fungsional.',
 
   // Building Application
-  'building.heading': 'Apa yang Bisa Kita Wujudkan Bersama?',
+  'building.heading': 'Apa yang Bisa Kita\nWujudkan Bersama?',
   'building.card1.title': 'Event & Aktivasi',
   'building.card1.cta': 'Katalog untuk Event',
   'building.card1.desc': 'Merchandise, signage, display, dan perlengkapan event yang dibuat sesuai kebutuhan acara dan identitas brand.',
@@ -81,7 +81,7 @@ export default {
 
   // Clients
   'clients.subtitle': 'Dipercaya arsitek, kontraktor, dan brand yang serius soal material.',
-  'clients.heading': 'Klien Kami',
+  'clients.heading': 'Klien',
 
   // Footer
   'footer.heading': 'Punya proyek? Kirim kebutuhan Anda, kami hitung bersama.',
@@ -97,6 +97,7 @@ export default {
   'rrPage.hero.lede2': 'RR Board dibuat dari 100% plastik bernilai rendah, termasuk sachet/MLP, kantong plastik, dan kemasan makanan.',
   'rrPage.hero.ctaSpec': 'Unduh Spesifikasi Material',
   'rrPage.hero.statValue': '100%',
+  'rrPage.hero.cardLabel': 'Plastik Bernilai Rendah',
   'rrPage.hero.statCaption': 'Plastik bernilai rendah, tanpa bahan baru',
   'rrPage.hero.noteTitle': 'Finishing Mozaic',
   'rrPage.hero.noteBody': 'Dipres, diamplas, dan dilapisi — siap dipotong, di-router, dan difabrikasi CNC.',
@@ -106,21 +107,23 @@ export default {
   'rrPage.specs.heading': 'Spesifikasi',
   'rrPage.specs.sub': 'Format papan standar dengan pilihan ketebalan, berat, dan finishing — siap untuk fabrikasi komersial.',
   'rrPage.specs.imageAlt': 'Tumpukan panel RR Board',
-  'rrPage.specs.finishMozaic': 'MOZAIC',
-  'rrPage.specs.finishDark': 'DARK',
-  'rrPage.specs.size.key': 'UKURAN PANEL',
+  'rrPage.specs.finishMozaic': 'Mozaic',
+  'rrPage.specs.finishDark': 'Dark Coal',
+  'rrPage.specs.finishRed': 'Merah',
+  'rrPage.specs.finishTerra': 'Terra',
+  'rrPage.specs.size.key': 'Ukuran Panel',
   'rrPage.specs.size.value': '1,2 × 2,4 m',
   'rrPage.specs.size.note': 'Format papan standar',
-  'rrPage.specs.thickness.key': 'KETEBALAN',
+  'rrPage.specs.thickness.key': 'Ketebalan',
   'rrPage.specs.thickness.value': '10 / 12 / 16 mm',
   'rrPage.specs.thickness.note': 'Pilih sesuai aplikasi',
-  'rrPage.specs.weight.key': 'BERAT',
+  'rrPage.specs.weight.key': 'Berat',
   'rrPage.specs.weight.value': '28 / 32 / 44 kg',
   'rrPage.specs.weight.note': 'Per papan',
-  'rrPage.specs.price.key': 'HARGA',
+  'rrPage.specs.price.key': 'Harga',
   'rrPage.specs.price.value': 'Mulai dari Rp 140.000 per m²',
   'rrPage.specs.price.note': 'Tergantung ketebalan & volume',
-  'rrPage.specs.color.key': 'PILIHAN WARNA & POLA',
+  'rrPage.specs.color.key': 'Pilihan Warna & Pola',
   'rrPage.specs.color.body': 'Warna natural RR Board mengikuti campuran plastik yang digunakan.',
   'rrPage.specs.color.note': 'Pilihan warna khusus tersedia untuk ketebalan 10 mm dan 12 mm, tergantung stok yang tersedia, dengan biaya tambahan Rp25.000 per papan. Warna yang sudah habis tidak dapat dipesan kembali.',
 
@@ -149,6 +152,7 @@ export default {
 
   // RR Board page — S4 Applications
   'rrPage.apps.heading': 'Aplikasi utama RR Board.',
+  'rrPage.apps.headingLines': 'Aplikasi Utama\nRR Board',
   'rrPage.apps.sub': 'Dirancang serbaguna, RR Board dapat difabrikasi menjadi berbagai aplikasi di bidang arsitektur, interior, dan furnitur.',
   'rrPage.apps.client': 'KLIEN',
   'rrPage.apps.a1.title': 'Fasad & Cladding',
@@ -167,7 +171,9 @@ export default {
   'rrPage.apps.a3.tag1': 'Furnitur',
   'rrPage.apps.a3.tag2': 'Permukaan meja',
   'rrPage.apps.a3.tag3': 'Kustom',
+  'rrPage.apps.a3.client': 'TUKU, Cirendeu',
   'rrPage.colors.heading': 'Setiap Papan Punya Karakternya Sendiri.',
+  'rrPage.colors.headingLines': 'Setiap Papan\nPunya\nKarakternya\nSendiri.',
   'rrPage.colors.body': 'Tidak ada dua RR Board yang benar-benar sama. Warna dan pola naturalnya terbentuk dari campuran plastik daur ulang, menjadikan setiap papan unik.',
   'rrPage.colors.body2': 'Lihat bagaimana karakter alami ini menjadi bagian dari desain berbagai proyek kami.',
   'rrPage.colors.label': 'Warna Natural di Proyek Nyata',
@@ -318,6 +324,14 @@ export default {
   'whyPlastic.heading': 'Keputusan Material Anda Dapat Memberi Dampak yang Lebih Besar.',
   'whyPlastic.body': 'Plastik sachet dan kantong sekali pakai sering berakhir mencemari lingkungan karena sulit didaur ulang. Dengan memilih RR Board, Anda memberi plastik rendah nilai kesempatan kedua sebagai papan fungsional untuk berbagai kebutuhan.',
   'whyPlastic.imageAlt': 'Sampah plastik bernilai rendah sebelum diolah',
+  'whyPlastic.headingLines': 'Keputusan\nMaterial Anda\nDapat Memberi\nDampak yang\nLebih Besar',
+  'hero.imageAlt': 'Tangan memegang cacahan plastik sachet',
+  'hero.socialLabel': 'Kanal kontak',
+  'hero.menu': 'Buka menu',
+  'hero.close': 'Tutup menu',
+  'homeBanner.imageAlt': 'Panel RR Board dengan berbagai campuran warna',
+  'homeContact.heading': 'Punya proyek?\nKirim kebutuhan Anda,\nkami hitung bersama.',
+  'homeContact.getInTouch': 'Hubungi Kami',
 
   // Custom project page — Explore products
   'customProjectPage.explore.catalogue.body': 'Untuk brand, perusahaan, desainer, dan siapa pun yang ingin mengeksplorasi kemungkinan produk dari Repair.',
