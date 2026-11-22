@@ -26,6 +26,8 @@
           <span class="relative block w-full aspect-[560/708] overflow-hidden rounded-[10px]">
             <img
               :src="item.image"
+            :srcset="item.srcset"
+            :sizes="item.sizes"
               :alt="t(`${item.prefix}.cta`)"
               loading="lazy"
               class="absolute max-w-none transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
@@ -58,12 +60,16 @@ const catalogues = [
   {
     prefix: 'customProjectPage.explore.catalogue',
     image: '/images/custom-project/redesign/product-catalogue.webp',
+    srcset: '/images/custom-project/redesign/product-catalogue-sm.webp 900w, /images/custom-project/redesign/product-catalogue.webp 1600w',
+    sizes: '(min-width: 1024px) 67vw, (min-width: 640px) 115vw, 229vw',
     href: 'https://w4c.id/RepairProjectCatalogue',
     crop: { width: '229.39%', height: '120.96%', left: '-28.49%', top: '-20.96%' },
   },
   {
     prefix: 'customProjectPage.explore.events',
     image: '/images/custom-project/redesign/product-events.webp',
+    srcset: '/images/custom-project/redesign/product-events-sm.webp 700w, /images/custom-project/redesign/product-events.webp 1100w',
+    sizes: '(min-width: 1024px) 56vw, (min-width: 640px) 95vw, 190vw',
     href: 'https://w4c.id/RepairForEvents',
   },
 ]

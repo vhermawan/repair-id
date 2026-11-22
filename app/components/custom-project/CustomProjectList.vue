@@ -39,6 +39,8 @@
             >
               <img
                 :src="image.src"
+          :srcset="image.srcset"
+          :sizes="image.sizes"
                 :alt="i === 0 ? t(`customProjectPage.projects.${project.key}.title`) : ''"
                 loading="lazy"
                 class="absolute max-w-none"
@@ -98,7 +100,7 @@ const projects = [
     key: 'schoolSet',
     article: 'lg:mt-0 lg:h-[33vw]',
     images: [
-      { src: '/images/custom-project/redesign/manulife-1.webp', ratio: '622 / 593', box: 'lg:left-0 lg:top-0 lg:w-[32.42vw]', crop: [83.94, 117.43, 19.98, -2.65] },
+      { src: '/images/custom-project/redesign/manulife-1.webp', srcset: '/images/custom-project/redesign/manulife-1-sm.webp 700w, /images/custom-project/redesign/manulife-1.webp 1050w', sizes: '(min-width: 1024px) 28vw, 84vw', ratio: '622 / 593', box: 'lg:left-0 lg:top-0 lg:w-[32.42vw]', crop: [83.94, 117.43, 19.98, -2.65] },
       { src: '/images/custom-project/redesign/manulife-2.webp', ratio: '363 / 424', box: 'w-2/3 self-end lg:left-[72.05vw] lg:top-[10.92vw] lg:w-[18.89vw]' },
     ],
     title: '-order-1 lg:order-none lg:left-[44.69vw] lg:top-0 lg:w-[30.5vw]',
@@ -120,7 +122,7 @@ const projects = [
     key: 'ecoRunfest',
     article: 'lg:mt-[10.71vw] lg:h-[36.34vw]',
     images: [
-      { src: '/images/custom-project/redesign/pertamina-1.webp', ratio: '561 / 698', box: 'lg:left-[13vw] lg:top-0 lg:w-[29.23vw]', crop: [112.28, 113.96, -6.14, -11.62] },
+      { src: '/images/custom-project/redesign/pertamina-1.webp', srcset: '/images/custom-project/redesign/pertamina-1-sm.webp 800w, /images/custom-project/redesign/pertamina-1.webp 1260w', sizes: '(min-width: 1024px) 33vw, 112vw', ratio: '561 / 698', box: 'lg:left-[13vw] lg:top-0 lg:w-[29.23vw]', crop: [112.28, 113.96, -6.14, -11.62] },
       { src: '/images/custom-project/redesign/pertamina-2.webp', ratio: '346 / 359', box: 'w-2/3 self-end lg:left-[76.72vw] lg:top-0 lg:w-[18.03vw]', crop: [126.65, 162.74, -10.65, -35.49] },
     ],
     title: '-order-1 lg:order-none lg:left-[45.44vw] lg:top-[19.55vw] lg:w-[22.25vw]',

@@ -61,6 +61,8 @@
       >
         <img
           src="/images/custom-project/redesign/process.webp"
+          srcset="/images/custom-project/redesign/process-sm.webp 1000w, /images/custom-project/redesign/process.webp 1600w"
+          sizes="(min-width: 1024px) 80vw, 214vw"
           alt=""
           loading="lazy"
           class="absolute top-0 left-[43.87%] h-full w-auto max-w-none -translate-x-1/2 -scale-x-100"
