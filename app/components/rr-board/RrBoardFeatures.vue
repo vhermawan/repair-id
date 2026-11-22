@@ -96,38 +96,5 @@ const features: { prefix: string, image: string, crop?: [number, number, number,
 const section = ref<HTMLElement | null>(null)
 const viewport = ref<HTMLElement | null>(null)
 const list = ref<HTMLElement | null>(null)
-const pinHeight = ref<number | null>(null)
-let travel = 0
-let desktop: MediaQueryList | null = null
-
-function update() {
-  if (!travel || !section.value || !list.value) return
-  const progress = Math.min(Math.max(-section.value.getBoundingClientRect().top / travel, 0), 1)
-  list.value.style.transform = `translate3d(0, ${-progress * travel}px, 0)`
-}
-
-function measure() {
-  if (!list.value || !viewport.value) return
-  if (!desktop?.matches) {
-    travel = 0
-    pinHeight.value = null
-    list.value.style.transform = ''
-    return
-  }
-  travel = Math.max(0, list.value.offsetHeight - viewport.value.clientHeight)
-  pinHeight.value = window.innerHeight + travel
-  update()
-}
-
-onMounted(() => {
-  desktop = window.matchMedia('(min-width: 1024px)')
-  measure()
-  window.addEventListener('scroll', update, { passive: true })
-  window.addEventListener('resize', measure, { passive: true })
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('scroll', update)
-  window.removeEventListener('resize', measure)
-})
+const { pinHeight } = usePinnedScroll(section, viewport, list)
 </script>

@@ -303,6 +303,7 @@ export default {
   'customProjectPage.projects.ecoRunfest.items': '250 keychains, 150 phone holders',
   'customProjectPage.projects.ecoRunfest.waste': '42 kg',
   'customProjectPage.order.heading': 'From Selection to Delivery, Made Simple',
+  'customProjectPage.order.headingLines': 'From Selection\nto Delivery,\nMade Simple',
   'customProjectPage.order.01.title': 'Choose Your Product',
   'customProjectPage.order.01.body': 'Explore our existing products and applications, or send us your design.',
   'customProjectPage.order.02.title': 'Confirm Your Requirements',

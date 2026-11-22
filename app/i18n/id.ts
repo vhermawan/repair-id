@@ -303,6 +303,7 @@ export default {
   'customProjectPage.projects.ecoRunfest.items': '250 gantungan kunci, 150 phone holder',
   'customProjectPage.projects.ecoRunfest.waste': '42 kg',
   'customProjectPage.order.heading': 'Memilih dan Menerima, Dibuat Sederhana',
+  'customProjectPage.order.headingLines': 'Memilih dan\nMenerima,\nDibuat Sederhana',
   'customProjectPage.order.01.title': 'Pilih Produk',
   'customProjectPage.order.01.body': 'Temukan produk dan aplikasi yang sudah tersedia, atau kirimkan desain-mu.',
   'customProjectPage.order.02.title': 'Konfirmasi Kebutuhan',
