@@ -10,7 +10,8 @@
           v-motion
           :initial="{ opacity: 0, y: 24 }"
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
-          class="font-dm-sans text-[36px] leading-[1.2] uppercase tracking-[0.05em] text-black lg:shrink-0 lg:text-[4.17vw]"
+          class="font-dm-sans text-[36px] leading-[1.2] uppercase tracking-[0.05em] text-black lg:shrink-0"
+          :class="locale === 'id' ? 'lg:text-[3.6vw]' : 'lg:text-[4.17vw]'"
         >
           <span
             v-for="(line, i) in headingLines"
@@ -73,7 +74,7 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale } = useI18n()
 
 const headingLines = computed(() => t('customProjectPage.order.headingLines').split('\n'))
 const indents = ['0.65em', '0', '1.9em']

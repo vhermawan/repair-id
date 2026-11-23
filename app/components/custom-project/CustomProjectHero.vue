@@ -100,7 +100,7 @@ const strip = [
   { src: '/images/custom-project/redesign/strip-medals.webp', labelKey: 'customProjectPage.products.medals', left: 2.19, top: 0.93, w: 12.18, h: 24.6, rotate: 10.81, fit: 'object-cover object-left-bottom' },
   { src: '/images/custom-project/redesign/strip-placard.webp', labelKey: 'customProjectPage.products.placard', left: 0, top: 0.88, w: 17.52, h: 20.46, fit: 'object-cover object-bottom' },
   { src: '/images/custom-project/redesign/strip-phone-holder.webp', labelKey: 'customProjectPage.products.phoneHolder', left: 0, top: 1.56, w: 17.64, h: 20.6, fit: 'object-cover object-bottom' },
-  { src: '/images/custom-project/redesign/strip-furniture.webp', labelKey: 'customProjectPage.products.furniture', left: 1.56, top: 3.96, w: 12.18, h: 16.17, fit: 'object-cover object-bottom' },
+  { src: '/images/custom-project/redesign/strip-furniture.webp', labelKey: 'customProjectPage.products.furniture', left: 1.72, top: 3.96, w: 12.18, h: 16.17, fit: 'object-cover object-bottom' },
   { src: '/images/custom-project/redesign/strip-waste-bin.webp', labelKey: 'customProjectPage.products.wasteBin', left: 2.19, top: 0.93, w: 15.33, h: 20.6, fit: 'object-contain object-bottom' },
   { src: '/images/custom-project/redesign/strip-keychain.webp', labelKey: 'customProjectPage.products.keychain', left: 0, top: 1.35, w: 17.64, h: 20.6, fit: 'object-cover' },
 ]

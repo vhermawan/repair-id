@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <div class="mt-6 flex justify-center gap-[1.35vw] lg:mt-[4.86vw] lg:pl-[12.86vw]">
+    <div class="mt-6 flex justify-center gap-[1.35vw] lg:mt-[4.86vw] lg:pl-[8.89vw]">
       <button
         type="button"
         :aria-label="t('rrPage.tests.prev')"

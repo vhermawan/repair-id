@@ -68,8 +68,8 @@ const catalogues = [
   {
     prefix: 'customProjectPage.explore.events',
     image: '/images/custom-project/redesign/product-events.webp',
-    srcset: '/images/custom-project/redesign/product-events-sm.webp 700w, /images/custom-project/redesign/product-events.webp 1100w',
-    sizes: '(min-width: 1024px) 56vw, (min-width: 640px) 95vw, 190vw',
+    srcset: '/images/custom-project/redesign/product-events-sm.webp 467w, /images/custom-project/redesign/product-events.webp 734w',
+    sizes: '(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw',
     href: 'https://w4c.id/RepairForEvents',
   },
 ]

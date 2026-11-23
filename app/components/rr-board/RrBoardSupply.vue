@@ -1,5 +1,5 @@
 <template>
-  <section class="relative w-full min-h-[560px] flex flex-col items-center justify-center gap-6 px-5 py-16 overflow-hidden text-center font-dm-sans lg:h-[56.25vw] lg:min-h-0 lg:gap-0 lg:pl-[12.86vw] lg:pr-0 lg:py-0">
+  <section class="relative w-full min-h-[560px] flex flex-col items-center justify-center gap-6 px-5 py-16 overflow-hidden text-center font-dm-sans lg:h-[56.25vw] lg:min-h-0 lg:gap-0 lg:pl-[8.89vw] lg:pr-0 lg:py-0">
     <img src="/images/rr-board/redesign/cta.webp" alt="" loading="lazy" class="absolute inset-0 w-full h-full object-cover lg:scale-[1.58]" />
     <div class="absolute inset-0 bg-black/25" aria-hidden="true" />
 

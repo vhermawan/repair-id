@@ -1,7 +1,7 @@
 <template>
   <div>
     <aside class="hidden lg:block fixed inset-y-0 left-0 z-40 w-[8.89vw]" :class="solid ? 'bg-[#2042EA]' : 'bg-black/25'">
-      <NuxtLink to="/" class="absolute left-[1.76vw] top-[1.93vh]" @click="goHome">
+      <NuxtLink to="/" class="absolute left-[1.76vw] top-[calc(1.575vw+4px+clamp(7px,0.52vw,10px))]" @click="goHome">
         <img src="/images/home/logo.png" alt="Repair Project" width="640" height="170" class="w-[5.99vw] h-auto" />
       </NuxtLink>
 

@@ -1,5 +1,5 @@
 <template>
-  <footer id="contact" class="w-full flex flex-col gap-12 px-5 pt-16 pb-14 bg-[#2042EA] lg:gap-[5.57vw] lg:pl-[18.7vw] lg:pr-[4.1vw] lg:pt-[3.96vw] lg:pb-[7.08vw]">
+  <footer id="contact" class="w-full flex flex-col gap-12 px-5 pt-16 pb-14 bg-[#2042EA] lg:gap-[5.57vw] lg:pl-[13vw] lg:pr-[4.1vw] lg:pt-[3.96vw] lg:pb-[7.08vw]">
     <h2
       v-motion
       :initial="{ opacity: 0, y: 32 }"

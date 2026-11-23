@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full bg-white px-5 py-14 lg:pl-[12.86vw] lg:pr-[5.12vw] lg:pt-[2.6vw] lg:pb-[2.6vw]">
+  <section class="w-full bg-white px-5 py-14 lg:pl-[8.89vw] lg:pr-[5.12vw] lg:pt-[2.6vw] lg:pb-[2.6vw]">
     <h2
       v-motion
       :initial="{ opacity: 0, y: 24 }"

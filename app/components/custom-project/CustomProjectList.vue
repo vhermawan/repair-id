@@ -26,6 +26,7 @@
             :key="project.key"
             class="relative mt-20 flex flex-col gap-6 lg:block lg:w-full"
             :class="project.article"
+            :style="{ '--x': extraLines[project.key] ?? 0 }"
           >
             <figure
               v-for="(image, i) in project.images"
@@ -50,6 +51,7 @@
             </figure>
 
             <h3
+              :ref="el => setTitle(project.key, el)"
               v-motion
               :initial="{ opacity: 0, y: 24 }"
               :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
@@ -95,37 +97,70 @@ const headingLines = computed(() => t('customProjectPage.projects.heading').spli
 
 const stats = ['items', 'waste'] as const
 
+const { locale } = useI18n()
+const titles: Record<string, HTMLElement> = {}
+const extraLines = ref<Record<string, number>>({})
+
+function setTitle(key: string, el: unknown) {
+  if (el instanceof HTMLElement) titles[key] = el
+}
+
+function measureTitles() {
+  const desktop = window.matchMedia('(min-width: 1024px)').matches
+  extraLines.value = Object.fromEntries(projects.map(({ key, baseLines }) => {
+    const el = titles[key]
+    if (!desktop || !el) return [key, 0]
+    const lines = Math.round(el.offsetHeight / parseFloat(getComputedStyle(el).lineHeight))
+    return [key, Math.max(0, lines - baseLines)]
+  }))
+}
+
+let resizeObserver: ResizeObserver | null = null
+
+onMounted(() => {
+  measureTitles()
+  resizeObserver = new ResizeObserver(measureTitles)
+  Object.values(titles).forEach(el => resizeObserver?.observe(el))
+})
+
+onBeforeUnmount(() => resizeObserver?.disconnect())
+
+watch(locale, () => nextTick(measureTitles))
+
 const projects = [
   {
     key: 'schoolSet',
+    baseLines: 1,
     article: 'lg:mt-0 lg:h-[33vw]',
     images: [
       { src: '/images/custom-project/redesign/manulife-1.webp', srcset: '/images/custom-project/redesign/manulife-1-sm.webp 700w, /images/custom-project/redesign/manulife-1.webp 1050w', sizes: '(min-width: 1024px) 28vw, 84vw', ratio: '622 / 593', box: 'lg:left-0 lg:top-0 lg:w-[32.42vw]', crop: [83.94, 117.43, 19.98, -2.65] },
       { src: '/images/custom-project/redesign/manulife-2.webp', ratio: '363 / 424', box: 'w-2/3 self-end lg:left-[72.05vw] lg:top-[10.92vw] lg:w-[18.89vw]' },
     ],
     title: '-order-1 lg:order-none lg:left-[44.69vw] lg:top-0 lg:w-[30.5vw]',
-    desc: 'lg:left-[44.69vw] lg:top-[6.11vw] lg:w-[24.3vw]',
-    stats: 'lg:left-[44.69vw] lg:top-[10.92vw]',
+    desc: 'lg:left-[44.69vw] lg:top-[calc(6.11vw+var(--x)*3.39vw)] lg:w-[24.3vw]',
+    stats: 'lg:left-[44.69vw] lg:top-[calc(10.92vw+var(--x)*3.39vw)]',
   },
   {
     key: 'miloBin',
-    article: 'lg:mt-[9.86vw] lg:h-[36.34vw]',
+    baseLines: 2,
+    article: 'lg:mt-[9.86vw] lg:h-[calc(36.34vw+var(--x)*3.39vw)]',
     images: [
       { src: '/images/custom-project/redesign/milo-1.webp', ratio: '561 / 698', box: 'lg:left-[70.7vw] lg:top-0 lg:w-[29.23vw]' },
-      { src: '/images/custom-project/redesign/milo-2.webp', ratio: '467 / 484', fill: true, box: 'w-2/3 lg:left-[44.69vw] lg:top-[13.6vw] lg:w-[24.3vw]' },
+      { src: '/images/custom-project/redesign/milo-2.webp', ratio: '467 / 484', fill: true, box: 'w-2/3 lg:left-[44.69vw] lg:top-[calc(13.6vw+var(--x)*3.39vw)] lg:w-[24.3vw]' },
     ],
     title: '-order-1 lg:order-none lg:left-[44.69vw] lg:top-[4.62vw] lg:w-[16.75vw]',
-    desc: 'lg:left-[13vw] lg:top-[13.6vw] lg:w-[24.3vw]',
-    stats: 'lg:left-[13vw] lg:top-[18.41vw]',
+    desc: 'lg:left-[13vw] lg:top-[calc(13.6vw+var(--x)*3.39vw)] lg:w-[24.3vw]',
+    stats: 'lg:left-[13vw] lg:top-[calc(18.41vw+var(--x)*3.39vw)]',
   },
   {
     key: 'ecoRunfest',
+    baseLines: 3,
     article: 'lg:mt-[10.71vw] lg:h-[36.34vw]',
     images: [
       { src: '/images/custom-project/redesign/pertamina-1.webp', srcset: '/images/custom-project/redesign/pertamina-1-sm.webp 800w, /images/custom-project/redesign/pertamina-1.webp 1260w', sizes: '(min-width: 1024px) 33vw, 112vw', ratio: '561 / 698', box: 'lg:left-[13vw] lg:top-0 lg:w-[29.23vw]', crop: [112.28, 113.96, -6.14, -11.62] },
       { src: '/images/custom-project/redesign/pertamina-2.webp', ratio: '346 / 359', box: 'w-2/3 self-end lg:left-[76.72vw] lg:top-0 lg:w-[18.03vw]', crop: [126.65, 162.74, -10.65, -35.49] },
     ],
-    title: '-order-1 lg:order-none lg:left-[45.44vw] lg:top-[19.55vw] lg:w-[22.25vw]',
+    title: '-order-1 lg:order-none lg:left-[45.44vw] lg:top-[calc(19.55vw-var(--x)*3.39vw)] lg:w-[22.25vw]',
     desc: 'lg:left-[45.44vw] lg:top-[31.51vw] lg:w-[22vw]',
     stats: 'lg:left-[45.44vw] lg:top-0',
   },
