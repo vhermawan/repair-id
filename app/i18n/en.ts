@@ -84,7 +84,7 @@ export default {
   'clients.heading': 'Clients',
 
   // Footer
-  'footer.heading': 'Have a project? Send your requirements, we\'ll calculate together.',
+  'footer.heading': 'Working on a project? Share your requirements, we\'ll help tailor it to your budget.',
   'footer.ctaWhatsapp': 'Chat via WhatsApp',
   'footer.ctaCatalog': 'Download RR Board catalog',
   'footer.workshop': 'Jl. Raya Bogor KM 27, Jakarta Timur',
@@ -331,7 +331,7 @@ export default {
   'hero.menu': 'Open menu',
   'hero.close': 'Close menu',
   'homeBanner.imageAlt': 'RR Board panels in different colour mixes',
-  'homeContact.heading': 'Have a project?\nSend your requirements,\nwe\'ll calculate together.',
+  'homeContact.heading': 'Working on a project?\nShare your requirements,\nwe\'ll help tailor it to your budget.',
   'homeContact.getInTouch': 'Get In Touch',
 
   // Custom project page — Explore products
