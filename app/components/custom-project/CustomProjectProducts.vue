@@ -1,41 +1,54 @@
 <template>
-  <section id="products" class="w-full flex flex-col gap-8 lg:gap-10 p-[0_20px_64px] lg:p-[0_48px_104px] scroll-mt-24">
+  <section id="products" class="w-full flex flex-col gap-8 px-5 pt-20 scroll-mt-6 lg:flex-row lg:gap-0 lg:pl-[13vw] lg:pr-0 lg:pt-[8.44vw]">
     <h2
       v-motion
       :initial="{ opacity: 0, y: 24 }"
       :visible-once="{ opacity: 1, y: 0, transition: { duration: 500 } }"
-      class="font-dm-sans font-bold type-h2 text-navy"
+      class="font-dm-sans text-[40px] leading-[1.2] uppercase tracking-[0.05em] text-black lg:w-[24.87vw] lg:-mt-[0.29vw] lg:text-[4.17vw]"
     >
       {{ t('customProjectPage.products.heading') }}
     </h2>
 
-    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div
-        v-for="(catalogue, i) in catalogues"
-        :key="catalogue.prefix"
+    <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-4 lg:gap-[1.0vw]">
+      <a
+        v-for="(item, i) in catalogues"
+        :key="item.prefix"
         v-motion
         :initial="{ opacity: 0, y: 24 }"
         :visible-once="{ opacity: 1, y: 0, transition: { duration: 500, delay: i * 120 } }"
-        class="flex flex-col gap-6 p-4 lg:p-5 bg-cream"
+        :href="item.href"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group relative flex flex-col lg:w-[29.19vw]"
+        :class="i === 0 && 'z-10'"
       >
-        <img
-          :src="catalogue.image"
-          :alt="t(`${catalogue.prefix}.cta`)"
-          loading="lazy"
-          class="w-full aspect-[4/3] object-cover"
-        >
-        <div class="flex flex-col gap-5 p-[0_4px_8px]">
-          <p class="font-dm-sans type-lead text-[#0C2244]">
-            {{ t(`${catalogue.prefix}.body`) }}
-          </p>
-          <div>
-            <a :href="catalogue.href" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-[26px] py-3.5 lg:px-8 lg:py-4 xl:py-[18px] 2xl:px-9 2xl:py-5 bg-blue-accent rounded-full">
-              <span class="font-dm-sans type-cta font-semibold text-white whitespace-nowrap">{{ t(`${catalogue.prefix}.cta`) }}</span>
-              <Icon name="lucide:arrow-up-right" class="w-4 h-4 lg:w-[18px] lg:h-[18px] xl:w-5 xl:h-5 text-white" />
-            </a>
-          </div>
-        </div>
-      </div>
+        <span class="relative block">
+          <span class="relative block w-full aspect-[560/708] overflow-hidden rounded-[10px]">
+            <img
+              :src="item.image"
+            :srcset="item.srcset"
+            :sizes="item.sizes"
+              :alt="t(`${item.prefix}.cta`)"
+              loading="lazy"
+              class="absolute max-w-none transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
+              :class="item.crop ? '' : 'inset-0 w-full h-full object-cover'"
+              :style="item.crop"
+            />
+          </span>
+          <span
+            v-if="i === 0"
+            class="hidden sm:block absolute top-1/2 right-[-0.5rem] w-12 h-12 translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2042EA] lg:right-[-0.5vw] lg:w-[3.93vw] lg:h-[3.93vw]"
+            aria-hidden="true"
+          />
+        </span>
+        <span class="mt-4 font-dm-sans text-base text-black lg:mt-[1.31vw] lg:w-[23.27vw] lg:text-[clamp(14px,1.04vw,20px)]">
+          {{ t(`${item.prefix}.body`) }}
+        </span>
+        <span class="mt-4 self-start inline-flex items-center gap-3 h-9 px-4 rounded-full border border-black font-dm-sans text-base text-black transition-colors group-hover:bg-black group-hover:text-white lg:mt-[1.3vw] lg:h-[1.8vw] lg:gap-[0.9vw] lg:px-[0.8vw] lg:text-[clamp(14px,1.04vw,20px)]">
+          {{ t(`${item.prefix}.cta`) }}
+          <img src="/images/home/arrow-up-right.svg" alt="" width="13" height="14" class="w-3 h-3 lg:w-[0.63vw] lg:h-[0.63vw] group-hover:invert" />
+        </span>
+      </a>
     </div>
   </section>
 </template>
@@ -44,7 +57,20 @@
 const { t } = useI18n()
 
 const catalogues = [
-  { prefix: 'customProjectPage.explore.catalogue', image: '/images/custom-project/product-display-table.webp', href: 'https://w4c.id/RepairProjectCatalogue' },
-  { prefix: 'customProjectPage.explore.events', image: '/images/custom-project/product-keychain.webp', href: 'https://w4c.id/RepairForEvents' },
+  {
+    prefix: 'customProjectPage.explore.catalogue',
+    image: '/images/custom-project/redesign/product-catalogue.webp',
+    srcset: '/images/custom-project/redesign/product-catalogue-sm.webp 900w, /images/custom-project/redesign/product-catalogue.webp 1600w',
+    sizes: '(min-width: 1024px) 67vw, (min-width: 640px) 115vw, 229vw',
+    href: 'https://w4c.id/RepairProjectCatalogue',
+    crop: { width: '229.39%', height: '120.96%', left: '-28.49%', top: '-20.96%' },
+  },
+  {
+    prefix: 'customProjectPage.explore.events',
+    image: '/images/custom-project/redesign/product-events.webp',
+    srcset: '/images/custom-project/redesign/product-events-sm.webp 467w, /images/custom-project/redesign/product-events.webp 734w',
+    sizes: '(min-width: 1024px) 30vw, (min-width: 640px) 50vw, 100vw',
+    href: 'https://w4c.id/RepairForEvents',
+  },
 ]
 </script>

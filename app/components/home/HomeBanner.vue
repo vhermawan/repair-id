@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full bg-white lg:pl-[12.86vw]">
+  <section class="w-full bg-white lg:pl-[8.89vw]">
     <img
       src="/images/home/rr-board-stack.webp"
       :alt="t('homeBanner.imageAlt')"

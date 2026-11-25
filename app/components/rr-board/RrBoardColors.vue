@@ -1,6 +1,6 @@
 <template>
   <section class="relative w-full bg-[#2042EA]">
-    <div class="flex flex-col justify-between gap-10 px-5 py-14 text-white font-dm-sans lg:sticky lg:top-0 lg:h-screen lg:gap-[2vw] lg:px-0 lg:pl-[18.17vw] lg:pt-[4.56vw] lg:pb-[5.36vw]">
+    <div class="flex flex-col justify-between gap-10 px-5 py-14 text-white font-dm-sans lg:sticky lg:top-0 lg:h-screen lg:gap-[2vw] lg:px-0 lg:pl-[14.2vw] lg:pt-[4.56vw] lg:pb-[5.36vw]">
       <h2
         v-motion
         :initial="{ opacity: 0, y: 24 }"

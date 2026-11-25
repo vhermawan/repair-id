@@ -1,9 +1,14 @@
 <template>
-  <div class="bg-white">
+  <div>
+    <HomeSideMenu solid />
     <CustomProjectHero />
     <CustomProjectProducts />
     <CustomProjectList />
     <CustomProjectOrder />
-    <TheFooter />
+    <HomeContact />
   </div>
 </template>
+
+<script setup lang="ts">
+definePageMeta({ layout: 'home' })
+</script>

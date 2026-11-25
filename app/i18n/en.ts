@@ -84,7 +84,7 @@ export default {
   'clients.heading': 'Clients',
 
   // Footer
-  'footer.heading': 'Have a project? Send your requirements, we\'ll calculate together.',
+  'footer.heading': 'Working on a project? Share your requirements, we\'ll help tailor it to your budget.',
   'footer.ctaWhatsapp': 'Chat via WhatsApp',
   'footer.ctaCatalog': 'Download RR Board catalog',
   'footer.workshop': 'Jl. Raya Bogor KM 27, Jakarta Timur',
@@ -292,17 +292,18 @@ export default {
   'customProjectPage.projects.totalWaste': 'TOTAL WASTE',
   'customProjectPage.projects.schoolSet.title': 'Manulife School Set',
   'customProjectPage.projects.schoolSet.desc': 'Circular furniture made from RR Board for a learning environment.',
-  'customProjectPage.projects.schoolSet.items': '90 sets',
+  'customProjectPage.projects.schoolSet.items': '90 Sets',
   'customProjectPage.projects.schoolSet.waste': '1,400 kg / 1.4 tons',
   'customProjectPage.projects.miloBin.title': 'Milo Waste Bin',
   'customProjectPage.projects.miloBin.desc': 'Made from Milo waste, transformed into functional waste bins for schools.',
-  'customProjectPage.projects.miloBin.items': '21 waste bins',
+  'customProjectPage.projects.miloBin.items': '21 Waste Bins',
   'customProjectPage.projects.miloBin.waste': '336 kg',
   'customProjectPage.projects.ecoRunfest.title': 'Pertamina Eco RunFest Merchandise',
   'customProjectPage.projects.ecoRunfest.desc': 'Event merchandise made from RR Board, turning waste into everyday items like keychains and phone holders.',
   'customProjectPage.projects.ecoRunfest.items': '250 keychains, 150 phone holders',
   'customProjectPage.projects.ecoRunfest.waste': '42 kg',
   'customProjectPage.order.heading': 'From Selection to Delivery, Made Simple',
+  'customProjectPage.order.headingLines': 'From Selection\nto Delivery,\nMade Simple',
   'customProjectPage.order.01.title': 'Choose Your Product',
   'customProjectPage.order.01.body': 'Explore our existing products and applications, or send us your design.',
   'customProjectPage.order.02.title': 'Confirm Your Requirements',
@@ -330,7 +331,7 @@ export default {
   'hero.menu': 'Open menu',
   'hero.close': 'Close menu',
   'homeBanner.imageAlt': 'RR Board panels in different colour mixes',
-  'homeContact.heading': 'Have a project?\nSend your requirements,\nwe\'ll calculate together.',
+  'homeContact.heading': 'Working on a project?\nShare your requirements,\nwe\'ll help tailor it to your budget.',
   'homeContact.getInTouch': 'Get In Touch',
 
   // Custom project page — Explore products

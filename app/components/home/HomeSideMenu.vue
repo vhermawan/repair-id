@@ -1,25 +1,25 @@
 <template>
   <div>
-    <aside class="hidden lg:block fixed inset-y-0 left-0 z-40 w-[12.86vw] bg-black/25">
-      <NuxtLink to="/" class="absolute left-[2.74vw] top-[8.58vh]" @click="goHome">
-        <img src="/images/home/logo.png" alt="Repair Project" width="640" height="170" class="w-[7.39vw] h-auto" />
+    <aside class="hidden lg:block fixed inset-y-0 left-0 z-40 w-[8.89vw]" :class="solid ? 'bg-[#2042EA]' : 'bg-black/25'">
+      <NuxtLink to="/" class="absolute left-[1.76vw] top-[calc(1.575vw+4px+clamp(7px,0.52vw,10px))]" @click="goHome">
+        <img src="/images/home/logo.png" alt="Repair Project" width="640" height="170" class="w-[5.99vw] h-auto" />
       </NuxtLink>
 
       <button
-        class="absolute left-[5.96vw] top-[46.4vh] transition-opacity hover:opacity-70"
+        class="absolute left-[4.23vw] top-[46.4vh] w-[1.15vw] transition-opacity hover:opacity-70"
         :aria-label="t('hero.menu')"
         :aria-expanded="open"
         aria-controls="home-menu"
         @click="open = true"
       >
-        <img src="/images/home/menu-lines.svg" alt="" />
+        <img src="/images/home/menu-lines.svg" alt="" width="25" height="77" class="w-full h-auto" />
       </button>
 
-      <nav class="absolute left-[6.05vw] top-[69.6vh] flex flex-col items-center gap-[3.5vh]" :aria-label="t('hero.socialLabel')">
+      <nav class="absolute left-[4.19vw] top-[69.7vh] flex flex-col items-center gap-[3.43vh]" :aria-label="t('hero.socialLabel')">
         <a
           v-for="item in contacts" :key="item.short"
           :href="item.href" target="_blank" rel="noopener noreferrer"
-          class="[writing-mode:vertical-rl] rotate-180 font-dm-sans text-[clamp(16px,1.3vw,25px)] text-white transition-opacity hover:opacity-70"
+          class="[writing-mode:vertical-rl] rotate-180 font-dm-sans text-[clamp(14px,1.04vw,20px)] text-white transition-opacity hover:opacity-70"
         >
           {{ item.short }}
         </a>
@@ -100,6 +100,8 @@
 </template>
 
 <script setup lang="ts">
+defineProps<{ solid?: boolean }>()
+
 const { t } = useI18n()
 const open = useState('homeMenuOpen', () => false)
 const panel = ref<HTMLElement | null>(null)

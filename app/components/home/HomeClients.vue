@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full flex flex-col items-center gap-8 px-5 py-16 bg-white lg:gap-[3.8vw] lg:pl-[12.86vw] lg:pr-0 lg:pt-[8.2vw] lg:pb-[8.2vw]">
+  <section class="w-full flex flex-col items-center gap-8 px-5 py-16 bg-white lg:gap-[3.8vw] lg:pl-[8.89vw] lg:pr-0 lg:pt-[8.2vw] lg:pb-[8.2vw]">
     <h2
       v-motion
       :initial="{ opacity: 0, y: 24 }"
